@@ -43,6 +43,11 @@
     padding: 0 5px;
     background: #fff;
 }
+.highlight-2 {
+    color: rgb(99, 98, 98);
+    padding: 0 5px;
+    background: rgb(251, 236, 217);
+}
 .disable-1 {
     opacity: 0.1;
 }

@@ -35,6 +35,11 @@
  * Update the foundational and global aspects of the page.
  */
 
+
+/*
+ * Edited by Dali Kewara (https://github.com/dalikewara).
+ */
+
 * {
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
@@ -322,6 +327,25 @@ tbody tr:nth-child(odd) th {
 
 
 /*
+ * Archives, Categories, Tags
+ */
+.archives, .categories, .tags {
+  margin-top: -30px;
+  margin-bottom: 60px;
+}
+.archives h1, .categories h1, .tags h1 {
+  margin-bottom: 40px;
+}
+
+/*
+ * Showing menu
+ */
+.showing-category, .showing-tag, .showing-recent {
+  margin-bottom: 40px;
+}
+
+
+/*
  * Posts and pages
  *
  * Each post is wrapped in `.post` and is used on default and post layouts. Each
@@ -399,6 +423,7 @@ tbody tr:nth-child(odd) th {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
+  margin-bottom: 60px;
 }
 
 /* Pagination items can be `span`s or `a`s */

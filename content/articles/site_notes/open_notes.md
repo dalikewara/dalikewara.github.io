@@ -1,6 +1,5 @@
 Title: Open Notes
 Date: 2019-07-29 10:17
-Category: Info
 Slug: opennotes
 
 > Catatan-catatan baru mungkin saya tambahkan bertahap&mdash;kalau sempat. 

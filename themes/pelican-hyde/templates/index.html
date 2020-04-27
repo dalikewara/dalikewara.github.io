@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+	{% if category %}
+		<div class="showing-category">
+			<p><i>@@ Articles in the <span class="highlight-2">{{ category }}</span> category...</i></p>
+		</div>
+	{% elif tag %}
+		<div class="showing-tag">
+			<p><i>## Articles tagged with <span class="highlight-2">{{ tag }}</span>...</i></p>
+		</div>
+	{% else %}
+		<div class="showing-recent">
+			<span><i>Hello there,</i></span>
+			<br>
+			<span><i>Get in touch with some <span class="highlight-2">recent</span> articles...</i></span>
+		</div>
+	{% endif %}
 	<div class="posts">
 		{% for article in articles_page.object_list %}
 			<div class="post">
@@ -11,21 +26,20 @@
 				<p>
 					{{ article.summary }}
 				</p>
-				<a class="read-more" href="{{ article.url }}">Continue reading »</a>
+				<a class="read-more" href="{{ SITEURL }}/{{ article.slug }}">Continue reading »</a>
 			</div>
 		{% endfor %}
 	</div>
 	<div class="pagination">
-
 		{% if articles_page.has_previous() %}
 		{% set num = articles_page.previous_page_number() %}
-		<span class="pagination-item older"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">Newer</a></span>
+		<span class="pagination-item older"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}">Newer</a></span>
 		{% else %}
 		<span class="pagination-item older">Newer</span>
 		{% endif %}
 
 		{% if articles_page.has_next() %}
-		<span class="pagination-item newer"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Older</a></span>
+		<span class="pagination-item newer"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}">Older</a></span>
 		{% else %}
 		<span class="pagination-item newer">Older</span>
 		{% endif %}
