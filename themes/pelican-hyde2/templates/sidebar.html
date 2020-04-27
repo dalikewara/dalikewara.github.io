@@ -1,0 +1,44 @@
+<div class="sidebar">
+	<div class="container sidebar-sticky">
+		<div class="sidebar-about">
+			{% block content %}
+				{% if article and article.title %}
+					<h1>
+						{{ article.title }}
+					</h1>
+				{% else %}
+					<h1>
+						{{ SITENAME }}
+					</h1>
+				{% endif %}
+			{% endblock %}
+			<p class="lead"></p>
+			<p class="lead">
+				Written by <strong><a href="/">{{ AUTHOR }}</a></strong>
+				who lives and works as Backend Developer&mdash;building useful and unexpected things&mdash;in Indonesia.
+				He also runs for
+				<span class="highlight-1"><b>#art</b></span>,
+				<span class="highlight-1"><b>#writing</b></span>,
+				and <span class="highlight-1"><b>#journey</b></span>.
+				You should follow him on any socials bellow.
+			</p>
+			<p></p>
+		</div>
+		<nav class="sidebar-nav">
+			{% for name, link in SOCIAL %}
+				{% if name == 'email' %}
+					<a class="sidebar-nav-item" href="mailto:{{ link }}">
+						<i class="fa fa-envelope"></i>
+					</a>
+				{% else %}
+					<a class="sidebar-nav-item" href="{{ link }}">
+						<i class="fa fa-{{ name }}"></i>
+					</a>
+				{% endif %}
+			{% endfor %}
+			<a class="sidebar-nav-item" href="{{ FEED_ALL_RSS }}">
+				<i class="fa fa-feed"></i>
+			</a>
+		</nav>
+	</div>
+</div>
