@@ -1,0 +1,12 @@
+[submodule "themes/themes/pelican-alchemy"]
+	path = themes/themes/pelican-alchemy
+	url = https://github.com/nairobilug/pelican-alchemy
+[submodule "themes/pelican-alchemy"]
+	path = themes/pelican-alchemy
+	url = https://github.com/nairobilug/pelican-alchemy
+[submodule "themes/pelican-hyde"]
+	path = themes/pelican-hyde
+	url = https://github.com/jvanz/pelican-hyde.git
+[submodule "themes/pelican-svbtle"]
+	path = themes/pelican-svbtle
+	url = https://github.com/wting/pelican-svbtle.git
