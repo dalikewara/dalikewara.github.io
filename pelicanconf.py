@@ -21,6 +21,9 @@ TIMEZONE = 'Asia/Jakarta'
 
 DEFAULT_LANG = 'en'
 
+ARTICLE_PATHS = ['articles']
+STATIC_PATHS = ['images', 'articles']
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
