@@ -12,7 +12,7 @@ THEME = 'themes/pelican-hyde'
 
 AUTHOR = 'Dali Kewara'
 SITENAME = 'An unexpected journey'
-BIO = ''
+BIO = 'Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey.'
 SITEURL = ''
 
 PATH = 'content'
