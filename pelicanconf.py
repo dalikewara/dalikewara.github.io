@@ -14,7 +14,6 @@ AUTHOR = 'Dali Kewara'
 SITENAME = 'An unexpected journey'
 BIO = ''
 SITEURL = ''
-PROFILE_IMAGE = 'pic.jpg'
 
 PATH = 'content'
 
