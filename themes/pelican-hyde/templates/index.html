@@ -18,16 +18,18 @@
 	{% endif %}
 	<div class="posts">
 		{% for article in articles_page.object_list %}
-			<div class="post">
-				<h1 class="post-title" href="{{ SITEURL }}/{{ article.slug }}">
-					<a href="{{ SITEURL }}/{{ article.slug }}">{{ article.title }}</a>
-				</h1>
-				<span class="post-date">{{ article.locale_date }}</span>
-				<p>
-					{{ article.summary }}
-				</p>
-				<a class="read-more" href="{{ SITEURL }}/{{ article.slug }}">Continue reading »</a>
-			</div>
+			{% if article.slug != 'aboutme' %}
+				<div class="post">
+					<h1 class="post-title" href="{{ SITEURL }}/{{ article.slug }}">
+						<a href="{{ SITEURL }}/{{ article.slug }}">{{ article.title }}</a>
+					</h1>
+					<span class="post-date">{{ article.locale_date }}</span>
+					<p>
+						{{ article.summary }}
+					</p>
+					<a class="read-more" href="{{ SITEURL }}/{{ article.slug }}">Continue reading »</a>
+				</div>
+			{% endif %}
 		{% endfor %}
 	</div>
 	<div class="pagination">

@@ -44,5 +44,7 @@ SOCIAL = (('instagram', 'https://instagram.com/harukii_kun'),
 
 DEFAULT_PAGINATION = 10
 
+DISQUS_SITENAME = 'dalikewara'
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True

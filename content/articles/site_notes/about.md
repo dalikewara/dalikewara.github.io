@@ -1,7 +1,6 @@
 Title: About Me
 Date: 2019-12-22 22:23
 Slug: aboutme
-Status: hidden
 
 ![Dali Kewara Pics](https://lh3.googleusercontent.com/qNhgG8q9hQHc4nKZuLE18Ue1kX4BUgAgw8-ZiQ6wwh7NSd_NLYluC11ttSeSCqMGldPi18cBK9knvld8r7mk76qqRqNggjppOaUWWY4MRxuJft_vyLeOkaFiKufQCpATnB_1cZWH3w=s1628-no)
 
