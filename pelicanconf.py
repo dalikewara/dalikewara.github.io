@@ -23,7 +23,14 @@ TIMEZONE = 'Asia/Jakarta'
 DEFAULT_LANG = 'en'
 
 ARTICLE_PATHS = ['articles']
-STATIC_PATHS = ['images', 'articles']
+STATIC_PATHS = ['images', 'articles', 'extra/robots.txt', 'extra/favicon.ico']
+EXTRA_PATH_METADATA = {
+    'extra/robots.txt': {'path': 'robots.txt'},
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
+
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
+SITEMAP_SAVE_AS = 'sitemap.xml'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
