@@ -1,0 +1,499 @@
+/*
+ *  __                  __
+ * /\ \                /\ \
+ * \ \ \___   __  __   \_\ \     __
+ *  \ \  _ `\/\ \/\ \  /'_` \  /'__`\
+ *   \ \ \ \ \ \ \_\ \/\ \_\ \/\  __/
+ *    \ \_\ \_\/`____ \ \___,_\ \____\
+ *     \/_/\/_/`/___/> \/__,_ /\/____/
+ *                /\___/
+ *                \/__/
+ *
+ * Designed, built, and released under MIT license by @mdo. Learn more at
+ * https://github.com/poole/hyde.
+ */
+
+
+/*
+ * Contents
+ *
+ * Global resets
+ * Sidebar
+ * Container
+ * Reverse layout
+ * Themes
+ */
+
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+/*
+ * Edited by Dali Kewara (https://github.com/dalikewara).
+ */
+
+/*
+ * Custom
+ */
+.highlight-1 {
+    color: #515151;
+    padding: 0 5px;
+    background: #fff;
+}
+.highlight-2 {
+    color: rgb(99, 98, 98);
+    padding: 0 5px;
+    background: rgb(251, 236, 217);
+}
+.disable-1 {
+    opacity: 0.1;
+}
+a[href*='#modulesbadges'] {
+    display: inline-block;
+}
+
+
+/*
+ * Base
+ */
+
+html {
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+}
+@media (min-width: 48em) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (min-width: 58em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+
+/*
+ * Sidebar
+ *
+ * Flexible banner for housing site name, intro, and "footer" content. Starts
+ * out above content in mobile and later moves to the side with wider viewports.
+ */
+
+.sidebar {
+  text-align: center;
+  padding: 2rem 1rem 0.1rem;
+  color: rgba(255,255,255, .75);
+  background-color: rgb(73, 130, 189);
+}
+@media (min-width: 48em) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+    text-align: left;
+  }
+}
+
+/* Sidebar links */
+.sidebar a {
+  color: #fff;
+}
+
+/* About section */
+
+.sidebar-about h1 {
+  color: #fff;
+  margin-top: 0;
+  font-size: 3rem;
+  line-height: 0.8;
+}
+
+.sidebar-about .lead {
+  font-size: .85rem;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  margin-bottom: 1rem;
+}
+.sidebar-nav-item {
+    display: inline-block;
+    padding: .25rem 0.5rem;
+    background: rgb(73, 130, 189);
+    margin: .2rem .2rem;
+    border-radius: .25rem;
+    font-size: .8rem;
+    font-weight: bold;
+    width: 17%;
+    text-align: center;
+}
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  background: rgb(43, 100, 158);
+  text-decoration: none;
+}
+.sidebar-nav-item.active {
+  color: #515151;
+  background: #fff;
+}
+a.sidebar-nav-item.active:hover,
+a.sidebar-nav-item.active:focus {
+  color: #fff;
+}
+
+/* Sticky sidebar
+ *
+ * Add the `sidebar-sticky` class to the sidebar's container to affix it the
+ * contents to the bottom of the sidebar in tablets and up.
+ */
+
+@media (min-width: 48em) {
+  .sidebar-sticky {
+    position: absolute;
+    right:  1rem;
+    bottom: 1rem;
+    left:   1rem;
+  }
+}
+
+
+/* Menu nav */
+.menu {
+  background-color: rgb(73, 130, 189);
+}
+.menu-nav {
+  padding: 9px 0 0;
+  text-align: center;
+}
+.menu-nav-item {
+    display: inline-block;
+    padding: .25rem 0.5rem;
+    margin: .2rem .2rem;
+    border-radius: .25rem;
+    font-size: .8rem;
+    font-weight: bold;
+    color: #fff;
+}
+.menu-nav-item-active {
+  background: #fff;
+  color: #515151 !important;
+}
+.menu-nav-item-active:hover {
+  text-decoration: none !important;
+}
+a.menu-nav-item:hover,
+a.menu-nav-item:focus {
+  text-decoration: underline;
+}
+@media (min-width: 48em) {
+    .menu-nav {
+        margin-left: 18rem;
+        text-align: left;
+    }
+}
+
+
+/* Fixed menu
+ */
+.menu-fixed {
+    margin-bottom: -10px;
+    background-color: rgb(73, 130, 189);
+}
+@media (min-width: 48em) {
+    .menu-fixed {
+        position: fixed;
+        margin-bottom: 0;
+        width: 100%;
+        top: 0;
+        z-index: 1;
+        height: 50px;
+    }
+}
+
+
+/* Footer
+ */
+.footer {
+    font-size: 0.6rem;
+}
+
+
+/* Container
+ *
+ * Align the contents of the site above the proper threshold with some margin-fu
+ * with a 25%-wide `.sidebar`.
+ */
+
+.content {
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  overflow: hidden;
+}
+
+.content a {
+  color: rgb(73, 130, 189);
+}
+
+.related-posts li a:hover {
+    color: rgb(73, 130, 189);
+}
+
+@media (min-width: 48em) {
+    .content {
+        padding-top: 5.5rem;
+        max-width: 38rem;
+        margin-left: 20rem;
+        margin-right: 2rem;
+    }
+}
+
+@media (min-width: 64em) {
+    .content {
+        padding-top: 5.5rem;
+        margin-left: 20rem;
+        margin-right: 4rem;
+    }
+}
+
+
+/*
+ * Reverse layout
+ *
+ * Flip the orientation of the page by placing the `.sidebar` on the right.
+ */
+
+@media (min-width: 48em) {
+  .layout-reverse .sidebar {
+    left: auto;
+    right: 0;
+  }
+  .layout-reverse .content {
+    margin-left: 2rem;
+    margin-right: 20rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .layout-reverse .content {
+    margin-left: 4rem;
+    margin-right: 22rem;
+  }
+}
+
+
+
+/*
+ * Themes
+ *
+ * As of v1.1, Hyde includes optional themes to color the sidebar and links
+ * within blog posts. To use, add the class of your choosing to the `body`.
+ */
+
+/* Base16 (http://chriskempson.github.io/base16/#default) */
+
+/* Blue */
+.theme-base-blue .sidebar {
+    background-color: rgb(73, 130, 189);
+}
+.theme-base-blue .sidebar-nav-item {
+    background-color: rgb(73, 130, 189);
+}
+.theme-base-blue a.sidebar-nav-item:hover,
+.theme-base-blue a.sidebar-nav-item:focus {
+    background: rgb(43, 100, 158);
+}
+.theme-base-blue .sidebar-nav-item.active {
+    color: rgb(43, 100, 158);
+}
+.theme-base-blue .content a,
+.theme-base-blue .related-posts li a:hover {
+    color: rgb(73, 130, 189);
+}
+.theme-base-blue .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-blue .menu-fixed {
+    background-color: rgb(73, 130, 189);
+}
+.theme-base-blue .menu {
+    background-color: rgb(73, 130, 189);
+}
+.theme-base-blue .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Orange */
+.theme-base-orange .sidebar {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange .sidebar-nav-item {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange a.sidebar-nav-item:hover,
+.theme-base-orange a.sidebar-nav-item:focus {
+    background: rgb(222, 138, 40);
+}
+.theme-base-orange .sidebar-nav-item.active {
+    color: rgb(222, 138, 40);
+}
+.theme-base-orange .content a,
+.theme-base-orange .related-posts li a:hover {
+    color: rgb(222, 138, 40);
+}
+.theme-base-orange .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-orange .menu-fixed {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange .menu {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Red */
+.theme-base-red .sidebar {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red .sidebar-nav-item {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red a.sidebar-nav-item:hover,
+.theme-base-red a.sidebar-nav-item:focus {
+    background: rgb(172, 17, 29);
+}
+.theme-base-red .sidebar-nav-item.active {
+    color: rgb(172, 17, 29);
+}
+.theme-base-red .content a,
+.theme-base-red .related-posts li a:hover {
+    color: rgb(172, 17, 29);
+}
+.theme-base-red .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-red .menu-fixed {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red .menu {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Green */
+.theme-base-green .sidebar {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green .sidebar-nav-item {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green a.sidebar-nav-item:hover,
+.theme-base-green a.sidebar-nav-item:focus {
+    background: rgb(52, 99, 63);
+}
+.theme-base-green .sidebar-nav-item.active {
+    color: rgb(52, 99, 63);
+}
+.theme-base-green .content a,
+.theme-base-green .related-posts li a:hover {
+    color: rgb(52, 99, 63);
+}
+.theme-base-green .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-green .menu-fixed {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green .menu {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Purple */
+.theme-base-purple .sidebar {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple .sidebar-nav-item {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple a.sidebar-nav-item:hover,
+.theme-base-purple a.sidebar-nav-item:focus {
+    background: rgb(96, 31, 95);
+}
+.theme-base-purple .sidebar-nav-item.active {
+    color: rgb(96, 31, 95);
+}
+.theme-base-purple .content a,
+.theme-base-purple .related-posts li a:hover {
+    color: rgb(96, 31, 95);
+}
+.theme-base-purple .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-purple .menu-fixed {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple .menu {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Black */
+.theme-base-black .sidebar {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black .sidebar-nav-item {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black a.sidebar-nav-item:hover,
+.theme-base-black a.sidebar-nav-item:focus {
+    background: rgb(222, 138, 40);
+}
+.theme-base-black .sidebar-nav-item.active {
+    color: rgb(222, 138, 40);
+}
+.theme-base-black .content a,
+.theme-base-black .related-posts li a:hover {
+    color: rgb(222, 138, 40);
+}
+.theme-base-black .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-black .menu-fixed {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black .menu {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black .menu-nav-item {
+    color: #fff;
+}

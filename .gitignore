@@ -17,4 +17,3 @@ build
 *.egg-info
 .temp
 temp
-output

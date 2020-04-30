@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en" prefix="og: http://ogp.me/ns#"><head><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="description" content="Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey."><meta property="og:description" content="Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey."><meta property="og:title" content="vcmpad, a String Padding Generator"><meta property="og:type" content="article"><meta property="og:url" content="/vcmpad-a-string-padding-generator.html"><meta property="og:image" content="/images/"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"><title>vcmpad, a String Padding Generator | An unexpected journey</title><link href="//fonts.googleapis.com/" rel="dns-prefetch"><link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&subset=latin,latin-ext" rel="stylesheet"><link rel="stylesheet" href="/theme/css/poole.css"><link rel="stylesheet" href="/theme/css/hyde.css"><link rel="stylesheet" href="/theme/css/syntax.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><script>
+			var url = window.location.href;
+			var urlpath = url.replace('http://', '').replace('https://', '');
+			var urlpathsplit = urlpath.split('/');
+			var now = new Date();
+			var thisHours = now.getHours();
+			var thisDay = now.getDay();
+		</script></head><body id="body" class="theme-base-blue"><div class="menu"><div class="menu-fixed"><nav class="menu-nav"><a id="menu-nav-item-overview" class="menu-nav-item" href="/"> Overview </a><a id="menu-nav-item-categories" class="menu-nav-item" href="/categories"> Categories </a><a id="menu-nav-item-tags" class="menu-nav-item" href="/tags"> Tags </a><a id="menu-nav-item-archives" class="menu-nav-item" href="/archives"> Archives </a><a id="menu-nav-item-aboutme" class="menu-nav-item" href="/aboutme"> About </a></nav></div><script>
+		var menuNavItemOverviewElem = document.getElementById('menu-nav-item-overview');
+		var menuNavItemCategoriesElem = document.getElementById('menu-nav-item-categories');
+		var menuNavItemTagsElem = document.getElementById('menu-nav-item-tags');
+		var menuNavItemArchivesElem = document.getElementById('menu-nav-item-archives');
+		var menuNavItemAboutmeElem = document.getElementById('menu-nav-item-aboutme');
+
+		if ((urlpathsplit[1] === 'categories') || (urlpathsplit[1] === 'category')) {
+			menuNavItemCategoriesElem.classList.add("menu-nav-item-active");
+		}
+
+		if ((urlpathsplit[1] === 'tags') || (urlpathsplit[1] === 'tag')) {
+			menuNavItemTagsElem.classList.add("menu-nav-item-active");
+		}
+
+		if (urlpathsplit[1] === 'archives') {
+			menuNavItemArchivesElem.classList.add("menu-nav-item-active");
+		}
+
+		if (urlpathsplit[1] === 'aboutme') {
+			menuNavItemAboutmeElem.classList.add("menu-nav-item-active");
+		} 
+
+		if (!urlpathsplit[1]) {
+			menuNavItemOverviewElem.classList.add("menu-nav-item-active");
+		}
+	</script></div><div class="sidebar"><div class="container sidebar-sticky"><div class="sidebar-about"><h1 id="title-name"> vcmpad, a String Padding Generator </h1><p class="lead"></p><p class="lead"> Written by <strong><a href="/aboutme">Dali Kewara</a></strong> who lives and works as Backend Developer&mdash;building useful and unexpected things&mdash;in Indonesia. He also runs for <span class="highlight-1"><b>#art</b></span>, <span class="highlight-1"><b>#writing</b></span>, and <span class="highlight-1"><b>#journey</b></span>. You should follow him on any socials bellow. </p><p></p></div><nav class="sidebar-nav"><a class="sidebar-nav-item" href="https://instagram.com/harukii_kun"><i class="fa fa-instagram"></i></a><a class="sidebar-nav-item" href="https://github.com/dalikewara"><i class="fa fa-github"></i></a><a class="sidebar-nav-item" href="mailto:dalikewara@gmail.com"><i class="fa fa-envelope"></i></a><a class="sidebar-nav-item" href><i class="fa fa-feed"></i></a></nav></div><script>
+		var titleNameElem = document.getElementById('title-name');
+
+		if ((urlpathsplit[1] === 'categories') || (urlpathsplit[1] === 'category')) {
+			titleNameElem.innerHTML = '@@ Discover site\'s categories';
+		}
+
+		if ((urlpathsplit[1] === 'tags') || (urlpathsplit[1] === 'tag')) {
+			titleNameElem.innerHTML = '## Discover site\'s tags';
+		}
+
+		if (urlpathsplit[1] === 'archives') {
+			titleNameElem.innerHTML = '>> Discover site\'s archives';
+		}
+	</script></div><div class="content container"><div class="post"><span class="post-date">Wed 29 April 2020</span><blockquote><p>Check out <code>vcmpad</code>'s latest documentation at <a href="https://github.com/dalikewara/vcmpad">https://github.com/dalikewara/vcmpad</a></p></blockquote><p><a href="https://nodei.co/npm/vcmpad/"><img alt="npm package" src="https://nodei.co/npm/vcmpad.png?downloads=true&downloadRank=true&stars=true"></a></p><p><a href="https://img.shields.io/npm/v/vcmpad.svg?style=flat#modulesbadges"><img alt="version" src="https://img.shields.io/npm/v/vcmpad.svg?style=flat"></a><a href="https://img.shields.io/circleci/project/github/dalikewara/vcmpad.svg?style=flat#modulesbadges"><img alt="build" src="https://img.shields.io/circleci/project/github/dalikewara/vcmpad.svg?style=flat"></a><a href="https://img.shields.io/github/languages/top/dalikewara/vcmpad.svg?style=flat#modulesbadges"><img alt="language" src="https://img.shields.io/github/languages/top/dalikewara/vcmpad.svg?style=flat"></a><a href="https://img.shields.io/npm/dt/vcmpad.svg?style=flat#modulesbadges"><img alt="download" src="https://img.shields.io/npm/dt/vcmpad.svg?style=flat"></a><a href="https://img.shields.io/librariesio/dependents/npm/vcmpad.svg?style=flat#modulesbadges"><img alt="dependents" src="https://img.shields.io/librariesio/dependents/npm/vcmpad.svg?style=flat"></a><a href="https://img.shields.io/github/issues/dalikewara/vcmpad.svg?style=flat#modulesbadges"><img alt="issue" src="https://img.shields.io/github/issues/dalikewara/vcmpad.svg?style=flat"></a><a href="https://img.shields.io/github/last-commit/dalikewara/vcmpad.svg?style=flat#modulesbadges"><img alt="last_commit" src="https://img.shields.io/github/last-commit/dalikewara/vcmpad.svg?style=flat"></a><a href="https://img.shields.io/npm/l/vcmpad.svg?style=flat#modulesbadges"><img alt="license" src="https://img.shields.io/npm/l/vcmpad.svg?style=flat"></a></p><h1>Fast, lightweight, and customable string padding generator</h1><p>String padding generator with custom Left/Right-Padding style. It allows you to generate string padding format such as LPS <em>(Left Padding Space)</em>, LPZ <em>(Left Padding Zero)</em>, RPS <em>(Right Padding Space)</em>, and RPZ <em>(Right Padding Zero)</em>&mdash;or even you can create your own custom format.</p><h3>Installation</h3><p>NPM</p><div class="highlight"><pre><span></span>npm install vcmpad --save
+</pre></div><p>Browser</p><div class="highlight"><pre><span></span>// Bower
+bower install vcmpad --save
+</pre></div><h3>Initialization</h3><p>NPM</p><div class="highlight"><pre><span></span><span class="kr">const</span> <span class="nx">vcmpad</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;vcmpad&#39;</span><span class="p">);</span>
+</pre></div><p>Browser</p><div class="highlight"><pre><span></span>// Bower
+<span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;bower_components/vcmpad/dist/vcmpad.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div><h1>Quickstart</h1><p>There are two basic functions (<code>vcmpad.left</code> and <code>vcmpad.right</code>) to create String-Padding format using <code>vcmpad</code>, and they're absolutelly easy to use.</p><div class="highlight"><pre><span></span><span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="nx">n</span><span class="p">,</span> <span class="nx">val</span><span class="p">,</span> <span class="nx">format</span><span class="p">[</span><span class="nx">optional</span><span class="p">],</span> <span class="nx">direction</span><span class="p">[</span><span class="nx">optional</span><span class="p">]);</span>
+</pre></div><ul><li>Arguments</li><li><em>string|integer</em><strong>n</strong></li><li><em>string|integer</em><strong>val</strong></li><li><em>string|integer</em><strong>format</strong> [optional]<ul><li><em>default</em> space | ' '</li></ul></li><li><em>boolean</em><strong>direction</strong> [optional]<ul><li><em>default</em> true</li><li>only takes effect if <code>val.length &gt; n</code>.</li><li>if <em>false</em>, return last <code>n.length</code> characters.</li></ul></li></ul><h3>Left-Padding</h3><p>A simple LPS format can be done like this:</p><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// output &#39;      test&#39;</span>
+</pre></div><p>Next, you may try to make other Left-Padding combinations, for example:</p><div class="highlight"><pre><span></span><span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">);</span> <span class="c1">// output &#39;000000test&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">);</span> <span class="c1">// output &#39;leftleftle&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">// output &#39;ftlefttest&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test1234567890&#39;</span><span class="p">);</span> <span class="c1">// output &#39;test123456&#39;</span>
+</pre></div><h3>Right-Padding</h3><p>A simple RPS format can be done like this:</p><div class="highlight"><pre><span></span><span class="kd">var</span> <span class="nx">str</span> <span class="o">=</span> <span class="nx">vcmpad</span><span class="p">.</span><span class="nx">right</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">);</span> <span class="c1">// output &#39;test      &#39;</span>
+</pre></div><p>Next, you may try to make other Right-Padding combinations, for example:</p><div class="highlight"><pre><span></span><span class="nx">vcmpad</span><span class="p">.</span><span class="nx">right</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">);</span> <span class="c1">// output &#39;test000000&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">right</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">);</span> <span class="c1">// output &#39;testrightr&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">right</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">// output &#39;rightright&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">right</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test1234567890&#39;</span><span class="p">);</span> <span class="c1">// output &#39;test123456&#39;</span>
+</pre></div><h3>Direction</h3><p>The <code>direction</code> argument gives you option where string position should be returned if length of result or value higger than the number of <code>n</code> argument&mdash;basicly, it is first <code>n length</code> characters or last <code>n length</code> charatecrs.</p><div class="highlight"><pre><span></span><span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test1234567890&#39;</span><span class="p">);</span> <span class="c1">// output &#39;test123456&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test1234567890&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">// output &#39;1234567890&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">);</span> <span class="c1">// output &#39;leftleftle&#39;</span>
+
+<span class="nx">vcmpad</span><span class="p">.</span><span class="nx">left</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="s1">&#39;left&#39;</span><span class="p">,</span> <span class="kc">false</span><span class="p">);</span> <span class="c1">// output &#39;ftlefttest&#39;</span>
+</pre></div><h1>Release</h1><h3>Changelog</h3><p>See <a href="https://github.com/dalikewara/vcmpad/blob/master/CHANGELOG.md">https://github.com/dalikewara/vcmpad/blob/master/CHANGELOG.md</a>.</p><h3>Credits</h3><p>Copyright &copy; 2019 <a href="https://www.dalikewara.com">Dali Kewara</a>.</p><h3>License</h3><p><a href="https://github.com/dalikewara/vcmpad/blob/master/LICENSE">MIT License</a></p><hr><div class="disqus"><div id="disqus_thread"></div><script type="text/javascript">
+			var disqus_shortname = 'dalikewara';
+			(function() {
+	 			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	 			dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	 			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	 		})();
+		</script><noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus</a>.</noscript></div></div><div class="footer"><div class="footer-inner"><footer> Okay... let's find out more by reading <a href="/themelogs">theme_logs</a> and <a href="/opennotes">open_notes</a>. <br><br> Proudly powered by <a href="https://blog.getpelican.com/">Pelican</a>, a static site generator written in Python. <br><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> at <a href="https://github.com/dalikewara/dalikewara.github.io">Github</a> and hosted on <a href="https://www.netlify.com">Netlify</a>. <br> 2017 - 2020 © <strong>Dali Kewara</strong>. </footer></div></div></div></body><script>
+		var bodyElem = document.getElementById('body');
+		var hours1 = [0, 3, 6, 9, 12, 15, 18, 21, 24];
+		var hours2 = [1, 4, 7, 10, 13, 16, 19, 22];
+		var hours3 = [2, 5, 8, 11, 14, 17, 20, 23];
+
+		if (thisDay >= 0 && thisDay <= 1) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-orange';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-red';
+		}
+
+		if (thisDay >= 2 && thisDay <= 3) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-green';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
+		}
+
+		if (thisDay >= 4 && thisDay <= 5) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-orange';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-red';
+		}
+
+		if (thisDay >= 6) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-green';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
+		}
+	</script></html>
