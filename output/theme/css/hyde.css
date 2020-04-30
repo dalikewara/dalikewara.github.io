@@ -241,6 +241,7 @@ a.menu-nav-item:focus {
 
 .related-posts li a:hover {
     color: rgb(73, 130, 189);
+    text-decoration: underline;
 }
 
 @media (min-width: 48em) {

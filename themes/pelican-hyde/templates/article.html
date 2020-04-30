@@ -16,6 +16,23 @@
 <div class="post">
 	<span class="post-date">{{ article.locale_date }}</span>
 	{{ article.content }}
+	<br/>
+	<br/>
+	<div class="share-button">
+		<p>Share:</p>
+		<div class="addthis_inline_share_toolbox"></div>
+	</div>
+	<br/>
+	<div class="related-posts">
+		{% if article.related_posts %}
+			<p>Related posts:</p>
+		    <ul>
+			    {% for related_post in article.related_posts %}
+			        <li><a href="{{ SITEURL }}/{{ related_post.slug }}">{{ related_post.title }}</a></li>
+			    {% endfor %}
+		    </ul>
+		{% endif %}
+	</div>
 	{% include 'fragments/disqus.html' %}
 </div>
 {% endblock %}

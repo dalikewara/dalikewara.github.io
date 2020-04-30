@@ -125,6 +125,10 @@ ul, ol, dl {
   margin-bottom: 1rem;
 }
 
+ul li a:hover {
+  text-decoration: underline;
+}
+
 dt {
   font-weight: bold;
 }

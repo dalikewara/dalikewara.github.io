@@ -50,10 +50,11 @@ SOCIAL = (('instagram', 'https://instagram.com/harukii_kun'),
           ('github', 'https://github.com/dalikewara'),
           ('email', 'dalikewara@gmail.com'),)
 
-
+PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'minify',
-    'pelican_precompress'
+    'pelican_precompress',
+    'related_posts'
 ]
 
 MINIFY = {
