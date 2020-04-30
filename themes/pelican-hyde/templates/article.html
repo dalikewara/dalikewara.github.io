@@ -14,18 +14,32 @@
 
 {% block content %}
 <div class="post">
-	<span class="post-date">{{ article.locale_date }}</span>
+	<span class="post-attr"><i class="far fa-calendar-alt"></i> {{ article.locale_date }}</span>
+	{% if article.readtime %}
+		<span class="post-attr"><i class="far fa-clock"></i> {{ article.readtime.minutes }} min(s)</span>
+    {% endif %}
+    <br/>
 	{{ article.content }}
 	<br/>
 	<br/>
+	{% if article.history %}
+		<p><i class="fas fa-history"></i> Article history:</p>
+		<div class="article-history">
+			{% for date, msg in article.history[:POST_HISTORY_MAX_COUNT|default(5)] %}
+		      <span>>> {{ date|strftime("%A %I:%M %p, %B %d %Y") }} | "{{ msg }}"</span>
+		      <br>
+		    {% endfor %}
+		</div>
+		<br/>
+	{% endif %}
 	<div class="share-button">
-		<p>Share:</p>
+		<p><i class="fas fa-share-alt"></i> Share:</p>
 		<div class="addthis_inline_share_toolbox"></div>
 	</div>
-	<br/>
 	<div class="related-posts">
 		{% if article.related_posts %}
-			<p>Related posts:</p>
+			<br/>
+			<p><i class="fas fa-pencil-alt"></i> Related posts:</p>
 		    <ul>
 			    {% for related_post in article.related_posts %}
 			        <li><a href="{{ SITEURL }}/{{ related_post.slug }}">{{ related_post.title }}</a></li>

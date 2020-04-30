@@ -7,6 +7,7 @@ CURRENTYEAR = date.today().year
 
 PELICAN_URL = 'https://blog.getpelican.com/'
 GITHUB_SITE_URL = 'https://github.com/dalikewara/dalikewara.github.io'
+GITHUB_URL = 'https://github.com/dalikewara/dalikewara.github.io'
 
 THEME = 'themes/pelican-hyde'
 
@@ -54,7 +55,10 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = [
     'minify',
     'pelican_precompress',
-    'related_posts'
+    'related_posts',
+    'readtime',
+    'post_revision',
+    'simple_footnotes'
 ]
 
 MINIFY = {

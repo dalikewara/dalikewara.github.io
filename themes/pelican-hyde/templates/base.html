@@ -28,7 +28,6 @@
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/poole.css" />
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/hyde.css" />
 		<link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/syntax.css" />
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<!-- RSS -->
 		{% if FEED_ALL_ATOM %}
@@ -58,6 +57,7 @@
 
         <!-- Google Analytic -->
 		{% include 'fragments/google_analytics.html' %}
+		<script src="https://kit.fontawesome.com/84840f8fbb.js" crossorigin="anonymous"></script>
 		<script>
 			var url = window.location.href;
 			var urlpath = url.replace('http://', '').replace('https://', '');
@@ -84,28 +84,46 @@
 		var hours2 = [1, 4, 7, 10, 13, 16, 19, 22];
 		var hours3 = [2, 5, 8, 11, 14, 17, 20, 23];
 
-		if (thisDay >= 0 && thisDay <= 1) {
+		if (thisDay == 0) {
 			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
 			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-orange';
 			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-red';
 		}
 
-		if (thisDay >= 2 && thisDay <= 3) {
+		if (thisDay == 1) {
 			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-green';
 			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
 			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
 		}
 
-		if (thisDay >= 4 && thisDay <= 5) {
+		if (thisDay == 2) {
 			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
 			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-orange';
 			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-red';
 		}
 
-		if (thisDay >= 6) {
+		if (thisDay == 3) {
 			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-green';
 			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
 			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
+		}
+
+		if (thisDay == 4) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-orange';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-red';
+		}
+
+		if (thisDay == 5) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-green';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
+		}
+
+		if (thisDay == 6) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
 		}
 	</script>
 </html>
