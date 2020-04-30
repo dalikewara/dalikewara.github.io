@@ -62,10 +62,13 @@
 			var url = window.location.href;
 			var urlpath = url.replace('http://', '').replace('https://', '');
 			var urlpathsplit = urlpath.split('/');
+			var now = new Date();
+			var thisHours = now.getHours();
+			var thisDay = now.getDay();
 		</script>
 	</head>
 
-	<body class="theme-base-0d">
+	<body id="body" class="theme-base-blue">
 		{% include 'menu.html' %}
 		{% include 'sidebar.html' %}
 		<div class="content container">
@@ -74,4 +77,34 @@
 			{% include 'footer.html' %}
 		</div>
 	</body>
+	<script>
+		var bodyElem = document.getElementById('body');
+		var hours1 = [0, 3, 6, 9, 12, 15, 18, 21, 24];
+		var hours2 = [1, 4, 7, 10, 13, 16, 19, 22];
+		var hours3 = [2, 5, 8, 11, 14, 17, 20, 23];
+
+		if (thisDay >= 0 && thisDay <= 1) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-orange';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-red';
+		}
+
+		if (thisDay >= 2 && thisDay <= 3) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-green';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
+		}
+
+		if (thisDay >= 4 && thisDay <= 5) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-blue';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-orange';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-red2';
+		}
+
+		if (thisDay >= 6) {
+			if (hours1.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-green';
+			if (hours2.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-purple';
+			if (hours3.indexOf(thisHours) >= 0) bodyElem.className = 'theme-base-black';
+		}
+	</script>
 </html>

@@ -86,7 +86,7 @@ html {
   text-align: center;
   padding: 2rem 1rem 0.1rem;
   color: rgba(255,255,255, .75);
-  background-color: #202020;
+  background-color: rgb(73, 130, 189);
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -124,7 +124,7 @@ html {
 .sidebar-nav-item {
     display: inline-block;
     padding: .25rem 0.5rem;
-    background: #fff;
+    background: rgb(73, 130, 189);
     margin: .2rem .2rem;
     border-radius: .25rem;
     font-size: .8rem;
@@ -134,7 +134,7 @@ html {
 }
 a.sidebar-nav-item:hover,
 a.sidebar-nav-item:focus {
-  background: #fff;
+  background: rgb(43, 100, 158);
   text-decoration: none;
 }
 .sidebar-nav-item.active {
@@ -163,6 +163,9 @@ a.sidebar-nav-item.active:focus {
 
 
 /* Menu nav */
+.menu {
+  background-color: rgb(73, 130, 189);
+}
 .menu-nav {
   padding: 9px 0 0;
   text-align: center;
@@ -174,6 +177,7 @@ a.sidebar-nav-item.active:focus {
     border-radius: .25rem;
     font-size: .8rem;
     font-weight: bold;
+    color: #fff;
 }
 .menu-nav-item-active {
   background: #fff;
@@ -198,6 +202,7 @@ a.menu-nav-item:focus {
  */
 .menu-fixed {
     margin-bottom: -10px;
+    background-color: rgb(73, 130, 189);
 }
 @media (min-width: 48em) {
     .menu-fixed {
@@ -228,6 +233,14 @@ a.menu-nav-item:focus {
   padding-top: 2rem;
   padding-bottom: 4rem;
   overflow: hidden;
+}
+
+.content a {
+  color: rgb(73, 130, 189);
+}
+
+.related-posts li a:hover {
+    color: rgb(73, 130, 189);
 }
 
 @media (min-width: 48em) {
@@ -284,33 +297,203 @@ a.menu-nav-item:focus {
 /* Base16 (http://chriskempson.github.io/base16/#default) */
 
 /* Blue */
-.theme-base-0d .sidebar {
+.theme-base-blue .sidebar {
     background-color: rgb(73, 130, 189);
 }
-.theme-base-0d .sidebar-nav-item {
+.theme-base-blue .sidebar-nav-item {
     background-color: rgb(73, 130, 189);
 }
-.theme-base-0d a.sidebar-nav-item:hover,
-.theme-base-0d a.sidebar-nav-item:focus {
+.theme-base-blue a.sidebar-nav-item:hover,
+.theme-base-blue a.sidebar-nav-item:focus {
     background: rgb(43, 100, 158);
 }
-.theme-base-0d .sidebar-nav-item.active {
+.theme-base-blue .sidebar-nav-item.active {
     color: rgb(43, 100, 158);
 }
-.theme-base-0d .content a,
-.theme-base-0d .related-posts li a:hover {
+.theme-base-blue .content a,
+.theme-base-blue .related-posts li a:hover {
     color: rgb(73, 130, 189);
 }
-.theme-base-0d .highlight-1 {
+.theme-base-blue .highlight-1 {
     color: #515151;
     background: #fff;
 }
-.theme-base-0d .menu-fixed {
+.theme-base-blue .menu-fixed {
     background-color: rgb(73, 130, 189);
 }
-.theme-base-0d .menu {
+.theme-base-blue .menu {
     background-color: rgb(73, 130, 189);
 }
-.theme-base-0d .menu-nav-item {
+.theme-base-blue .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Orange */
+.theme-base-orange .sidebar {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange .sidebar-nav-item {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange a.sidebar-nav-item:hover,
+.theme-base-orange a.sidebar-nav-item:focus {
+    background: rgb(222, 138, 40);
+}
+.theme-base-orange .sidebar-nav-item.active {
+    color: rgb(222, 138, 40);
+}
+.theme-base-orange .content a,
+.theme-base-orange .related-posts li a:hover {
+    color: rgb(222, 138, 40);
+}
+.theme-base-orange .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-orange .menu-fixed {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange .menu {
+    background-color: rgb(226, 145, 15);
+}
+.theme-base-orange .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Red */
+.theme-base-red .sidebar {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red .sidebar-nav-item {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red a.sidebar-nav-item:hover,
+.theme-base-red a.sidebar-nav-item:focus {
+    background: rgb(172, 17, 29);
+}
+.theme-base-red .sidebar-nav-item.active {
+    color: rgb(172, 17, 29);
+}
+.theme-base-red .content a,
+.theme-base-red .related-posts li a:hover {
+    color: rgb(172, 17, 29);
+}
+.theme-base-red .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-red .menu-fixed {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red .menu {
+    background-color: rgb(193, 42, 26);
+}
+.theme-base-red .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Green */
+.theme-base-green .sidebar {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green .sidebar-nav-item {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green a.sidebar-nav-item:hover,
+.theme-base-green a.sidebar-nav-item:focus {
+    background: rgb(52, 99, 63);
+}
+.theme-base-green .sidebar-nav-item.active {
+    color: rgb(52, 99, 63);
+}
+.theme-base-green .content a,
+.theme-base-green .related-posts li a:hover {
+    color: rgb(52, 99, 63);
+}
+.theme-base-green .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-green .menu-fixed {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green .menu {
+    background-color: rgb(68, 129, 82);
+}
+.theme-base-green .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Purple */
+.theme-base-purple .sidebar {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple .sidebar-nav-item {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple a.sidebar-nav-item:hover,
+.theme-base-purple a.sidebar-nav-item:focus {
+    background: rgb(96, 31, 95);
+}
+.theme-base-purple .sidebar-nav-item.active {
+    color: rgb(96, 31, 95);
+}
+.theme-base-purple .content a,
+.theme-base-purple .related-posts li a:hover {
+    color: rgb(96, 31, 95);
+}
+.theme-base-purple .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-purple .menu-fixed {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple .menu {
+    background-color: rgb(149, 48, 147);
+}
+.theme-base-purple .menu-nav-item {
+    color: #fff;
+}
+
+
+
+/* Black */
+.theme-base-black .sidebar {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black .sidebar-nav-item {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black a.sidebar-nav-item:hover,
+.theme-base-black a.sidebar-nav-item:focus {
+    background: rgb(222, 138, 40);
+}
+.theme-base-black .sidebar-nav-item.active {
+    color: rgb(222, 138, 40);
+}
+.theme-base-black .content a,
+.theme-base-black .related-posts li a:hover {
+    color: rgb(222, 138, 40);
+}
+.theme-base-black .highlight-1 {
+    color: #515151;
+    background: #fff;
+}
+.theme-base-black .menu-fixed {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black .menu {
+    background-color: rgb(33, 31, 27);
+}
+.theme-base-black .menu-nav-item {
     color: #fff;
 }
