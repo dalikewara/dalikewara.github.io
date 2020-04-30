@@ -13,6 +13,7 @@ THEME = 'themes/pelican-hyde'
 AUTHOR = 'Dali Kewara'
 SITENAME = 'An unexpected journey'
 BIO = 'Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey.'
+KEYWORDS = 'dalikewara, dali kewara, blog, personal, website, programmer, developer, daily, work, person, journey, art, writing, business'
 SITEURL = ''
 
 PATH = 'content'
@@ -41,6 +42,27 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('instagram', 'https://instagram.com/harukii_kun'),
           ('github', 'https://github.com/dalikewara'),
           ('email', 'dalikewara@gmail.com'),)
+
+
+PLUGINS = [
+    'minify',
+    'pelican_precompress'
+]
+
+MINIFY = {
+  'remove_comments': True,
+  'remove_all_empty_space': True,
+  'remove_optional_attribute_quotes': False
+}
+
+PRECOMPRESS_GZIP = True
+PRECOMPRESS_TEXT_EXTENSIONS = {
+    '.atom',
+    '.css',
+    '.html',
+    '.js',
+    '.rss'
+}
 
 DEFAULT_PAGINATION = 10
 

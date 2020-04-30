@@ -1,10 +1,15 @@
 blinker==1.4
+Brotli==1.0.7
 docutils==0.16
 feedgenerator==1.9.1
+htmlmin==0.1.12
 Jinja2==2.11.2
+joblib==0.14.1
 Markdown==3.1.1
 MarkupSafe==1.1.1
 pelican==4.2.0
+pelican-minify==0.9
+pelican-precompress==1.0.0
 Pygments==2.5.2
 python-dateutil==2.8.1
 pytz==2019.3
@@ -12,3 +17,4 @@ six==1.14.0
 smartypants==2.0.1
 typogrify==2.0.7
 Unidecode==1.1.1
+zopfli==0.1.7

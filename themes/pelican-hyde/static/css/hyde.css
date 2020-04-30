@@ -175,6 +175,13 @@ a.sidebar-nav-item.active:focus {
     font-size: .8rem;
     font-weight: bold;
 }
+.menu-nav-item-active {
+  background: #fff;
+  color: #515151 !important;
+}
+.menu-nav-item-active:hover {
+  text-decoration: none !important;
+}
 a.menu-nav-item:hover,
 a.menu-nav-item:focus {
   text-decoration: underline;
@@ -220,6 +227,7 @@ a.menu-nav-item:focus {
 .content {
   padding-top: 2rem;
   padding-bottom: 4rem;
+  overflow: hidden;
 }
 
 @media (min-width: 48em) {

@@ -3,11 +3,11 @@
 		<div class="sidebar-about">
 			{% block content %}
 				{% if article and article.title %}
-					<h1>
+					<h1 id="title-name">
 						{{ article.title }}
 					</h1>
 				{% else %}
-					<h1>
+					<h1 id="title-name">
 						{{ SITENAME }}
 					</h1>
 				{% endif %}
@@ -41,4 +41,19 @@
 			</a>
 		</nav>
 	</div>
+	<script>
+		var titleNameElem = document.getElementById('title-name');
+
+		if ((urlpathsplit[1] === 'categories') || (urlpathsplit[1] === 'category')) {
+			titleNameElem.innerHTML = '@@ Discover site\'s categories';
+		}
+
+		if ((urlpathsplit[1] === 'tags') || (urlpathsplit[1] === 'tag')) {
+			titleNameElem.innerHTML = '## Discover site\'s tags';
+		}
+
+		if (urlpathsplit[1] === 'archives') {
+			titleNameElem.innerHTML = '>> Discover site\'s archives';
+		}
+	</script>
 </div>
