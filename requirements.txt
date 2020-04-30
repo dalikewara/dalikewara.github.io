@@ -9,7 +9,7 @@ Markdown==3.1.1
 MarkupSafe==1.1.1
 pelican==4.2.0
 pelican-minify==0.9
-pelican-precompress
+pelican-precompress==1.0.0
 Pygments==2.5.2
 python-dateutil==2.8.1
 pytz==2019.3
