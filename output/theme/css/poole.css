@@ -398,6 +398,11 @@ tbody tr:nth-child(odd) th {
   font-size: 0.8em;
 }
 
+/* Share button */
+.share-button {
+  margin-bottom: 15px;
+}
+
 /* Related posts */
 .related {
   padding-top: 2rem;
@@ -407,6 +412,7 @@ tbody tr:nth-child(odd) th {
 .related-posts {
   padding-left: 0;
   list-style: none;
+  margin-bottom: 30px;
 }
 .related-posts h3 {
   margin-top: 0;

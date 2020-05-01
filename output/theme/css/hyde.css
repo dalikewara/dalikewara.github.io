@@ -55,6 +55,9 @@ a[href*='#modulesbadges'] {
     display: inline-block;
     margin-right: 5px;
 }
+#st-1 .st-btn > svg {
+  width: 34px !important;
+}
 
 
 /*
