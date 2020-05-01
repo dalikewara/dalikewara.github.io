@@ -1,6 +1,6 @@
 Title: pangsitpy (Python), My Starter Pack Framework In Deep Learning
 Date: 2020-04-29 23:52
-Tags: python, module, project, open source
+Tags: python, module, project, open source, framework
 
 > Check out `pangsitpy`'s latest documentation at [https://github.com/dalikewara/pangsitpy](https://github.com/dalikewara/pangsitpy)
 
