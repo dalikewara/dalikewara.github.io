@@ -35,21 +35,6 @@
       </div>
       <br/>
     {% endif %}
-    {% if page.related_posts %}
-      <div class="related-posts">
-        <p><i class="fas fa-pencil-alt"></i> Related posts:</p>
-          <ul>
-            {% for related_post in page.related_posts %}
-                <li><a href="{{ SITEURL }}/{{ related_post.slug }}">{{ related_post.title }}</a></li>
-            {% endfor %}
-          </ul>
-      </div>
-    {% endif %}
-    <div class="share-button">
-      <p><i class="fas fa-share-alt"></i> Share:</p>
-      <!-- <div class="addthis_inline_share_toolbox"></div> -->
-      <div class="sharethis-inline-share-buttons"></div>
-    </div>
     {% include 'fragments/disqus.html' %}
   {% endif %}
 </div>
