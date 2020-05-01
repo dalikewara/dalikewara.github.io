@@ -1,15 +1,13 @@
 Title: pangsitpy (Python), My Starter Pack Framework In Deep Learning
 Date: 2020-04-29 23:52
 Tags: python, module, project, open source, framework
-Description: Pangsit(py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning,
-Data Science, etc.
+Description: Pangsit(py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning, Data Science, etc.
 
 > Check out `pangsitpy`'s latest documentation at [https://github.com/dalikewara/pangsitpy](https://github.com/dalikewara/pangsitpy)
 
 # Pangsit(py)
 
-Pangsit(py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning,
-Data Science, etc.
+Pangsit(py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning, Data Science, etc.
 
 > I'll create a documentation for this later.
 
