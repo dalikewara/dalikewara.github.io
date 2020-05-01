@@ -21,21 +21,26 @@
     <priority>0.8</priority>
   </url>
 
+
   <url>
-    <loc>/aboutme.html</loc>
-    <priority>0.8</priority>
+    <loc>/pages/404.html</loc>
+    <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>/opennotes.html</loc>
-    <priority>0.8</priority>
+    <loc>/pages/aboutme.html</loc>
+    <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>/themelogs.html</loc>
-    <priority>0.8</priority>
+    <loc>/pages/opennotes.html</loc>
+    <priority>1.0</priority>
   </url>
 
+  <url>
+    <loc>/pages/themelogs.html</loc>
+    <priority>1.0</priority>
+  </url>
 
 
 </urlset>

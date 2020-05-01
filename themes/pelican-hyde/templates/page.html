@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block metadata %}
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+{% endblock %}
+
+{% block title %}
+  {{ page.title|striptags }} | {{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="post">
+  {% if page.slug != '404' %}
+    <span class="post-attr"><i class="far fa-calendar-alt"></i> {{ page.locale_date }}</span>
+    {% if page.readtime %}
+    <span class="post-attr"><i class="far fa-clock"></i> {{ page.readtime.minutes }} min(s)</span>
+    {% endif %}
+    <br/>
+  {% endif %}
+  {{ page.content }}
+  {% if page.slug != '404' %}
+    <br/>
+    <br/>
+    {% if page.history %}
+      <p><i class="fas fa-history"></i> Article history:</p>
+      <div class="article-history">
+        {% for date, msg in page.history[:POST_HISTORY_MAX_COUNT|default(5)] %}
+            <span>>> {{ date|strftime("%A %I:%M %p, %B %d %Y") }} | "{{ msg }}"</span>
+            <br>
+          {% endfor %}
+      </div>
+      <br/>
+    {% endif %}
+    <div class="share-button">
+      <p><i class="fas fa-share-alt"></i> Share:</p>
+      <div class="addthis_inline_share_toolbox"></div>
+    </div>
+    <div class="related-posts">
+      {% if page.related_posts %}
+        <br/>
+        <p><i class="fas fa-pencil-alt"></i> Related posts:</p>
+          <ul>
+            {% for related_post in page.related_posts %}
+                <li><a href="{{ SITEURL }}/{{ related_post.slug }}">{{ related_post.title }}</a></li>
+            {% endfor %}
+          </ul>
+      {% endif %}
+    </div>
+    {% include 'fragments/disqus.html' %}
+  {% endif %}
+</div>
+{% endblock %}
+
+ 
