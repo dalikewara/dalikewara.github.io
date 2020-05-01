@@ -2,6 +2,7 @@ Title: Open Notes
 Date: 2019-07-29 10:17
 Slug: opennotes
 Save_as: opennotes.html
+Description: My website's open notes
 
 > Catatan-catatan baru mungkin saya tambahkan bertahap&mdash;kalau sempat. 
 > Tag waktu disini menandakan kapan catatan itu dibuat. 

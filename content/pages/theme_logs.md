@@ -2,6 +2,7 @@ Title: Theme Logs
 Date: 2019-07-28 23:23
 Slug: themelogs
 Save_as: themelogs.html
+Description: My website's themes log
 
 # Current (@April 2020)
 

@@ -1,6 +1,7 @@
 Title: What Happend to My First PHP Framework?
 Date: 2020-05-01 18:54
 Tags: php, module, project, open source, framework
+Description: It has been long time since I published my first PHP framework `Janggelan` on GitHub. The framework was built from scratch with a core system structure inspired by Laravel and designed based on MVC concept. The goal is basicly have the framework easy to use without reducing its performance.
 
 ![confusing](https://lh3.googleusercontent.com/9IzD6XHvtYogN55oI7illXdgFXYWEJ0VWL6UoDT6fCnOqgab-tVTYQb9VghTk--cRhmn6i5bpkMoF32gQOwjOcj0z3Qa9yiaOritND4kUGNhUcyQq2CO3fBGM3o9wqKxZY5upmE_Bg=w222-no)
 

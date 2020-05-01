@@ -1,6 +1,7 @@
 Title: vcmloop, Loop Massive Data With No Worry
 Date: 2020-04-29 23:31
 Tags: javascript, nodejs, module, project, open source
+Description: Doing simple looping basicly doesn't have big impact to your RAM/CPU resource, but, it will if you performing heavy looping with massive data, for example 100k data or > 1m data.
 
 > Check out `vcmloop`'s latest documentation at [https://github.com/dalikewara/vcmloop](https://github.com/dalikewara/vcmloop)
 
