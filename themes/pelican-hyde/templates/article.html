@@ -6,6 +6,10 @@
 	<meta property="og:title" content="{{ article.title }}" />
 	<meta property="og:type" content="article" />
 	<meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+	<meta property="og:image" content="{{ article.cover_image_url }}" />
+	<meta property="twitter:title" content="{{ article.title }}">
+	<meta property="twitter:description" content="{% if article.description %}{{ article.description }}{% else %}{{ BIO }}{% endif %}">
+  	<meta property="twitter:image:src" content="{{ article.cover_image_url }}">
 {% endblock %}
 
 {% block title %}

@@ -4,8 +4,12 @@
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
   <meta property="og:title" content="{{ page.title }}" />
-  <meta property="og:type" content="article" />
+  <meta property="og:type" content="page" />
   <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+  <meta property="og:image" content="{{ page.cover_image_url }}" />
+  <meta property="twitter:title" content="{{ page.title }}">
+  <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="twitter:image:src" content="{{ page.cover_image_url }}">
 {% endblock %}
 
 {% block title %}
