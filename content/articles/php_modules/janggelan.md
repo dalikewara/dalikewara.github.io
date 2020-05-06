@@ -15,7 +15,7 @@ As simple as making route like this:
 $this->request('POST /print-hello-world @Hello::world');
 ```
 
-`janggelan` gives a quick access to **controllers** and its **methods**. Route `/print-hello-world` on the example above will run the `world` method in the `Hello` controller.
+`janggelan` gives a quick access to **controller** and its **methods**. Route `/print-hello-world` on the example above will run the `world` method in the `Hello` controller.
 
 Every framework comes with security mechanism built through inside of it. `janggelan` also provides it by giving **protecting rule** system to protect `pages`, `views` and `urls`.
 
