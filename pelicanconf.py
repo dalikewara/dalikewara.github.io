@@ -62,8 +62,13 @@ PLUGINS = [
     'readtime',
     'post_revision',
     'simple_footnotes',
-    'pelican-cover-image'
+    'pelican-cover-image',
+    'ipynb.markup'
 ]
+
+MARKUP = ('md', 'ipynb')
+
+IGNORE_FILES = ['.ipynb_checkpoints']
 
 MINIFY = {
   'remove_comments': True,

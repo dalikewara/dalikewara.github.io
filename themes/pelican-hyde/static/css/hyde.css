@@ -58,6 +58,11 @@ a[href*='#modulesbadges'] {
 #st-1 .st-btn > svg {
   width: 34px !important;
 }
+img + em {
+  display: inherit;
+  margin-top: -10px;
+  font-size: 0.6em;
+}
 
 
 /*
@@ -214,7 +219,7 @@ a.menu-nav-item:focus {
         margin-bottom: 0;
         width: 100%;
         top: 0;
-        z-index: 1;
+        z-index: 9999;
         height: 50px;
     }
 }

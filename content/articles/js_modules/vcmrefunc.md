@@ -3,7 +3,8 @@ Date: 2020-05-02 22:39
 Tags: javascript, nodejs, module, project, open source
 Description: This module helps you to repeat a process again after it completely executed. You can specify a condition to stop the repetition immediately by giving a command `repeat(false)` inside the `repeat_function`. Also, there is an option to pass a callback that will be executed after the repetition is finished.
 
-![repeated](https://lh3.googleusercontent.com/nejFukwOIhB3rJOklW5uGKFly3F3L1LDXFj3D0gODQl0CdiS2Et_OaXvIaPl3KCxSDzT8-ND0S4qTlMLLzyHSq4uCApZqv_TbcKoYyd2LolW-QprCkdOFadSCEB7higmFVLRC0V-Hg=w300-h258-no)
+![repeated](https://media.giphy.com/media/rh0W2vpayXMac/giphy.gif)
+*Photo taken from [Giphy](https://giphy.com/search/repeat)*
 
 > Check out `vcmrefunc`'s latest documentation at [https://github.com/dalikewara/vcmrefunc](https://github.com/dalikewara/vcmrefunc)
 
