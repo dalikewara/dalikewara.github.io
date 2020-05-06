@@ -66,6 +66,20 @@ PLUGINS = [
     'ipynb.markup'
 ]
 
+MARKDOWN = {
+  'extension_configs': {
+    'markdown.extensions.codehilite': {
+      'css_class': 'highlight'
+    },
+    'markdown.extensions.extra': {},
+    'markdown.extensions.meta': {},
+    'markdown.extensions.toc': {
+      'title': 'Table of Contents',
+    },
+  },
+  'output_format': 'html5',
+}
+
 MARKUP = ('md', 'ipynb')
 
 IGNORE_FILES = ['.ipynb_checkpoints']
