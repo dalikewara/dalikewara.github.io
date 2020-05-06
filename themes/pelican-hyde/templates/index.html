@@ -12,8 +12,13 @@
 	{% else %}
 		<div class="showing-recent">
 			<span><i>Hello there,</i></span>
-			<br>
-			<span><i>Get in touch with some <span class="highlight-2">recent</span> articles...</i></span>
+			<div id="simplenote-iframe" class="simplenote-iframe">
+				<iframe scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen src="http://simp.ly/p/z4rDYm" onload="onMyFrameLoad(this)"></iframe>
+				<a class="read-more" href="http://simp.ly/p/z4rDYm" style="margin-left:20px;" target="_blank">Readmore via Simplenote »</a>
+			</div>
+			<br/>
+			<span><i>You can read my <span class="highlight-2">recent</span> articles bellow...</i></span>
+			<br/>
 		</div>
 	{% endif %}
 	<div class="posts">
@@ -49,4 +54,9 @@
 		<span class="pagination-item newer">Older</span>
 		{% endif %}
 	</div>
+	<script>
+		function onMyFrameLoad() {
+		  document.getElementById('simplenote-iframe').style.display = 'block';
+		};
+	</script>
 {% endblock %}
