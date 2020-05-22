@@ -2,6 +2,7 @@ Title: "Modular Oriented" And Why We Should Doing This
 Date: 2020-05-22 09:56
 Tags: blog, post, tips, opinion, module, framework
 Description: Di dalam sebuah tim, kita mungkin memakai *framework* sebagai *standart* sistem, dan itu pasti akan sangat membantu sekali. Akan tetapi, yang saya temukan ternyata hal itu masih belum cukup untuk dikatakan efisien. Masih sering ada pekerjaan yang tidak *reusable*, artinya dia ditulis secara *inline-feature*, sehingga butuh *effort* lebih untuk mengimplementasikannya kedalam sistem lain&mdash;atau bahkan tidak bisa sama sekali. Masih sering juga terdapat lebih dari satu *flow* yang sama, namun ditulis ulang di setiap fitur, sehingga membuat *maintenance* menjadi rumit. Hingga masalah klasik seperti perbedaan *style* penulisan *code*, yang terkadang membuat bingung anggota tim.
+cover_image: https://images.unsplash.com/photo-1492355040260-cd982083603e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80
 
 ![search-modular](https://images.unsplash.com/photo-1492355040260-cd982083603e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80)
 *Photo by [Simon Goetz](https://unsplash.com/photos/feeredToXK4) on [Unsplash](https://unsplash.com/s/photos/modular)*
