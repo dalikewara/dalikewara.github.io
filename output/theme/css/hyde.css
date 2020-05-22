@@ -67,11 +67,9 @@ iframe{
   overflow:hidden;
 }
 .simplenote-iframe {
-  display: none;  
-  border-left: 5px solid rgb(193, 193, 193);
+  display: none;
   background: rgb(255, 255, 255);
-  margin-top: 40px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .simplenote-iframe iframe {
   position: relative;

@@ -76,7 +76,7 @@ def parse_for_footnotes(article_or_page_generator):
                     backlink = dom.createElement(u"a")
                     backlink.setAttribute(u"href", u"#%s" % fnbackid)
                     backlink.setAttribute(u"class", u"simple-footnote-back")
-                    backlink.appendChild(dom.createTextNode(u'\u21a9'))
+                    backlink.appendChild(dom.createTextNode(u' | \u21a9'))
                     li.appendChild(dom.createTextNode(u" "))
                     li.appendChild(backlink)
                     ol.appendChild(li)
