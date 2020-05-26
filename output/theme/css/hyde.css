@@ -66,6 +66,10 @@ img + em {
 iframe{
   overflow:hidden;
 }
+.yt-iframe {
+  width: 100%;
+  height: 400px;
+}
 .simplenote-iframe {
   display: none;
   background: rgb(255, 255, 255);

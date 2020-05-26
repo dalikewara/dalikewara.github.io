@@ -6,7 +6,7 @@ cover_image: https://lh3.googleusercontent.com/pw/ACtC-3edqd-uh6zpbd3na_fVHle6pT
 
 I was looking for great wallpapers for my MacBook and I found this one -> [https://www.youtube.com/watch?v=z5gigQrSz-o](https://www.youtube.com/watch?v=z5gigQrSz-o)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/z5gigQrSz-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="yt-iframe" src="https://www.youtube.com/embed/z5gigQrSz-o" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Now I can make my MacBook look aesthetic. This is my own creation:
 
