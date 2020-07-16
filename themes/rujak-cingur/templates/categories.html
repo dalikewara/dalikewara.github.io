@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Categories # {{ SITENAME }}{% endblock %}
+
+{% block content %}
+
+  <div id="page-categories">
+    <h1 class="hide">Categories</h1>
+    <div class="has-text-left">
+      <span class="dot-style-6 dot-yellow"></span>
+    </div>
+
+    {% set col = 2 %}
+
+    {% for x in range(0, categories|length) %}
+
+      {% if (x + 1) % col == 1 %}
+
+        <div class="tile tile-categories is-ancestor">
+
+          {% for n in range(x, x + col) %}
+
+            {% if categories[n] %}
+
+              {% set categories = categories|sort %}
+
+              {% set category, articles = categories[n] %}
+
+              <a class="tile tile-category is-parent" href="{{ SITEURL }}/category/{{ category.slug }}">
+                <article class="tile is-child">
+                  <div class="content is-vcentered has-text-centered">
+
+                    {% if CATEGORY_DESCRIPTION %}
+                    
+                      {% for name, description, image in CATEGORY_DESCRIPTION %}
+                      
+                        {% if name == category.name and image %}
+                        
+                          <img src="{{ image }}" alt="">
+                        
+                        {% endif %}
+                      
+                      {% endfor %}
+                    
+                    {% endif %}
+
+                    <p><strong><span class="dot dot-yellow"></span> @{{ category.name }}</strong> ({{ articles|count }})</p>
+
+                    {% if CATEGORY_DESCRIPTION %}
+
+                      {% for name, description, image in CATEGORY_DESCRIPTION %}
+
+                        {% if name == category.name and description %}
+
+                          <p class="subtile">{{ description }}</p>
+
+                        {% endif %}
+
+                      {% endfor %}        
+
+                    {% endif %}
+
+                  </div>
+                </article>
+              </a>
+
+            {% else %}
+
+              <div class="tile tile-category is-parent hide"></div>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
+      {% endif %}
+
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

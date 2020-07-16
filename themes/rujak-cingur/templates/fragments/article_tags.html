@@ -1,0 +1,22 @@
+{% if article.tags %}
+
+  <div class="article-tags">
+    <div class="has-text-centered">
+      <span class="dot-style-3 dot-yellow"></span>
+    </div>
+    <span>
+      <span class="dot dot-yellow"></span>
+      Tags.
+    </span>
+    <div class="tags">
+
+      {% for tag in article.tags %}
+
+        <a class="tag is-large" href="{{ SITEURL }}/tag/{{ tag.slug }}">#{{ tag.name }}</a>
+
+      {% endfor %}
+
+    </div>
+  </div>
+
+{% endif %}

@@ -1,0 +1,60 @@
+@import 'colors';
+
+/**
+ * Index: Article.
+ */
+
+#index-article-header {
+  margin: 1.25rem 0 1.25rem;
+}
+
+#index-article-header p {
+  font-size: 1em;
+}
+
+.index-article-content {
+  padding: 2.25rem;
+  // margin-bottom: 1rem;
+  // background: $white-2;
+}
+
+.index-article-content .title {
+  transition: all 0.2s;
+  margin: 1.25rem 0 2rem;
+  padding: 1.25rem;
+  // width: 200px;
+  color: $black-4;
+  background: $yellow;
+  text-shadow: none;
+}
+
+.index-article-content .title:hover {
+  text-decoration: underline;
+}
+
+#index-article-contents .index-article-content .readmore {
+  color: $black;
+  background: $none;
+}
+
+#index-article-pagination {
+  margin: 2.25rem 0 1.25rem;
+}
+
+#index-article-pagination .pagination-previous,
+#index-article-pagination .pagination-next
+{
+  font-size: 1.5em;
+  padding: 2.25rem 0;
+  width: 100%;
+  color: $black;
+  background: $white-2;
+  border: none;
+}
+
+#index-article-pagination .pagination-previous:hover,
+#index-article-pagination .pagination-next:hover
+{
+  text-decoration: none;
+  background: $yellow-5;
+}

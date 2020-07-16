@@ -1,0 +1,73 @@
+@import 'colors';
+
+/**
+ * Themes: Master light theme.
+ */
+
+.master-light {
+  color: $black;
+}
+
+.master-light a {
+  color: $yellow;
+}
+
+.master-light a:link {
+  color: $yellow;
+  background: $black-2;
+}
+
+.master-light a:visited {
+  color: $yellow;
+}
+
+.master-light a:hover {
+  color: $white;
+}
+
+.master-light a:active {
+  color: $yellow;
+}
+
+.master-light h1 {
+  text-shadow: 3px 3px 1px $yellow;
+}
+
+.master-light .navbar-start a {
+  color: $black;
+  background: $none;
+}
+
+.master-light .navbar-start a:hover {
+  color: $black-4;
+  background: $white-2;
+}
+
+.master-light .navbar-start navbar-item:hover {
+  background: $none;
+}
+
+.master-light .navbar-item-more {
+  background: $yellow;
+}
+
+.master-light .navbar-dropdown-more {
+  background: $yellow;
+}
+
+.master-light .navbar-dropdown-more .navbar-divider {
+  background: $yellow-2;
+}
+
+.master-light .navbar-dropdown-more .navbar-item {
+  color: $yellow-4;
+}
+
+.master-light .navbar-dropdown-more .navbar-item:hover {
+  color: $black-4;
+  background: $yellow-3;
+}
+
+.master-light .footer {
+  background: $none;
+}

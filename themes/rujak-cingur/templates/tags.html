@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Tags # {{ SITENAME }}{% endblock %}
+
+{% block content %}
+
+  <div id="page-tags">
+    <h1 class="hide">Tags</h1>
+    <div class="has-text-left">
+      <span class="dot-style-6 dot-yellow"></span>
+    </div>
+
+    {% set col = 4 %}
+    
+    {% for x in range(0, tags|length) %}
+    
+      {% if (x + 1) % col == 1 %}
+
+        <div class="tile tile-tags is-ancestor">
+
+          {% for n in range(x, x + col) %}
+
+            {% if tags[n] %}
+
+              {% set tags = tags|sort %}
+
+              {% set tag, articles = tags[n] %}
+
+              <a class="tile tile-tag is-parent" href="{{ SITEURL }}/tag/{{ tag.slug }}">
+                <article class="tile is-child has-text-centered">
+                  <span>({{ articles|count }})</span>
+                  <p><strong>#{{ tag.name }}</strong></p>
+                </article>
+              </a>
+
+            {% else %}
+
+              <div class="tile tile-tag is-parent hide"></div>
+
+            {% endif %}
+
+          {% endfor %}
+
+        </div>
+
+      {% endif %}
+    
+    {% endfor %}
+
+  </div>
+
+{% endblock %}

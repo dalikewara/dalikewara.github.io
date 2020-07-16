@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block metadata %}
+
+  <meta name="description" content="{% if article.description %}{{ article.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="og:description" content="{% if article.description %}{{ article.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="og:title" content="{{ article.title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
+  <meta property="og:image" content="{{ article.cover_image_url }}" />
+  <meta property="twitter:title" content="{{ article.title }}">
+  <meta property="twitter:description" content="{% if article.description %}{{ article.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="twitter:image:src" content="{{ article.cover_image_url }}">
+
+{% endblock %}
+
+{% block title %}
+
+  {{ article.title|striptags }} | {{ super() }}
+  
+{% endblock %}
+
+{% block content %}
+
+  <div id="article">
+
+    <!-- Article info -->
+    
+    {% include 'fragments/article_info.html' %}
+
+    <div class="has-text-left">
+      <span class="dot-style-6 dot-yellow"></span>
+    </div>
+    <div id="article-cover-image" class="hide">
+      <img src="{{ article.cover_image_url }}" alt="Article cover image">
+    </div>
+    <div id="article-content">
+      {{ article.content }}
+    </div>
+
+    <!-- Article tags -->
+
+    {% include 'fragments/article_tags.html' %}
+
+    <!-- Article history -->
+    
+    {% include 'fragments/article_history.html' %}
+
+    <!-- Article related posts -->
+
+    {% include 'fragments/article_related_posts.html' %}
+
+    <div class="has-text-left">
+      <span class="dot-style-7 dot-black"></span>
+    </div>
+    
+    <!-- Share button -->
+
+    {% include 'fragments/article_share_button.html' %}
+
+    <!-- Disqus -->
+
+    {% include 'fragments/disqus.html' %}
+
+  </div>
+
+{% endblock %}

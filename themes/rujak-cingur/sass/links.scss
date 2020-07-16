@@ -1,0 +1,22 @@
+@import 'colors';
+
+/**
+ * Links.
+ */
+
+.master-light a:link {
+  border-radius: 2px;
+  text-decoration: none;
+}
+
+.master-light a:visited {
+  text-decoration: underline;
+}
+
+.master-light a:hover {
+  text-decoration: underline;
+}
+
+.master-light a:active {
+  text-decoration: none;
+}

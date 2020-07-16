@@ -1,0 +1,32 @@
+@import 'colors';
+
+/**
+ * Base.
+ */
+
+a,
+body,
+html
+{
+  transition: all 0.2s;
+}
+
+.hide {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img + em {
+  display: inherit;
+  font-size: 0.6em;
+}

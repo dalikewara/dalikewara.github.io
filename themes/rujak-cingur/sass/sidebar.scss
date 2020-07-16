@@ -1,0 +1,49 @@
+@import 'colors';
+
+/**
+ * Sidebar.
+ */
+
+#sidebar {
+  padding: 1.25rem;
+}
+
+#sidebar h1 {
+  font-size: 6em;
+  line-height: 0.9;
+  margin-bottom: 0;
+  margin-top: 0;
+  text-shadow: 5px 5px 1px $yellow;
+}
+
+#sidebar h1 a {
+  text-shadow: none;
+}
+
+#sidebar-title {
+  cursor: default;
+}
+
+#sidebar-author {
+  border-radius: 3px;
+  margin-top: 2.25rem;
+  padding: 0.8rem;
+  background: $white-2;
+}
+
+#sidebar-social {
+  margin-top: 1.25rem;
+}
+
+#sidebar-social .buttons .button {
+  transition: all 0.2s;
+  border: 1px solid $black;
+  background: $none;
+  color: $black;
+}
+
+#sidebar-social .buttons .button:hover {
+  background: $black;
+  color: $yellow;
+  text-decoration: none;
+}

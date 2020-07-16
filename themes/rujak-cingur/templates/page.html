@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block metadata %}
+
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="og:title" content="{{ page.title }}" />
+  <meta property="og:type" content="page" />
+  <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
+  <meta property="og:image" content="{{ page.cover_image_url }}" />
+  <meta property="twitter:title" content="{{ page.title }}">
+  <meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ BIO }}{% endif %}">
+  <meta property="twitter:image:src" content="{{ page.cover_image_url }}">
+
+{% endblock %}
+
+{% block title %}
+
+  {{ page.title|striptags }} | {{ super() }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div id="article">
+    <div class="has-text-left">
+      <span class="dot-style-6 dot-yellow"></span>
+    </div>
+    <div id="article-cover-image" class="hide">
+      <img src="{{ page.cover_image_url }}" alt="Page cover image">
+    </div>
+    <div id="article-content">
+      {{ page.content }}
+    </div>
+    
+    <!-- Page history -->
+    
+    {% include 'fragments/page_history.html' %}
+    
+  </div>
+
+{% endblock %}

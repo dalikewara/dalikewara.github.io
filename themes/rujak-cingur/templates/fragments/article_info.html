@@ -1,0 +1,24 @@
+<div class="article-info">
+  <div class="article-info-date">
+    <span class="icon">
+      <i class="far fa-calendar-alt"></i>
+    </span>
+    <span>
+      {{ article.locale_date }}
+    </span>
+  </div>
+  <div class="article-info-readtime">
+    <span class="icon">
+      <i class="far fa-clock"></i>
+    </span>
+    <span>
+  
+      {% if article.readtime %}
+      {{ article.readtime.minutes }} min(s)
+      {% else %}
+      -
+      {% endif %}
+  
+    </span>
+  </div>
+</div>

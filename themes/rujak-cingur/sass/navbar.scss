@@ -1,0 +1,36 @@
+@import 'colors';
+
+/**
+ * Navbar.
+ */
+
+#navbar {
+  margin-bottom: 1.25rem;
+}
+
+.navbar {
+  min-height: 4rem;
+}
+
+.navbar-menu {
+  box-shadow: none;
+}
+
+.navbar-item-more {
+  padding: 0 8px;
+  margin: 0;
+  border-radius: 2px;
+  cursor: default;
+}
+
+.navbar-item {
+  transition: all 0.2s;
+}
+
+.navbar-item:hover {
+  text-decoration: none;
+}
+
+.navbar-dropdown-more .navbar-item:hover {
+  text-decoration: none;
+}

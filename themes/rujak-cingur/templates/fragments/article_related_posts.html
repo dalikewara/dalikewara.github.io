@@ -1,0 +1,24 @@
+{% if article.related_posts %}
+
+  <div class="article-related-posts">
+    <div class="has-text-centered">
+      <span class="dot-style-5 dot-yellow"></span>
+    </div>
+    <div class="related-posts">
+      <span>
+        <span class="dot dot-yellow"></span>
+        Related posts.
+      </span>
+      <div class="columns is-desktop">
+        
+        {% for related_post in article.related_posts %}
+        
+          <a class="column" href="{{ SITEURL }}/{{ related_post.slug }}">{{ related_post.title }}</a>
+        
+        {% endfor %}
+
+      </div>
+    </div>
+  </div>
+
+{% endif %}
