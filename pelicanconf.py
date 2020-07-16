@@ -16,7 +16,7 @@ THEME = 'themes/rujak-cingur'
 
 AUTHOR = 'Dali Kewara'
 SITENAME = 'An unexpected journey'
-BIO = 'Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey.'
+BIO = 'Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey. His life motto is "Make it simple but Spectacular!"'
 KEYWORDS = 'dalikewara, dali kewara, blog, personal, website, programmer, developer, daily, work, person, journey, art, writing, business'
 SITEURL = ''
 
