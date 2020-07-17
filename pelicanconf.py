@@ -86,7 +86,7 @@ PLUGINS = [
 MARKDOWN = {
   'extension_configs': {
     'markdown.extensions.codehilite': {
-      'css_class': 'highlight'
+      'use_pygments': False
     },
     'markdown.extensions.extra': {},
     'markdown.extensions.meta': {},

@@ -7,7 +7,6 @@ dist
 *.pyc
 *.pyo
 __pycache__
-yuicorepy/__pycache__
 .cache
 .ipynb_checkpoints
 .pytest_cache

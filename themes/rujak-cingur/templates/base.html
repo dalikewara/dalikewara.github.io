@@ -34,6 +34,11 @@
     
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bulma.min.css" />
     <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/master.min.css" />
+    <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/atom-one-dark.min.css" />
+
+    <!-- JS -->
+
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/highlight.min.js"></script>
 
     <!-- RSS -->
 
@@ -106,6 +111,10 @@
       var thisYear = now.getFullYear();
       var thisHours = now.getHours();
       var thisDay = now.getDay();
+
+      // HighlightJS
+
+      hljs.initHighlightingOnLoad();
     </script>
   </head>
 

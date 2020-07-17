@@ -45,3 +45,16 @@ img[src*='#badge'] {
     margin-right: 0.5rem;
     background: $none !important;
 }
+
+pre,
+.content pre
+{
+  padding: 0;
+  background: $none;
+  word-wrap: normal !important;
+}
+
+code {
+  background: $yellow-6;
+  color: $yellow-7;
+}
