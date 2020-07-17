@@ -148,36 +148,50 @@
         </div>
       </div>
     </div>
-  </body>
 
-  <!-- Tasks -->
+    <!-- Tasks -->
 
-  <script>
+    <script>
+      
+      /**
+       * Netlify CMS
+       */
 
-    /**
-     * Toggle burger navbar.
-     */
-
-    function toggleBurgerNavbar() {
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-      if ($navbarBurgers.length > 0) {
-        $navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-          });
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    }
 
-    /**
-     * DOM content loaded trigger.
-     */
-     
-    document.addEventListener('DOMContentLoaded', () => {
-      toggleBurgerNavbar()
-    });
-  </script>
+      /**
+       * Toggle burger navbar.
+       */
+
+      function toggleBurgerNavbar() {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach(function(el) {
+            el.addEventListener('click', function() {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+      }
+
+      /**
+       * DOM content loaded trigger.
+       */
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        toggleBurgerNavbar()
+      });
+    </script>
+  </body>
 </html>

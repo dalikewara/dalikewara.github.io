@@ -26,31 +26,45 @@
     }
   </script></div></div></div><div class="column highlight-full"><div id="content" class="content"><div id="page-archives"><h1 class="hide">Archives</h1><div class="has-text-left"><span class="dot-style-6 dot-yellow"></span></div><div class="page-archive"><dt><span class="dot dot-black-2"></span> Fri 22 May 2020</dt><dd><a href="/modular-oriented-and-why-we-should-doing-this">"Modular Oriented" And Why We Should Doing This</a></dd></div><div class="page-archive"><dt><span class="dot dot-black-2"></span> Sat 02 May 2020</dt><dd><a href="/vcmrefunc-this-is-how-to-repeat-a-process-correctly">vcmrefunc, This Is How To Repeat A Process Correctly</a></dd></div><div class="page-archive"><dt><span class="dot dot-black-2"></span> Fri 01 May 2020</dt><dd><a href="/what-happend-to-my-first-php-framework">What Happend to My First PHP Framework?</a></dd></div><div class="page-archive"><dt><span class="dot dot-black-2"></span> Wed 29 April 2020</dt><dd><a href="/pangsitpy-python-my-starter-pack-framework-in-deep-learning">pangsitpy (Python), My Starter Pack Framework In Deep Learning</a></dd></div><div class="page-archive"><dt><span class="dot dot-black-2"></span> Wed 29 April 2020</dt><dd><a href="/vcmcemtex-deal-with-banks-transaction-file-format">vcmcemtex, Deal With Banks Transaction File Format</a></dd></div><div class="page-archive"><dt><span class="dot dot-black-2"></span> Wed 29 April 2020</dt><dd><a href="/vcmloop-loop-massive-data-with-no-worry">vcmloop, Loop Massive Data With No Worry</a></dd></div><div class="page-archive"><dt><span class="dot dot-black-2"></span> Wed 29 April 2020</dt><dd><a href="/vcmpad-a-string-padding-generator">vcmpad, a String Padding Generator</a></dd></div></div></div><div id="footer"><footer class="footer"><div class="content has-text-right"><span class="dot-style-2 dot-yellow"></span><p><img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/744f164e-9fb1-48fc-8eae-9db47ff30e76/deploy-status"><br><span class="dot dot-yellow"></span> Proudly powered by <a href="https://blog.getpelican.com/">Pelican</a> (a static site generator written in Python) <br> and <a href="https://bulma.io/">Bulma</a> (a free & open source CSS framework based on Flexbox). <br><span class="dot dot-yellow"></span><span class="icon"><i class="fa fa-code"></i></span> with <span class="icon"><i class="fa fa-heart"></i></span> at <a href="https://github.com/dalikewara/dalikewara.github.io/">Github</a> and hosted on <a href="https://www.netlify.com/">Netlify</a>. <br><span class="dot dot-yellow"></span> 2017 - <span id="footer-current-year"></span> © <strong>Dali Kewara</strong>. </p></div></footer></div><script>
   document.getElementById('footer-current-year').innerHTML = thisYear || new Date().getFullYear();
-</script></div></div></div></div></body><script>
+</script></div></div></div></div><script>
+      
+      /**
+       * Netlify CMS
+       */
 
-    /**
-     * Toggle burger navbar.
-     */
-
-    function toggleBurgerNavbar() {
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-      if ($navbarBurgers.length > 0) {
-        $navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-          });
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    }
 
-    /**
-     * DOM content loaded trigger.
-     */
-     
-    document.addEventListener('DOMContentLoaded', () => {
-      toggleBurgerNavbar()
-    });
-  </script></html>
+      /**
+       * Toggle burger navbar.
+       */
+
+      function toggleBurgerNavbar() {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach(function(el) {
+            el.addEventListener('click', function() {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+      }
+
+      /**
+       * DOM content loaded trigger.
+       */
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        toggleBurgerNavbar()
+      });
+    </script></body></html>

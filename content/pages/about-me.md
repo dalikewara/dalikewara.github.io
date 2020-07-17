@@ -1,8 +1,10 @@
+---
 Title: About Me
 Date: 2019-12-22 22:23
 Slug: about-me
 Save_as: about-me.html
 Description: Pria yang mencintai tidur, berfilosofi, dan memahami alam. Dimanapun tempatnya, yang dicari-cari selalu Nasi Goreng, dan Es Jeruk Manis&mdash;karna belakangan sadar kalau minum Es Teh setelah makan itu tidak baik.
+---
 
 ![Dali Kewara Pics](https://lh3.googleusercontent.com/qNhgG8q9hQHc4nKZuLE18Ue1kX4BUgAgw8-ZiQ6wwh7NSd_NLYluC11ttSeSCqMGldPi18cBK9knvld8r7mk76qqRqNggjppOaUWWY4MRxuJft_vyLeOkaFiKufQCpATnB_1cZWH3w=s300-no)
 

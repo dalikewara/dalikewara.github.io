@@ -28,15 +28,29 @@ DEFAULT_LANG = 'en'
 
 ARTICLE_PATHS = ['articles']
 PAGE_PATHS = ['pages']
-STATIC_PATHS = ['images', 'articles', 'extra/robots.txt', 'extra/favicon.ico']
+
 EXTRA_PATH_METADATA = {
-    'extra/robots.txt': {'path': 'robots.txt'},
-    'extra/favicon.ico': {'path': 'favicon.ico'}
+  'extra/robots.txt': {'path': 'robots.txt'},
+  'extra/favicon.ico': {'path': 'favicon.ico'},
+  'admin/config.yml': {'path': 'config.yml'}
 }
+
+# STATIC PATHS
+
+STATIC_PATHS = [
+  'images', 
+  'articles', 
+  'extra/robots.txt', 
+  'extra/favicon.ico', 
+  'admin/index.html', 
+  'admin/config.yml'
+]
 
 # DIRECT TEMPLATES
 
 DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'sitemap')
+
+# SITEMAP
 
 SITEMAP_SAVE_AS = 'sitemap.xml'
 

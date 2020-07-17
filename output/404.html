@@ -26,31 +26,45 @@
     }
   </script></div></div></div><div class="column highlight-full"><div id="content" class="content"><div id="article"><div class="has-text-left"><span class="dot-style-6 dot-yellow"></span></div><div id="article-cover-image" class="hide"><img src="https://lh3.googleusercontent.com/t-hryOxzsaAKrfhedprLLmAc2sSeErMEAIX740NjiAwhGwJyzWkqPt_izjy13Ji3ItrZOyS0NO5ngqWX3zutNFKveO9iIvzuXikvMQ-XdHUitQ4B_gIMfh0nZsAYnH-UUwmpXbO0nA=s261-no" alt="Page cover image"></div><div id="article-content"><h1 id="the-requested-item-could-not-be-located-perhaps-you-might-want-to-check-the-archives">The requested item could not be located. Perhaps you might want to check the <a href="/archives">Archives</a>?</h1><p><img alt="404 gif" src="https://media.giphy.com/media/fAoCvHX831XIY6yp8j/200w_d.gif"><em>Photo taken from <a href="https://giphy.com/search/not-found">Giphy</a></em></p></div><div class="article-history"><div class="has-text-centered"><span class="dot-style-4 dot-black-2"></span></div><div class="history"><span><span class="dot dot-black-2"></span> Change logs. </span><ul><li>Friday 12:33 AM, July 17 2020 | "new theme 'rujak cingur' and some major changes"</li><li>Wednesday 06:26 PM, May 06 2020 | "add readme & license"</li><li>Friday 04:17 PM, May 01 2020 | "reworked article pages & add 404 custom page"</li></ul></div></div></div></div><div id="footer"><footer class="footer"><div class="content has-text-right"><span class="dot-style-2 dot-yellow"></span><p><img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/744f164e-9fb1-48fc-8eae-9db47ff30e76/deploy-status"><br><span class="dot dot-yellow"></span> Proudly powered by <a href="https://blog.getpelican.com/">Pelican</a> (a static site generator written in Python) <br> and <a href="https://bulma.io/">Bulma</a> (a free & open source CSS framework based on Flexbox). <br><span class="dot dot-yellow"></span><span class="icon"><i class="fa fa-code"></i></span> with <span class="icon"><i class="fa fa-heart"></i></span> at <a href="https://github.com/dalikewara/dalikewara.github.io/">Github</a> and hosted on <a href="https://www.netlify.com/">Netlify</a>. <br><span class="dot dot-yellow"></span> 2017 - <span id="footer-current-year"></span> © <strong>Dali Kewara</strong>. </p></div></footer></div><script>
   document.getElementById('footer-current-year').innerHTML = thisYear || new Date().getFullYear();
-</script></div></div></div></div></body><script>
+</script></div></div></div></div><script>
+      
+      /**
+       * Netlify CMS
+       */
 
-    /**
-     * Toggle burger navbar.
-     */
-
-    function toggleBurgerNavbar() {
-      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-      if ($navbarBurgers.length > 0) {
-        $navbarBurgers.forEach(el => {
-          el.addEventListener('click', () => {
-            const target = el.dataset.target;
-            const $target = document.getElementById(target);
-            el.classList.toggle('is-active');
-            $target.classList.toggle('is-active');
-          });
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", function(user) {
+          if (!user) {
+            window.netlifyIdentity.on("login", function() {
+              document.location.href = "/admin/";
+            });
+          }
         });
       }
-    }
 
-    /**
-     * DOM content loaded trigger.
-     */
-     
-    document.addEventListener('DOMContentLoaded', () => {
-      toggleBurgerNavbar()
-    });
-  </script></html>
+      /**
+       * Toggle burger navbar.
+       */
+
+      function toggleBurgerNavbar() {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+          $navbarBurgers.forEach(function(el) {
+            el.addEventListener('click', function() {
+              const target = el.dataset.target;
+              const $target = document.getElementById(target);
+              el.classList.toggle('is-active');
+              $target.classList.toggle('is-active');
+            });
+          });
+        }
+      }
+
+      /**
+       * DOM content loaded trigger.
+       */
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        toggleBurgerNavbar()
+      });
+    </script></body></html>

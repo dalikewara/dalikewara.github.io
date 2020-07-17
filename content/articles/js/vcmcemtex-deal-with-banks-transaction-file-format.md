@@ -1,7 +1,9 @@
+---
 Title: vcmcemtex, Deal With Banks Transaction File Format
 Date: 2020-04-29 23:40
 Tags: javascript, nodejs, module, project, open source
 Description: `Cemtext` file format is a format used by banks to allow for batch transactions. Some bank have adopted this format by default, but each others can have a different format style. This module allows you to create a cemtext format by your own style&mdash;that means you can use it to meet your bank cemtext requirements. This module is fast, easy to understand, and more humanable.
+---
 
 > Check out `vcmcemtex`'s latest documentation at [https://github.com/dalikewara/vcmcemtex](https://github.com/dalikewara/vcmcemtex)
 
