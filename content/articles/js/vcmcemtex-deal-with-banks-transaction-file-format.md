@@ -5,16 +5,16 @@ Description: `Cemtext` file format is a format used by banks to allow for batch 
 
 > Check out `vcmcemtex`'s latest documentation at [https://github.com/dalikewara/vcmcemtex](https://github.com/dalikewara/vcmcemtex)
 
-[![npm package](https://nodei.co/npm/vcmcemtex.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vcmcemtex/)
+![npm package](https://nodei.co/npm/vcmcemtex.png?downloads=true&downloadRank=true&stars=true#badge)
 
-[![version](https://img.shields.io/npm/v/vcmcemtex.svg?style=flat)](https://img.shields.io/npm/v/vcmcemtex.svg?style=flat#modulesbadges)
-[![build](https://img.shields.io/circleci/project/github/dalikewara/vcmcemtex.svg?style=flat)](https://img.shields.io/circleci/project/github/dalikewara/vcmcemtex.svg?style=flat#modulesbadges)
-[![language](https://img.shields.io/github/languages/top/dalikewara/vcmcemtex.svg?style=flat)](https://img.shields.io/github/languages/top/dalikewara/vcmcemtex.svg?style=flat#modulesbadges)
-[![download](https://img.shields.io/npm/dt/vcmcemtex.svg?style=flat)](https://img.shields.io/npm/dt/vcmcemtex.svg?style=flat#modulesbadges)
-[![dependents](https://img.shields.io/librariesio/dependents/npm/vcmcemtex.svg?style=flat)](https://img.shields.io/librariesio/dependents/npm/vcmcemtex.svg?style=flat#modulesbadges)
-[![issue](https://img.shields.io/github/issues/dalikewara/vcmcemtex.svg?style=flat)](https://img.shields.io/github/issues/dalikewara/vcmcemtex.svg?style=flat#modulesbadges)
-[![last_commit](https://img.shields.io/github/last-commit/dalikewara/vcmcemtex.svg?style=flat)](https://img.shields.io/github/last-commit/dalikewara/vcmcemtex.svg?style=flat#modulesbadges)
-[![license](https://img.shields.io/npm/l/vcmcemtex.svg?style=flat)](https://img.shields.io/npm/l/vcmcemtex.svg?style=flat#modulesbadges)
+![version](https://img.shields.io/npm/v/vcmcemtex.svg?style=flat#badge)
+![build](https://img.shields.io/circleci/project/github/dalikewara/vcmcemtex.svg?style=flat#badge)
+![language](https://img.shields.io/github/languages/top/dalikewara/vcmcemtex.svg?style=flat#badge)
+![download](https://img.shields.io/npm/dt/vcmcemtex.svg?style=flat#badge)
+![dependents](https://img.shields.io/librariesio/dependents/npm/vcmcemtex.svg?style=flat#badge)
+![issue](https://img.shields.io/github/issues/dalikewara/vcmcemtex.svg?style=flat#badge)
+![last_commit](https://img.shields.io/github/last-commit/dalikewara/vcmcemtex.svg?style=flat#badge)
+![license](https://img.shields.io/npm/l/vcmcemtex.svg?style=flat#badge)
 
 # An universal & customable cemtext generator for batch transactions
 `Cemtext` file format is a format used by banks to allow for batch transactions. Some bank have adopted this format by default, but each others can have a different format style. This module allows you to create a cemtext format by your own style&mdash;that means you can use it to meet your bank cemtext requirements. This module is fast, easy to understand, and more humanable.

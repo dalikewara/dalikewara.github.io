@@ -35,3 +35,13 @@ img + em {
   display: inherit;
   font-size: 0.6em;
 }
+
+a + img {
+  background: $none;
+}
+
+img[src*='#badge'] {
+    display: inline-block;
+    margin-right: 0.5rem;
+    background: $none !important;
+}

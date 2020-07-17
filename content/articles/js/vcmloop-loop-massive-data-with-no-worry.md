@@ -5,16 +5,16 @@ Description: Doing simple looping basicly doesn't have big impact to your RAM/CP
 
 > Check out `vcmloop`'s latest documentation at [https://github.com/dalikewara/vcmloop](https://github.com/dalikewara/vcmloop)
 
-[![npm package](https://nodei.co/npm/vcmloop.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vcmloop/)
+![npm package](https://nodei.co/npm/vcmloop.png?downloads=true&downloadRank=true&stars=true#badge)
 
-[![version](https://img.shields.io/npm/v/vcmloop.svg?style=flat)](https://img.shields.io/npm/v/vcmloop.svg?style=flat#modulesbadges)
-[![build](https://img.shields.io/circleci/project/github/dalikewara/vcmloop.svg?style=flat)](https://img.shields.io/circleci/project/github/dalikewara/vcmloop.svg?style=flat#modulesbadges)
-[![language](https://img.shields.io/github/languages/top/dalikewara/vcmloop.svg?style=flat)](https://img.shields.io/github/languages/top/dalikewara/vcmloop.svg?style=flat#modulesbadges)
-[![download](https://img.shields.io/npm/dt/vcmloop.svg?style=flat)](https://img.shields.io/npm/dt/vcmloop.svg?style=flat#modulesbadges)
-[![dependents](https://img.shields.io/librariesio/dependents/npm/vcmloop.svg?style=flat)](https://img.shields.io/librariesio/dependents/npm/vcmloop.svg?style=flat#modulesbadges)
-[![issue](https://img.shields.io/github/issues/dalikewara/vcmloop.svg?style=flat)](https://img.shields.io/github/issues/dalikewara/vcmloop.svg?style=flat#modulesbadges)
-[![last_commit](https://img.shields.io/github/last-commit/dalikewara/vcmloop.svg?style=flat)](https://img.shields.io/github/last-commit/dalikewara/vcmloop.svg?style=flat#modulesbadges)
-[![license](https://img.shields.io/npm/l/vcmloop.svg?style=flat)](https://img.shields.io/npm/l/vcmloop.svg?style=flat#modulesbadges)
+![version](https://img.shields.io/npm/v/vcmloop.svg?style=flat#badge)
+![build](https://img.shields.io/circleci/project/github/dalikewara/vcmloop.svg?style=flat#badge)
+![language](https://img.shields.io/github/languages/top/dalikewara/vcmloop.svg?style=flat#badge)
+![download](https://img.shields.io/npm/dt/vcmloop.svg?style=flat#badge)
+![dependents](https://img.shields.io/librariesio/dependents/npm/vcmloop.svg?style=flat#badge)
+![issue](https://img.shields.io/github/issues/dalikewara/vcmloop.svg?style=flat#badge)
+![last_commit](https://img.shields.io/github/last-commit/dalikewara/vcmloop.svg?style=flat#badge)
+![license](https://img.shields.io/npm/l/vcmloop.svg?style=flat#badge)
 
 # An interval-based looping method for massive data
 Doing simple looping basicly doesn't have big impact to your RAM/CPU resource, but, it will if you performing heavy looping with massive data, for example 100k data or > 1m data.

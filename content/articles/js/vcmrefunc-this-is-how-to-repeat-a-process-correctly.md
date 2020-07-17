@@ -9,16 +9,16 @@ cover_image: https://media.giphy.com/media/rh0W2vpayXMac/giphy.gif
 
 > Check out `vcmrefunc`'s latest documentation at [https://github.com/dalikewara/vcmrefunc](https://github.com/dalikewara/vcmrefunc)
 
-[![npm package](https://nodei.co/npm/vcmrefunc.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vcmrefunc/)
+![npm package](https://nodei.co/npm/vcmrefunc.png?downloads=true&downloadRank=true&stars=true#badge)
 
-[![version](https://img.shields.io/npm/v/vcmrefunc.svg?style=flat)](https://img.shields.io/npm/v/vcmrefunc.svg?style=flat#modulesbadges)
-[![build](https://img.shields.io/circleci/project/github/dalikewara/vcmrefunc.svg?style=flat)](https://img.shields.io/circleci/project/github/dalikewara/vcmrefunc.svg?style=flat#modulesbadges)
-[![language](https://img.shields.io/github/languages/top/dalikewara/vcmrefunc.svg?style=flat)](https://img.shields.io/github/languages/top/dalikewara/vcmrefunc.svg?style=flat#modulesbadges)
-[![download](https://img.shields.io/npm/dt/vcmrefunc.svg?style=flat)](https://img.shields.io/npm/dt/vcmrefunc.svg?style=flat#modulesbadges)
-[![dependents](https://img.shields.io/librariesio/dependents/npm/vcmrefunc.svg?style=flat)](https://img.shields.io/librariesio/dependents/npm/vcmrefunc.svg?style=flat#modulesbadges)
-[![issue](https://img.shields.io/github/issues/dalikewara/vcmrefunc.svg?style=flat)](https://img.shields.io/github/issues/dalikewara/vcmrefunc.svg?style=flat#modulesbadges)
-[![last_commit](https://img.shields.io/github/last-commit/dalikewara/vcmrefunc.svg?style=flat)](https://img.shields.io/github/last-commit/dalikewara/vcmrefunc.svg?style=flat#modulesbadges)
-[![license](https://img.shields.io/npm/l/vcmrefunc.svg?style=flat)](https://img.shields.io/npm/l/vcmrefunc.svg?style=flat#modulesbadges)
+![version](https://img.shields.io/npm/v/vcmrefunc.svg?style=flat#badge)
+![build](https://img.shields.io/circleci/project/github/dalikewara/vcmrefunc.svg?style=flat#badge)
+![language](https://img.shields.io/github/languages/top/dalikewara/vcmrefunc.svg?style=flat#badge)
+![download](https://img.shields.io/npm/dt/vcmrefunc.svg?style=flat#badge)
+![dependents](https://img.shields.io/librariesio/dependents/npm/vcmrefunc.svg?style=flat#badge)
+![issue](https://img.shields.io/github/issues/dalikewara/vcmrefunc.svg?style=flat#badge)
+![last_commit](https://img.shields.io/github/last-commit/dalikewara/vcmrefunc.svg?style=flat#badge)
+![license](https://img.shields.io/npm/l/vcmrefunc.svg?style=flat#badge)
 
 # The right way to repeat a process
 
