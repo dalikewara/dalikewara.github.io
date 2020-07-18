@@ -31,8 +31,7 @@ PAGE_PATHS = ['pages']
 
 EXTRA_PATH_METADATA = {
   'extra/robots.txt': {'path': 'robots.txt'},
-  'extra/favicon.ico': {'path': 'favicon.ico'},
-  'admin/config.yml': {'path': 'config.yml'}
+  'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
 # STATIC PATHS
@@ -42,8 +41,8 @@ STATIC_PATHS = [
   'articles', 
   'extra/robots.txt', 
   'extra/favicon.ico', 
-  'admin/index.html', 
-  'admin/config.yml'
+  'enter-root/index.html', 
+  'enter-root/config.yml'
 ]
 
 # DIRECT TEMPLATES
