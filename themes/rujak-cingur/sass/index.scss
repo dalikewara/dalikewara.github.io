@@ -19,10 +19,10 @@
 .index-article-content .title {
   transition: all 0.2s;
   margin: 1.25rem 0 2rem;
-  padding: 1.25rem;
   color: $black-4;
   background: $yellow;
   text-shadow: none;
+  display: inline;
 }
 
 .index-article-content .title:hover {
