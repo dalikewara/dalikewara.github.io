@@ -14,25 +14,59 @@ NETLIFY_URL = 'https://www.netlify.com/'
 
 THEME = 'themes/rujak-cingur'
 
+# SITE INFO
+
 AUTHOR = 'Dali Kewara'
+AUTHOR_NICKNAME = 'Dali'
 SITENAME = 'An unexpected journey'
 BIO = 'Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey. His life motto is "Make it simple but Spectacular!"'
 KEYWORDS = 'dalikewara, dali kewara, blog, personal, website, programmer, developer, daily, work, person, journey, art, writing, business'
 SITEURL = ''
+SITE_LOGO = 'https://lh3.googleusercontent.com/pw/ACtC-3dBME0xNP8kojcslSG6fOJxYTgQ_30vbVGvWb2DIz0M6GFQ1DdEl7fUhruizL0uuSjQpx_3j3htACAV92-EYtbrj5bkr0zdfiWOa6z87OXt_zr9T1OkXQXoIOu2Gx3AJcAtSl7ZVbNKkTo36LJYmE9v=w900-h300-no'
 
-PATH = 'content'
+# TIMEZONE
 
 TIMEZONE = 'Asia/Jakarta'
 
+# LANG
+
 DEFAULT_LANG = 'en'
 
+# PATHS
+
+PATH = 'content'
 ARTICLE_PATHS = ['articles']
 PAGE_PATHS = ['pages']
+
+# EXTRA PATH METADATA
 
 EXTRA_PATH_METADATA = {
   'extra/robots.txt': {'path': 'robots.txt'},
   'extra/favicon.ico': {'path': 'favicon.ico'}
 }
+
+# PAGE LINKS
+
+PAGE_LINK = {
+  'about': 'about-me',
+  'categories': 'categories',
+  'tags': 'tags',
+  'archives': 'archives',
+}
+
+# NAVBAR MENU
+
+NAVBAR_MENU = [
+  ('item', 'Overview', 'yellow', ''),
+  ('item', 'About', 'yellow', PAGE_LINK['about']),
+  ('dropdown', 'More...', 'black', [
+    ('item', 'Categories', 'black', PAGE_LINK['categories']),
+    ('item', 'Tags', 'black', PAGE_LINK['tags']),
+    ('item', 'Archives', 'black', PAGE_LINK['archives']),
+    ('separator', '', '', ''),
+    ('disable', 'Report an issue', 'red', '')
+  ])
+]
 
 # STATIC PATHS
 
@@ -84,14 +118,14 @@ SOCIAL = (('instagram', 'Instagram', 'https://instagram.com/harukii_kun'),
 
 PLUGIN_PATHS = ['plugins']
 PLUGINS = [
-    'minify',
-    'pelican_precompress',
-    'related_posts',
-    'readtime',
-    'post_revision',
-    'simple_footnotes',
-    'pelican-cover-image',
-    'ipynb.markup'
+  'minify',
+  'pelican_precompress',
+  'related_posts',
+  'readtime',
+  'post_revision',
+  'simple_footnotes',
+  'pelican-cover-image',
+  'ipynb.markup'
 ]
 
 # MARKDOWN
@@ -132,11 +166,11 @@ PRECOMPRESS_GZIP = True
 PRECOMPRESS_ZOPFLI = True
 PRECOMPRESS_BROTLI = True
 PRECOMPRESS_TEXT_EXTENSIONS = {
-    '.atom',
-    '.css',
-    '.html',
-    '.js',
-    '.rss'
+  '.atom',
+  '.css',
+  '.html',
+  '.js',
+  '.rss'
 }
 
 # PAGINATION
@@ -154,4 +188,12 @@ CATEGORY_DESCRIPTION = [
   ('js', 'Articles about Javascript and NodeJS. Many of them are information about my JS modules and the documentations.', 'https://lh3.googleusercontent.com/pw/ACtC-3cqQHa1FMrGyydG9XrSsaNZI-s2A4kincR_hoC8pPZEwDMrY4pPjJw0ULFXE3LhJ-s4MOKm-nN_y2CyBAKYiM_JdRVtRj8jYkX7EqsOFVvVN6Up9lHY5LrrdfJDNgVjBS1si8kHg3WFjPT5pQ-Yz9qU=w1150-h524-no'),
   ('php', 'Articles about PHP. Many of them are information about my PHP modules and the documentations.', 'https://lh3.googleusercontent.com/pw/ACtC-3cDS4OSTV1ntDVgXxdX-yYJAPLeDuXFYBsTZGl22-mlkvZWXM7_76xoCTA-JkRVtybEZarfvn2sZvkghAu-1kc4fkPjwN3in8xStMzpgnMqG-XGzOQzcw7835_FDoTE3I5tw7jeEIME8BmBId4xDPG8=w1130-h486-no'),
   ('python', 'Articles about Python. Many of them are information about my Python modules and the documentations.', 'https://lh3.googleusercontent.com/pw/ACtC-3dq2uWImDux39myT4O4FsuuadAxkCy0OlcKb8e_OyCjK5yTWF1t0jQYZ3kXHGuNW4YOexNc2N2XORE0eLFluH-KRzCuao1ZoNdw_GxQwYx_I4hvvqX7HpaVcNRixxG9JOU3sIrue4XtEL8Nilwg055F=w1040-h510-no')
+]
+
+# OVERVIEW INFO
+
+OVERVIEW_INFO = [
+  'Code in NodeJS, Python and PHP',
+  'Play DOTA 2',
+  '<a href="' + SITEURL + '/' + PAGE_LINK['about'] + '">Learn more about ' + AUTHOR_NICKNAME + ' >></a>'
 ]

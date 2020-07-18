@@ -4,7 +4,7 @@
       <div class="navbar-brand" role="navigation" aria-label="main navigation">
         <a class="navbar-item" href="{{ SITEURL }}/">
           <img
-            src="https://lh3.googleusercontent.com/pw/ACtC-3dBME0xNP8kojcslSG6fOJxYTgQ_30vbVGvWb2DIz0M6GFQ1DdEl7fUhruizL0uuSjQpx_3j3htACAV92-EYtbrj5bkr0zdfiWOa6z87OXt_zr9T1OkXQXoIOu2Gx3AJcAtSl7ZVbNKkTo36LJYmE9v=w900-h300-no">
+            src="{{ SITE_LOGO }}">
         </a>
         <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
           data-target="navbarMenuTarget">
@@ -15,45 +15,72 @@
       </div>
       <div id="navbarMenuTarget" class="navbar-menu">
         <div class="navbar-start">
-          <a class="navbar-item" href="{{ SITEURL }}/">
-            <span>
-              <span class="dot dot-yellow"></span>
-              Overview
-            </span>
-          </a>
-          <a class="navbar-item" href="{{ SITEURL }}/about-me">
-            <span>
-              <span class="dot dot-yellow"></span>
-              About
-            </span>
-          </a>
-          <div class="navbar-item has-dropdown is-hoverable">
-            <div class="navbar-item is-arrowless">
-              <span class="navbar-item-more">
-                <span class="dot dot-black"></span>
-                More...
-              </span>
-            </div>
-            <div class="navbar-dropdown is-boxed navbar-dropdown-more">
-              <a class="navbar-item" href="{{ SITEURL }}/categories">
-                <span class="dot dot-black"></span>
-                Categories
-              </a>
-              <a class="navbar-item" href="{{ SITEURL }}/tags">
-                <span class="dot dot-black"></span>
-                Tags
-              </a>
-              <a class="navbar-item" href="{{ SITEURL }}/archives">
-                <span class="dot dot-black"></span>
-                Archives
-              </a>
-              <hr class="navbar-divider">
-              <a class="navbar-item disable">
-                <span class="dot dot-red"></span>
-                Report an issue
-              </a>
-            </div>
-          </div>
+
+          {% if NAVBAR_MENU %}
+
+            {% for prefix, name, dot, data in NAVBAR_MENU %}
+            
+              {% if prefix == 'item' %}
+
+                <a class="navbar-item" href="{{ SITEURL }}/{{ data }}">
+                  <span>
+                    <span class="dot dot-{{ dot }}"></span>
+                    {{ name }}
+                  </span>
+                </a>
+
+              {% elif prefix == 'disable' %}
+
+                <a class="navbar-item disable">
+                  <span>
+                    <span class="dot dot-{{ dot }}"></span>
+                    {{ name }}
+                  </span>
+                </a>
+
+              {% elif prefix == 'dropdown' %}
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <div class="navbar-item is-arrowless">
+                    <span class="navbar-item-more">
+                      <span class="dot dot-{{ dot }}"></span>
+                      {{ name }}
+                    </span>
+                  </div>
+                  <div class="navbar-dropdown is-boxed navbar-dropdown-more">
+
+                    {% for dprefix, dname, ddot, ddata in data %}
+
+                      {% if dprefix == 'item' %}
+
+                        <a class="navbar-item" href="{{ SITEURL }}/{{ ddata }}">
+                          <span class="dot dot-{{ ddot }}"></span>
+                          {{ dname }}
+                        </a>
+
+                      {% elif dprefix == 'separator' %}
+
+                        <hr class="navbar-divider">
+
+                      {% elif dprefix == 'disable' %}
+
+                          <a class="navbar-item disable">
+                            <span class="dot dot-{{ ddot }}"></span>
+                            {{ dname }}
+                          </a>
+
+                      {% endif %}
+
+                    {% endfor %}
+                    
+                  </div>
+                </div>
+
+              {% endif%}
+
+            {% endfor %}
+
+          {% endif %}
         </div>
       </div>
     </div>

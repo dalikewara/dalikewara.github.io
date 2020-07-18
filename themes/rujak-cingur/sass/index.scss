@@ -61,5 +61,41 @@
  */
 
 #index-overview {
-  margin-bottom: 4.25rem;
+  margin-bottom: 3.25rem;
+}
+
+#index-overview #overview-now {
+  color: $black;
+  background: $yellow;
+}
+
+#index-overview #overview-release {
+  background: $black;
+  color: $yellow;
+}
+
+#index-overview #overview-info {
+  background: $none;
+  color: $black;
+}
+
+#index-overview #overview-note {
+  background: $none;
+  color: $black;
+}
+
+#index-overview #overview-info .overview-content {
+  color: $black;
+  font-size: 0.8em;
+}
+
+#index-overview #overview-info .overview-content a {
+  transition: all 0.2s;
+  color: $black;
+  background: $yellow;
+  text-decoration: none;
+}
+
+#index-overview #overview-info .overview-content a:hover {
+  text-decoration: underline;
 }
