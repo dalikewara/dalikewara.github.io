@@ -57,14 +57,14 @@ PAGE_LINK = {
 # NAVBAR MENU
 
 NAVBAR_MENU = [
-  ('item', 'Overview', 'yellow', ''),
-  ('item', 'About', 'yellow', PAGE_LINK['about']),
+  ('item', 'Overview', 'yellow', SITEURL + '/'),
+  ('item', 'About', 'yellow', SITEURL + '/' + PAGE_LINK['about']),
   ('dropdown', 'More...', 'black', [
-    ('item', 'Categories', 'black', PAGE_LINK['categories']),
-    ('item', 'Tags', 'black', PAGE_LINK['tags']),
-    ('item', 'Archives', 'black', PAGE_LINK['archives']),
+    ('item', 'Categories', 'black', SITEURL + '/' + PAGE_LINK['categories']),
+    ('item', 'Tags', 'black', SITEURL + '/' + PAGE_LINK['tags']),
+    ('item', 'Archives', 'black', SITEURL + '/' + PAGE_LINK['archives']),
     ('separator', '', '', ''),
-    ('disable', 'Report an issue', 'red', '')
+    ('item', 'Report an issue', 'red', GITHUB_SITE_ISSUE_URL)
   ])
 ]
 
@@ -125,7 +125,8 @@ PLUGINS = [
   'post_revision',
   'simple_footnotes',
   'pelican-cover-image',
-  'ipynb.markup'
+  'ipynb.markup',
+  'rujak_cingur'
 ]
 
 # MARKDOWN
@@ -196,4 +197,36 @@ OVERVIEW_INFO = [
   'Code in NodeJS, Python and PHP',
   'Play DOTA 2',
   '<a href="' + SITEURL + '/' + PAGE_LINK['about'] + '">Learn more about ' + AUTHOR_NICKNAME + ' >></a>'
+]
+
+# OVERVIEW INTEREST
+
+OVERVIEW_INTEREST = [
+  (
+    '"vcmrefunc" version 1.0.1 - The right way to repeat a process', 
+    'vcmrefunc-this-is-how-to-repeat-a-process-correctly'
+  ),
+  (
+    '"pangsitpy" version 0.0.13 - My starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning, Data Science, etc', 
+    'pangsitpy-python-my-starter-pack-framework-in-deep-learning'
+  ),
+  (
+    '"vcmcemtex" version 1.0.0 - An universal & customable cemtext generator for batch transactions', 
+    'vcmcemtex-deal-with-banks-transaction-file-format'
+  ),
+  (
+    '"vcmloop" version 1.0.4 - An interval-based looping method for massive data', 
+    'vcmloop-loop-massive-data-with-no-worry'
+  ),
+  (
+    '"vcmpad" version 1.0.5 - Fast, lightweight, and customable string padding generator', 
+    'vcmpad-a-string-padding-generator'
+  ),
+]
+
+# OVERVIEW NOW
+
+OVERVIEW_NOW = [
+  'He\'s writing a paper from his research about toxic speech detection.',
+  'He\'s creating AyaPingPing v3 and will make it has first public release.'
 ]

@@ -22,7 +22,7 @@
             
               {% if prefix == 'item' %}
 
-                <a class="navbar-item" href="{{ SITEURL }}/{{ data }}">
+                <a class="navbar-item" href="{{ data }}">
                   <span>
                     <span class="dot dot-{{ dot }}"></span>
                     {{ name }}
@@ -53,7 +53,7 @@
 
                       {% if dprefix == 'item' %}
 
-                        <a class="navbar-item" href="{{ SITEURL }}/{{ ddata }}">
+                        <a class="navbar-item" href="{{ ddata }}">
                           <span class="dot dot-{{ ddot }}"></span>
                           {{ dname }}
                         </a>
