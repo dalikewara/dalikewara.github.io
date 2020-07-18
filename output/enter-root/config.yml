@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: master
+logo_url: https://lh3.googleusercontent.com/pw/ACtC-3dBME0xNP8kojcslSG6fOJxYTgQ_30vbVGvWb2DIz0M6GFQ1DdEl7fUhruizL0uuSjQpx_3j3htACAV92-EYtbrj5bkr0zdfiWOa6z87OXt_zr9T1OkXQXoIOu2Gx3AJcAtSl7ZVbNKkTo36LJYmE9v=w900-h300-no
 
 # Editorial workflow
 
@@ -26,12 +27,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string"}
-      - {label: "Featured Image", name: "cover_image", widget: "image"}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string"}
-      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Slug", name: "Slug", widget: "string", required: false}
 
 
   - name: "articles-js"
@@ -44,12 +45,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string"}
-      - {label: "Featured Image", name: "cover_image", widget: "image"}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string"}
-      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Slug", name: "Slug", widget: "string", required: false}
   
 
   - name: "articles-notebooks"
@@ -62,12 +63,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string"}
-      - {label: "Featured Image", name: "cover_image", widget: "image"}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string"}
-      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Slug", name: "Slug", widget: "string", required: false}
 
 
   - name: "articles-php"
@@ -80,12 +81,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string"}
-      - {label: "Featured Image", name: "cover_image", widget: "image"}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string"}
-      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Slug", name: "Slug", widget: "string", required: false}
 
 
   - name: "articles-python"
@@ -98,12 +99,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string"}
-      - {label: "Featured Image", name: "cover_image", widget: "image"}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string"}
-      - {label: "Slug", name: "Slug", widget: "string"}
+      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Slug", name: "Slug", widget: "string", required: false}
 
 
   - name: "pages"
@@ -117,7 +118,7 @@ collections:
     fields:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Description", name: "Description", widget: "string", required: false}
-      - {label: "Featured Image", name: "cover_image", widget: "image", required: false}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Save As", name: "Save_as", widget: "string", required: false}

@@ -22,12 +22,10 @@
         {% else %}
         
           {% if articles_page.has_previous() %}
-          
-            {% set page_num = articles_page.previous_page_number() + 1 %}
             
             <br />
             <span class="dot dot-black-2"></span>
-            Page {{ page_num }}
+            Last page
           
           {% endif %}
         
@@ -61,7 +59,7 @@
             
             <br />
             <span class="dot dot-black-2"></span>
-            Page {{ page_num }}
+            Last page
           
           {% endif %}
         
@@ -91,11 +89,9 @@
 
           {% if articles_page.has_previous() %}
 
-            {% set page_num = articles_page.previous_page_number() + 1 %}
-
             <br />
             <span class="dot dot-black-2"></span>
-            Page {{ page_num }}
+            Last page
           
           {% endif %}
 

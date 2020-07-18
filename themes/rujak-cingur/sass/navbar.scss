@@ -16,6 +16,10 @@
   box-shadow: none;
 }
 
+.navbar .navbar-brand .navbar-item {
+  background: $none;
+}
+
 .navbar-item-more {
   padding: 0 8px;
   margin: 0;

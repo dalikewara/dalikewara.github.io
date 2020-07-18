@@ -16,10 +16,19 @@ html
   transition: all 0.2s;
 }
 
-.hide {
-  display: none;
-  opacity: 0;
-  overflow: hidden;
+.hide,
+.hide:hover
+{
+  display: none !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+}
+
+.disable,
+.disable:hover
+{
+  opacity: 0.5 !important;
+  cursor: default !important;
 }
 
 .noselect {
