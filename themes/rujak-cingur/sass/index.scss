@@ -26,7 +26,17 @@
 }
 
 .index-article-content .title:hover {
-  text-decoration: underline;
+  color: $yellow-7;
+  text-decoration: none;
+}
+
+.index-article-content .title-a {
+  text-decoration: none;
+}
+
+.index-article-content .title-a:hover {
+  color: $yellow-7;
+  text-decoration: none;
 }
 
 #index-article-contents .index-article-content .readmore {
