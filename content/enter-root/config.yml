@@ -107,6 +107,24 @@ collections:
       - {label: "Slug", name: "Slug", widget: "string", required: false}
 
 
+  - name: "articles-status"
+    label: "Articles: Status"
+    folder: "content/articles/status"
+    create: true
+    identifier_field: "Title"
+    summary: "{{filename}}.{{extension}} | {{commit_author}} - {{commit_date}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - {label: "Title", name: "Title", widget: "string"}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
+      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Slug", name: "Slug", widget: "string", required: false}
+
+
   - name: "pages"
     label: "Pages"
     folder: "content/pages"

@@ -125,8 +125,7 @@ PLUGINS = [
   'post_revision',
   'simple_footnotes',
   'pelican-cover-image',
-  'ipynb.markup',
-  'rujak_cingur'
+  'ipynb.markup'
 ]
 
 # MARKDOWN
@@ -185,17 +184,48 @@ DISQUS_SITENAME = 'dalikewara'
 # CATEGORY DESCRIPTION
 
 CATEGORY_DESCRIPTION = [
-  ('blog', 'Things in daily life I wanna write&mdash;depends on my mood actually.', 'https://lh3.googleusercontent.com/pw/ACtC-3ff9c2NDer_YX06s8mu3kvLF8crc3XhqfPFrgUum4hyaORHr65PmdFb851Vq9FmAOorka9QTJ0s78iHJWDIwx9XiwMJTOd-8OY1LNxSRfUNcEcxqTsDuaHEMBpQuj1Yve94U7Cs_sv2lH12Ohq2pWz5=w1440-h952-no'),
-  ('js', 'Articles about Javascript and NodeJS. Many of them are information about my JS modules and the documentations.', 'https://lh3.googleusercontent.com/pw/ACtC-3cqQHa1FMrGyydG9XrSsaNZI-s2A4kincR_hoC8pPZEwDMrY4pPjJw0ULFXE3LhJ-s4MOKm-nN_y2CyBAKYiM_JdRVtRj8jYkX7EqsOFVvVN6Up9lHY5LrrdfJDNgVjBS1si8kHg3WFjPT5pQ-Yz9qU=w1150-h524-no'),
-  ('php', 'Articles about PHP. Many of them are information about my PHP modules and the documentations.', 'https://lh3.googleusercontent.com/pw/ACtC-3cDS4OSTV1ntDVgXxdX-yYJAPLeDuXFYBsTZGl22-mlkvZWXM7_76xoCTA-JkRVtybEZarfvn2sZvkghAu-1kc4fkPjwN3in8xStMzpgnMqG-XGzOQzcw7835_FDoTE3I5tw7jeEIME8BmBId4xDPG8=w1130-h486-no'),
-  ('python', 'Articles about Python. Many of them are information about my Python modules and the documentations.', 'https://lh3.googleusercontent.com/pw/ACtC-3dq2uWImDux39myT4O4FsuuadAxkCy0OlcKb8e_OyCjK5yTWF1t0jQYZ3kXHGuNW4YOexNc2N2XORE0eLFluH-KRzCuao1ZoNdw_GxQwYx_I4hvvqX7HpaVcNRixxG9JOU3sIrue4XtEL8Nilwg055F=w1040-h510-no')
+  (
+    'blog', 
+    'Things to write in daily life&mdash;depends on my mood actually.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3ff9c2NDer_YX06s8mu3kvLF8crc3XhqfPFrgUum4hyaORHr65PmdFb851Vq9FmAOorka9QTJ0s78iHJWDIwx9XiwMJTOd-8OY1LNxSRfUNcEcxqTsDuaHEMBpQuj1Yve94U7Cs_sv2lH12Ohq2pWz5=w1440-h952-no'
+  ),
+  (
+    'status', 
+    'Basicly my daily activities&mdash;can be cases that I met while working or just something that need to solve.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3ff9c2NDer_YX06s8mu3kvLF8crc3XhqfPFrgUum4hyaORHr65PmdFb851Vq9FmAOorka9QTJ0s78iHJWDIwx9XiwMJTOd-8OY1LNxSRfUNcEcxqTsDuaHEMBpQuj1Yve94U7Cs_sv2lH12Ohq2pWz5=w1440-h952-no'
+  ),
+  (
+    'js', 
+    'Articles about Javascript and NodeJS. Many of them are information about my JS modules and the documentation.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3cqQHa1FMrGyydG9XrSsaNZI-s2A4kincR_hoC8pPZEwDMrY4pPjJw0ULFXE3LhJ-s4MOKm-nN_y2CyBAKYiM_JdRVtRj8jYkX7EqsOFVvVN6Up9lHY5LrrdfJDNgVjBS1si8kHg3WFjPT5pQ-Yz9qU=w1150-h524-no'
+  ),
+  (
+    'php', 
+    'Articles about PHP. Many of them are information about my PHP modules and the documentation.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3cDS4OSTV1ntDVgXxdX-yYJAPLeDuXFYBsTZGl22-mlkvZWXM7_76xoCTA-JkRVtybEZarfvn2sZvkghAu-1kc4fkPjwN3in8xStMzpgnMqG-XGzOQzcw7835_FDoTE3I5tw7jeEIME8BmBId4xDPG8=w1130-h486-no'
+  ),
+  (
+    'python', 
+    'Articles about Python. Many of them are information about my Python modules and the documentation.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3dq2uWImDux39myT4O4FsuuadAxkCy0OlcKb8e_OyCjK5yTWF1t0jQYZ3kXHGuNW4YOexNc2N2XORE0eLFluH-KRzCuao1ZoNdw_GxQwYx_I4hvvqX7HpaVcNRixxG9JOU3sIrue4XtEL8Nilwg055F=w1040-h510-no'
+  )
 ]
 
 # OVERVIEW INFO
 
 OVERVIEW_INFO = [
-  'Code in NodeJS, Python and PHP',
-  'Play DOTA 2',
+  'Code in ' +
+      '<span class="icon"><i class="fab fa-node" style="color:#82c920"></i></span> ' +
+    'NodeJS, ' +
+      '<span class="icon"><i class="fab fa-python" style="color:#fd7e16"></i></span> ' +
+    'Python and ' +
+      '<span class="icon"><i class="fab fa-php" style="color:#be4bdb"></i></span> ' +
+    'PHP',
+  'Play ' + 
+      '<img src="https://lh3.googleusercontent.com/pw/ACtC-3fvWy52TJnpM_p1y_KMF_w-IrtsFrgyxjEJfZ8WIMu8BA6jP99Dyen4gwWqAIsvQNxbypmsuJiSxzpJaE0SlxRuf-BgazELzO4N8BL52y5Z00id31IA5gqZB6VuSPOEOXx-BdpIYnvubTV3FQxyZ0zz=w1024-h1029-no" width="15" height="15"/> ' + 
+    'DOTA 2 turbo mode (have fun only) & ' +
+      '<img src="https://lh3.googleusercontent.com/pw/ACtC-3eMSz_QJ95soGFabO6XNFoeZzdCDUD_OVVu6Q55sxA4UMEla4I9ZBs_e8LiQOnFZN5vwwTc-5dEKLxWg5Wn9m50P6aMJ7hQzVvb9LDL5RixXdz0yMbKS0TKEmSxR5KY6ncjQ1x2GyKTVK5czjXh7_zm=w1397-h810-no" width="30" height="30"/> ' +
+    'STORY OF SEASONS: Friends of Mineral Town',
   '<a href="' + SITEURL + '/' + PAGE_LINK['about'] + '">Learn more about ' + AUTHOR_NICKNAME + ' >></a>'
 ]
 
