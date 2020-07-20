@@ -191,8 +191,8 @@ CATEGORY_DESCRIPTION = [
   ),
   (
     'status', 
-    'Basicly my daily activities&mdash;can be cases that I met while working or just something that need to solve.', 
-    'https://lh3.googleusercontent.com/pw/ACtC-3ff9c2NDer_YX06s8mu3kvLF8crc3XhqfPFrgUum4hyaORHr65PmdFb851Vq9FmAOorka9QTJ0s78iHJWDIwx9XiwMJTOd-8OY1LNxSRfUNcEcxqTsDuaHEMBpQuj1Yve94U7Cs_sv2lH12Ohq2pWz5=w1440-h952-no'
+    'This is basicly my daily activities&mdash;can be cases that I met while working or just something that need to solve.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3cgG2xl7VxpdaIJBawQZY0STRjSiw7xE-4JsOIOZW1F3ebvmW3ERaIfHAfoIoVkEyp4BwmrL2x1z_tDB6dQanr2pu1cD-yTfQYPJppHj_VhWnUXxpqEs_bMrBP-UoIoE3Cd-Ih6p8eTA1MCsqWLWSzI=w1698-h514-no'
   ),
   (
     'js', 
