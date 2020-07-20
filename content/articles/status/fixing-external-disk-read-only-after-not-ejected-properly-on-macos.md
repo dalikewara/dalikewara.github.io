@@ -1,8 +1,6 @@
 ---
 Title: Fixing External Disk Read-Only After Not Ejected Properly on MacOS
-Description: Di MacOS, hardisk external saya pada saat dia tidak ke eject secara
-  benar pasti akan menjadi read-only ketika saya koneksikan lagi. Bahkan kadang
-  malah ga ke detect (unmounted).
+Description: Di MacOS, hardisk external saya pada saat dia tidak ke eject secara benar pasti akan menjadi read-only ketika saya koneksikan lagi. Bahkan kadang malah ga ke detect (unmounted).
 cover_image: https://lh3.googleusercontent.com/pw/ACtC-3f_Z0u7xgSAmynttDAGq6-GNH3_BVn5f2NCCxCSUHSKCp6YcyVAOM6pVOeidO6GItzSJ0UzuQa9jgD0baOPNZrkSpQzM7nQ-VTyA06ca18vOvIoXHkrvFMocHIXKuy0uGOnhFdIc_PpYOR25BnyrkYu=w720-h290-no
 Date: 2020-07-20 18:35
 Tags: case, macos, fixing, apple, disk
