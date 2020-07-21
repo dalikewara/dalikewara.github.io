@@ -3,13 +3,6 @@
 
 
     <url>
-      <loc>/this-songs-accompanied-me-while-working.html</loc>
-      <priority>0.8</priority>
-    </url>
-
-
-
-    <url>
       <loc>/fixing-external-disk-read-only-after-not-ejected-properly-on-macos.html</loc>
       <priority>0.8</priority>
     </url>
