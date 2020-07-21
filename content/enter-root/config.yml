@@ -27,7 +27,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
@@ -45,7 +45,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
@@ -63,7 +63,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
@@ -81,7 +81,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
@@ -99,7 +99,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
@@ -117,7 +117,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
@@ -135,7 +135,7 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
