@@ -1,7 +1,6 @@
 ---
 Title: This Songs Accompanied Me While Working
-Description: Maudy Ayundas songs—filtered based on my favourite. 
-  I used to listen this songs while working.
+Description: Maudy Ayundas songs—filtered based on my favourite. I used to listen this songs while working.
 Date: 2020-07-21 18:40
 Tags: song, working, activity, daily, maudy ayunda, listening
 ---

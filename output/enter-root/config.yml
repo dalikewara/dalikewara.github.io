@@ -27,12 +27,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Tags", name: "Tags", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
 
 
   - name: "articles-js"
@@ -45,12 +45,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Tags", name: "Tags", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
   
 
   - name: "articles-notebooks"
@@ -63,12 +63,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Tags", name: "Tags", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
 
 
   - name: "articles-php"
@@ -81,12 +81,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Tags", name: "Tags", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
 
 
   - name: "articles-python"
@@ -99,12 +99,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Tags", name: "Tags", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
 
 
   - name: "articles-status"
@@ -117,12 +117,12 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Tags", name: "Tags", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
 
 
   - name: "pages"
@@ -135,9 +135,9 @@ collections:
     format: "yaml-frontmatter"
     fields:
       - {label: "Title", name: "Title", widget: "string"}
-      - {label: "Description", name: "Description", widget: "markdown", required: false}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
-      - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Save As", name: "Save_as", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
