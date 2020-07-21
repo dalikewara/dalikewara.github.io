@@ -191,7 +191,7 @@ CATEGORY_DESCRIPTION = [
   ),
   (
     'status', 
-    'This is basicly my daily activities&mdash;can be cases that I met while working or just something that need to solve.', 
+    'This is basicly my daily activities&mdash;can be plans to go, things happenned, cases that I met while working or just something that need to solve.', 
     'https://lh3.googleusercontent.com/pw/ACtC-3cgG2xl7VxpdaIJBawQZY0STRjSiw7xE-4JsOIOZW1F3ebvmW3ERaIfHAfoIoVkEyp4BwmrL2x1z_tDB6dQanr2pu1cD-yTfQYPJppHj_VhWnUXxpqEs_bMrBP-UoIoE3Cd-Ih6p8eTA1MCsqWLWSzI=w1698-h514-no'
   ),
   (
