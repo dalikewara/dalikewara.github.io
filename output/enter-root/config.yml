@@ -119,7 +119,7 @@ collections:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Tags", name: "Tags", widget: "list", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
       - {label: "Description", name: "Description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}

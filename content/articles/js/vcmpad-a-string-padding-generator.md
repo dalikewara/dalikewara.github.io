@@ -1,7 +1,12 @@
 ---
 Title: vcmpad, a String Padding Generator
 Date: 2020-04-29 22:23
-Tags: javascript, nodejs, module, project, open source
+Tags: 
+- javascript
+- nodejs
+- module
+- project
+- open source
 Description: String padding generator with custom Left/Right-Padding style. It allows you to generate string padding format such as LPS *(Left Padding Space)*, LPZ *(Left Padding Zero)*, RPS *(Right Padding Space)*, and RPZ *(Right Padding Zero)*&mdash;or even you can create your own custom format.
 ---
 
