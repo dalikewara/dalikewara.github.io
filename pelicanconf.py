@@ -192,8 +192,8 @@ CATEGORY_DESCRIPTION = [
   ),
   (
     'status', 
-    'This is basicly my daily activities&mdash;can be plans to go, things happenned, cases that I met while working or just something that need to solve.', 
-    'https://lh3.googleusercontent.com/pw/ACtC-3cgG2xl7VxpdaIJBawQZY0STRjSiw7xE-4JsOIOZW1F3ebvmW3ERaIfHAfoIoVkEyp4BwmrL2x1z_tDB6dQanr2pu1cD-yTfQYPJppHj_VhWnUXxpqEs_bMrBP-UoIoE3Cd-Ih6p8eTA1MCsqWLWSzI=w1698-h514-no'
+    'This is basicly my daily activities&mdash;can be plans to go, things happenned or just something that need to share.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3dFSWpNd-degn3lQgPsuna1G-Oxwx84--uzxwS9I_35SEVu0TZfCbuAba_FwdACLSZTs5aJDd1OPsPaStdJNQgcQYd89gBteBsLc0_XNjd3ATevrCiO1P63TP-Agw38SD17DEtobAyzBuz4Cs04Sod1=w1468-h786-no'
   ),
   (
     'js', 
@@ -209,6 +209,11 @@ CATEGORY_DESCRIPTION = [
     'python', 
     'Articles about Python. Many of them are information about my Python modules and the documentation.', 
     'https://lh3.googleusercontent.com/pw/ACtC-3dq2uWImDux39myT4O4FsuuadAxkCy0OlcKb8e_OyCjK5yTWF1t0jQYZ3kXHGuNW4YOexNc2N2XORE0eLFluH-KRzCuao1ZoNdw_GxQwYx_I4hvvqX7HpaVcNRixxG9JOU3sIrue4XtEL8Nilwg055F=w1040-h510-no'
+  ),
+  (
+    'macos', 
+    'Article about MacOS&mdash;in my experience.', 
+    'https://lh3.googleusercontent.com/pw/ACtC-3fiwdjLBRV_UgVKlk1cQCHSNnG54jiPvzgxRdYnshvyIYOSQp0Xx3s6DSlV7j8hIsbsqOI9BqXICEQDnjAAmopV4_LFolP2NFeGScQg3FUGy0WxdtYDjnJN9PqjJey89sEa6Sy11SUlDUXy8JyL6ZdH=w1180-h712-no'
   )
 ]
 
