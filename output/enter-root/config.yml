@@ -29,7 +29,7 @@ collections:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Tags", name: "Tags", widget: "list", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
       - {label: "Description", name: "Description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -47,7 +47,7 @@ collections:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Tags", name: "Tags", widget: "list", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
       - {label: "Description", name: "Description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -65,7 +65,7 @@ collections:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Tags", name: "Tags", widget: "list", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
       - {label: "Description", name: "Description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -83,7 +83,7 @@ collections:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Tags", name: "Tags", widget: "list", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
       - {label: "Description", name: "Description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -101,7 +101,7 @@ collections:
       - {label: "Title", name: "Title", widget: "string"}
       - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
-      - {label: "Tags", name: "Tags", widget: "string", required: false}
+      - {label: "Tags", name: "Tags", widget: "list", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
       - {label: "Description", name: "Description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -110,6 +110,24 @@ collections:
   - name: "articles-status"
     label: "Articles: Status"
     folder: "content/articles/status"
+    create: true
+    identifier_field: "Title"
+    summary: "{{filename}}.{{extension}} | {{commit_author}} - {{commit_date}}"
+    extension: "md"
+    format: "yaml-frontmatter"
+    fields:
+      - {label: "Title", name: "Title", widget: "string"}
+      - {label: "Featured Image Url", name: "cover_image", widget: "string", required: false}
+      - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
+      - {label: "Tags", name: "Tags", widget: "list", required: false}
+      - {label: "Slug", name: "Slug", widget: "string", required: false}
+      - {label: "Description", name: "Description", widget: "string", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+
+  - name: "articles-macos"
+    label: "Articles: MacOS"
+    folder: "content/articles/macos"
     create: true
     identifier_field: "Title"
     summary: "{{filename}}.{{extension}} | {{commit_author}} - {{commit_date}}"
@@ -139,6 +157,5 @@ collections:
       - {label: "Publish Date", name: "Date", widget: "datetime", dateFormat: "YYYY-MM-DD", timeFormat: "HH:mm", format: "YYYY-MM-DD HH:mm"}
       - {label: "Save As", name: "Save_as", widget: "string", required: false}
       - {label: "Slug", name: "Slug", widget: "string", required: false}
-      # pattern: ["^[^\n\r].{3,80}$", "80 characters or less. No newlines."]
       - {label: "Description", name: "Description", widget: "string", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
