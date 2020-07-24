@@ -125,7 +125,8 @@ PLUGINS = [
   'post_revision',
   'simple_footnotes',
   'pelican-cover-image',
-  'ipynb.markup'
+  'ipynb.markup',
+  'pelican-yaml-metadata'
 ]
 
 # MARKDOWN
