@@ -234,31 +234,6 @@ OVERVIEW_INFO = [
     'STORY OF SEASONS: Friends of Mineral Town'
 ]
 
-# OVERVIEW INTEREST
-
-OVERVIEW_INTEREST = [
-  (
-    '"vcmrefunc" version 1.0.1 - The right way to repeat a process', 
-    'vcmrefunc-this-is-how-to-repeat-a-process-correctly'
-  ),
-  (
-    '"pangsitpy" version 0.0.13 - My starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning, Data Science, etc', 
-    'pangsitpy-python-my-starter-pack-framework-in-deep-learning'
-  ),
-  (
-    '"vcmcemtex" version 1.0.0 - An universal & customable cemtext generator for batch transactions', 
-    'vcmcemtex-deal-with-banks-transaction-file-format'
-  ),
-  (
-    '"vcmloop" version 1.0.4 - An interval-based looping method for massive data', 
-    'vcmloop-loop-massive-data-with-no-worry'
-  ),
-  (
-    '"vcmpad" version 1.0.5 - Fast, lightweight, and customable string padding generator', 
-    'vcmpad-a-string-padding-generator'
-  ),
-]
-
 # OVERVIEW NOW
 
 OVERVIEW_NOW = [

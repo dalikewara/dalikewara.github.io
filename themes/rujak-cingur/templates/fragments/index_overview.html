@@ -4,23 +4,6 @@
       <div class="tile is-vertical">
         <div class="tile">
           <div class="tile is-parent is-vertical">
-            <article id="overview-interest" class="tile is-child notification">
-              <p class="title">
-                <span class="dot dot-yellow"></span>
-                You may interest,
-              </p>
-              <div class="overview-content">
-
-                {% for interest, url in OVERVIEW_INTEREST %}
-                
-                  <div class="interest">
-                    <a href="{{ SITEURL }}/{{ url }}">{{ interest }}</a>
-                  </div>
-                
-                {% endfor %}
-
-              </div>
-            </article>
             <article id="overview-now" class="tile is-child notification">
               <p class="title">
                 <span class="dot dot-black"></span>

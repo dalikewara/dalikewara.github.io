@@ -1,9 +1,23 @@
 # Development
 
-### Activate virtual env
+### Set up virtualenv
+
+```bash
+virtualenv venv
+```
+
+### Activate virtualenv
 
 ```bash
 source venv/bin/activate
+```
+
+### Install requirements
+
+Activate virtualenv, then;
+
+```bash
+pip3 install -r requirements.txt
 ```
 
 ### Listen Pelican
