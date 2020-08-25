@@ -45,29 +45,6 @@ EXTRA_PATH_METADATA = {
   'extra/favicon.ico': {'path': 'favicon.ico'}
 }
 
-# PAGE LINKS
-
-PAGE_LINK = {
-  'about': 'about-me',
-  'categories': 'categories',
-  'tags': 'tags',
-  'archives': 'archives',
-}
-
-# NAVBAR MENU
-
-NAVBAR_MENU = [
-  ('item', 'Overview', 'yellow', SITEURL + '/'),
-  ('item', 'About', 'yellow', SITEURL + '/' + PAGE_LINK['about']),
-  ('dropdown', 'More...', 'black', [
-    ('item', 'Categories', 'black', SITEURL + '/' + PAGE_LINK['categories']),
-    ('item', 'Tags', 'black', SITEURL + '/' + PAGE_LINK['tags']),
-    ('item', 'Archives', 'black', SITEURL + '/' + PAGE_LINK['archives']),
-    ('separator', '', '', ''),
-    ('item', 'Report an issue', 'red', GITHUB_SITE_ISSUE_URL)
-  ])
-]
-
 # STATIC PATHS
 
 STATIC_PATHS = [
@@ -181,6 +158,29 @@ DEFAULT_PAGINATION = 10
 # DISQUS
 
 DISQUS_SITENAME = 'dalikewara'
+
+# PAGE LINKS
+
+PAGE_LINK = {
+  'ecosystem': 'ecosystem',
+  'categories': 'categories',
+  'tags': 'tags',
+  'archives': 'archives',
+}
+
+# NAVBAR MENU
+
+NAVBAR_MENU = [
+  ('item', 'Overview', 'yellow', SITEURL + '/'),
+  ('item', 'Ecosystem', 'yellow', SITEURL + '/' + PAGE_LINK['ecosystem']),
+  ('dropdown', 'More...', 'black', [
+    ('item', 'Categories', 'black', SITEURL + '/' + PAGE_LINK['categories']),
+    ('item', 'Tags', 'black', SITEURL + '/' + PAGE_LINK['tags']),
+    ('item', 'Archives', 'black', SITEURL + '/' + PAGE_LINK['archives']),
+    ('separator', '', '', ''),
+    ('item', 'Report an issue', 'red', GITHUB_SITE_ISSUE_URL)
+  ])
+]
 
 # CATEGORY DESCRIPTION
 
