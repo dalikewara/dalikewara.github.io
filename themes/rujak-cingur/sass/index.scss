@@ -79,11 +79,6 @@
   background: $yellow;
 }
 
-#index-overview #overview-interest {
-  background: $black;
-  color: $yellow;
-}
-
 #index-overview #overview-info {
   background: $none;
   color: $black;
@@ -103,27 +98,4 @@
 
 #index-overview #overview-info .overview-content a:hover {
   text-decoration: underline;
-}
-
-#index-overview #overview-interest .overview-content {
-  color: $white;
-  font-size: 0.9em;
-  line-height: 1;
-}
-
-#index-overview #overview-interest .overview-content a {
-  transition: all 0.2s;
-  color: $white;
-  background: $none;
-  text-decoration: none;
-}
-
-#index-overview #overview-interest .overview-content a:hover {
-  color: $yellow;
-  text-decoration: underline;
-}
-
-#index-overview #overview-interest .overview-content .interest {
-  padding: 0.5rem;
-  border-bottom: 1px dashed $black-3;
 }
