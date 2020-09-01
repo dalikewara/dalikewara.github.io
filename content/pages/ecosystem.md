@@ -9,24 +9,34 @@ Description: Tools I use in daily activites
 
 Under maintenance...
 
-## Operating systems
+### Operating systems
 
-* [macOS Catalina](https://www.apple.com/macos/catalina/)
+* macOS Catalina | [link](https://www.apple.com/macos/catalina/)
 
-## Code editors
+### Code editors
 
-* [Visual Studio Code](https://code.visualstudio.com/) (macOS)
+* Visual Studio Code (macOS) | [link](https://code.visualstudio.com/)
 
   > *"Visual Studio Code is a streamlined code editor with support for development operations like debugging, task running, and version control"*
 
-## SSH clients
+### SSH clients
 
-* [Termius](https://termius.com/) (macOS)
+* Termius (macOS) | [link](https://termius.com/)
 
   > *"Termius is the SSH client that works on Desktop and Mobile"*
 
-## OpenVPN clients
+### OpenVPN clients
 
-* [Tunnelblick](https://tunnelblick.net/) (macOS)
+* Tunnelblick (macOS) | [link](https://tunnelblick.net/)
 
   > *"Tunnelblick helps you control OpenVPN® VPNs on macOS. It is Free Software that puts its users first. There are no ads, no affiliate marketers, no tracking — we don't even keep logs of your IP address or other information. We just supply open technology for fast, easy, private, and secure control of VPNs."*
+
+### Terminals
+
+* Built in terminal (macOS)
+
+### File comparison
+
+* Meld (macOS) | [link](http://meldmerge.org/)
+
+  > *"Meld is a visual diff and merge tool targeted at developers"*
