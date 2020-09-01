@@ -116,7 +116,7 @@ MARKDOWN = {
     'markdown.extensions.extra': {},
     'markdown.extensions.meta': {},
     'markdown.extensions.toc': {
-      'title': 'Table of Contents',
+      'title': 'Table of contents',
     },
   },
   'output_format': 'html5',

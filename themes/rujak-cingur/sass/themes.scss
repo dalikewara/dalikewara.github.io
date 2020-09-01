@@ -9,16 +9,16 @@
 }
 
 .master-light a {
-  color: $yellow;
+  color: $yellow-8;
 }
 
 .master-light a:link {
-  color: $yellow;
-  background: $black-2;
+  color: $yellow-8;
+  background: $orange;
 }
 
 .master-light a:visited {
-  color: $yellow;
+  color: $yellow-8;
 }
 
 .master-light a:hover {
@@ -26,7 +26,7 @@
 }
 
 .master-light a:active {
-  color: $yellow;
+  color: $yellow-8;
 }
 
 .master-light h1 {
@@ -68,6 +68,179 @@
   background: $yellow-3;
 }
 
+.master-light .navbar .navbar-brand .navbar-item {
+  background: $none;
+}
+
 .master-light .footer {
   background: $none;
+}
+
+.master-light .toc {
+  background: $yellow;
+  color: $black;
+  border-left: 5px solid $yellow-9;
+}
+
+.master-light .toc ul li a {
+  background: none;
+  color: $black;
+}
+
+.master-light .article-info-date, 
+.master-light .article-info-readtime 
+{
+  color: $black-2;
+}
+
+.master-light .article-tags .tags a {
+  background: $yellow;
+  color: $black;
+}
+
+.master-light .article-tags .tags a:hover {
+  background: $black;
+  color: $yellow;
+}
+
+.master-light .article-related-posts .related-posts .columns .column {
+  color: $black;
+  background: $white-2;
+}
+
+.master-light .article-related-posts .related-posts .columns .column:hover {
+  color: $black;
+  background: $yellow;
+}
+
+.master-light a + img {
+  background: $none;
+}
+
+.master-light img[src*='#badge'] {
+    background: $none !important;
+}
+
+.master-light pre,
+.master-light .content pre
+{
+  background: $none;
+}
+
+.master-light .index-article-content .title {
+  color: $black-4;
+  background: $yellow;
+}
+
+.master-light #index-article-contents .index-article-content .readmore {
+  color: $black;
+  background: $none;
+}
+
+.master-light .index-article-content .title:hover {
+  color: $yellow-7;
+}
+
+.master-light .index-article-content .title-a:hover {
+  color: $yellow-7;
+}
+
+.master-light #index-article-pagination .pagination-previous,
+.master-light #index-article-pagination .pagination-next
+{
+  color: $black;
+  background: $white-2;
+}
+
+.master-light #index-article-pagination .pagination-previous:hover,
+.master-light #index-article-pagination .pagination-next:hover
+{
+  background: $yellow-5;
+}
+
+.master-light #index-overview #overview-now {
+  color: $black;
+  background: $yellow;
+}
+
+.master-light #index-overview #overview-info {
+  background: $none;
+  color: $black;
+}
+
+.master-light #index-overview #overview-info .overview-content {
+  color: $black;
+}
+
+.master-light #index-overview #overview-info .overview-content a {
+  color: $black;
+  background: $yellow;
+}
+
+.master-light #page-tags .tile-tags .tile-tag {
+  background: $yellow;
+  color: $black;
+}
+
+.master-light #page-tags .tile-tags .tile-tag:hover {
+  background: $black;
+  color: $yellow;
+}
+
+.master-light #page-categories .tile-categories .tile-category {
+  background: $white-2;
+  color: $black;
+}
+
+.master-light #page-categories .tile-categories .tile-category:hover {
+  background: $yellow;
+}
+
+.master-light #page-archives .page-archive dt {
+  color: $black;
+}
+
+.master-light #page-archives .page-archive dd a {
+  color: $black;
+  background: $none;
+}
+
+.master-light #sidebar h1 {
+  text-shadow: 5px 5px 1px $yellow;
+}
+
+.master-light #sidebar-author {
+  background: $white-2;
+}
+
+.master-light #sidebar-social .buttons .button {
+  border: 1px solid $black;
+  background: $none;
+  color: $black;
+}
+
+.master-light #sidebar-social .buttons .button:hover {
+  background: $black;
+  color: $yellow;
+}
+
+.master-light .simple-footnote {
+  background: $black !important;
+  color: $white !important;
+}
+
+.master-light .simple-footnotes li a.simple-footnote-back {
+  background: $black;
+  color: $white;
+}
+
+.master-light .scrolltop a {
+  background: $black;
+  color: $white;
+  box-shadow: 5px -4px 10px $yellow-8;
+}
+
+.master-light .scrolltop a:hover {
+  background: $yellow;
+  color: $black;
 }

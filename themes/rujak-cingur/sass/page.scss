@@ -1,5 +1,3 @@
-@import 'colors';
-
 /**
  * Page: Tags.
  */
@@ -11,13 +9,9 @@
 #page-tags .tile-tags .tile-tag {
   margin: 0 0.4rem 0.4rem 0.4rem;
   transition: all 0.2s;
-  background: $yellow;
-  color: $black;
 }
 
 #page-tags .tile-tags .tile-tag:hover {
-  background: $black;
-  color: $yellow;
   text-decoration: none;
 }
 
@@ -32,8 +26,6 @@
 #page-categories .tile-categories .tile-category {
   margin: 0 0.4rem 0.4rem 0.4rem;
   transition: all 0.2s;
-  background: $white-2;
-  color: $black;
 }
 
 #page-categories .tile-categories .tile-category img {
@@ -41,7 +33,6 @@
 }
 
 #page-categories .tile-categories .tile-category:hover {
-  background: $yellow;
   text-decoration: none;
 }
 
@@ -54,11 +45,5 @@
 }
 
 #page-archives .page-archive dt {
-  color: $black;
   font-size: 0.8em;
-}
-
-#page-archives .page-archive dd a {
-  color: $black;
-  background: $none;
 }

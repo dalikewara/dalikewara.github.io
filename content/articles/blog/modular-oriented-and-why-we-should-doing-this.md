@@ -168,20 +168,3 @@ Kita harus berfikir untuk membantu orang lain.
 `modular oriented` tidak hanya akan membuat pekerjaan menjadi lebih mudah, tetapi juga membuat kolaborasi antar tim menjadi terstruktur, dan kita bisa sedikit memberikan manfaat kepada orang lain.
 
 `modular oriented` juga bisa menjadi solusi mengatasi `PR` untuk menciptakan lingkungan ekosistem yang efisien.
-
-
-<hr>
-<br>
-
-### References
-
-
-
-
-
-
-
-
-
-
-

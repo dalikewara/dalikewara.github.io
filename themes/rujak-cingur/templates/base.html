@@ -38,6 +38,7 @@
 
     <!-- JS -->
 
+    <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/zenscroll.min.js"></script>
     <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/highlight.min.js"></script>
 
     <!-- RSS -->
@@ -147,6 +148,9 @@
           </div>
         </div>
       </div>
+
+      {% include 'fragments/scrolltop.html' %}
+
     </div>
 
     <!-- Tasks -->
@@ -172,11 +176,41 @@
       }
 
       /**
+       * Scroll on top
+       */
+
+      function scrolltop() {
+        if (window) {
+          var elm = document.getElementById('scrolltop');
+          var s = 1000;
+          if (zenscroll) {
+            var f = zenscroll.getTopOf(document.getElementById('footer'));
+          } else {
+            var f = 700;
+          }
+          f = f - 700;
+          window.onscroll = function () {
+            if (zenscroll) {
+              var cr = zenscroll.getY();
+            } else {
+              var cr = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+            }
+            if (cr > s && cr < f) {
+              elm.style.opacity = '1';
+            } else {
+              elm.style.opacity = '0';
+            }
+          };
+        }
+      }
+
+      /**
        * DOM content loaded trigger.
        */
       
       document.addEventListener('DOMContentLoaded', function() {
-        toggleBurgerNavbar()
+        toggleBurgerNavbar();
+        scrolltop();
       });
     </script>
   </body>

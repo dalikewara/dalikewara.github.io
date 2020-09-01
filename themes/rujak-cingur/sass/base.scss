@@ -14,6 +14,7 @@ body,
 html
 {
   transition: all 0.2s;
+  scroll-behavior: smooth;
 }
 
 .hide,
@@ -45,21 +46,15 @@ img + em {
   font-size: 0.6em;
 }
 
-a + img {
-  background: $none;
-}
-
 img[src*='#badge'] {
     display: inline-block;
     margin-right: 0.5rem;
-    background: $none !important;
 }
 
 pre,
 .content pre
 {
   padding: 0;
-  background: $none;
   word-wrap: normal !important;
 }
 
