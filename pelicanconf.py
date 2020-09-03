@@ -163,6 +163,7 @@ DISQUS_SITENAME = 'dalikewara'
 
 PAGE_LINK = {
   'ecosystem': 'ecosystem',
+  'publications': 'publications',
   'categories': 'categories',
   'tags': 'tags',
   'archives': 'archives',
@@ -172,6 +173,7 @@ PAGE_LINK = {
 
 NAVBAR_MENU = [
   ('item', 'Overview', 'yellow', SITEURL + '/'),
+  ('item', 'Publications', 'yellow', SITEURL + '/' + PAGE_LINK['publications']),
   ('item', 'Ecosystem', 'yellow', SITEURL + '/' + PAGE_LINK['ecosystem']),
   ('dropdown', 'More...', 'black', [
     ('item', 'Categories', 'black', SITEURL + '/' + PAGE_LINK['categories']),

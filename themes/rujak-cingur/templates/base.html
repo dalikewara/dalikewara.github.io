@@ -183,18 +183,10 @@
         if (window) {
           var elm = document.getElementById('scrolltop');
           var s = 1000;
-          if (zenscroll) {
-            var f = zenscroll.getTopOf(document.getElementById('footer'));
-          } else {
-            var f = 700;
-          }
-          f = f - 700;
+          var f = document.getElementById('footer').offsetTop;
+          f = f - 550;
           window.onscroll = function () {
-            if (zenscroll) {
-              var cr = zenscroll.getY();
-            } else {
-              var cr = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
-            }
+            var cr = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
             if (cr > s && cr < f) {
               elm.style.opacity = '1';
             } else {

@@ -1,55 +1,27 @@
 ---
-Title: The Ecosystem
+Title: Ecosystem I Use in Daily Activities
 Date: 2020-08-25 11:18
 Save_as: ecosystem.html
 Slug: ecosystem
-Description: Tools & devices I use in daily activites
+Description: Ecosystem I use in daily activites
 ---
-[TOC]
 
-Tools & devices I use in daily activities.
-
-<hr>
-
-# Devices
-
-* **MacBook Pro** (13-inch, 2017, Two Thunderbolt 3 ports)
-* **iPhone 7**
-
-# Operating systems
-
-* **macOS Catalina** | [link](https://www.apple.com/macos/catalina/)
-
-# Programming languages
-
-* **NodeJS**
-* **Python**
-* **PHP**
-
-# Code editors
-
-* **Visual Studio Code** (macOS) | [link](https://code.visualstudio.com/)
-
-  > *"Visual Studio Code is a streamlined code editor with support for development operations like debugging, task running, and version control"*
-
-# SSH clients
-
-* **Termius** (macOS) | [link](https://termius.com/)
-
-  > *"Termius is the SSH client that works on Desktop and Mobile"*
-
-# OpenVPN clients
-
-* **Tunnelblick** (macOS) | [link](https://tunnelblick.net/)
-
-  > *"Tunnelblick helps you control OpenVPN® VPNs on macOS"*
-
-# Terminals
-
-* **Built in terminal** (macOS)
-
-# File comparison
-
-* **Meld** (macOS) | [link](http://meldmerge.org/)
-
-  > *"Meld is a visual diff and merge tool targeted at developers"*
+- **Devices**
+    - `MacBook Pro`&nbsp;<small>(13-inch, 2017, Two Thunderbolt 3 ports)</small>
+    - `iPhone 7`
+- **Operating systems**
+    - `macOS Catalina` | [link](https://www.apple.com/macos/catalina/)
+- **Programming languages**
+    - `NodeJS`
+    - `Python`
+    - `PHP`
+- **Code editors**
+    - `Visual Studio Code`&nbsp;<small>(macOS)</small> | [link](https://code.visualstudio.com/)
+- **SSH clients**
+    - `Termius`&nbsp;<small>(macOS)</small> | [link](https://termius.com/)
+- **OpenVPN clients**
+    - `Tunnelblick`&nbsp;<small>(macOS)</small> | [link](https://tunnelblick.net/)
+- **Terminals**
+    - `Built in terminal`&nbsp;<small>(macOS)</small>
+- **File comparison**
+    - `Meld`&nbsp;<small>(macOS)</small> | [link](http://meldmerge.org/)
