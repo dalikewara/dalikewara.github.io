@@ -25,5 +25,7 @@ Description: Ecosystem I use in daily activites
     - `Built in terminal`&nbsp;<small>(macOS)</small>
 - **File comparison**
     - `Meld`&nbsp;<small>(macOS)</small> | [link](http://meldmerge.org/)
+- **Git clients**
+    - `GitKraken`&nbsp;<small>(macOS)</small> | [link](https://www.gitkraken.com/)
 - **Image editors**
     - `Gimp`&nbsp;<small>(macOS)</small> | [link](https://www.gimp.org/)
