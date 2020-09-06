@@ -7,28 +7,33 @@ Description: Ecosystem I use in daily activites
 ---
 
 - **Devices**
-    - `MacBook Pro`<small> (13-inch, 2017, Two Thunderbolt 3 ports)</small>
+    - `MacBook Pro`
+        - 13-inch, 2017, Two Thunderbolt 3 ports
 - **Operating systems**
-    - `macOS Catalina` [link](https://www.apple.com/macos/catalina/)
+    - `macOS Catalina`&nbsp;[link](https://www.apple.com/macos/catalina/)
 - **Programming languages**
     - `NodeJS`
+        - ExpressJS
+        - AyaPingPingJS&nbsp;[link](https://github.com/dalikewara/appjs)
     - `Python`
+        - Flask
     - `PHP`
+        - Laravel
 - **Code editors**
-    - `Visual Studio Code` [link](https://code.visualstudio.com/)
+    - `Visual Studio Code`&nbsp;[link](https://code.visualstudio.com/)
 - **SSH clients**
-    - `Termius` [link](https://termius.com/)
+    - `Termius`&nbsp;[link](https://termius.com/)
 - **OpenVPN clients**
-    - `Tunnelblick` [link](https://tunnelblick.net/)
+    - `Tunnelblick`&nbsp;[link](https://tunnelblick.net/)
 - **Terminals**
     - `Built in terminal`
 - **File comparison**
-    - `Meld` [link](http://meldmerge.org/)
+    - `Meld`&nbsp;[link](http://meldmerge.org/)
 - **Deployment**
-    - `Docker` [link](https://www.docker.com/)
+    - `Docker`&nbsp;[link](https://www.docker.com/)
 - **Git clients**
-    - `GitKraken` [link](https://www.gitkraken.com/)
+    - `GitKraken`&nbsp;[link](https://www.gitkraken.com/)
 - **API clients**
-    - `Postman` [link](https://www.postman.com/)
+    - `Postman`&nbsp;[link](https://www.postman.com/)
 - **Image editors**
-    - `Gimp` [link](https://www.gimp.org/)
+    - `Gimp`&nbsp;[link](https://www.gimp.org/)
