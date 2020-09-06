@@ -16,20 +16,20 @@ Description: Ecosystem I use in daily activites
     - `Python`
     - `PHP`
 - **Code editors**
-    - `Visual Studio Code`&nbsp;<small>(macOS)</small> | [link](https://code.visualstudio.com/)
+    - `Visual Studio Code` | [link](https://code.visualstudio.com/)
 - **SSH clients**
-    - `Termius`&nbsp;<small>(macOS)</small> | [link](https://termius.com/)
+    - `Termius` | [link](https://termius.com/)
 - **OpenVPN clients**
-    - `Tunnelblick`&nbsp;<small>(macOS)</small> | [link](https://tunnelblick.net/)
+    - `Tunnelblick` | [link](https://tunnelblick.net/)
 - **Terminals**
-    - `Built in terminal`&nbsp;<small>(macOS)</small>
+    - `Built in terminal`
 - **File comparison**
-    - `Meld`&nbsp;<small>(macOS)</small> | [link](http://meldmerge.org/)
+    - `Meld` | [link](http://meldmerge.org/)
 - **Deployment**
-    - `Docker`&nbsp;<small>(macOS)</small> | [link](https://www.docker.com/)
+    - `Docker` | [link](https://www.docker.com/)
 - **Git clients**
-    - `GitKraken`&nbsp;<small>(macOS)</small> | [link](https://www.gitkraken.com/)
+    - `GitKraken` | [link](https://www.gitkraken.com/)
 - **API clients**
-    - `Postman`&nbsp;<small>(macOS)</small> | [link](https://www.postman.com/)
+    - `Postman` | [link](https://www.postman.com/)
 - **Image editors**
-    - `Gimp`&nbsp;<small>(macOS)</small> | [link](https://www.gimp.org/)
+    - `Gimp` | [link](https://www.gimp.org/)
