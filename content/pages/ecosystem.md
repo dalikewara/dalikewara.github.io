@@ -8,7 +8,6 @@ Description: Ecosystem I use in daily activites
 
 - **Devices**
     - `MacBook Pro`&nbsp;<small>(13-inch, 2017, Two Thunderbolt 3 ports)</small>
-    - `iPhone 7`
 - **Operating systems**
     - `macOS Catalina` | [link](https://www.apple.com/macos/catalina/)
 - **Programming languages**
