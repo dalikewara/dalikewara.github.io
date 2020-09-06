@@ -27,5 +27,7 @@ Description: Ecosystem I use in daily activites
     - `Meld`&nbsp;<small>(macOS)</small> | [link](http://meldmerge.org/)
 - **Git clients**
     - `GitKraken`&nbsp;<small>(macOS)</small> | [link](https://www.gitkraken.com/)
+- **API clients**
+    - `Postman`&nbsp;<small>(macOS)</small> | [link](https://www.postman.com/)
 - **Image editors**
     - `Gimp`&nbsp;<small>(macOS)</small> | [link](https://www.gimp.org/)
