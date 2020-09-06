@@ -7,28 +7,28 @@ Description: Ecosystem I use in daily activites
 ---
 
 - **Devices**
-    - `MacBook Pro`&nbsp;<small>(13-inch, 2017, Two Thunderbolt 3 ports)</small>
+    - `MacBook Pro`<small> (13-inch, 2017, Two Thunderbolt 3 ports)</small>
 - **Operating systems**
-    - `macOS Catalina` | [link](https://www.apple.com/macos/catalina/)
+    - `macOS Catalina` [link](https://www.apple.com/macos/catalina/)
 - **Programming languages**
     - `NodeJS`
     - `Python`
     - `PHP`
 - **Code editors**
-    - `Visual Studio Code` | [link](https://code.visualstudio.com/)
+    - `Visual Studio Code` [link](https://code.visualstudio.com/)
 - **SSH clients**
-    - `Termius` | [link](https://termius.com/)
+    - `Termius` [link](https://termius.com/)
 - **OpenVPN clients**
-    - `Tunnelblick` | [link](https://tunnelblick.net/)
+    - `Tunnelblick` [link](https://tunnelblick.net/)
 - **Terminals**
     - `Built in terminal`
 - **File comparison**
-    - `Meld` | [link](http://meldmerge.org/)
+    - `Meld` [link](http://meldmerge.org/)
 - **Deployment**
-    - `Docker` | [link](https://www.docker.com/)
+    - `Docker` [link](https://www.docker.com/)
 - **Git clients**
-    - `GitKraken` | [link](https://www.gitkraken.com/)
+    - `GitKraken` [link](https://www.gitkraken.com/)
 - **API clients**
-    - `Postman` | [link](https://www.postman.com/)
+    - `Postman` [link](https://www.postman.com/)
 - **Image editors**
-    - `Gimp` | [link](https://www.gimp.org/)
+    - `Gimp` [link](https://www.gimp.org/)
