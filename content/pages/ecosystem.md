@@ -25,6 +25,8 @@ Description: Ecosystem I use in daily activites
     - `Built in terminal`&nbsp;<small>(macOS)</small>
 - **File comparison**
     - `Meld`&nbsp;<small>(macOS)</small> | [link](http://meldmerge.org/)
+- **Deployment**
+    - `Docker`&nbsp;<small>(macOS)</small> | [link](https://www.docker.com/)
 - **Git clients**
     - `GitKraken`&nbsp;<small>(macOS)</small> | [link](https://www.gitkraken.com/)
 - **API clients**
