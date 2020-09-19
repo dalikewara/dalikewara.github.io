@@ -24,7 +24,7 @@ collections:
     summary: "{{filename}}.{{extension}} | {{commit_author}} - {{commit_date}}"
     extension: "json"
     fields:
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "text"}
 
 
   - name: "articles-blog"
