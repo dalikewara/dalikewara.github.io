@@ -12,12 +12,24 @@
 }
 
 /**
+ * Themes: hr.
+ */
+
+.master-dark hr {
+  background: $black-2;
+}
+
+/**
  * Themes: blockquote.
  */
 
 .master-dark blockquote {
-  background: $black-3;
+  background: $yellow-3;
   color: $black-4;
+}
+
+.master-dark .content blockquote {
+  border-left: 5px solid $yellow-4;
 }
 
 .master-dark blockquote h2,
@@ -218,6 +230,20 @@
   background: $none;
 }
 .master-dark .navbar .navbar-brand .navbar-item {
+  background: $none;
+}
+
+.master-light .navbar .navbar-brand .navbar-burger {
+  color: $black;
+}
+.master-dark .navbar .navbar-brand .navbar-burger {
+  color: $white-2;
+}
+
+.master-light .navbar .navbar-menu {
+  background: $none;
+}
+.master-dark .navbar .navbar-menu {
   background: $none;
 }
 
