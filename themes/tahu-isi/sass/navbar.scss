@@ -1,0 +1,51 @@
+/**
+ * Navbar.
+ */
+
+#navbar {
+  margin-bottom: 1.25rem;
+}
+
+.navbar {
+  min-height: 4rem;
+}
+
+.navbar-menu {
+  box-shadow: none;
+}
+
+.navbar-item-more {
+  padding: 0 8px;
+  margin: 0;
+  border-radius: 2px;
+  cursor: default;
+}
+
+.navbar-item {
+  transition: all 0.2s;
+}
+
+.navbar-item:hover {
+  text-decoration: none;
+}
+
+.navbar-dropdown-more .navbar-item:hover {
+  text-decoration: none;
+}
+
+/**
+ * Navbar: Change theme.
+ */
+
+#change-theme {
+  cursor: pointer;
+  top: -4.5px;
+  right: 60px;
+  position: absolute;
+}
+
+#change-theme-light,
+#change-theme-dark {
+  font-weight: bold !important;
+  padding-top: 10px;
+}

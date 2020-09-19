@@ -1,0 +1,44 @@
+<div id="page-title">
+
+  {% block content %}
+  
+    {% if article and article.title %}
+    
+      <span>
+        <span class="dot dot-black-2"></span>
+        Article @ {{article.category}}
+      </span>
+      <h1 id="title-name" class="title">{{ article.title }}</h1>
+    
+    {% elif page and page.title %}
+    
+      <span>
+        <span class="dot dot-black-2"></span>
+        Page.
+      </span>
+      <h1 id="title-name" class="title">{{ page.title }}</h1>
+    
+    {% else %}
+    
+      <h1 id="title-name" class="title">{{ SITENAME }}</h1>
+    
+    {% endif %}
+  
+  {% endblock %}
+
+  <script>
+    var titleNameElem = document.getElementById('title-name');
+
+    if ((urlpathsplit[1] === 'categories') || (urlpathsplit[1] === 'category')) {
+      titleNameElem.innerHTML = '@@ Discover site\'s categories';
+    }
+
+    if ((urlpathsplit[1] === 'tags') || (urlpathsplit[1] === 'tag')) {
+      titleNameElem.innerHTML = '## Discover site\'s tags';
+    }
+
+    if (urlpathsplit[1] === 'archives') {
+      titleNameElem.innerHTML = '>> Discover site\'s archives';
+    }
+  </script>
+</div>

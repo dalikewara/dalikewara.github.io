@@ -31,3 +31,7 @@ pelican --listen --autoreload
 ```bash
 sass --no-source-map --watch themes/rujak-cingur/sass/master.scss:themes/rujak-cingur/static/css/master.min.css --style compressed
 ```
+
+```bash
+sass --no-source-map --watch themes/tahu-isi/sass/master.scss:themes/tahu-isi/static/css/master.min.css --style compressed
+```

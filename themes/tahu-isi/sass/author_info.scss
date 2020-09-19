@@ -1,0 +1,25 @@
+/**
+ * Author info.
+ */
+
+#author-info-img {
+  width: 127px !important;
+}
+
+#author-info {
+  border-radius: 3px;
+  margin: 2.25rem 0;
+  padding: 0.8rem;
+}
+
+#author-social {
+  margin-top: 1.25rem;
+}
+
+#author-social .buttons .button {
+  transition: all 0.2s;
+}
+
+#author-social .buttons .button:hover {
+  text-decoration: none;
+}

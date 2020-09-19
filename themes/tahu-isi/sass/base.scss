@@ -1,0 +1,89 @@
+@import 'colors';
+
+/**
+ * Base.
+ */
+
+body
+{
+  overflow: hidden;
+}
+
+a,
+body,
+html
+{
+  transition: all 0.2s;
+  scroll-behavior: smooth;
+}
+
+#master {
+  width: 790px;
+  padding: 0 20px;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.hide,
+.hide:hover
+{
+  display: none !important;
+  opacity: 0 !important;
+  overflow: hidden !important;
+}
+
+.show,
+.show:hover
+{
+  display: block !important;
+  opacity: 1 !important;
+  overflow: hidden !important;
+}
+
+.disable,
+.disable:hover
+{
+  opacity: 0.5 !important;
+  cursor: default !important;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img + em {
+  display: inherit;
+  font-size: 0.6em;
+}
+
+img[src*='#badge'] {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+pre,
+.content pre
+{
+  padding: 0;
+  word-wrap: normal !important;
+}
+
+code {
+  background: $yellow-6;
+  color: $yellow-7;
+}
+
+.codehilite code {
+  padding: 20px !important;
+}
+
+@media only screen and (max-width: 850px) {
+  #master {
+    width: 100%;
+  }
+}

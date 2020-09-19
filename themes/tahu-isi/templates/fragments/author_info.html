@@ -1,0 +1,61 @@
+<div id="author-info">
+  <div class="media">
+    <div class="media-left">
+      <div id="author-info-img" class="image">
+        <img src="{{ AUTHOR_IMAGE }}">
+      </div>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <span class="dot dot-black-2"></span>
+          Written by <strong><a href="{{ SITEURL }}/aboutme">{{ AUTHOR }}</a></strong>
+          who lives and works as Backend Developer&mdash;building useful and unexpected things&mdash;in Indonesia.
+          Interested in
+          <span class="highlight-yellow">#art</span>,
+          <span class="highlight-yellow">#writing</span>,
+          and <span class="highlight-yellow">#journey</span>.
+          His life motto is <strong>"Make it simple but Spectacular!"</strong>.
+        </p>
+        <div id="author-social">
+          <div class="buttons">
+        
+            {% for prefix, name, link in SOCIAL %}
+        
+              {% if prefix == 'envelope' %}
+          
+                <a class="button is-normal is-white" href="{{ link }}">
+                  <span class="icon">
+                    <i class="fa fa-{{ prefix }}"></i>
+                  </span>
+                  <span>{{ name }}</span>
+                </a>
+          
+              {% elif prefix == 'feed' %}
+          
+                <a class="button is-normal is-white" href="{{ FEED_ALL_RSS }}">
+                  <span class="icon">
+                    <i class="fa fa-{{ prefix }}"></i>
+                  </span>
+                  <span>{{ name }}</span>
+                </a>
+          
+              {% else %}
+          
+                <a class="button is-normal is-white" href="{{ link }}">
+                  <span class="icon">
+                    <i class="fab fa-{{ prefix }}"></i>
+                  </span>
+                  <span>{{ name }}</span>
+                </a>
+          
+              {% endif %}
+        
+            {% endfor %}
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

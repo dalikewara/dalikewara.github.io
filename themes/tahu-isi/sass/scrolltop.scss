@@ -1,0 +1,23 @@
+/**
+ * Scrolltop.
+ */
+
+.scrolltop {
+  padding-bottom: 6px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.2s;
+}
+
+.scrolltop a {
+  padding: 10px 30px;
+  transition: all 0.2s;
+}
+
+.scrolltop a:hover {
+  text-decoration: none;
+}

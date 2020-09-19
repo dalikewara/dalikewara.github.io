@@ -1,0 +1,78 @@
+/**
+ * Article: Content.
+ */
+
+#article-content {
+  margin-bottom: 3.25rem;
+}
+
+#article-content h1 a {
+  text-shadow: none;
+}
+
+/**
+ * Article: Info.
+ */
+
+.article-info-date, 
+.article-info-readtime 
+{
+  font-size: 0.8em;
+}
+
+/**
+ * Article: Tags.
+ */
+
+.article-tags {
+  margin: 2.25rem 0;
+}
+
+.article-tags .tags {
+  margin-top: 1.25rem;
+}
+
+.article-tags .tags a {
+  transition: all 0.2s;
+}
+
+.article-tags .tags a:hover {
+  text-decoration: none;
+}
+
+/**
+ * Article: History.
+ */
+
+.article-history {
+  margin: 2.25rem 0;
+}
+
+.article-history .history ul li {
+  font-size: 0.8em;
+}
+
+/**
+ * Article: Related posts.
+ */
+
+.article-related-posts {
+  margin: 2.25rem 0;
+}
+
+.article-related-posts .related-posts .columns {
+  margin-top: 1.25rem;
+}
+
+.article-related-posts .related-posts .columns .column {
+  transition: all 0.2s;
+  font-size: 0.9em;
+}
+
+/**
+ * Article: Share button.
+ */
+
+.article-share-button {
+  margin: 2.25rem 0;
+}

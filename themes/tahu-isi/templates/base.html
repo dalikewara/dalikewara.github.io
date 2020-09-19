@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}" prefix="og: http://ogp.me/ns#">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Metadata -->
+
+  {% block metadata %}
+
+  <meta name="description" content="{{ BIO }}" />
+  <meta name="keywords" content="{{ KEYWORDS }}">
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta property="og:description" content="{{ BIO }}" />
+  <meta property="og:title" content="{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="{{ SITEURL }}" />
+  <meta property="og:image" content="{{ DEFAULT_COVER_IMAGE }}" />
+  <meta property="twitter:title" content="{{ SITENAME }}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}">
+  <meta property="twitter:description" content="{{ BIO }}">
+  <meta property="twitter:image:src" content="{{ DEFAULT_COVER_IMAGE }}">
+
+  {% endblock %}
+
+  <!-- Enable responsiveness on mobile devices -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <!-- Site title -->
+
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}{% if SITESUBTITLE %} - {{ SITESUBTITLE }}{% endif %}
+  </title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/bulma.min.css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/master.min.css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/atom-one-dark.min.css" />
+
+  <!-- JS -->
+
+  <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/zenscroll.min.js"></script>
+  <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/highlight.min.js"></script>
+
+  <!-- RSS -->
+
+  {% if FEED_ALL_ATOM %}
+
+  <link
+    href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
+
+  {% endif %}
+
+  {% if FEED_ALL_RSS %}
+
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Full RSS Feed" />
+
+  {% endif %}
+
+  {% if FEED_ATOM %}
+
+  <link href="{{ FEED_DOMAIN }}/{%if FEED_ATOM_URL %}{{ FEED_ATOM_URL }}{% else %}{{ FEED_ATOM }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+
+  {% endif %}
+
+  {% if FEED_RSS %}
+
+  <link href="{{ FEED_DOMAIN }}/{% if FEED_RSS_URL %}{{ FEED_RSS_URL }}{% else %}{{ FEED_RSS }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+
+  {% endif %}
+
+  {% if CATEGORY_FEED_ATOM and category %}
+
+  <link
+    href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_ATOM_URL %}{{ CATEGORY_FEED_ATOM_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_ATOM.format(slug=category.slug) }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Categories Atom Feed" />
+
+  {% endif %}
+
+  {% if CATEGORY_FEED_RSS and category %}
+
+  <link
+    href="{{ FEED_DOMAIN }}/{% if CATEGORY_FEED_RSS_URL %}{{ CATEGORY_FEED_RSS_URL.format(slug=category.slug) }}{% else %}{{ CATEGORY_FEED_RSS.format(slug=category.slug) }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Categories RSS Feed" />
+  {% endif %}
+
+  {% if TAG_FEED_ATOM and tag %}
+
+  <link
+    href="{{ FEED_DOMAIN }}/{% if TAG_FEED_ATOM_URL %}{{ TAG_FEED_ATOM_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_ATOM.format(slug=tag.slug) }}{% endif %}"
+    type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Tags Atom Feed" />
+
+  {% endif %}
+
+  {% if TAG_FEED_RSS and tag %}
+
+  <link
+    href="{{ FEED_DOMAIN }}/{% if TAG_FEED_RSS_URL %}{{ TAG_FEED_RSS_URL.format(slug=tag.slug) }}{% else %}{{ TAG_FEED_RSS.format(slug=tag.slug) }}{% endif %}"
+    type="application/rss+xml" rel="alternate" title="{{ SITENAME }} Tags RSS Feed" />
+
+  {% endif %}
+
+  <!-- Google Analytic -->
+
+  {% include 'fragments/google_analytics.html' %}
+
+  <!-- Font awesome -->
+
+  <script src="https://kit.fontawesome.com/84840f8fbb.js" crossorigin="anonymous"></script>
+
+  <!-- Share this -->
+
+  <script type='text/javascript'
+    src='https://platform-api.sharethis.com/js/sharethis.js#property=59cb4c5521dcc40012f16f01&product=inline-share-buttons'
+    async='async'></script>
+
+  <!-- Initial process -->
+
+  <script>
+    var url = window.location.href;
+    var urlpath = url.replace('http://', '').replace('https://', '');
+    var urlpathsplit = urlpath.split('/');
+    var now = new Date();
+    var thisYear = now.getFullYear();
+    var thisHours = now.getHours();
+    var thisDay = now.getDay();
+
+    // HighlightJS
+
+    hljs.initHighlightingOnLoad();
+  </script>
+</head>
+
+<!-- Content -->
+
+<body id="theme" class="master-light">
+  <div id="master" class="container">
+
+    {% include 'navbar.html' %}
+
+    <script>
+      /**
+       * Change theme.
+       */
+
+      function changeTheme(theme) {
+        var btnLight = document.getElementById('change-theme-light');
+        var btnDark = document.getElementById('change-theme-dark');
+        document.body.className = "";
+        if (theme === 'master-light') {
+          btnLight.classList.remove("hide");
+          btnLight.classList.add("hide");
+          btnDark.classList.remove("hide");
+        } else if (theme === 'master-dark') {
+          btnDark.classList.remove("hide");
+          btnDark.classList.add("hide");
+          btnLight.classList.remove("hide");
+        } else {
+          btnLight.classList.remove("hide");
+          btnLight.classList.add("hide");
+          btnDark.classList.remove("hide");
+          theme = 'master-light';
+        }
+        localStorage.setItem('theme', theme);
+        document.body.classList.add(theme);
+      }
+
+      if ((localStorage.getItem('theme') === 'master-light') ||
+      (thisHours >= 4 && thisHours <= 18)) {
+        changeTheme('master-light');
+      } else if ((localStorage.getItem('theme') === 'master-dark') ||
+      (thisHours >= 18 || thisHours <= 4)) {
+        changeTheme('master-dark');
+      }
+    </script>
+
+    {% include 'fragments/label.html' %}
+
+    <div id="content" class="content">
+
+      {% block content %}
+      {% endblock %}
+
+    </div>
+
+    {% include 'footer.html' %}
+
+    {% include 'fragments/scrolltop.html' %}
+    
+  </div>
+
+  <!-- Tasks -->
+  
+  <script>
+    /**
+     * Toggle burger navbar.
+     */
+
+    function toggleBurgerNavbar() {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(function (el) {
+          el.addEventListener('click', function () {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    }
+
+    /**
+     * Scroll on top
+     */
+
+    function scrolltop() {
+      if (window) {
+        var elm = document.getElementById('scrolltop');
+        var s = 1000;
+        var f = document.getElementById('footer').offsetTop;
+        f = f - 450;
+        window.onscroll = function () {
+          var cr = window.scrollY || window.scrollTop || document.getElementsByTagName("html")[0].scrollTop;
+          if (cr > s && cr < f) {
+            elm.style.opacity = '1';
+          } else {
+            elm.style.opacity = '0';
+          }
+        };
+      }
+    }
+
+    /**
+     * DOM content loaded trigger.
+     */
+
+    document.addEventListener('DOMContentLoaded', function () {
+      toggleBurgerNavbar();
+      scrolltop();
+    });
+  </script>
+</body>
+</html>

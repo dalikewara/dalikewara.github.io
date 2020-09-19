@@ -1,0 +1,245 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <div id="index">
+
+    {% if not category and not tag %}
+
+      <div id="index-overview" class="">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <article id="overview-now" class="tile is-child notification">
+                  <p class="title">
+                    <span class="dot dot-black"></span>
+                    Now,
+                  </p>
+      
+                  {% for now in OVERVIEW_NOW %}
+      
+                  <p class="title"><i>{{ now }}</i></p>
+      
+                  {% endfor %}
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article id="overview-info" class="tile is-child notification">
+                  <p class="title">
+                    <span class="dot dot-yellow"></span>
+                    Sometimes he create username named <span class="highlight-yellow-2">harukii_kun</span> and,
+                  </p>
+                  <p class="overview-content">
+      
+                    {% for info in OVERVIEW_INFO %}
+      
+                    <span class="dot-style-8 dot-yellow"></span>
+                    {{ info }}
+      
+                    {% endfor %}
+      
+                  </p>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        var indexOverviewElem = document.getElementById('index-overview');
+
+        if (urlpathsplit[1]) {
+          indexOverviewElem.classList.add("hide");
+        }
+      </script>
+      
+    {% endif %}
+
+    <div id="index-article">
+      <div id="index-article-header">
+    
+        {% if category %}
+    
+          <p>
+            <span class="dot dot-yellow"></span>
+            @@ Articles in the <span class="highlight-yellow">{{ category }}</span> category...
+      
+            {% if articles_page.has_next() %}
+      
+              {% set page_num = articles_page.next_page_number() - 1 %}
+      
+              {% if page_num > 1 %}
+        
+                <br />
+                <span class="dot dot-black-2"></span>
+                Page {{ page_num }}
+        
+              {% endif %}
+      
+            {% else %}
+      
+              {% if articles_page.has_previous() %}
+        
+                <br />
+                <span class="dot dot-black-2"></span>
+                Last page
+        
+              {% endif %}
+      
+            {% endif %}
+
+            <br>
+            <br>
+      
+          </p>
+    
+        {% elif tag %}
+    
+          <p>
+            <span class="dot dot-yellow"></span>
+            ## Articles tagged with <span class="highlight-yellow">{{ tag }}</span>...
+      
+            {% if articles_page.has_next() %}
+      
+              {% set page_num = articles_page.next_page_number() - 1 %}
+        
+              {% if page_num > 1 %}
+        
+                <br />
+                <span class="dot dot-black-2"></span>
+                Page {{ page_num }}
+        
+              {% endif %}
+      
+            {% else %}
+      
+              {% if articles_page.has_previous() %}
+        
+                {% set page_num = articles_page.previous_page_number() + 1 %}
+          
+                <br />
+                <span class="dot dot-black-2"></span>
+                Last page
+        
+              {% endif %}
+      
+            {% endif %}
+
+            <br>
+            <br>
+      
+          </p>
+    
+        {% else %}
+    
+          <p>
+            <span class="dot dot-yellow"></span>
+            Recent articles.
+      
+            {% if articles_page.has_next() %}
+      
+              {% set page_num = articles_page.next_page_number() - 1 %}
+        
+              {% if page_num > 1 %}
+        
+                <br />
+                <span class="dot dot-black-2"></span>
+                Page {{ page_num }}
+        
+              {% endif %}
+      
+            {% else %}
+      
+              {% if articles_page.has_previous() %}
+        
+                <br />
+                <span class="dot dot-black-2"></span>
+                Last page
+        
+              {% endif %}
+      
+            {% endif %}
+
+            <br>
+            <br>
+      
+          </p>
+    
+        {% endif %}
+    
+      </div>
+      <div id="index-article-contents">
+    
+        {% for article in articles_page.object_list %}
+    
+          {% if article.slug != 'aboutme' %}
+
+            <div class="index-article-content">
+        
+              <!-- Article info -->
+        
+              {% include 'fragments/article_info.html' %}
+        
+              <br />
+        
+              <a class="title-a" href="{{ SITEURL }}/{{ article.slug }}">
+                <h1 class="title">{{ article.title }}</h1>
+              </a>
+              <p>
+                {{ article.summary }}
+              </p>
+              <span class="dot dot-black"></span>
+              <a class="readmore" href="{{ SITEURL }}/{{ article.slug }}">
+                Continue reading »
+              </a>
+            </div>
+      
+          {% endif %}
+    
+        {% endfor %}
+    
+      </div>
+      <div id="index-article-pagination">
+        <div class="pagination" role="navigation" aria-label="pagination">
+    
+          {% if articles_page.has_previous() %}
+    
+            {% set num = articles_page.previous_page_number() %}
+      
+            <a class="pagination-previous" href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}">
+              <span class="dot dot-yellow"></span>
+              <strong>Newer</strong>
+            </a>
+    
+          {% else %}
+    
+            <span class="pagination-previous hide">
+              <span class="dot dot-yellow"></span>
+              Newer
+            </span>
+    
+          {% endif %}
+    
+          {% if articles_page.has_next() %}
+    
+            <a class="pagination-next" href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}">
+              <span class="dot dot-yellow"></span>
+              <strong>Older</strong>
+            </a>
+    
+          {% else %}
+    
+            <span class="pagination-next hide">
+              <span class="dot dot-yellow"></span>
+              Older
+            </span>
+    
+          {% endif %}
+    
+          </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

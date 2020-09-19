@@ -1,0 +1,103 @@
+<div id="navbar">
+  <div class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand" role="navigation" aria-label="main navigation">
+        <a class="navbar-item" href="{{ SITEURL }}/">
+          <img src="{{ SITE_LOGO }}">
+        </a>
+        <div role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+          data-target="navbarMenuTarget">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </div>
+      </div>
+      <div id="navbarMenuTarget" class="navbar-menu">
+        <div class="navbar-start">
+
+          {% if NAVBAR_MENU %}
+
+            {% for prefix, name, dot, data in NAVBAR_MENU %}
+
+              {% if prefix == 'item' %}
+
+                <a class="navbar-item" href="{{ data }}">
+                  <span>
+                    <span class="dot dot-{{ dot }}"></span>
+                    {{ name }}
+                  </span>
+                </a>
+
+              {% elif prefix == 'disable' %}
+
+                <a class="navbar-item disable">
+                  <span>
+                    <span class="dot dot-{{ dot }}"></span>
+                    {{ name }}
+                  </span>
+                </a>
+
+              {% elif prefix == 'dropdown' %}
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                  <div class="navbar-item is-arrowless">
+                    <span class="navbar-item-more">
+                      <span class="dot dot-{{ dot }}"></span>
+                      {{ name }}
+                    </span>
+                  </div>
+                  <div class="navbar-dropdown is-boxed navbar-dropdown-more">
+
+                    {% for dprefix, dname, ddot, ddata in data %}
+
+                      {% if dprefix == 'item' %}
+
+                        <a class="navbar-item" href="{{ ddata }}">
+                          <span class="dot dot-{{ ddot }}"></span>
+                          {{ dname }}
+                        </a>
+
+                      {% elif dprefix == 'separator' %}
+
+                        <hr class="navbar-divider">
+
+                      {% elif dprefix == 'disable' %}
+
+                        <a class="navbar-item disable">
+                          <span class="dot dot-{{ ddot }}"></span>
+                          {{ dname }}
+                        </a>
+
+                      {% endif %}
+
+                    {% endfor %}
+
+                  </div>
+                </div>
+
+              {% endif%}
+
+            {% endfor %}
+
+          {% endif %}
+        </div>
+      </div>
+      <div id="change-theme" class="navbar-end">
+        <div class="navbar-item">
+          <div id="change-theme-light" class="hide" onclick="changeTheme('master-light');">
+            <span class="icon">
+              <i class="far fa-lightbulb"></i>
+            </span>
+            <span>Light</span>
+          </div>
+          <div id="change-theme-dark" class="" onclick="changeTheme('master-dark');">
+            <span class="icon">
+              <i class="fas fa-lightbulb"></i>
+            </span>
+            <span>Dark</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

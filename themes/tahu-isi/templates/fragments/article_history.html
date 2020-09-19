@@ -1,0 +1,24 @@
+{% if article.history %}
+
+  <div class="article-history">
+    <div class="has-text-centered">
+      <span class="dot-style-4 dot-black-2"></span>
+    </div>
+    <div class="history">
+      <span>
+        <span class="dot dot-black-2"></span>
+        Change logs.
+      </span>
+      <ul>
+        
+        {% for date, msg in article.history[:POST_HISTORY_MAX_COUNT|default(5)] %}
+        
+          <li>{{ date|strftime("%A %I:%M %p, %B %d %Y") }} | "{{ msg }}"</li>
+        
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+
+{% endif %}

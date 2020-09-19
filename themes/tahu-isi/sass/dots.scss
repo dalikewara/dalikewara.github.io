@@ -1,0 +1,81 @@
+@import 'colors';
+
+/**
+ * Dots.
+ */
+
+.dot {
+  height: 0.7rem;
+  width: 0.7rem;
+  margin-right: 0.4rem;
+  display: inline-block;
+}
+
+.dot-style-2 {
+  height: 5rem;
+  width: 5rem;
+  margin: 1.25rem 0 1.25rem;
+  display: inline-block;
+}
+
+.dot-style-3 {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.25rem 0 0.25rem 4.35rem;
+  display: inline-block;
+}
+
+.dot-style-4 {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.25rem 8rem 0.25rem 0;
+  display: inline-block;
+}
+
+.dot-style-5 {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.25rem 0 0.25rem 0;
+  display: inline-block;
+}
+
+.dot-style-6 {
+  height: 3rem;
+  width: 3rem;
+  margin: 1.25rem 0 1.25rem 4.35rem;
+  display: inline-block;
+}
+
+.dot-style-7 {
+  height: 2rem;
+  width: 2rem;
+  margin: 0.25rem 0 0.25rem 8.35rem;
+  display: inline-block;
+}
+
+.dot-style-8 {
+  height: 0.7rem;
+  width: 0.7rem;
+  margin: 0 0.2rem 0 0.2rem;
+  display: inline-block;
+}
+
+.dot-black {
+  background: $black;
+}
+
+.dot-black-2 {
+  background: $black-2;
+}
+
+.dot-yellow {
+  background: $yellow;
+}
+
+.dot-red {
+  background: $red;
+}
+
+.dot-white {
+  background: $white;
+}

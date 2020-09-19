@@ -12,12 +12,13 @@ NETLIFY_URL = 'https://www.netlify.com/'
 
 # ACTIVE THEME
 
-THEME = 'themes/rujak-cingur'
+THEME = 'themes/tahu-isi'
 
 # SITE INFO
 
 AUTHOR = 'Dali Kewara'
 AUTHOR_NICKNAME = 'Dali'
+AUTHOR_IMAGE = 'https://www.gravatar.com/avatar/a75d88e645704b0779a74b7b2264f165?s=600'
 SITENAME = 'An unexpected journey'
 BIO = 'Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey. His life motto is \'Make it simple but Spectacular!\''
 KEYWORDS = 'dalikewara, dali kewara, blog, personal, website, programmer, developer, daily, work, person, journey, art, writing, business'
@@ -153,7 +154,7 @@ PRECOMPRESS_TEXT_EXTENSIONS = {
 
 # PAGINATION
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # DISQUS
 
@@ -173,8 +174,7 @@ PAGE_LINK = {
 
 NAVBAR_MENU = [
   ('item', 'Overview', 'yellow', SITEURL + '/'),
-  ('item', 'Publications', 'yellow', SITEURL + '/' + PAGE_LINK['publications']),
-  ('item', 'Ecosystem', 'yellow', SITEURL + '/' + PAGE_LINK['ecosystem']),
+  ('disable', 'Publications', 'yellow', SITEURL + '/' + PAGE_LINK['publications']),
   ('dropdown', 'More...', 'black', [
     ('item', 'Categories', 'black', SITEURL + '/' + PAGE_LINK['categories']),
     ('item', 'Tags', 'black', SITEURL + '/' + PAGE_LINK['tags']),

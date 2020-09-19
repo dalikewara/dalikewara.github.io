@@ -1,0 +1,75 @@
+/**
+ * Index: Article.
+ */
+
+#index-article-header {
+  margin: 1.25rem 0 1.25rem;
+}
+
+#index-article-header p {
+  font-size: 1em;
+}
+
+.index-article-content {
+  padding-bottom: 2.25rem;
+}
+
+.index-article-content .title {
+  transition: all 0.2s;
+  margin: 1.25rem 0 2rem;
+  text-shadow: none;
+  display: inline;
+}
+
+.index-article-content .title:hover {
+  text-decoration: none;
+}
+
+.index-article-content .title-a {
+  padding: 0 !important;
+  text-decoration: none;
+}
+
+.index-article-content .title-a:hover {
+  text-decoration: none;
+}
+
+#index-article-pagination {
+  margin: 0 0 1.25rem;
+}
+
+#index-article-pagination .pagination-previous,
+#index-article-pagination .pagination-next
+{
+  font-size: 1.5em;
+  padding: 2.25rem 0;
+  width: 100%;
+  border: none;
+}
+
+#index-article-pagination .pagination-previous:hover,
+#index-article-pagination .pagination-next:hover
+{
+  text-decoration: none;
+}
+
+/**
+ * Index: Overview.
+ */
+
+#index-overview {
+  margin-bottom: 3.25rem;
+}
+
+#index-overview #overview-info .overview-content {
+  font-size: 0.8em;
+}
+
+#index-overview #overview-info .overview-content a {
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+#index-overview #overview-info .overview-content a:hover {
+  text-decoration: underline;
+}

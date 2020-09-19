@@ -1,0 +1,49 @@
+/**
+ * Page: Tags.
+ */
+
+#page-tags .tile-tags {
+  margin: 0 0 0.4rem;
+}
+
+#page-tags .tile-tags .tile-tag {
+  margin: 0 0.4rem 0.4rem 0.4rem;
+  transition: all 0.2s;
+}
+
+#page-tags .tile-tags .tile-tag:hover {
+  text-decoration: none;
+}
+
+/**
+ * Page: Categories.
+ */
+
+#page-categories .tile-categories {
+  margin: 0 0 0.4rem;
+}
+
+#page-categories .tile-categories .tile-category {
+  margin: 0 0.4rem 0.4rem 0.4rem;
+  transition: all 0.2s;
+}
+
+#page-categories .tile-categories .tile-category img {
+  margin-top: 0.8rem;
+}
+
+#page-categories .tile-categories .tile-category:hover {
+  text-decoration: none;
+}
+
+/**
+ * Page: Archives.
+ */
+
+#page-archives .page-archive {
+  margin-bottom: 1.25rem;
+}
+
+#page-archives .page-archive dt {
+  font-size: 0.8em;
+}
