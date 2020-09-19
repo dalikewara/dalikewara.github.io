@@ -17,16 +17,6 @@ public_folder: "/images"
 collections:
 
 
-  - name: "data"
-    label: "Data"
-    folder: "data"
-    create: true
-    summary: "{{filename}}.{{extension}} | {{commit_author}} - {{commit_date}}"
-    extension: "json"
-    fields:
-      - {label: "Body", name: "body", widget: "text"}
-
-
   - name: "articles-blog"
     label: "Articles: Blog"
     folder: "content/articles/blog"
