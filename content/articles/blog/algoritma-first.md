@@ -13,7 +13,7 @@ Description: Karena saya bekerja dengan komputer, hal tersebut adalah yang
   bisa mengerjakannya. Algoritma juga harus logis, artinya, dia harus
   benar-benar bisa dikerjakan.
 ---
-> ### Jika kita tahu algoritmanya dalam membuat sesuatu, maka kita bisa membuat itu, tidak peduli dengan alat apa kita akan membuatnya.
+> ### Jika kita tahu algoritmanya dalam membuat sesuatu, maka kita akan bisa membuat itu, tidak peduli dengan alat apa kita akan membuatnya.
 
 Karena saya bekerja dengan komputer, algoritma adalah yang paling penting bagi saya pada saat mengembangkan sebuah aplikasi. Algoritma adalah hal paling utama yang saya pikirkan terlebih dahulu sebelum saya mulai menyentuh keyboard. Karena jika saya tidak tahu algoritmanya, saya tidak akan bisa mengerjakannya. Algoritma juga harus logis, artinya, dia harus benar-benar bisa dikerjakan.
 
