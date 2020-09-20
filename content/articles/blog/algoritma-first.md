@@ -1,6 +1,6 @@
 ---
 Title: Algoritma Dulu!
-Date: 2020-09-20 19:36
+Date: 2020-09-20 23:07
 Tags:
   - blog
   - post
