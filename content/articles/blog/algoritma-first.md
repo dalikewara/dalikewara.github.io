@@ -1,5 +1,5 @@
 ---
-Title: Algoritma First!
+Title: Algoritma Dulu!
 Date: 2020-09-20 19:36
 Tags:
   - blog
