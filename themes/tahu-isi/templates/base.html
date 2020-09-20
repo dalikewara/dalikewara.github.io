@@ -172,14 +172,6 @@
 
       if (localStorage.getItem('theme') === 'master-dark') {
         changeTheme('master-dark');
-      } else if (localStorage.getItem('theme') === 'master-light') {
-        changeTheme('master-light');
-      } else {
-        if (thisHours >= 18 || thisHours <= 4) {
-          changeTheme('master-dark');
-        } else {
-          changeTheme('master-light');
-        }
       }
     </script>
 
