@@ -239,6 +239,6 @@ OVERVIEW_INFO = [
 # OVERVIEW NOW
 
 OVERVIEW_NOW = [
-  'He\'s writing a paper from his research about toxic speech detection.',
+  'He\'s writing papers from his research about toxic speech detection.',
   'He\'s creating AyaPingPing v3 and will make it has first public release.'
 ]
