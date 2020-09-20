@@ -6,6 +6,7 @@ Tags:
   - post
   - opinion
   - algorithm
+Slug: algoritma-dulu
 Description: Karena saya bekerja dengan komputer, hal tersebut adalah yang
   paling penting bagi saya pada saat mengembangkan sebuah aplikasi. Algoritma
   adalah hal paling utama yang saya pikirkan terlebih dahulu sebelum saya mulai
