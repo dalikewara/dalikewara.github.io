@@ -40,6 +40,10 @@
                     {% endfor %}
       
                   </p>
+                  <!-- <br/> -->
+                  <div class="LI-profile-badge" data-version="v1" data-size="medium" data-locale="en_US" data-type="horizontal"
+                    data-theme="dark" data-vanity="dalikewara"><a class="LI-simple-link"
+                      href='https://id.linkedin.com/in/dalikewara?trk=profile-badge'></a></div>
                 </article>
               </div>
             </div>
@@ -49,7 +53,7 @@
       <script>
         var indexOverviewElem = document.getElementById('index-overview');
 
-        if (urlpathsplit[1]) {
+        if (urlpathsplit[1] && (urlpathsplit[1] !== 'index')) {
           indexOverviewElem.classList.add("hide");
         }
       </script>

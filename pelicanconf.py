@@ -19,6 +19,7 @@ THEME = 'themes/tahu-isi'
 AUTHOR = 'Dali Kewara'
 AUTHOR_NICKNAME = 'Dali'
 AUTHOR_IMAGE = 'https://www.gravatar.com/avatar/a75d88e645704b0779a74b7b2264f165?s=600'
+AUTHOR_LINKEDIN = 'https://www.linkedin.com/in/dalikewara/'
 SITENAME = 'An unexpected journey'
 BIO = 'Written by Dali Kewara who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also runs for art, writing, and journey. His life motto is \'Make it simple but Spectacular!\''
 KEYWORDS = 'dalikewara, dali kewara, blog, personal, website, programmer, developer, daily, work, person, journey, art, writing, business'
@@ -229,11 +230,13 @@ OVERVIEW_INFO = [
     'Python and ' +
       '<span class="icon"><i class="fab fa-php" style="color:#be4bdb"></i></span> ' +
     'PHP',
+  'Focusing on <span class="icon"><i class="fas fa-terminal"></i></span> Backend',
   'Play ' + 
       '<img src="https://lh3.googleusercontent.com/pw/ACtC-3fvWy52TJnpM_p1y_KMF_w-IrtsFrgyxjEJfZ8WIMu8BA6jP99Dyen4gwWqAIsvQNxbypmsuJiSxzpJaE0SlxRuf-BgazELzO4N8BL52y5Z00id31IA5gqZB6VuSPOEOXx-BdpIYnvubTV3FQxyZ0zz=w1024-h1029-no" width="15" height="15"/> ' + 
     'DOTA 2 turbo mode (have fun only) & ' +
       '<img src="https://lh3.googleusercontent.com/pw/ACtC-3eMSz_QJ95soGFabO6XNFoeZzdCDUD_OVVu6Q55sxA4UMEla4I9ZBs_e8LiQOnFZN5vwwTc-5dEKLxWg5Wn9m50P6aMJ7hQzVvb9LDL5RixXdz0yMbKS0TKEmSxR5KY6ncjQ1x2GyKTVK5czjXh7_zm=w1397-h810-no" width="30" height="30"/> ' +
-    'STORY OF SEASONS: Friends of Mineral Town'
+    'STORY OF SEASONS: Friends of Mineral Town',
+    'Available on <a href="' + AUTHOR_LINKEDIN + '">LinkedIn</a>...'
 ]
 
 # OVERVIEW NOW
