@@ -241,5 +241,5 @@ OVERVIEW_INFO = [
 OVERVIEW_NOW = [
   'He\'s joining deep learning research team.',
   'He\'s writing papers from his research about toxic speech detection.',
-  'He\'s creating AyaPingPing v3 and will make it has first public release.'
+  '<strike>He\'s creating AyaPingPing v3 and will make it has first public release.</strike> Initial release at <a href="https://github.com/dalikewara/ayapingping-js">here</a>.'
 ]
