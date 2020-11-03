@@ -169,6 +169,7 @@ PAGE_LINK = {
   'categories': 'categories',
   'tags': 'tags',
   'archives': 'archives',
+  'portfolio': 'portfolio',
 }
 
 # NAVBAR MENU
@@ -177,6 +178,7 @@ NAVBAR_MENU = [
   ('item', 'Overview', 'yellow', SITEURL + '/'),
   ('disable', 'Publications', 'yellow', SITEURL + '/' + PAGE_LINK['publications']),
   ('dropdown', 'More...', 'black', [
+    ('item', 'Portfolio', 'black', SITEURL + '/' + PAGE_LINK['portfolio']),
     ('item', 'Categories', 'black', SITEURL + '/' + PAGE_LINK['categories']),
     ('item', 'Tags', 'black', SITEURL + '/' + PAGE_LINK['tags']),
     ('item', 'Archives', 'black', SITEURL + '/' + PAGE_LINK['archives']),
