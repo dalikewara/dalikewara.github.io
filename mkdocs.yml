@@ -1,0 +1,94 @@
+site_name: Dali Kewara
+site_url: http://localhost:8002
+site_description: Dali Kewara's official website
+site_keywords: dali kewara, website, official, personal, art, writing, journey, developer, backend, software engineer
+copyright: Copyright &copy; 2017 - 2021 Dali Kewara
+repo_name: dalikewara/dalikewara.github.io
+repo_url: https://github.com/dalikewara/dalikewara.github.io
+edit_uri: ""
+announcement: Stay safe, stay healthy, stay well! We need to all work together to stop this pandemic! <a href="https://kawalcorona.com" target="_blank">https://kawalcorona.com</a>
+theme:
+    name: material
+    custom_dir: overrides
+    favicon: assets/favicon/favicon.ico
+    favicon_path: assets/favicon
+    features:
+      - navigation.tracking
+      - navigation.indexes
+      - navigation.top
+      - search.suggest
+      - search.highlight
+      - search.share
+      - content.code.annotate
+      - content.tabs.link
+    palette:
+      scheme: slate
+      primary: blue grey
+      accent: yellow
+    icon:
+      repo: fontawesome/brands/github
+plugins:
+  - search
+  - minify:
+      minify_html: true
+markdown_extensions:
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      use_pygments: false
+      linenums: true
+      linenums_style: pymdownx-inline
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - attr_list
+  - abbr
+  - toc:
+      permalink: true
+  - meta
+  - footnotes
+extra:
+  disqus: dalikewara
+  analytics:
+    provider: google
+    property: UA-68907511-1
+  social:
+    - icon: fontawesome/brands/github
+      link: https://www.github.com/dalikewara
+      name: 'Dali Kewara on GitHub'
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/channel/UCgK0T0mxumi9uNQewd1RIwg
+      name: 'Dali Kewara on YouTube'
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/dalikewara
+      name: '@dalikewara on Twitter'
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/dalikewara
+      name: '@dalikewara on Instagram'
+    - icon: fontawesome/brands/facebook
+      link: https://www.facebook.com/dalikewara
+      name: 'Dali Kewara on Facebook'
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/dalikewara
+      name: 'Dali Kewara on LinkedIn'
+extra_css:
+  - assets/css/custom.css
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/atom-one-dark.min.css
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - assets/javascripts/config.js
