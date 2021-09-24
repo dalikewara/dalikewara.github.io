@@ -44,23 +44,23 @@ You can follow him on
 [:fontawesome-brands-instagram:{ .instagram } Instagram](https://www.instagram.com/dalikewara){:target="_blank"}, 
 or 
 [:fontawesome-brands-facebook:{ .facebook } Facebook](https://www.facebook.com/dalikewara){:target="_blank"}. 
-For professional purpose, don't hesitate email him at 
+For professional purpose, don't hesitate to email him at 
 [:fontawesome-regular-envelope: dalikewara@gmail.com](mailto:dalikewara@gmail.com) 
 and don't forget to connect to his 
 [:fontawesome-brands-linkedin:{ .linkedin } LinkedIn](https://www.linkedin.com/in/dalikewara/){:target="_blank"}.
 
 ## What you can found here?
 
-As you can see in navigation menu on the left, there are some sections that contain 
-all what you can found in this website.
+As you can see in navigation menu on the left, there are some sections contain 
+all you can found in this website.
 
 ### Blog
 
-This to place his blog articles. There is no specified category here, but mostly
+Section to place blog articles. There is no specified category here, but mostly
 articles are about his `Thoughts`.
 
 ### Projects
 
-This to place documentation of his projects&mdash;basically the most important part. This
-is why he forms the website like a documentation page, because he wants to manage his project's documentations
-just in a single site.
+Section to place documentation of his projects&mdash;basically the most important part. This
+is the main reason why he forms his website like a documentation page, because he wants to 
+manage all of his project documentations just in a single site.
