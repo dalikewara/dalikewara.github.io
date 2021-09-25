@@ -44,8 +44,7 @@ You can follow him on
 [:fontawesome-brands-instagram:{ .instagram } Instagram](https://www.instagram.com/dalikewara){:target="_blank"}, 
 or 
 [:fontawesome-brands-facebook:{ .facebook } Facebook](https://www.facebook.com/dalikewara){:target="_blank"}. 
-For professional purpose, don't hesitate to email him at 
-[:fontawesome-regular-envelope: dalikewara@gmail.com](mailto:dalikewara@gmail.com) 
+For professional purpose, don't hesitate to email him at `dalikewara[at]gmail.com`
 and don't forget to connect to his 
 [:fontawesome-brands-linkedin:{ .linkedin } LinkedIn](https://www.linkedin.com/in/dalikewara/){:target="_blank"}.
 
