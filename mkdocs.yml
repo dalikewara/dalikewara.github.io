@@ -31,6 +31,12 @@ plugins:
   - search
   - minify:
       minify_html: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
+        remove_all_empty_space: true
+      js_files:
+        - assets/javascripts/config.js
 markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
