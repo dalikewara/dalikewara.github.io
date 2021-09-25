@@ -32,7 +32,7 @@ listening to [Yorushika](https://open.spotify.com/playlist/3sQKVJHpxisbBGGtC1mA4
 on :fontawesome-brands-spotify:{ .spotify } Spotify, 
 playing 
 [Dota 2](https://steamcommunity.com/id/harukii_kun/){:target="_blank"}, 
-traveling, or creating open source projects to help 
+traveling, or creating commercial & open source projects to help 
 people solve their problems.
 
 ## How to contact him?
@@ -45,13 +45,13 @@ You can follow him on
 or 
 [:fontawesome-brands-facebook:{ .facebook } Facebook](https://www.facebook.com/dalikewara){:target="_blank"}. 
 For professional purpose, don't hesitate to email him at `dalikewara[at]gmail.com`
-and don't forget to connect to his 
+, and also don't forget to connect to his 
 [:fontawesome-brands-linkedin:{ .linkedin } LinkedIn](https://www.linkedin.com/in/dalikewara/){:target="_blank"}.
 
 ## What you can found here?
 
-As you can see in navigation menu on the left, there are some sections contain 
-all you can found in this website.
+As you can see in navigation menu on the left, there are sections that contain
+all contents in this website.
 
 ### Blog
 
@@ -60,6 +60,34 @@ articles are about his `Thoughts`.
 
 ### Projects
 
-Section to place documentation of his projects&mdash;basically the most important part. This
+Section to place documentation of his open-sourced projects&mdash;basically the most important part. This
 is the main reason why he forms his website like a documentation page, because he wants to 
-manage all of his project documentations just in a single site.
+serve all of his open-sourced project documentation just in a single site.
+
+## Repository
+
+This website is available on GitHub at 
+[:rocket: https://github.com/dalikewara/dalikewara.github.io](https://github.com/dalikewara/dalikewara.github.io).
+
+### Engine
+
+- Built with [MkDocs](https://github.com/mkdocs/mkdocs/) & [Material for MkDocs](https://github.com/squidfunk/mkdocs-material), a static site generator written in [Python](https://www.python.org/).
+
+!!! example
+    Installation & serving MkDocs:
+    ```bash
+    pip install mkdocs mkdocs-material mkdocs-minify-plugin
+    ```
+    ```bash
+    mkdocs serve
+    ```
+    or using `Makefile` file in the repository:
+    ```bash
+    make install && make serve
+    ```
+
+- Hosted on [Netlify](https://www.netlify.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/e708333d-38e6-4386-84e1-18a9b839e93e/deploy-status)](https://app.netlify.com/sites/dalikewara/deploys).
+
+### License
+
+[GNU General Public License v3](https://github.com/dalikewara/dalikewara.github.io/blob/master/LICENSE)
