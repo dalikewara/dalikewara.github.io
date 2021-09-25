@@ -35,19 +35,6 @@ playing
 traveling, or creating commercial & open source projects to help 
 people solve their problems.
 
-## How to contact him?
-
-You can follow him on 
-[:fontawesome-brands-github:{ .github } GitHub](https://www.github.com/dalikewara){:target="_blank"}, 
-[:fontawesome-brands-youtube:{ .youtube } YouTube](https://www.youtube.com/channel/UCgK0T0mxumi9uNQewd1RIwg){:target="_blank"}, 
-[:fontawesome-brands-twitter:{ .twitter } Twitter](https://www.twitter.com/dalikewara){:target="_blank"}, 
-[:fontawesome-brands-instagram:{ .instagram } Instagram](https://www.instagram.com/dalikewara){:target="_blank"}, 
-or 
-[:fontawesome-brands-facebook:{ .facebook } Facebook](https://www.facebook.com/dalikewara){:target="_blank"}. 
-For professional purpose, don't hesitate to email him at `dalikewara[at]gmail.com`
-, and also don't forget to connect to his 
-[:fontawesome-brands-linkedin:{ .linkedin } LinkedIn](https://www.linkedin.com/in/dalikewara/){:target="_blank"}.
-
 ## What you can found here?
 
 As you can see in navigation menu on the left, there are sections that contain
@@ -91,3 +78,16 @@ This website is available on GitHub at
 ### License
 
 [GNU General Public License v3](https://github.com/dalikewara/dalikewara.github.io/blob/master/LICENSE)
+
+## Contact
+
+You can follow him on 
+[:fontawesome-brands-github:{ .github } GitHub](https://www.github.com/dalikewara){:target="_blank"}, 
+[:fontawesome-brands-youtube:{ .youtube } YouTube](https://www.youtube.com/channel/UCgK0T0mxumi9uNQewd1RIwg){:target="_blank"}, 
+[:fontawesome-brands-twitter:{ .twitter } Twitter](https://www.twitter.com/dalikewara){:target="_blank"}, 
+[:fontawesome-brands-instagram:{ .instagram } Instagram](https://www.instagram.com/dalikewara){:target="_blank"}, 
+or 
+[:fontawesome-brands-facebook:{ .facebook } Facebook](https://www.facebook.com/dalikewara){:target="_blank"}. 
+For professional purpose, don't hesitate to email him at `dalikewara[at]gmail.com`
+, and also don't forget to connect to his 
+[:fontawesome-brands-linkedin:{ .linkedin } LinkedIn](https://www.linkedin.com/in/dalikewara/){:target="_blank"}.
