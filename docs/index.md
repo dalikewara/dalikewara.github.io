@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: Dali Kewara's official website introduction
+description: A guy who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also has interests in art, writing and journey (traveling)
 author: Dali Kewara
 date: 2021-09-24 10:59:24
 ---
