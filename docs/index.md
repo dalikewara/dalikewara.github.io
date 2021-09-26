@@ -21,7 +21,7 @@ journey (traveling), and his life motto is,
 
 Currently, he works at [![rctiplus logo](assets/images/logo/rctiplus.png#img-icon-wide-medium){ loading=lazy }](https://www.linkedin.com/company/rctiplus/){:target="_blank"} as a Software Engineer in 
 Jakarta and focuses in back-end development. 
-He has also worked as a Back-End Developer at
+He also has worked as a Back-End Developer at
 [![vascomm logo](assets/images/logo/vascomm.png#img-icon-wide-large){ loading=lazy }](https://www.linkedin.com/company/vascomm/){:target="_blank"}
 in Sidoarjo for at least 4 years.
 
@@ -35,15 +35,30 @@ playing
 traveling, or creating commercial & open source projects to help 
 people solve their problems.
 
+## Tech overview
+
+As a Software Engineer, he used to work using following technologies:
+
+| Languages | Databases | Message Channels | API | Event-Driven | Others
+| :-------- | :-------- | :--------------- | :-- | :----------- | :-----
+| :material-check:{ style=color:green } Python | :material-check:{ style=color:green } MySQL | :material-check:{ style=color:grey } RabbitMQ | :material-check:{ style=color:green } REST | :material-check:{ style=color:grey } Celery | :material-check:{ style=color:green } Docker
+| :material-check:{ style=color:green } Golang | :material-check:{ style=color:green } Mongo | | :material-check:{ style=color:grey } gRPC | | :material-check:{ style=color:grey } Elasticsearch (APM)
+| :material-check:{ style=color:yellow } JavaScript (NodeJS) | :material-check:{ style=color:yellow } Redis | | | | :material-check:{ style=color:green } Git
+| :material-check:{ style=color:grey } PHP | | | | | 
+
+!!! info
+    The :material-check: check icon color indicates how often he uses that technology at current moment.
+    :material-check:{ style=color:green } means very often, otherwise is :material-check:{ style=color:grey }.
+
 ## What you can found here?
 
 As you can see in navigation menu on the left, there are sections that contain
-all contents in this website.
+all contents in this website. You can use search feature to find them quickly.
 
 ### Blog
 
 Section to place blog articles. There is no specified category here, but mostly
-articles are about his `Thoughts`.
+articles are about his thoughts.
 
 ### Projects
 
@@ -58,7 +73,7 @@ This website is available on GitHub at
 
 ### Engine
 
-- Built with [MkDocs](https://github.com/mkdocs/mkdocs/) & [Material for MkDocs](https://github.com/squidfunk/mkdocs-material), a static site generator written in [Python](https://www.python.org/).
+- Built with [MkDocs](https://github.com/mkdocs/mkdocs/) ([Material for MkDocs](https://github.com/squidfunk/mkdocs-material)), a static site generator written in [Python](https://www.python.org/).
 
 !!! example
     Installation & serving MkDocs:
