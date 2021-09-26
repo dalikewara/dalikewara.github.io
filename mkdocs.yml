@@ -6,7 +6,7 @@ copyright: Copyright &copy; 2017 - 2021 Dali Kewara
 repo_name: dalikewara/dalikewara.github.io
 repo_url: https://github.com/dalikewara/dalikewara.github.io
 edit_uri: ""
-announcement: Stay safe, stay healthy, stay well! We need to all work together to stop this pandemic! <a href="https://kawalcorona.com" target="_blank">https://kawalcorona.com</a>
+announcement: Stay safe, stay healthy, stay well! We need to all work together to end this pandemic! <a href="https://kawalcorona.com" target="_blank">https://kawalcorona.com</a>
 theme:
     name: material
     custom_dir: overrides
