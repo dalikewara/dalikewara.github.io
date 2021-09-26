@@ -1,11 +1,12 @@
 ---
-title: Introduction
+title: About
 description: A guy who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He also has interests in art, writing and journey (traveling)
 author: Dali Kewara
 date: 2021-09-24 10:59:24
+disqus: ""
 ---
 
-# Introduction
+# About
 
 Welcome to an official website owned by Dali Kewara, a guy 
 who lives and works as 
@@ -71,9 +72,7 @@ serve all of his open-sourced project documentation just in a single site.
 This website is available on GitHub at 
 [:rocket: https://github.com/dalikewara/dalikewara.github.io](https://github.com/dalikewara/dalikewara.github.io).
 
-### Engine
-
-- Built with [MkDocs](https://github.com/mkdocs/mkdocs/) ([Material for MkDocs](https://github.com/squidfunk/mkdocs-material)), a static site generator written in [Python](https://www.python.org/).
+- Built with [MkDocs](https://github.com/mkdocs/mkdocs/){:target="_blank"} ([Material for MkDocs](https://github.com/squidfunk/mkdocs-material){:target="_blank"}), a static site generator written in [Python](https://www.python.org/){:target="_blank"}.
 
 !!! example
     Installation & serving MkDocs:
@@ -88,21 +87,4 @@ This website is available on GitHub at
     make install && make serve
     ```
 
-- Hosted on [Netlify](https://www.netlify.com) | [![Netlify Status](https://api.netlify.com/api/v1/badges/e708333d-38e6-4386-84e1-18a9b839e93e/deploy-status)](https://app.netlify.com/sites/dalikewara/deploys).
-
-### License
-
-[GNU General Public License v3](https://github.com/dalikewara/dalikewara.github.io/blob/master/LICENSE)
-
-## Contact
-
-You can follow him on 
-[:fontawesome-brands-github:{ .github } GitHub](https://www.github.com/dalikewara){:target="_blank"}, 
-[:fontawesome-brands-youtube:{ .youtube } YouTube](https://www.youtube.com/channel/UCgK0T0mxumi9uNQewd1RIwg){:target="_blank"}, 
-[:fontawesome-brands-twitter:{ .twitter } Twitter](https://www.twitter.com/dalikewara){:target="_blank"}, 
-[:fontawesome-brands-instagram:{ .instagram } Instagram](https://www.instagram.com/dalikewara){:target="_blank"}, 
-or 
-[:fontawesome-brands-facebook:{ .facebook } Facebook](https://www.facebook.com/dalikewara){:target="_blank"}. 
-For professional purpose, don't hesitate to email him at `dalikewara[at]gmail.com`
-, and also don't forget to connect to his 
-[:fontawesome-brands-linkedin:{ .linkedin } LinkedIn](https://www.linkedin.com/in/dalikewara/){:target="_blank"}.
+- Hosted on [Netlify](https://www.netlify.com){:target="_blank"} | [![Netlify Status](https://api.netlify.com/api/v1/badges/e708333d-38e6-4386-84e1-18a9b839e93e/deploy-status)](https://app.netlify.com/sites/dalikewara/deploys).

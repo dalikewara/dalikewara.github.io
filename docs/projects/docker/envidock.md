@@ -9,6 +9,11 @@ date: 2021-09-24 18:50:50
 
 **Envidock** is a general local environment services setup using the power of Docker.
 
+## Usage
+
+Clone the repo at [https://github.com/dalikewara/envidock](https://github.com/dalikewara/envidock),
+then use the `docker-compose.yml` or use the `Makefile`.
+
 ## Requirements
 
 - Docker (>=20.10.5)
