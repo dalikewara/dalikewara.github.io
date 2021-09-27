@@ -14,9 +14,7 @@ who lives and works as
 Developer—building useful and unexpected things—in 
 ![indonesia logo](assets/images/logo/indonesia.png#img-icon-wide){ loading=lazy } 
 Indonesia. He also has interests in art, writing and 
-journey (traveling), and his life motto is,
-
-!!! quote "*Make it simple but Spectacular!*"
+journey (traveling), and his life motto is: "*Make it simple but Spectacular!*".
 
 ## What does he do?
 
@@ -50,6 +48,20 @@ As a Software Engineer, he used to work using following technologies:
 !!! info
     The :material-check: check icon color indicates how often he uses that technology at current moment.
     :material-check:{ style=color:green } means very often, otherwise is :material-check:{ style=color:grey }.
+
+### JetBrains products
+
+**GoLand**, **PyCharm**, **WebStorm**, **PhpStorm**, **DataGrip**&mdash;damn he really 
+loves [JetBrains](https://www.jetbrains.com){:target="_blank"} products so much!!! :fire:
+
+### Containerization
+
+In localhost, he uses **Docker** for most environment services like database, message channel, etc.
+He likes to manage them in a single `docker-compose.yml` file or just wrapped it all in a `Makefile` 
+file.
+
+!!! note
+    You can see [envidock](projects/docker/envidock.md) for more details.
 
 ## What you can found here?
 
@@ -88,3 +100,16 @@ This website is available on GitHub at
     ```
 
 - Hosted on [Netlify](https://www.netlify.com){:target="_blank"} | [![Netlify Status](https://api.netlify.com/api/v1/badges/e708333d-38e6-4386-84e1-18a9b839e93e/deploy-status)](https://app.netlify.com/sites/dalikewara/deploys).
+
+## Contact
+
+You can follow him on 
+[:fontawesome-brands-github:{ .github } GitHub](https://www.github.com/dalikewara){:target="_blank"}, 
+[:fontawesome-brands-youtube:{ .youtube } YouTube](https://www.youtube.com/channel/UCgK0T0mxumi9uNQewd1RIwg){:target="_blank"}, 
+[:fontawesome-brands-twitter:{ .twitter } Twitter](https://www.twitter.com/dalikewara){:target="_blank"}, 
+[:fontawesome-brands-instagram:{ .instagram } Instagram](https://www.instagram.com/dalikewara){:target="_blank"}, 
+or 
+[:fontawesome-brands-facebook:{ .facebook } Facebook](https://www.facebook.com/dalikewara){:target="_blank"}. 
+For professional purpose, don't hesitate to email him at `dalikewara[at]gmail.com`
+, and also don't forget to connect to his 
+[:fontawesome-brands-linkedin:{ .linkedin } LinkedIn](https://www.linkedin.com/in/dalikewara/){:target="_blank"}.
