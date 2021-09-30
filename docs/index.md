@@ -45,22 +45,21 @@ As a Software Engineer, he used to work using following technologies:
 | :material-check:{ style=color:yellow } JavaScript (NodeJS) | :material-check:{ style=color:yellow } Redis | | | | :material-check:{ style=color:green } Git
 | :material-check:{ style=color:grey } PHP | | | | | 
 
-!!! info
+!!! note
     The :material-check: check icon color indicates how often he uses that technology at current moment.
-    :material-check:{ style=color:green } means very often, otherwise is :material-check:{ style=color:grey }.
+    :material-check:{ style=color:green } means very often, :material-check:{ style=color:grey } is otherwise.
 
 ### JetBrains products
 
-**GoLand**, **PyCharm**, **WebStorm**, **PhpStorm**, **DataGrip**&mdash;damn he really 
+He uses **GoLand**, **PyCharm**, **WebStorm**, **PhpStorm**, and **DataGrip**&mdash;damn he really 
 loves [JetBrains](https://www.jetbrains.com){:target="_blank"} products so much!!! :fire:
 
 ### Containerization
 
-In localhost, he uses **Docker** for most environment services like database, message channel, etc.
-He likes to manage them in a single `docker-compose.yml` file or just wrapped it all in a `Makefile` 
-file.
+In localhost, he uses **Docker** for most environment services such as databases, message channels, etc.
+He likes to manage them in a single `docker-compose.yml` file or just wrapped all in a `Makefile`.
 
-!!! note
+!!! info
     You can see [envidock](projects/docker/envidock.md) for more details.
 
 ## What you can found here?
