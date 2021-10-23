@@ -673,3 +673,7 @@ For more information on this, and how to apply and follow the GNU AGPL, see
 <https://www.gnu.org/licenses/>.
 
 ```
+
+# Frequently Asked Questions about the GNU Licenses
+
+[https://www.gnu.org/licenses/gpl-faq.html](https://www.gnu.org/licenses/gpl-faq.html)
