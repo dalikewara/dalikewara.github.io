@@ -19,8 +19,7 @@ journey (traveling), and his life motto is: "*Make it simple but Spectacular!*".
 ## What does he do?
 
 Currently, he works at [![rctiplus logo](assets/images/logo/rctiplus.png#img-icon-wide-medium){ loading=lazy }](https://www.linkedin.com/company/rctiplus/){:target="_blank"} as a Software Engineer in 
-Jakarta and focuses in back-end development. 
-He also has worked as a Back-End Developer at
+Jakarta and focuses in back-end development. Previously, he was worked as a Back-End Developer at
 [![vascomm logo](assets/images/logo/vascomm.png#img-icon-wide-large){ loading=lazy }](https://www.linkedin.com/company/vascomm/){:target="_blank"}
 in Sidoarjo for at least 4 years.
 
@@ -47,7 +46,7 @@ As a Software Engineer, he used to work using following technologies:
 
 !!! note
     The :material-check: check icon color indicates how often he uses that technology at current moment.
-    :material-check:{ style=color:green } means very often, :material-check:{ style=color:grey } is otherwise.
+    :material-check:{ style=color:green } means very often, and :material-check:{ style=color:grey } is otherwise.
 
 ### JetBrains products
 
