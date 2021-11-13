@@ -41,12 +41,12 @@ As a Software Engineer, he used to work using following technologies:
 | :-------- | :-------- | :--------------- | :-- | :----------- | :-----
 | :material-check:{ style=color:green } Python | :material-check:{ style=color:green } MySQL | :material-check:{ style=color:grey } RabbitMQ | :material-check:{ style=color:green } REST | :material-check:{ style=color:grey } Celery | :material-check:{ style=color:green } Docker
 | :material-check:{ style=color:green } Golang | :material-check:{ style=color:green } Mongo | | :material-check:{ style=color:grey } gRPC | | :material-check:{ style=color:grey } Elasticsearch (APM)
-| :material-check:{ style=color:yellow } JavaScript (NodeJS) | :material-check:{ style=color:yellow } Redis | | | | :material-check:{ style=color:green } Git
+| :material-check:{ style=color:yellow } JavaScript (NodeJS) | :material-check:{ style=color:yellow } Redis | | :material-check:{ style=color:green } GraphQL | | :material-check:{ style=color:green } Git
 | :material-check:{ style=color:grey } PHP | | | | | 
 
 !!! note
-    The :material-check: check icon color indicates how often he uses that technology at current moment.
-    :material-check:{ style=color:green } means very often, and :material-check:{ style=color:grey } is otherwise.
+    The :material-check: check icon color indicates how often he uses that technology at the current moment.
+    :material-check:{ style=color:green } means very often, otherwise is :material-check:{ style=color:grey }.
 
 ### JetBrains products
 
