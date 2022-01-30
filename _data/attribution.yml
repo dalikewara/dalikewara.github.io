@@ -1,3 +1,38 @@
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/nodejs-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/css-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/javascript-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/python-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/php-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/docker-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by jiannette from Cleanpng"
+  altName: "jiannette"
+  iconUrl: "/assets/img/golang-pixel.png"
+  url: "https://www.cleanpng.com/users/@jiannette.html"
+
 - name: "The icon made by Smashicons from Flaticon"
   altName: "Smashicons"
   iconUrl: "/assets/img/robotics-pixel.png"

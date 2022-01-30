@@ -39,7 +39,7 @@ footer:
   copyright: "Copyright © 2017 - 2022 Dali Kewara. All rights reserved. Proudly made with <a href='https://jekyllrb.com'>Jekyll</a>."
 articles:
   title: "Sometimes I write articles based on my thoughts, and here they are,"
-  latestTitle: "Sometimes I write <img src='/assets/img/scroll-pixel.png'/> articles based on my thoughts, and here are the latest,"
+  latestTitle: "Sometimes I write <img src='/assets/img/scroll-pixel.png'/> articles too based on my thoughts, and here are the latest,"
   latestLimit: 5
   excerptLimit: 20
   viewMoreUrl: "/articles"
