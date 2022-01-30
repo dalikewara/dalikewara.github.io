@@ -1,0 +1,45 @@
+{% assign title = "Projects" %}
+{% assign name = "Untitled" %}
+{% assign notFoundIcon = "/assets/img/robotics-pixel.png" %}
+{% assign config = site.projects %}
+{% assign contents = site.data.projects %}
+{% if config.title %}
+	{% assign title = config.title %}
+{% endif %}
+{% if config.notFoundIcon %}
+	{% assign notFoundIcon = config.notFoundIcon %}
+{% endif %}
+<div id="project-list" class="section">
+	<div id="project-list-inner" class="section-inner">
+		<div id="project-list-header">
+			<h2>{{- title -}}</h2>
+		</div>
+		{% if contents %}
+			{% for content in contents %}
+				{% assign cName = name %}
+				{% if content.name %}
+					{% assign cName = content.name %}
+				{% endif %}
+				{% assign cUrl = content.url %}
+				{% assign cIconUrl = content.iconUrl %}
+				{% assign cDescription = content.description %}
+				<div class="project-list-item">
+					<div class="project-list-item-inner">
+						<p>
+							{% if cIconUrl %}
+								<img src="{{- cIconUrl -}}" class="icon" />
+							{% endif %}
+							<span class="project-list-item-inner-name"><strong>{{- cName -}}</strong></span>
+							<span class="project-list-item-inner-description">#&nbsp;{{- cDescription -}}</span>
+							{% if cUrl %}
+								<span class="project-list-item-inner-url"><a href="{{- cUrl -}}">Go to repo</a></span>
+							{% endif %}
+						</p>
+					</div>
+				</div>
+			{% endfor %}
+		{% else %}
+			<p class="item-not-found">No project found... <img src="{{- notFoundIcon -}}" class="icon" /></p>
+		{% endif %}
+	</div>
+</div>

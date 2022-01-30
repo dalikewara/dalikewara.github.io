@@ -1,0 +1,10 @@
+{% assign copyright = "Copyright © 2017 - 2022 Dali Kewara. All rights reserved. Proudly made with Jekyll." %}
+{% assign config = site.footer %}
+{% if config.copyright %}
+	{% assign copyright = config.copyright %}
+{% endif %}
+<footer id="footer">
+    <div id="footer-inner">
+        <p>{{- copyright -}}</p>
+    </div>
+</footer>

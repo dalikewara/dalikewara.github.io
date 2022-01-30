@@ -1,0 +1,61 @@
+- name: "The icon made by Smashicons from Flaticon"
+  altName: "Smashicons"
+  iconUrl: "/assets/img/robotics-pixel.png"
+  url: "https://www.flaticon.com/authors/smashicons"
+
+- name: "The icon made by Smashicons from Flaticon"
+  altName: "Smashicons"
+  iconUrl: "/assets/img/monster-pixel.png"
+  url: "https://www.flaticon.com/authors/smashicons"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/house-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/scroll-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/rocket-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by microstd from Flaticon"
+  altName: "microstd"
+  iconUrl: "/assets/img/boy-pixel.png"
+  url: "https://www.flaticon.com/authors/microstd"
+
+- name: "The icon made by Roundicons from Flaticon"
+  altName: "Roundicons"
+  iconUrl: "/assets/img/indonesia-flag-pixel.png"
+  url: "https://www.flaticon.com/authors/roundicons"
+
+- name: "The icon made by Slidicon from Flaticon"
+  altName: "Slidicon"
+  iconUrl: "/assets/img/legal-hammer-pixel.png"
+  url: "https://www.flaticon.com/authors/slidicon"
+
+- name: "The gif made by Ota Jaider from Giphy"
+  altName: "Ota Jaider"
+  iconUrl: "/assets/img/cat-pixel.gif"
+  url: "https://giphy.com/otajaider"
+
+- name: "The icon made by Pixel perfect from Flaticon"
+  altName: "Pixel perfect"
+  iconUrl: "/assets/img/github-blue-pixel.png"
+  url: "https://www.flaticon.com/authors/pixel-perfect"
+
+- name: "hint.min.css by kushagra.dev"
+  altName: "kushagra.dev"
+  url: "https://kushagra.dev/lab/hint/"
+
+- name: "blockquote.min.css by tomhodgins from Codepen"
+  altName: "tomhodgins"
+  url: "https://codepen.io/tomhodgins/pen/gPaPoq"
+
+- name: "scroll.min.css by w3schools"
+  altName: "w3schools"
+  url: "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar"

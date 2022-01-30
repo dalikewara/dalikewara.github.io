@@ -1,0 +1,43 @@
+{% assign title = "Articles" %}
+{% assign name = "Untitled" %}
+{% assign notFoundIcon = "/assets/img/robotics-pixel.png" %}
+{% assign excerptLimit = 20 %}
+{% assign config = site.articles %}
+{% assign contents = site.posts %}
+{% if config.excerptLimit %}
+        {% assign excerptLimit = config.excerptLimit %}
+{% endif %}
+{% if config.title %}
+	{% assign title = config.title %}
+{% endif %}
+{% if config.notFoundIcon %}
+	{% assign notFoundIcon = config.notFoundIcon %}
+{% endif %}
+<div id="article-list" class="section">
+	<div id="article-list-inner" class="section-inner">
+		<div id="article-list-header">
+			<h2>{{- title -}}</h2>
+		</div>
+		{% if contents %}
+			{% for content in contents %}
+				{% assign cTitle = name %}
+				{% if content.title %}
+					{% assign cTitle = content.title %}
+				{% endif %}
+				{% assign cUrl = content.url %}
+				{% assign cDate = content.date %}
+				{% assign cContent = content.content %}
+				<a class="article-list-item" href="{{- cUrl -}}">
+					<span class="article-list-item-title">{{- cTitle -}}</span>
+					<span class="article-list-item-date">/&nbsp;{{- cDate | date: "%B %-d, %Y" -}}</span>
+					{% if cContent %}
+						</br>
+						<span class="article-list-item-content">#&nbsp;{{- cContent | strip_html | truncatewords: excerptLimit -}}</span>
+					{% endif %}
+				</a>
+			{% endfor %}
+		{% else %}
+			<p class="item-not-found">No article found... <img src="{{- notFoundIcon -}}" class="icon" /></p>
+		{% endif %}
+	</div>
+</div>

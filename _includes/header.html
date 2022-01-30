@@ -1,0 +1,38 @@
+{% assign name = "Page Name" %}
+{% assign iconUrl = "/assets/img/monster-pixel.png" %}
+{% assign menu = site.data.header %}
+{% assign currentPermalink = page.url %}
+<header id="header">
+    <div id="header-inner">
+    	{% if menu %}
+    		{% for m in menu %}
+    			{% assign mName = name %}
+    			{% assign mUrl = m.url %}
+    			{% assign mUrlHTML = m.url | append: ".html" %}
+    			{% assign mUrlMD = m.url | append: ".md" %}
+    			{% assign mIconUrl = iconUrl %}
+			{% assign mActiveStatus = "" %}
+			{% if m.name %}
+				{% assign mName = m.name %}
+			{% endif %}
+			{% if m.iconUrl %}
+                                {% assign mIconUrl = m.iconUrl %}
+                        {% endif %}
+			{% if currentPermalink == mUrl or currentPermalink == mUrlHTML or currentPermalink == mUrlMD %}
+				{% assign mActiveStatus = "active" %}
+			{% endif %}
+    			<div class="header-menu-icon hint--bottom hint--no-animate {{ mActiveStatus }}" aria-label="{{- mName -}}">
+		            <a {% if mUrl %}href="{{- mUrl -}}"{% endif %}>
+		                <img src="{{- mIconUrl -}}"/>
+		            </a>
+		        </div>
+    		{% endfor %}
+    	{% else %}
+    		<div class="header-menu-icon hint--bottom hint--no-animate" aria-label="{{- name -}}">
+	            <a>
+	                <img src="{{- iconUrl -}}"/>
+	            </a>
+	        </div>
+    	{% endif %}
+    </div>
+</header>
