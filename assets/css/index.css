@@ -25,6 +25,7 @@ html, body {
     font-size: 1.1em;
     font-family: var(--font-family);
     line-height: 1.5;
+    overflow-x: hidden;
 }
 
 a:link {
@@ -583,10 +584,6 @@ blockquote:nth-of-type(even) {
 }
 
 @media screen and (max-width: 340px) {
-    html, body {
-        overflow-x: hidden;
-    }
-
     .project-list-item-inner {
         width: 100%;
         padding-right: 0px;
