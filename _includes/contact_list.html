@@ -1,0 +1,46 @@
+{% assign title = "Follow me on these platform:" %}
+{% assign description = "" %}
+{% assign name = "Untitled" %}
+{% assign notFoundIcon = "/assets/img/robotics-pixel.png" %}
+{% assign config = site.contact %}
+{% assign contents = site.data.socials %}
+{% if config.title %}
+    {% assign title = config.title %}
+{% endif %}
+{% if config.description %}
+    {% assign description = config.description %}
+{% endif %}
+{% if config.notFoundIcon %}
+    {% assign notFoundIcon = config.notFoundIcon %}
+{% endif %}
+<div id="contact-list" class="section">
+    <div id="contact-list-inner" class="section-inner">
+        <div id="contact-list-header">
+            <h2>{{- title -}}</h2>
+            {% if description %}
+                <p>{{- description -}}</p>
+            {% endif %}
+        </div>
+        {% if contents %}
+            {% for content in contents %}
+                {% assign mName = name %}
+                {% if content.name %}
+                    {% assign mName = content.name %}
+                {% endif %}
+                {% assign cUrl = content.url %}
+                {% assign cIconUrl = content.iconUrl %}
+                <div class="contact-list-item menu-icon hint--bottom hint--no-animate" aria-label="{{- mName -}}">
+                    <div class="contact-list-item-inner">
+                        <a {% if cUrl %}href="{{- cUrl -}}"{% endif %}>
+                            {% if cIconUrl %}
+                                <img src="{{- cIconUrl -}}" class="icon" />
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="item-not-found">No social found... <img src="{{- notFoundIcon -}}" class="icon"/></p>
+        {% endif %}
+    </div>
+</div>

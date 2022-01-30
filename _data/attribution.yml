@@ -1,3 +1,33 @@
+- name: "The icon made by Pixel perfect from Flaticon"
+  altName: "Pixel perfect"
+  iconUrl: "/assets/img/youtube-pixel.png"
+  url: "https://www.flaticon.com/authors/pixel-perfect"
+
+- name: "The icon made by OpenSea"
+  altName: "OpenSea"
+  iconUrl: "/assets/img/opensea-pixel.png"
+  url: "https://docs.opensea.io/docs/logos"
+
+- name: "The icon made by Pixel perfect from Flaticon"
+  altName: "Pixel perfect"
+  iconUrl: "/assets/img/instagram-pixel.png"
+  url: "https://www.flaticon.com/authors/pixel-perfect"
+
+- name: "The icon made by Pixel perfect from Flaticon"
+  altName: "Pixel perfect"
+  iconUrl: "/assets/img/linkedin-pixel.png"
+  url: "https://www.flaticon.com/authors/pixel-perfect"
+
+- name: "The icon made by Pixel perfect from Flaticon"
+  altName: "Pixel perfect"
+  iconUrl: "/assets/img/facebook-pixel.png"
+  url: "https://www.flaticon.com/authors/pixel-perfect"
+
+- name: "The icon made by Pixel perfect from Flaticon"
+  altName: "Pixel perfect"
+  iconUrl: "/assets/img/twitter-pixel.png"
+  url: "https://www.flaticon.com/authors/pixel-perfect"
+
 - name: "The icon made by Freepik from Flaticon"
   altName: "Freepik"
   iconUrl: "/assets/img/nodejs-pixel.png"

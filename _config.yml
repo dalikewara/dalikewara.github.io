@@ -1,6 +1,7 @@
 title: "Dali Kewara"
 tagline: "An unexpected journey"
 description: "A guy who lives and works as Backend Developer—building useful and unexpected things—in Indonesia. He loves to code and draw his own world—also has interests in art, writing and journey (traveling). He is on an unexpected journey and gonna make it simple but spectacular!"
+keywords: "dali, dali kewara, dalikewara, articles, projects, website, art, writing, journey, developer, backend, software engineer"
 url: "https://www.dalikewara.com"
 author:
   name: "Dali Kewara"
@@ -17,7 +18,7 @@ social:
     - "https://www.linkedin.com/in/dalikewara"
     - "https://www.github.com/dalikewara"
     - "https://www.instagram.com/dalikewara"
-    - "https://www.opensea.io/dalikewara"
+    - "https://opensea.io/dalikewara"
     - "https://www.youtube.com/channel/UCgK0T0mxumi9uNQewd1RIwg"
 google_site_verification: "Czw8BPlbSgfcKuHG56yYHEU2TPLH5TK29b80uJLX-CY"
 jekyll_analytics:
@@ -32,14 +33,15 @@ plugins:
   - "jekyll-analytics"
   - "jekyll-google-tag-manager"
   - "jekyll-minifier"
+  - "jekyll-sitemap"
 greeting:
   title: "Hello there,"
   content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as Backend Developer—building useful and unexpected things—in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia. I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular!"
 footer:
-  copyright: "Copyright © 2017 - 2022 Dali Kewara. All rights reserved. Proudly made with <a href='https://jekyllrb.com'>Jekyll</a>."
+  copyright: "Copyright © 2017 - 2022 Dali Kewara. All rights reserved. Proudly made with <a href='https://jekyllrb.com'>Jekyll</a>, hosted on <a href='https://www.netlify.com/'>Netlify</a>."
 articles:
   title: "Sometimes I write articles based on my thoughts, and here they are,"
-  latestTitle: "Sometimes I write <img src='/assets/img/scroll-pixel.png'/> articles too based on my thoughts, and here are the latest,"
+  latestTitle: "Sometimes I write <img src='/assets/img/scroll-pixel.png'/> articles too&mdash;based on my thoughts, and here are the latest,"
   latestLimit: 5
   excerptLimit: 20
   viewMoreUrl: "/articles"
@@ -53,3 +55,7 @@ projects:
 attribution:
   title: "Attribution"
   description: "Some assets you found on this website didn't created by myself. I know that making such a good things takes a lot of time and effort, so I proudly to give them an attribution to credit the creator. Because this website has a pixel vibes, so I convert them to a pixel first using <a href='https://giventofly.github.io/pixelit/'>Pixel It</a>&mdash;if they are not a pixel art by default."
+contact:
+  title: "You can follow me on these platform:"
+  description: "<blockquote>For professional purpose, don't hesitate to email me at <code>dalikewara[at]gmail.com</code></blockquote>"
+  notFoundIcon: "/assets/img/robotics-pixel.png"

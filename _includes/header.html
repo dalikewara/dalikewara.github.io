@@ -11,13 +11,13 @@
     			{% assign mUrlHTML = m.url | append: ".html" %}
     			{% assign mUrlMD = m.url | append: ".md" %}
     			{% assign mIconUrl = iconUrl %}
-			{% assign mActiveStatus = "" %}
-			{% if m.name %}
-				{% assign mName = m.name %}
-			{% endif %}
-			{% if m.iconUrl %}
-                                {% assign mIconUrl = m.iconUrl %}
-                        {% endif %}
+				{% assign mActiveStatus = "" %}
+				{% if m.name %}
+					{% assign mName = m.name %}
+				{% endif %}
+				{% if m.iconUrl %}
+					{% assign mIconUrl = m.iconUrl %}
+				{% endif %}
 			{% if currentPermalink == mUrl or currentPermalink == mUrlHTML or currentPermalink == mUrlMD %}
 				{% assign mActiveStatus = "active" %}
 			{% endif %}

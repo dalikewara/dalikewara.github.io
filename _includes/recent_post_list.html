@@ -36,7 +36,7 @@
 					<span class="article-list-item-title">{{- cTitle -}}</span>
 					<span class="article-list-item-date">/&nbsp;{{- cDate | date: "%B %-d, %Y" -}}</span>
 					{% if cContent %}
-						</br>
+						<br/>
 						<span class="article-list-item-content">#&nbsp;{{- cContent | strip_html | truncatewords: excerptLimit -}}</span>
 					{% endif %}
 				</a>
