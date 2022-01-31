@@ -17,9 +17,6 @@
     <div id="contact-list-inner" class="section-inner">
         <div id="contact-list-header">
             <h2>{{- title -}}</h2>
-            {% if description %}
-                <p>{{- description -}}</p>
-            {% endif %}
         </div>
         {% if contents %}
             {% for content in contents %}
@@ -41,6 +38,9 @@
             {% endfor %}
         {% else %}
             <p class="item-not-found">No social found... <img src="{{- notFoundIcon -}}" class="icon"/></p>
+        {% endif %}
+        {% if description %}
+            <p>{{- description -}}</p>
         {% endif %}
     </div>
 </div>

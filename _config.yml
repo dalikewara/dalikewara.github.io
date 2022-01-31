@@ -40,15 +40,15 @@ greeting:
 footer:
   copyright: "Copyright © 2017 - 2022 Dali Kewara. All rights reserved. Proudly made with <a href='https://jekyllrb.com'>Jekyll</a>, hosted on <a href='https://www.netlify.com/'>Netlify</a>."
 articles:
-  title: "Sometimes I write articles based on my thoughts, and here they are,"
-  latestTitle: "Sometimes I write <img src='/assets/img/scroll-pixel.png'/> articles too&mdash;based on my thoughts, and here are the latest,"
+  title: "Sometimes I write articles&mdash;based on my thoughts, and here they are,"
+  latestTitle: "Sometimes I write <img src='/assets/img/scroll-pixel.png'/> articles too&mdash;based on my thoughts,"
   latestLimit: 5
   excerptLimit: 20
   viewMoreUrl: "/articles"
   notFoundIcon: "/assets/img/robotics-pixel.png"
 projects:
-  title: "I love to create projects that can help people solve their problems, and here they are,"
-  latestTitle: "I love to create <img src='/assets/img/rocket-pixel.png'/> projects that can help people solve their problems, and here are the latest,"
+  title: "I love creating projects to help people solve their problems, and here they are,"
+  latestTitle: "I love creating <img src='/assets/img/rocket-pixel.png'/> projects to help people solve their problems,"
   latestLimit: 7
   viewMoreUrl: "/projects"
   notFoundIcon: "/assets/img/robotics-pixel.png"
@@ -56,6 +56,6 @@ attribution:
   title: "Attribution"
   description: "Some assets you found on this website didn't created by myself. I know that making such a good things takes a lot of time and effort, so I proudly to give them an attribution to credit the creator. Because this website has a pixel vibes, so I convert them to a pixel first using <a href='https://giventofly.github.io/pixelit/'>Pixel It</a>&mdash;if they are not a pixel art by default."
 contact:
-  title: "You can follow me on these platform:"
+  title: "Want to know me more? find me on these platform:"
   description: "<blockquote>For professional purpose, don't hesitate to email me at <code>dalikewara[at]gmail.com</code></blockquote>"
   notFoundIcon: "/assets/img/robotics-pixel.png"
