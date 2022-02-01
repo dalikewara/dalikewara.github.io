@@ -19,6 +19,8 @@
     --icon-med: 30px;
     --icon-lg: 40px;
     --icon-lg-xxl: 200px;
+    --icon-width-med: 80px;
+    --icon-width-lg: 100px;
 }
 
 /*base*/
@@ -61,6 +63,11 @@ code {
     background: rgb(28, 29, 33);
     color: rgb(78, 181, 214);
     padding: 5px 10px;
+}
+
+/*img url*/
+.img-url:hover {
+    background: none;
 }
 
 /*container*/
@@ -195,28 +202,38 @@ code {
 
 /*icon*/
 .icon {
-    width: var(--icon);
-    height: var(--icon);
+    width: var(--icon) !important;
+    height: var(--icon) !important;
 }
 
 .icon-sm {
-    width: var(--icon-sm);
-    height: var(--icon-sm);
+    width: var(--icon-sm) !important;
+    height: var(--icon-sm) !important;
 }
 
 .icon-med {
-    width: var(--icon-med);
-    height: var(--icon-med);
+    width: var(--icon-med) !important;
+    height: var(--icon-med) !important;
 }
 
 .icon-lg {
-    width: var(--icon-lg);
-    height: var(--icon-lg);
+    width: var(--icon-lg) !important;
+    height: var(--icon-lg) !important;
 }
 
 .icon-lg-xxl {
-    width: var(--icon-lg-xxl);
-    height: var(--icon-lg-xxl);
+    width: var(--icon-lg-xxl) !important;
+    height: var(--icon-lg-xxl) !important;
+}
+
+.icon-width-med {
+    width: var(--icon-width-med) !important;
+    height: var(--icon) !important;
+}
+
+.icon-width-lg {
+    width: var(--icon-width-lg) !important;
+    height: var(--icon) !important;
 }
 
 /*item not found*/
@@ -239,6 +256,12 @@ code {
 }
 
 #greeting img {
+    width: var(--icon);
+    height: var(--icon);
+}
+
+/*job*/
+#job img {
     width: var(--icon);
     height: var(--icon);
 }

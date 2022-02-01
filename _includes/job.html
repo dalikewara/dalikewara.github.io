@@ -1,0 +1,15 @@
+{% assign title = "What am I doing in real life?" %}
+{% assign content = "I do unexpected stuff" %}
+{% assign config = site.job %}
+{% if config.content %}
+    {% assign content = config.content %}
+{% endif %}
+{% if config.title %}
+    {% assign title = config.title %}
+{% endif %}
+<div id="job" class="section">
+    <div id="job-inner" class="section-inner">
+        <h2>{{- title -}}</h2>
+        <p>{{- content -}}</p>
+    </div>
+</div>

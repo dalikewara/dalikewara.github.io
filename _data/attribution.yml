@@ -1,3 +1,13 @@
+- name: "The icon made by Freepik from Flaticon"
+  altName: "Freepik"
+  iconUrl: "/assets/img/dota2-pixel.png"
+  url: "https://www.flaticon.com/authors/freepik"
+
+- name: "The icon made by Pixel perfect from Flaticon"
+  altName: "Pixel perfect"
+  iconUrl: "/assets/img/spotify-pixel.png"
+  url: "https://www.flaticon.com/authors/pixel-perfect"
+
 - name: "The icon made by Pixel perfect from Flaticon"
   altName: "Pixel perfect"
   iconUrl: "/assets/img/youtube-pixel.png"
@@ -124,3 +134,13 @@
 - name: "scroll.min.css by w3schools"
   altName: "w3schools"
   url: "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar"
+
+- name: "The icon made by Vascomm"
+  altName: "Vascomm"
+  iconUrl: "/assets/img/vascomm-white-pixel.png"
+  url: "https://www.vascomm.co.id/"
+
+- name: "The icon downloaded from PngAAA"
+  altName: "Rctiplus"
+  iconUrl: "/assets/img/rctiplus-pixel.png"
+  url: "https://www.pngaaa.com/detail/5897327"

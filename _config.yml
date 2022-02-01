@@ -41,6 +41,9 @@ jekyll-minifier:
 greeting:
   title: "Hello there,"
   content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as Backend Developer—building useful and unexpected things—in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia. I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular!"
+job:
+  title: "What am I doing in real life?"
+  content: "Currently, I'm working at <a href='https://www.linkedin.com/company/rctiplus' class='img-url'><img src='assets/img/rctiplus-pixel.png' class='icon-width-med'/></a> as a Software Engineer in Jakarta and focuses in Back-End development. Previously, I was worked as a Back-End Developer at <a href='https://www.linkedin.com/company/vascomm' class='img-url'><img src='assets/img/vascomm-white-pixel.png' class='icon-width-lg'/></a> in Sidoarjo&mdash;at least for 4 years.<br/><br/>After working hours, sometimes I'm relaxing myself by watching <a href='https://www.youtube.com/results?search_query=solo+bushcraft'>solo bushcraft</a> contents on <img src='/assets/img/youtube-pixel.png'/> YouTube, listening to <a href='https://open.spotify.com/playlist/3sQKVJHpxisbBGGtC1mA4I?si=a5610bb4d8ce4048'>Yorushika</a> on <img src='/assets/img/spotify-pixel.png'/> Spotify, playing <img src='/assets/img/dota2-pixel.png'/> <a href='https://steamcommunity.com/id/green_4pple'>Dota 2</a>, traveling, or creating commercial & open source projects to help people solve their problems."
 footer:
   copyright: "Copyright © 2017 - 2022 Dali Kewara. All rights reserved. Proudly made with <a href='https://jekyllrb.com'>Jekyll</a>, hosted on <a href='https://www.netlify.com/'>Netlify</a>."
 articles:
