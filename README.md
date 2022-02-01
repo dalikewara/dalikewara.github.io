@@ -7,7 +7,7 @@ This is my website project on [GitHub](https://github.com/dalikewara/dalikewara.
 
 ## Credits
 
-Copyright &copy; 2021 [Dali Kewara](https://www.dalikewara.com)
+Copyright &copy; 2022 [Dali Kewara](https://www.dalikewara.com)
 
 ## License
 
