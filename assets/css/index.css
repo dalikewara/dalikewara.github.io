@@ -182,7 +182,7 @@ code {
 
 /*view more*/
 .view-more {
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 /*icon*/
@@ -222,6 +222,10 @@ code {
 }
 
 /* greeting */
+#greeting {
+    margin-bottom: 0;
+}
+
 #greeting h2 {
     font-size: 1.5em;
 }
@@ -233,7 +237,6 @@ code {
 
 /*contact list*/
 #contact-list {
-    margin-bottom: 10px;
     display: block;
 }
 
@@ -258,7 +261,6 @@ code {
 /*project list*/
 
 #project-list {
-    margin-bottom: 10px;
     display: block;
 }
 
@@ -272,15 +274,17 @@ code {
 }
 
 .project-list-item-inner {
-    font-size: 0.7em;
+    font-size: 0.8em;
     padding: 0 10px;
     border: 1px dashed var(--bg-color-dark);
     background: var(--bg-color-dark);
-    width: 130px;
+    width: 180px;
     margin-bottom: 12px;
 }
 
-.project-list-item-inner:hover {
+.project-list-item-inner:hover,
+.project-list-item-inner:active,
+.project-list-item-inner:focus {
     border: 1px dashed var(--pallete-color);
     background: var(--bg-color-dark);
     color: var(--color-light);
@@ -297,13 +301,13 @@ code {
 }
 
 .project-list-item-inner-description {
-    display: inline-block;
+    display: block;
     color: var(--color-dark);
     padding-right: 10px;
 }
 
 .project-list-item-inner-url {
-    display: inline-block;
+    display: block;
     color: var(--color-dark);
 }
 
@@ -311,7 +315,6 @@ code {
 
 #article-list {
     display: block;
-    margin-bottom: 20px;
 }
 
 #article-list-header {
@@ -321,7 +324,6 @@ code {
 .article-list-item {
     display: inline-block;
     padding: 5px 10px;
-    text-decoration: none;
     color: var(--color) !important;
     text-decoration: none !important;
     width: 100%;
@@ -350,7 +352,7 @@ code {
 }
 
 .article-list-item-content {
-    font-size: 0.7em;
+    font-size: 0.8em;
     display: inline-block;
     color: var(--color-dark);
 }
@@ -393,6 +395,10 @@ code {
 
 
 /*section*/
+.section {
+    margin-bottom: 30px;
+}
+
 .section-inner {
     padding: 2px 20px;
 }
@@ -490,17 +496,22 @@ code {
 /*custom blockquote.min.css*/
 
 blockquote {
-	border-left: 5px solid var(--color);
+    font-size: 0.8em;
+    border-left: 5px solid var(--color);
 }
+
 blockquote p {
-	color: var(--color);
+    font-size: 1em;
+    color: var(--color);
 }
+
 blockquote footer,
 blockquote cite {
-	color: var(--color);
+    color: var(--color);
 }
+
 blockquote:nth-of-type(even) {
-	border-right: 5px solid var(--color);
+    border-right: 5px solid var(--color);
 }
 
 /*custom scroll.min.css*/
@@ -524,9 +535,16 @@ blockquote:nth-of-type(even) {
         font-size: 1em;
     }
 
-    #container-inner,
+    #container {
+        padding: 2px 20px 10px 20px;
+    }
+
+    #container-inner {
+        width: 100%;
+    }
+
     #footer-inner {
-        width: 400px;
+        width: 90%;
     }
 
     #header {
@@ -564,28 +582,13 @@ blockquote:nth-of-type(even) {
         width: var(--icon-med);
         height: var(--icon-med);
     }
-}
 
-@media screen and (max-width: 450px) {
-    #container {
-        padding: 2px 20px 10px 20px;
-    }
-
-    #container-inner,
-    #footer-inner {
-        width: 100%;
-    }
-}
-
-@media screen and (max-width: 400px) {
     .project-list-item-inner {
-        width: 90px;
-    }
-}
-
-@media screen and (max-width: 340px) {
-    .project-list-item-inner {
-        width: 100%;
+        width: 97%;
         padding-right: 0px;
+    }
+
+    .project-list-more {
+        display: block;
     }
 }

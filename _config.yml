@@ -49,7 +49,7 @@ articles:
 projects:
   title: "I love creating projects to help people solve their problems, and here they are,"
   latestTitle: "I love creating <img src='/assets/img/rocket-pixel.png'/> projects to help people solve their problems,"
-  latestLimit: 7
+  latestLimit: 5
   viewMoreUrl: "/projects"
   notFoundIcon: "/assets/img/robotics-pixel.png"
 attribution:
