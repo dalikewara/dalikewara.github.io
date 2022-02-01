@@ -28,6 +28,7 @@ jekyll_analytics:
 google:
   tag_manager:
     container_id: "GTM-MMH79W"
+permalink: "/:categories/:year/:month/:day/:title"
 plugins:
   - "jekyll-seo-tag"
   - "jekyll-analytics"
