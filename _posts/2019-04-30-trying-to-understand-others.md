@@ -42,7 +42,7 @@ Why would he/she do that? Why? There must always be a reason, and every excuse
 has something to forgive—in human terms. We learn to endure hatred, 
 cultivate love and patience. Given the reality of the diversity of human 
 viewpoints, we must pay attention to that diversity, and not make decisions 
-on the truth unilaterally. Of course, humans are not suitable for this. Men 
+on the truth unilaterally. Of course, humans are not suitable for this. Humans 
 will always obey their own righteousness—with their lusts. Although humans 
 are social creatures, basically humans have the nature to destroy each other. 
 Ironic.
