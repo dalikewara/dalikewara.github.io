@@ -52,7 +52,9 @@ a:active {
 
 code {
     font-size: 1em;
-    background: var(--bg-color-dark) !important;
+    background: var(--color);
+    color: var(--bg-color-dark);
+    padding: 5px 10px;
 }
 
 /*container*/
@@ -309,6 +311,10 @@ code {
 .project-list-item-inner-url {
     display: block;
     color: var(--color-dark);
+}
+
+.project-list-item-inner-url a {
+    text-decoration: none !important;
 }
 
 /*article list*/
@@ -584,7 +590,7 @@ blockquote:nth-of-type(even) {
     }
 
     .project-list-item-inner {
-        width: 97%;
+        width: 95%;
         padding-right: 0px;
     }
 
