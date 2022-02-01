@@ -5,7 +5,11 @@ layout: base
 	{% gtm head %}
 	{% seo %}
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="{{- site.keywords -}}" />
+	{% if page.keywords %}
+		<meta name="keywords" content="{{- page.keywords -}}" />
+	{% else if site.keywords %}
+		<meta name="keywords" content="{{- site.keywords -}}" />
+	{% endif %}
 	<link rel="stylesheet" href="/assets/css/scroll.min.css">
 	<link rel="stylesheet" href="/assets/css/hint.min.css">
 	<link rel="stylesheet" href="/assets/css/blockquote.min.css">
@@ -30,6 +34,31 @@ layout: base
 	<meta name="msapplication-TileImage" content="/assets/img/ms-icon-144x144.png">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
 	<script>hljs.highlightAll();</script>
+	<script>
+		let currentDayOfWeek = new Date().getDay();
+		switch (currentDayOfWeek) {
+			case 1:
+				document.documentElement.style.setProperty('--pallete-color', 'var(--green)');
+				break;
+			case 2:
+				document.documentElement.style.setProperty('--pallete-color', 'var(--blue-sky)');
+				break;
+			case 3:
+				document.documentElement.style.setProperty('--pallete-color', 'var(--blue)');
+				break;
+			case 4:
+				document.documentElement.style.setProperty('--pallete-color', 'var(--purple)');
+				break;
+			case 5:
+				document.documentElement.style.setProperty('--pallete-color', 'var(--pink)');
+				break;
+			case 6:
+				document.documentElement.style.setProperty('--pallete-color', 'var(--red)');
+				break;
+			default:
+				document.documentElement.style.setProperty('--pallete-color', 'var(--orange)');
+		}
+	</script>
 </head>
 <body>
 	{% gtm body %}

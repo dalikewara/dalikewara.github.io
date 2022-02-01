@@ -35,6 +35,9 @@ plugins:
   - "jekyll-google-tag-manager"
   - "jekyll-minifier"
   - "jekyll-sitemap"
+jekyll-minifier:
+  uglifier_args:
+    harmony: true
 greeting:
   title: "Hello there,"
   content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as Backend Developer—building useful and unexpected things—in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia. I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular!"
