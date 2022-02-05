@@ -18,6 +18,11 @@
   iconUrl: "/assets/img/python-pixel.png"
   description: "Pangsit (py) is my starter pack framework represented in Python to deal with learning computing such as Machine/Deep Learning, Data Science, etc."
 
+- name: "rctiplus-rabbitmq-python-sdk"
+  url: "https://github.com/dalikewara/rctiplus-rabbitmq-python-sdk"
+  iconUrl: "/assets/img/python-pixel.png"
+  description: "A library from RCTI+ to handle RabbitMQ tasks (connect, send, receive, etc) in Python."
+
 - name: "vcmrefunc"
   url: "https://github.com/dalikewara/vcmrefunc"
   iconUrl: "/assets/img/javascript-pixel.png"
