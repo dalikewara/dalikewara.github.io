@@ -1,3 +1,8 @@
+- name: "cmtxgo"
+  url: "https://github.com/dalikewara/cmtxgo"
+  iconUrl: "/assets/img/golang-pixel.png"
+  description: "cmtxgo generates cemtext format in Golang. Cemtext file format is a format used by banks to allow for batch transactions."
+
 - name: "ayapingping-go"
   url: "https://github.com/dalikewara/ayapingping-go"
   iconUrl: "/assets/img/golang-pixel.png"
