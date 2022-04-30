@@ -37,7 +37,7 @@
 							<span class="project-list-item-inner-name"><strong>{{- cName -}}</strong></span>
 							<span class="project-list-item-inner-description">#&nbsp;{{- cDescription -}}</span>
 							{% if cUrl %}
-								<span class="project-list-item-inner-url"><a href="{{- cUrl -}}">Go to repo</a></span>
+								<span class="project-list-item-inner-url"><a href="{{- cUrl -}}" class="hint--bottom hint--no-animate" aria-label="Click to go to the project repository">Go to repo</a></span>
 							{% endif %}
 						</p>
 					</div>
@@ -46,7 +46,7 @@
 			{% if viewMoreUrl %}
 				<div class="project-list-more">
 					<div class="project-list-more-inner">
-                                		<a href="{{- viewMoreUrl -}}" class="view-more">More projects...</a>
+                                		<a href="{{- viewMoreUrl -}}" class="view-more hint--bottom hint--no-animate" aria-label="Click to see more projects">More projects...</a>
 					</div>
 				</div>
 			{% endif %}

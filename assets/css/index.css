@@ -8,6 +8,8 @@
     --red: rgb(227, 72, 72);
     --bg-color: rgb(23, 23, 23);
     --bg-color-dark: rgb(0, 0, 0);
+    --bg-color-gr-tl: rgb(54, 30, 53);
+    --bg-color-gr-br: rgb(35, 27, 51);
     --pallete-color: var(--orange);
     --color: rgb(180, 180, 180);
     --color-light: rgb(255, 255, 255);
@@ -26,7 +28,7 @@
 /*base*/
 
 html, body {
-    background: var(--bg-color);
+    background: linear-gradient(-45deg, var(--bg-color-gr-br), var(--bg-color), var(--bg-color), var(--bg-color-gr-tl));
     color: var(--color);
     margin: 0;
     padding: 0;
