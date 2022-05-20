@@ -1,8 +1,14 @@
 {% assign title = "What am I doing in real life?" %}
-{% assign content = "I do unexpected stuff" %}
+{% assign name = "Untitled" %}
+{% assign currentWork = "" %}
+{% assign afterWorkingHours = "I do unexpected stuff" %}
+{% assign contents = site.data.jobs %}
 {% assign config = site.job %}
-{% if config.content %}
-    {% assign content = config.content %}
+{% if config.afterWorkingHours %}
+    {% assign afterWorkingHours = config.afterWorkingHours %}
+{% endif %}
+{% if config.currentWork %}
+    {% assign currentWork = config.currentWork %}
 {% endif %}
 {% if config.title %}
     {% assign title = config.title %}
@@ -10,6 +16,51 @@
 <div id="job" class="section">
     <div id="job-inner" class="section-inner">
         <h2>{{- title -}}</h2>
-        <p>{{- content -}}</p>
+        <p>{{- currentWork -}}</p>
+        <div id="job-list" class="section">
+            <div id="job-list-inner" class="section-inner">
+                {% if contents %}
+                    {% for content in contents %}
+                        {% assign cName = name %}
+                        {% if content.name %}
+                            {% assign cName = content.name %}
+                        {% endif %}
+                        {% assign cUrl = content.url %}
+                        {% assign cIconUrl = content.iconUrl %}
+                        {% assign cPosition = content.position %}
+                        {% assign cDate = content.date %}
+                        {% assign cHeight = content.height %}
+                        {% assign cWidth = content.width %}
+                        {% assign cShow = content.show %}
+                        {% assign cPresent = content.present %}
+                        {% assign cStyle = 'style="' %}
+                        {% if cHeight %}
+                            {% assign cStyle = cStyle | append: "height:" | append: cHeight | append: " !important;" %}
+                        {% endif %}
+                        {% if cWidth %}
+                            {% assign cStyle = cStyle | append: "width:" | append: cWidth | append: " !important;" %}
+                        {% endif %}
+                        {% assign cStyle = cStyle | append: '"' %}
+                        {% if cShow %}
+                            <div class="job-list-item">
+                                <div class="job-list-item-inner">
+                                    <p>
+                                        {% if cIconUrl %}
+                                            <a {% if cUrl %}href="{{- cUrl -}}" class="hint--bottom hint--no-animate" aria-label="Click to go"{% endif %} >
+                                                <img src="{{- cIconUrl -}}" {{- cStyle -}} />
+                                            </a>
+                                        {% endif %}
+                                        <span class="job-list-item-inner-name"><strong>{{- cName -}}</strong></span>
+                                        <span class="job-list-item-inner-position">{{- cPosition -}}</span>
+                                        <span class="{% if cPresent %}job-list-item-inner-date-present{% else %}job-list-item-inner-date{% endif %}">{{- cDate -}}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+        <p>{{- afterWorkingHours -}}</p>
     </div>
 </div>

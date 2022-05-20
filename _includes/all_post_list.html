@@ -1,8 +1,8 @@
-{% assign title = "Articles" %}
+{% assign title = "Posts" %}
 {% assign name = "Untitled" %}
 {% assign notFoundIcon = "/assets/img/robotics-pixel.png" %}
 {% assign excerptLimit = 20 %}
-{% assign config = site.articles %}
+{% assign config = site.postSection %}
 {% assign contents = site.posts %}
 {% if config.excerptLimit %}
         {% assign excerptLimit = config.excerptLimit %}
@@ -13,9 +13,10 @@
 {% if config.notFoundIcon %}
 	{% assign notFoundIcon = config.notFoundIcon %}
 {% endif %}
-<div id="article-list" class="section">
-	<div id="article-list-inner" class="section-inner">
-		<div id="article-list-header">
+{% assign odd = "true" %}
+<div id="post-list" class="section">
+	<div id="post-list-inner" class="section-inner">
+		<div id="post-list-header">
 			<h2>{{- title -}}</h2>
 		</div>
 		{% if contents %}
@@ -27,17 +28,22 @@
 				{% assign cUrl = content.url %}
 				{% assign cDate = content.date %}
 				{% assign cContent = content.content %}
-				<a class="article-list-item" href="{{- cUrl -}}">
-					<span class="article-list-item-title">{{- cTitle -}}</span>
-					<span class="article-list-item-date">/&nbsp;{{- cDate | date: "%B %-d, %Y" -}}</span>
+				<a class="post-list-item {% if odd == 'true' %}post-list-item-odd{% else %}post-list-item-even{% endif %}" href="{{- cUrl -}}">
+					<span class="post-list-item-title">{{- cTitle -}}</span>
+					<span class="post-list-item-date">/&nbsp;{{- cDate | date: "%B %-d, %Y" -}}</span>
 					{% if cContent %}
 						<br/>
-						<span class="article-list-item-content">#&nbsp;{{- cContent | strip_html | truncatewords: excerptLimit -}}</span>
+						<span class="post-list-item-content">#&nbsp;{{- cContent | strip_html | truncatewords: excerptLimit -}}</span>
 					{% endif %}
 				</a>
+				{% if odd == 'true' %}
+					{% assign odd = "false" %}
+				{% else %}
+					{% assign odd = "true" %}
+				{% endif %}
 			{% endfor %}
 		{% else %}
-			<p class="item-not-found">No article found... <img src="{{- notFoundIcon -}}" class="icon" /></p>
+			<p class="item-not-found">No post found... <img src="{{- notFoundIcon -}}" class="icon" /></p>
 		{% endif %}
 	</div>
 </div>

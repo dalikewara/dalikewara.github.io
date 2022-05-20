@@ -1,0 +1,25 @@
+- name: "Warung Pintar"
+  url: "https://warungpintar.co.id"
+  iconUrl: "/assets/img/warung-pintar.png"
+  position: "Software Engineer"
+  date: "2022 - present"
+  width: "120px"
+  height: "120px"
+  show: false
+  present: true
+- name: "RCTI+"
+  url: "https://www.rctiplus.com"
+  iconUrl: "/assets/img/rctiplus.png"
+  position: "Software Engineer"
+  date: "2021 - 2022"
+  width: "140px"
+  height: "50px"
+  show: true
+- name: "Vascomm"
+  url: "https://www.vascomm.co.id"
+  iconUrl: "/assets/img/vascomm-white.png"
+  position: "Backend Developer"
+  date: "2016 - 2021"
+  width: "140px"
+  height: "30px"
+  show: true

@@ -1,3 +1,8 @@
+# - name: "The icon downloaded from Warung Pintar's Facebook profile"
+#   altName: "Warung Pintar"
+#   iconUrl: "/assets/img/warung-pintar.png"
+#   url: "https://www.facebook.com/warungpintar.co.id/photos/a.435271693555340/1351911168558050"
+
 - name: "The icon made by Freepik from Flaticon"
   altName: "Freepik"
   iconUrl: "/assets/img/dota2-pixel.png"
@@ -137,10 +142,10 @@
 
 - name: "The icon made by Vascomm"
   altName: "Vascomm"
-  iconUrl: "/assets/img/vascomm-white-pixel.png"
+  iconUrl: "/assets/img/vascomm-white.png"
   url: "https://www.vascomm.co.id/"
 
 - name: "The icon downloaded from PngAAA"
   altName: "Rctiplus"
-  iconUrl: "/assets/img/rctiplus-pixel.png"
+  iconUrl: "/assets/img/rctiplus.png"
   url: "https://www.pngaaa.com/detail/5897327"

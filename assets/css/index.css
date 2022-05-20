@@ -1,16 +1,24 @@
 :root {
     --orange: rgb(255, 118, 0);
+    --orange-gr-tl: rgb(54, 30, 30);
     --green: rgb(45, 153, 0);
+    --green-gr-tl: rgb(40, 54, 30);
     --blue-sky: rgb(0, 157, 193);
+    --blue-sky-gr-tl: rgb(30, 47, 54);
     --blue: rgb(59, 120, 239);
+    --blue-gr-tl: rgb(32, 30, 54);
     --purple: rgb(172, 77, 255);
+    --purple-gr-tl: rgb(54, 30, 53);
     --pink: rgb(223, 81, 171);
+    --pink-gr-tl: rgb(54, 30, 53);
     --red: rgb(227, 72, 72);
+    --red-gr-tl: rgb(54, 30, 30);
     --bg-color: rgb(23, 23, 23);
     --bg-color-dark: rgb(0, 0, 0);
-    --bg-color-gr-tl: rgb(54, 30, 53);
-    --bg-color-gr-br: rgb(35, 27, 51);
+    --bg-color-odd-light: rgb(17, 17, 17);
+    --bg-color-even-light: rgb(10, 10, 10);
     --pallete-color: var(--orange);
+    --pallete-color-gr-tl: var(--orange-gr-tl);
     --color: rgb(180, 180, 180);
     --color-light: rgb(255, 255, 255);
     --color-dark: rgb(110, 110, 110);
@@ -23,12 +31,13 @@
     --icon-lg-xxl: 200px;
     --icon-width-med: 80px;
     --icon-width-lg: 100px;
+    --icon-width-lg-xxl: 200px;
 }
 
 /*base*/
 
 html, body {
-    background: linear-gradient(-45deg, var(--bg-color-gr-br), var(--bg-color), var(--bg-color), var(--bg-color-gr-tl));
+    background: linear-gradient(-45deg, var(--bg-color), var(--bg-color), var(--bg-color), var(--pallete-color-gr-tl));
     color: var(--color);
     margin: 0;
     padding: 0;
@@ -61,10 +70,11 @@ a:active {
 }
 
 code {
-    font-size: 1em;
-    background: rgb(28, 29, 33);
-    color: rgb(78, 181, 214);
+    background: rgb(0, 0, 0) !important;
+    color: rgb(180, 155, 136);
     padding: 5px 10px;
+    font-size: 0.8em !important;
+    font-family:  monospace !important;
 }
 
 /*img url*/
@@ -80,6 +90,10 @@ code {
 /*post*/
 #post {
     padding: 0 20px;
+}
+
+#post p {
+    font-size: 0.9em;
 }
 
 #post-info {
@@ -238,6 +252,11 @@ code {
     height: var(--icon) !important;
 }
 
+.icon-width-lg-xxl {
+    width: var(--icon-width-lg-xxl) !important;
+    height: var(--icon) !important;
+}
+
 /*item not found*/
 .item-not-found {
     color: var(--color-dark);
@@ -348,17 +367,68 @@ code {
     text-decoration: none !important;
 }
 
-/*article list*/
+/*job list*/
 
-#article-list {
+#job-list {
     display: block;
+    margin-bottom: -18px;
 }
 
-#article-list-header {
+.job-list-item {
     display: inline-block;
 }
 
-.article-list-item {
+.job-list-item-inner {
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px 10px;
+    width: 160px;
+    margin-bottom: 12px;
+}
+
+.job-list-item-inner a:hover,
+.job-list-item-inner a:active,
+.job-list-item-inner a:focus {
+    background: transparent;
+    text-decoration: none;
+}
+
+.job-list-item-inner img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin-bottom: 10px;
+}
+
+.job-list-item-inner img,
+.job-list-item-inner-name,
+.job-list-item-inner-position,
+.job-list-item-inner-date {
+    display: inline-block;
+}
+
+.job-list-item-inner-name {
+    font-size: 1.2em !important;
+}
+
+.job-list-item-inner-date {
+    background: rgb(96, 61, 61);
+}
+
+.job-list-item-inner-date-present {
+    background: rgb(42, 84, 42);
+}
+
+/*post list*/
+
+#post-list {
+    display: block;
+}
+
+#post-list-header {
+    display: inline-block;
+}
+
+.post-list-item {
     display: inline-block;
     padding: 5px 10px;
     color: var(--color) !important;
@@ -368,27 +438,35 @@ code {
     font-size: 1em;
 }
 
-.article-list-item:hover {
+.post-list-item-odd {
+    background: var(--bg-color-odd-light);
+}
+
+.post-list-item-even {
+    background: var(--bg-color-even-light);
+}
+
+.post-list-item:hover {
     font-weight: normal !important;
     background: var(--bg-color-dark);
     color: var(--color-light);
 }
 
-.article-list-item img {
+.post-list-item img {
     width: var(--icon);
     height: var(--icon);
 }
 
-.article-list-item-title {
+.post-list-item-title {
     font-weight: bold;
 }
 
-.article-list-item-date {
+.post-list-item-date {
     color: var(--pallete-color);
     font-size: 0.7em;
 }
 
-.article-list-item-content {
+.post-list-item-content {
     font-size: 0.8em;
     display: inline-block;
     color: var(--color-dark);
@@ -595,7 +673,7 @@ blockquote:nth-of-type(even) {
 
     #greeting img,
     .project-list-item-inner img,
-    .article-list-item img,
+    .post-list-item img,
     .attribution-list-item img {
         width: var(--icon-sm);
         height: var(--icon-sm);
