@@ -1,7 +1,7 @@
-# - name: "The icon downloaded from Warung Pintar's Facebook profile"
-#   altName: "Warung Pintar"
-#   iconUrl: "/assets/img/warung-pintar.png"
-#   url: "https://www.facebook.com/warungpintar.co.id/photos/a.435271693555340/1351911168558050"
+- name: "The icon downloaded from Warung Pintar's Facebook profile"
+  altName: "Warung Pintar"
+  iconUrl: "/assets/img/warung-pintar.png"
+  url: "https://www.facebook.com/warungpintar.co.id/photos/a.435271693555340/1351911168558050"
 
 - name: "The icon made by Freepik from Flaticon"
   altName: "Freepik"

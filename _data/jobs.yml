@@ -5,7 +5,7 @@
   date: "2022 - present"
   width: "120px"
   height: "120px"
-  show: false
+  show: true
   present: true
 - name: "RCTI+"
   url: "https://www.rctiplus.com"
