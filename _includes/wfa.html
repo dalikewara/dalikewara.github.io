@@ -1,0 +1,15 @@
+{% assign title = "Currently, my company allows me to Working From Anywhere until further notice" %}
+{% assign content = "" %}
+{% assign config = site.wfa %}
+{% if config.content %}
+{% assign content = config.content %}
+{% endif %}
+{% if config.title %}
+{% assign title = config.title %}
+{% endif %}
+<div id="wfa" class="section">
+  <div id="wfa-inner" class="section-inner">
+    <h2>{{- title -}}</h2>
+    <p>{{- content -}}</p>
+  </div>
+</div>

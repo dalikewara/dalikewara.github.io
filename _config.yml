@@ -44,7 +44,7 @@ greeting:
   content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as Backend Developer—building useful and unexpected things, and making positive impacts for people—in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia.<br/><br/>I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular!"
 job:
   title: "What am I doing in real life?"
-  currentWork: "Currently, I work as a Software Engineer (Backend) for living&mdash;at least for these companies:"
+  currentWork: "Currently, I work as a Software Engineer (Backend) for living&mdash;at least I've worked for these companies:"
   afterWorkingHours: "After working hours, sometimes I enjoy myself by watching <a href='https://www.youtube.com/results?search_query=solo+bushcraft' class='hint--bottom hint--no-animate' aria-label='Click to go'>solo bushcraft</a> contents on <img src='/assets/img/youtube-pixel.png'/> YouTube, listening <a href='https://open.spotify.com/playlist/3sQKVJHpxisbBGGtC1mA4I?si=a5610bb4d8ce4048' class='hint--bottom hint--no-animate' aria-label='Click to go'>Yorushika</a> on <img src='/assets/img/spotify-pixel.png'/> Spotify, playing <img src='/assets/img/dota2-pixel.png'/> <a href='https://steamcommunity.com/id/green_4pple' class='hint--bottom hint--no-animate' aria-label='Click to go'>Dota 2</a>, traveling, or creating projects."
 footer:
   copyright: "Copyright © 2017 - 2022 Dali Kewara. All rights reserved. Proudly made with <a href='https://jekyllrb.com' class='hint--bottom hint--no-animate' aria-label='Click to go'>Jekyll</a>, hosted on <a href='https://www.netlify.com/' class='hint--bottom hint--no-animate' aria-label='Click to go'>Netlify</a>."
@@ -68,3 +68,6 @@ contact:
   title: "Want to know me more? find me on these platform:"
   description: "<blockquote>For professional purpose, don't hesitate to email me at <code>dalikewara[at]gmail.com</code></blockquote>"
   notFoundIcon: "/assets/img/robotics-pixel.png"
+wfa:
+  title: "Currently, my company allows me to Working From Anywhere <img src='/assets/img/flame-pixel.png'/><img src='/assets/img/smile-love-pixel.png'/> &mdash;until further notice"
+  content: "<img src='/assets/img/wfa-meeting.png'/>"
