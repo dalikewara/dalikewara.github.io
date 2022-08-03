@@ -1,3 +1,8 @@
+- name: "The gif made by Sebastián (Shiny) from Giphy"
+  altName: "Pika Heart Pixel"
+  iconUrl: "/assets/img/pika-heart-pixel.gif"
+  url: "https://giphy.com/shinyseabass"
+
 - name: "The icon made by Vectors Market from Flaticon"
   altName: "Flame Pixel"
   iconUrl: "/assets/img/flame-pixel.png"

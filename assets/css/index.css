@@ -287,6 +287,11 @@ code {
     height: var(--icon);
 }
 
+/*wfa*/
+#wfa-inner p {
+    text-align: center;
+}
+
 /*contact list*/
 #contact-list {
     display: block;

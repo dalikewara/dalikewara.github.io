@@ -63,11 +63,11 @@ projects:
   notFoundIcon: "/assets/img/robotics-pixel.png"
 attribution:
   title: "Attribution"
-  description: "Some assets you found on this website didn't created by myself. I know that making such a good things takes a lot of time and effort, so I proudly to give them an attribution to credit the creator. Because this website has a pixel vibes, so I convert them to a pixel first using <a href='https://giventofly.github.io/pixelit/' class='hint--bottom hint--no-animate' aria-label='Click to go'>Pixel It</a>&mdash;if they are not a pixel art by default."
+  description: "Some assets you found on this website didn't created by myself. I know that making good things like that takes a lot of time and effort, so I proudly to give them an attribution to credit the creator. Because this website has a pixel vibes, I convert them to a pixel first using <a href='https://giventofly.github.io/pixelit/' class='hint--bottom hint--no-animate' aria-label='Click to go'>Pixel It</a>&mdash;if they are not pixel arts by default."
 contact:
   title: "Want to know me more? find me on these platform:"
   description: "<blockquote>For professional purpose, don't hesitate to email me at <code>dalikewara[at]gmail.com</code></blockquote>"
   notFoundIcon: "/assets/img/robotics-pixel.png"
 wfa:
   title: "Currently, my company allows me to Working From Anywhere <img src='/assets/img/flame-pixel.png'/><img src='/assets/img/smile-love-pixel.png'/> &mdash;until further notice"
-  content: "<img src='/assets/img/wfa-meeting.png'/>"
+  content: "<img src='/assets/img/pika-heart-pixel.gif'/>"
