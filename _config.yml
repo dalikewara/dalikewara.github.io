@@ -56,8 +56,8 @@ postSection:
   viewMoreUrl: "/posts"
   notFoundIcon: "/assets/img/robotics-pixel.png"
 projects:
-  title: "I love creating projects that can help people solve their problems,"
-  latestTitle: "I love creating <img src='/assets/img/rocket-pixel.png'/> projects that can help people solve their problems,"
+  title: "I love creating projects that can help people to solve their problems,"
+  latestTitle: "I love creating <img src='/assets/img/rocket-pixel.png'/> projects that can help people to solve their problems,"
   latestLimit: 5
   viewMoreUrl: "/projects"
   notFoundIcon: "/assets/img/robotics-pixel.png"
