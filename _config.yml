@@ -1,6 +1,6 @@
 title: "Dali Kewara"
 tagline: "An unexpected journey"
-description: "A guy who lives and works as Backend Developer—building useful and unexpected things, and making positive impacts for people—in Indonesia. He loves to code and draw his own world—also has interests in art, writing and journey (traveling). He is on an unexpected journey and gonna make it simple but spectacular!"
+description: "A guy who lives and works as a Backend Developer in Indonesia—building useful and unexpected things, and making positive impacts for people. He loves to code and draw his own world—also has interests in art, writing and journey (traveling). He is on an unexpected journey and gonna make it simple but spectacular!"
 keywords: "dali, dali kewara, dalikewara, posts, projects, website, art, writing, journey, developer, backend, software engineer"
 url: "https://www.dalikewara.com"
 author:
@@ -41,7 +41,7 @@ jekyll-minifier:
     harmony: true
 greeting:
   title: "Hello there,"
-  content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as Backend Developer—building useful and unexpected things, and making positive impacts for people—in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia.<br/><br/>I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular!"
+  content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as a Backend Developer in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia—building useful and unexpected things, and making positive impacts for people.<br/><br/>I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular!"
 job:
   title: "What am I doing in real life?"
   currentWork: "Currently, I work as a Software Engineer (Backend) for living&mdash;at least I've worked for these companies:"
