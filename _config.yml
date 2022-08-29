@@ -41,7 +41,7 @@ jekyll-minifier:
     harmony: true
 greeting:
   title: "Hello there,"
-  content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as a Backend Developer in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia—building useful and unexpected things, and making positive impacts for people.<br/><br/>I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular!"
+  content: "I'm <strong>Dali Kewara</strong>, a guy who lives and works as a Backend Developer in <img src='/assets/img/indonesia-flag-pixel.png'/> Indonesia—building useful and unexpected things, and making positive impacts for people.<br/><br/>I love to code and draw my own world—also have interest in art, writing and journey (traveling). I'm on an unexpected journey and gonna make it simple but spectacular! <br/><br/> <iframe src='https://github.com/sponsors/dalikewara/button' title='Sponsor dalikewara' height='35' width='116' style='border: 0;color:yellow !important'></iframe>"
 job:
   title: "What am I doing in real life?"
   currentWork: "Currently, I work as a Software Engineer (Backend) for living&mdash;at least I've worked for these companies:"
