@@ -114,7 +114,7 @@ code {
 #header {
     text-align: center;
     display: block;
-    margin: 20px 0 50px 0;
+    margin: 40px 0 20px;
 }
 
 .header-menu-icon {
@@ -359,7 +359,6 @@ code {
 
 .project-list-item-inner-description {
     display: block;
-    color: var(--color-dark);
     padding-right: 10px;
 }
 
@@ -474,7 +473,6 @@ code {
 .post-list-item-content {
     font-size: 0.8em;
     display: inline-block;
-    color: var(--color-dark);
 }
 
 /*attribution*/
@@ -665,10 +663,6 @@ blockquote:nth-of-type(even) {
 
     #footer-inner {
         width: 90%;
-    }
-
-    #header {
-        margin: 20px 0;
     }
 
     .header-menu-icon img {

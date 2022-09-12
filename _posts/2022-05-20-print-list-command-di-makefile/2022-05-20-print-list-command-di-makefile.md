@@ -5,8 +5,8 @@ description: Menampilkan semua list command yang ada di Makefile beserta dengan 
 keywords: makefile, unix, cli, command, print
 ---
 
-Kamu yang sering lupa apa saja nama-nama *command* yang sudah dibuat di **Makefile**?
-dan capek harus *nge-check-in file* **Makefile** nya terus setiap kali lupa? cobalah *script* praktis
+Kamu sering lupa apa saja nama-nama *command* yang sudah dibuat di **Makefile**?
+dan capek harus *nge-check-in file* **Makefile** nya terus? cobalah *script* praktis
 dibawah ini:
 
 ```shell

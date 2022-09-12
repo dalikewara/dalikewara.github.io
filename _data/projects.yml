@@ -1,3 +1,8 @@
+- name: "rflgo"
+  url: "https://github.com/dalikewara/rflgo"
+  iconUrl: "/assets/img/golang-pixel.png"
+  description: "rflgo composes new value into destination type based on the source data value. It will reflects all values from the source, but keeps the structure, types and the properties of the destination."
+
 - name: "cmtxgo"
   url: "https://github.com/dalikewara/cmtxgo"
   iconUrl: "/assets/img/golang-pixel.png"
