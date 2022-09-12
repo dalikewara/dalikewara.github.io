@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Saya Pakai envidock Untuk Kebutuhan Infra di Local
-description: Menampilkan semua list command yang ada di Makefile beserta dengan deskripsinya
+description: Menjalankan semua service infra sekaligus dengan sekali run command
 keywords: envidock, infra, local, docker
 ---
 
