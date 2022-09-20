@@ -1,3 +1,18 @@
+- name: "strgo"
+  url: "https://github.com/dalikewara/strgo"
+  iconUrl: "/assets/img/golang-pixel.png"
+  description: "strgo is a helper to validate a string based on a format specification that you set before. You can use this package to validate some common string case like username, name, password, email, etc."
+
+- name: "pgxpoolgo"
+  url: "https://github.com/dalikewara/pgxpoolgo"
+  iconUrl: "/assets/img/golang-pixel.png"
+  description: "pgxpoolgo is based on pgxpool, but provides Pool interface and ability to mock the pgxpool connection for unit testing."
+
+- name: "errgo"
+  url: "https://github.com/dalikewara/errgo"
+  iconUrl: "/assets/img/golang-pixel.png"
+  description: "errgo generates a custom interface for error errgo.ErrGo with code and message as a standard."
+
 - name: "rflgo"
   url: "https://github.com/dalikewara/rflgo"
   iconUrl: "/assets/img/golang-pixel.png"
