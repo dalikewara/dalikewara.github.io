@@ -11,7 +11,7 @@
 - name: "errgo"
   url: "https://github.com/dalikewara/errgo"
   iconUrl: "/assets/img/golang-pixel.png"
-  description: "errgo generates a custom interface for error errgo.ErrGo with code and message as a standard."
+  description: "errgo provides custom interface for error errgo.ErrGo with code and message as a standard."
 
 - name: "rflgo"
   url: "https://github.com/dalikewara/rflgo"
