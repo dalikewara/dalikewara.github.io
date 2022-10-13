@@ -283,6 +283,6 @@ blockquote p:last-of-type:after {
         --icon-lg: 30px;
     }
     html {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 }

@@ -10,8 +10,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("robots.txt");
     eleventyConfig.addPlugin(pluginMinifier);
     eleventyConfig.addPlugin(pluginRss);
-    // eleventyConfig.addPassthroughCopy("post/**/*.png");
-    // eleventyConfig.addCollection("posts", function (collectionApi) {
-    //     return collectionApi.getFilteredByGlob("post/**/*.md").reverse();
-    // });
+    eleventyConfig.addPassthroughCopy("post/**/*.png");
+    eleventyConfig.addCollection("posts", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("post/**/*.md").reverse();
+    });
 };
