@@ -8,5 +8,4 @@ serve: ## serve app
 build: ## build app
 	npx @11ty/eleventy
 
-build-netlify: ## build command to deploy on netlify
-    eleventy
+build-netlify: build ## build command to deploy on netlify
