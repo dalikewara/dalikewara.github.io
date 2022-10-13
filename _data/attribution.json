@@ -1,0 +1,106 @@
+{
+  "images": [
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "Youtube",
+      "iconUrl": "/assets/img/youtube.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by OpenSea",
+      "altName": "OpenSea",
+      "iconUrl": "/assets/img/opensea.png",
+      "url": "https://docs.opensea.io/docs/logos"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "Instagram",
+      "iconUrl": "/assets/img/instagram.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "LinkedIn",
+      "iconUrl": "/assets/img/linkedin.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "Facebook",
+      "iconUrl": "/assets/img/facebook.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "Twitter",
+      "iconUrl": "/assets/img/twitter.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "GitHub",
+      "iconUrl": "/assets/img/github.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "NodeJS",
+      "iconUrl": "/assets/img/nodejs.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "CSS",
+      "iconUrl": "/assets/img/css.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "Javascript",
+      "iconUrl": "/assets/img/javascript.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "Python",
+      "iconUrl": "/assets/img/python.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "PHP",
+      "iconUrl": "/assets/img/php.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
+      "altName": "Docker",
+      "iconUrl": "/assets/img/docker.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by jiannette from Cleanpng",
+      "altName": "Golang",
+      "iconUrl": "/assets/img/golang.png",
+      "url": "https://www.cleanpng.com/users/@jiannette.html"
+    },
+    {
+      "name": "The gif made by Ota Jaider from Giphy",
+      "altName": "Cat Pixel",
+      "iconUrl": "/assets/img/cat-pixel.gif",
+      "url": "https://giphy.com/otajaider"
+    }
+  ],
+  "files": [
+    {
+      "name": "hint.min.css by kushagra.dev",
+      "altName": "hint.min.css",
+      "url": "https://kushagra.dev/lab/hint/"
+    },
+    {
+      "name": "scroll.min.css by w3schools",
+      "altName": "scroll.min.css",
+      "url": "https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_custom_scrollbar"
+    }
+  ]
+}

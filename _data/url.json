@@ -1,0 +1,17 @@
+{
+  "url": "https://www.dalikewara.com",
+  "home": "/",
+  "homeMatch": "/",
+  "postMatch": "/post/",
+  "projects": "/projects",
+  "legalAndLicense": "/legal-and-license",
+  "assetsImg": "/assets/img",
+  "steamUser": "https://steamcommunity.com/id/green_4pple",
+  "githubSponsorUrl": "https://github.com/sponsors/dalikewara/button",
+  "githubWebsiteRepo": "https://github.com/dalikewara/dalikewara.github.io",
+  "eleventy": "https://www.11ty.dev/",
+  "netlify": "https://www.netlify.com/",
+  "vascomm": "https://www.vascomm.co.id",
+  "rctiplus": "https://www.rctiplus.com",
+  "warungPintar": "https://warungpintar.co.id"
+}

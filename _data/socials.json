@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Twitter",
+    "url": "https://www.twitter.com/dalikewara",
+    "iconUrl": "/assets/img/twitter.png"
+  },
+  {
+    "name": "Facebook",
+    "url": "https://www.facebook.com/dalikewara",
+    "iconUrl": "/assets/img/facebook.png"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/dalikewara",
+    "iconUrl": "/assets/img/linkedin.png"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://www.github.com/dalikewara",
+    "iconUrl": "/assets/img/github.png"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/dalikewara",
+    "iconUrl": "/assets/img/instagram.png"
+  },
+  {
+    "name": "OpenSea",
+    "url": "https://opensea.io/dalikewara",
+    "iconUrl": "/assets/img/opensea.png"
+  },
+  {
+    "name": "YouTube",
+    "url": "https://www.youtube.com/channel/UCgK0T0mxumi9uNQewd1RIwg",
+    "iconUrl": "/assets/img/youtube.png"
+  }
+]

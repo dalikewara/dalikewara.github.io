@@ -1,0 +1,7 @@
+{% for social in socials %}
+<div class="social-list-item hint--bottom hint--no-animate" aria-label="{{ social.name }}">
+    <a href="{{ social.url }}">
+        <img src="{{ social.iconUrl }}" />
+    </a>
+</div>
+{% endfor %}
