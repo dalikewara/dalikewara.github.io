@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@sherby/eleventy-plugin-files-minifier": "^1.1.1"
+  }
+}
