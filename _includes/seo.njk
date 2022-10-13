@@ -1,0 +1,121 @@
+{% if url.postMatch in page.url %}
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:locale" content="{{ site.locale }}"/>
+<meta property="og:description" content="{{ description }}"/>
+<link rel="canonical" href="{{ url.url }}{{ page.url }}"/>
+<meta property="og:url" content="{{ url.url }}{{ page.url }}"/>
+<meta property="og:site_name" content="{{ site.author }}"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="{{ page.date }}"/>
+<meta name="twitter:card" content="summary"/>
+<meta property="twitter:title" content="{{ title }}"/>
+<meta name="twitter:site" content="@{{ site.twitterUsername }}"/>
+<meta name="twitter:creator" content="@{{ site.twitterUsername }}"/>
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"BlogPosting",
+        "author":{
+            "@type":"Person",
+            "name":"{{ site.author }}",
+            "url":"{{ url.url }}"
+        },
+        "dateModified":"{{ page.date }}",
+        "datePublished":"{{ page.date }}",
+        "description":"{{ description }}",
+        "headline":"{{ title }}",
+        "mainEntityOfPage":{
+            "@type":"WebPage",
+            "@id":"{{ url.url }}{{ page.url }}"
+        },
+        "publisher":{
+            "@type":"Organization",
+            "logo":{
+                "@type":"ImageObject",
+                "url":"{{ url.url }}{{ url.assetsImg }}/pic.jpg"
+            },
+            "name":"{{ site.author }}"
+        },
+        "url":"{{ url.url }}{{ page.url }}"
+    }
+</script>
+{% endif %}
+{% if url.homeMatch == page.url %}
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:locale" content="{{ site.locale }}"/>
+<meta property="og:description" content="{{ description }}"/>
+<link rel="canonical" href="{{ url.url }}"/>
+<meta property="og:url" content="{{ url.url }}"/>
+<meta property="og:site_name" content="{{ site.author }}"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<meta property="twitter:title" content="{{ title }}"/>
+<meta name="twitter:site" content="@{{ site.twitterUsername }}"/>
+<meta name="twitter:creator" content="@{{ site.twitterUsername }}"/>
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"WebSite",
+        "author":{
+            "@type":"Person",
+            "name":"{{ site.author }}",
+            "url":"{{ url.url }}"
+        },
+        "description":"{{ description }}",
+        "headline":"{{ title }}",
+        "name":"{{ site.author }}",
+        "publisher":{
+            "@type":"Organization",
+            "logo":{
+                "@type":"ImageObject",
+                "url":"{{ url.url }}{{ url.assetsImg }}/pic.jpg"
+            },
+            "name":"{{ site.author }}"
+        },
+        "sameAs": [
+            "{{ socials[0].url }}",
+            "{{ socials[1].url }}",
+            "{{ socials[2].url }}",
+            "{{ socials[3].url }}",
+            "{{ socials[4].url }}",
+            "{{ socials[5].url }}",
+            "{{ socials[6].url }}"
+        ],
+        "url":"{{ url.url }}"
+    }
+</script>
+{% else %}
+<meta property="og:title" content="{{ title }}"/>
+<meta property="og:locale" content="{{ site.locale }}"/>
+<meta property="og:description" content="{{ description }}"/>
+<link rel="canonical" href="{{ url.url }}{{ page.url }}"/>
+<meta property="og:url" content="{{ url.url }}{{ page.url }}"/>
+<meta property="og:site_name" content="{{ site.author }}"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary"/>
+<meta property="twitter:title" content="{{ title }}"/>
+<meta name="twitter:site" content="@{{ site.twitterUsername }}"/>
+<meta name="twitter:creator" content="@{{ site.twitterUsername }}"/>
+<script type="application/ld+json">
+    {
+        "@context":"https://schema.org",
+        "@type":"WebPage",
+        "author":{
+            "@type":"Person",
+            "name":"{{ site.author }}",
+            "url":"{{ url.url }}"
+        },
+        "description":"{{ description }}",
+        "headline":"{{ title }}",
+        "publisher":{
+            "@type":"Organization",
+            "logo":{
+                "@type":"ImageObject",
+                "url":"{{ url.url }}{{ url.assetsImg }}/pic.jpg"
+            },
+            "name":"{{ site.author }}"
+        },
+        "url":"{{ url.url }}{{ page.url }}"
+    }
+</script>
+{% endif %}

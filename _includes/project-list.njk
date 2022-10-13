@@ -1,0 +1,12 @@
+<div id="project-list"><div id="project-list-inner">
+{% for project in projects %}
+<div class="project-list-item">
+    <p>
+        <img src="{{ project.iconUrl }}">
+        <a class="project-list-item-title" href="{{ project.url }}">{{ project.name }}</a>
+        <br/>
+        <span>{{ project.description }}</span>
+    </p>
+</div>
+{% endfor %}
+</div></div>

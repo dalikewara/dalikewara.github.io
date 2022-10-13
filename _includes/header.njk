@@ -1,0 +1,18 @@
+{% if page.url == "/" %}
+    {% set homeActive = "active" %}
+{% endif %}
+{% if page.url == "/projects/" %}
+    {% set projectsActive = "active" %}
+{% endif %}
+{% if page.url == "/legal-and-license/" %}
+    {% set legalAndLicenseActive = "active" %}
+{% endif %}
+<header id="header">
+    <div id="header-inner">
+        <ul>
+            <li><a class="{{ homeActive }}" href="{{ url.home }}">Introduction</a></li>
+            <li><a class="{{ projectsActive }}" href="{{ url. projects }}">Projects</a></li>
+            <li><a class="{{ legalAndLicenseActive }}" href="{{ url.legalAndLicense }}">Legal & license</a></li>
+        </ul>
+    </div>
+</header>
