@@ -1,18 +1,36 @@
-{% if page.url == "/" %}
-    {% set homeActive = "active" %}
-{% endif %}
-{% if page.url == "/projects/" %}
-    {% set projectsActive = "active" %}
-{% endif %}
-{% if page.url == "/legal-and-license/" %}
-    {% set legalAndLicenseActive = "active" %}
-{% endif %}
 <header id="header">
     <div id="header-inner">
+        <div id="mode">
+            <div id="mode-inner">
+                <div id="mode-toggle-light" class="mode-toggle mode-mode" onclick="modeToggle(this.id, 'light');"></div>
+                <div id="mode-toggle-dark" class="mode-toggle mode-mode" onclick="modeToggle(this.id, 'dark');"></div>
+                <div id="mode-toggle-orange" class="mode-toggle mode-color" onclick="modeToggle(this.id, 'orange');"></div>
+                <div id="mode-toggle-green" class="mode-toggle mode-color" onclick="modeToggle(this.id, 'green');"></div>
+                <div id="mode-toggle-blue" class="mode-toggle mode-color" onclick="modeToggle(this.id, 'blue');"></div>
+                <div id="mode-toggle-blue-sky" class="mode-toggle mode-color" onclick="modeToggle(this.id, 'blue-sky');"></div>
+                <div id="mode-toggle-purple" class="mode-toggle mode-color" onclick="modeToggle(this.id, 'purple');"></div>
+                <div id="mode-toggle-pink" class="mode-toggle mode-color" onclick="modeToggle(this.id, 'pink');"></div>
+                <div id="mode-toggle-red" class="mode-toggle mode-color" onclick="modeToggle(this.id, 'red');"></div>
+            </div>
+        </div>
         <ul>
-            <li><a class="{{ homeActive }}" href="{{ url.home }}">Introduction</a></li>
-            <li><a class="{{ projectsActive }}" href="{{ url. projects }}">Projects</a></li>
-            <li><a class="{{ legalAndLicenseActive }}" href="{{ url.legalAndLicense }}">Legal & license</a></li>
+            {% if page.url == url.homeMatch %}
+            <li class="active">Introduction</li>
+            {% else %}
+            <li><a href="{{ url.home }}">Introduction</a></li>
+            {% endif %}
+
+            {% if url.projectsMatch in page.url  %}
+            <li class="active">Projects</li>
+            {% else %}
+            <li><a href="{{ url.projects }}">Projects</a></li>
+            {% endif %}
+
+            {% if url.legalAndLicenseMatch in page.url  %}
+            <li class="active">Legal & license</li>
+            {% else %}
+            <li><a href="{{ url.legalAndLicense }}">Legal & license</a></li>
+            {% endif %}
         </ul>
     </div>
 </header>

@@ -48,4 +48,55 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
             </div>
         </div>
     </body>
+    <script>
+        let modeModeKey = "dalikewara.com_mode-mode";
+        let modeModeIdKey = "dalikewara.com_mode-mode-id";
+        let modeColorKey = "dalikewara.com_mode-color";
+        let modeColorIdKey = "dalikewara.com_mode-color-id";
+        function removeClassFromElems(elems, name) {
+            elems.forEach(function(el) {
+                el.classList.remove(name);
+            });
+        }
+        function modeToggle(id, mode) {
+            let elem = document.getElementById(id);
+            let elemModes = document.querySelectorAll(".mode-mode");
+            let elemColors = document.querySelectorAll(".mode-color");
+            if (mode === "light") {
+                removeClassFromElems(elemModes, "mode-toggle-active");
+                elem.classList.toggle("mode-toggle-active");
+                document.documentElement.style.setProperty("--bg-color", "var(--white)");
+                document.documentElement.style.setProperty("--font-color", "var(--black)");
+                localStorage.setItem(modeModeKey, mode);
+                localStorage.setItem(modeModeIdKey, id);
+            } else if (mode === "dark") {
+                removeClassFromElems(elemModes, "mode-toggle-active");
+                elem.classList.toggle("mode-toggle-active");
+                document.documentElement.style.setProperty("--bg-color", "var(--dark)");
+                document.documentElement.style.setProperty("--font-color", "var(--white-dark)");
+                localStorage.setItem(modeModeKey, mode);
+                localStorage.setItem(modeModeIdKey, id);
+            } else {
+                removeClassFromElems(elemColors, "mode-toggle-active");
+                elem.classList.toggle("mode-toggle-active");
+                document.documentElement.style.setProperty("--color", "var(--"+ mode +")");
+                localStorage.setItem(modeColorKey, mode);
+                localStorage.setItem(modeColorIdKey, id);
+            }
+        }
+        let currentModeMode = localStorage.getItem(modeModeKey);
+        let currentModeModeId = localStorage.getItem(modeModeIdKey);
+        if (currentModeMode == null) {
+            modeToggle("mode-toggle-light", "light");
+        } else {
+            modeToggle(currentModeModeId, currentModeMode);
+        }
+        let currentModeColor = localStorage.getItem(modeColorKey);
+        let currentModeColorId = localStorage.getItem(modeColorIdKey);
+        if (currentModeColor == null) {
+            modeToggle("mode-toggle-blue", "blue");
+        } else {
+            modeToggle(currentModeColorId, currentModeColor);
+        }
+    </script>
 </html>

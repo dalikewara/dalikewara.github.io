@@ -4,19 +4,20 @@
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
     --white-dark: rgb(200, 200, 200);
+    --dark: rgb(34, 34, 34);
+    --orange: rgb(255, 118, 0);
+    --green: rgb(45, 153, 0);
     --blue: rgb(59, 120, 239);
+    --blue-sky: rgb(0, 157, 193);
+    --purple: rgb(172, 77, 255);
+    --pink: rgb(223, 81, 171);
+    --red: rgb(227, 72, 72);
     --color: var(--blue);
     --font-color: var(--black);
     --bg-color: var(--white);
     --bg-color-dark: var(--white-dark);
     --icon: 20px;
-    --icon-sm: 15px;
-    --icon-med: 30px;
     --icon-lg: 40px;
-    --icon-lg-xxl: 200px;
-    --icon-width-med: 80px;
-    --icon-width-lg: 100px;
-    --icon-width-lg-xxl: 200px;
     --content-width: 800px;
 }
 html {
@@ -27,6 +28,8 @@ html {
     padding: 0;
     line-height: 2;
     overflow-x: hidden;
+    background: var(--bg-color);
+    color: var(--font-color);
 }
 
 /* link */
@@ -58,7 +61,6 @@ h1 {
 
 /* blockquote */
 blockquote {
-    font-size: 0.85em;
     font-style: italic;
     margin: 0;
     padding: 5px;
@@ -110,7 +112,7 @@ blockquote p:last-of-type:after {
 #header-inner ul li a:hover {
     opacity: 0.5;
 }
-#header-inner ul li a.active {
+#header-inner ul li.active {
     font-weight: bold;
 }
 
@@ -186,6 +188,60 @@ blockquote p:last-of-type:after {
 .attribution-list-item img {
     width: var(--icon);
     height: var(--icon);
+}
+
+/* mode */
+#mode {
+    display: block;
+}
+#mode-toggle-light {
+    background: var(--white);
+    border: 1px solid var(--black);
+}
+#mode-toggle-dark {
+    background: var(--black);
+    border: 1px solid var(--white);
+}
+#mode-toggle-orange {
+    background: var(--orange);
+    border: 1px solid var(--orange);
+}
+#mode-toggle-green {
+    background: var(--green);
+    border: 1px solid var(--green);
+}
+#mode-toggle-blue {
+    background: var(--blue);
+    border: 1px solid var(--blue);
+}
+#mode-toggle-blue-sky {
+    background: var(--blue-sky);
+    border: 1px solid var(--blue-sky);
+}
+#mode-toggle-purple {
+    background: var(--purple);
+    border: 1px solid var(--purple);
+}
+#mode-toggle-pink {
+    background: var(--pink);
+    border: 1px solid var(--pink);
+}
+#mode-toggle-red {
+    background: var(--red);
+    border: 1px solid var(--red);
+}
+.mode-toggle {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.mode-toggle:hover {
+    opacity: 0.7;
+}
+.mode-toggle-active {
+    height: 30px;
 }
 
 /* custom scroll.min.css */
@@ -282,7 +338,9 @@ blockquote p:last-of-type:after {
     :root {
         --icon-lg: 30px;
     }
-    html {
-        font-size: 1em;
+    #content-inner,
+    #header-inner,
+    #footer-inner {
+        padding: 0 20px;
     }
 }
