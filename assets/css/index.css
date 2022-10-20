@@ -56,7 +56,6 @@ h1 {
     font-size: 3em;
     letter-spacing: 0.2em;
     line-height: 1.2;
-    word-break: break-all;
 }
 
 /* blockquote */
@@ -83,12 +82,21 @@ blockquote p:last-of-type:after {
     margin-left: 5px;
 }
 
+blockquote img {
+    text-align: center;
+    margin: auto;
+    max-width: 100%;
+}
+
 /* content */
 #content {
     width: var(--content-width);
     margin: auto;
+    display: block;
 }
 #content img {
+    text-align: center;
+    margin: auto;
     max-width: 100%;
 }
 
@@ -337,6 +345,9 @@ blockquote p:last-of-type:after {
 @media screen and (max-width: 680px) {
     :root {
         --icon-lg: 30px;
+    }
+    h1 {
+        word-break: break-all;
     }
     #content-inner,
     #header-inner,

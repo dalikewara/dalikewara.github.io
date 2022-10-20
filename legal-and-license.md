@@ -3,8 +3,6 @@ layout: content.njk
 title: Legal and license
 ---
 
-# LICENSE
-
 This website is under [GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 The repository is open-sourced on [GitHub]({{ url.githubWebsiteRepo }}).
 Frequently Asked Questions about the GNU Licenses can be found at 
