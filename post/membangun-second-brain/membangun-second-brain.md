@@ -10,7 +10,7 @@ tags: post
 
 Baru-baru ini aku denger sebuah istilah yang cukup menarik dari
 [thread Twitter](https://twitter.com/hilmanski/status/1581596970472288256) nya mas [Hilman](https://twitter.com/hilmanski), 
-tentang "**[Second Brain](https://www.buildingasecondbrain.com/)**".
+tentang **"[Second Brain](https://www.buildingasecondbrain.com/)"**.
 Apa sih itu? Kalau secara sederhana, **Second Brain** itu adalah tempat kita menyimpan dan mengolah berbagai informasi, 
 yang itu nggak hanya berguna buat diri kita saat ini, melainkan juga untuk diri kita di masa mendatang.
 Kenapa kita perlu **Second Brain**? karna kita perlu sistem yang bisa membantu diri sendiri untuk mengakses, menganalisa,
@@ -23,7 +23,7 @@ Karna itu kita butuh alat bantu.
 
 ![](book.jpg)
 
-> **Second Brain** ini ada bukunya, judulnya "Building a Second Brain" dari Tiago Forte. Silahkan baca bukunya supaya
+> **Second Brain** ini ada bukunya, judulnya **"Building a Second Brain"** dari Tiago Forte. Silahkan baca bukunya supaya
 lebih jelas dan lengkap tentang konsep ini.
 
 ## Apa otak fisik kita belum cukup?
