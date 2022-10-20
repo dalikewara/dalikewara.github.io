@@ -2,6 +2,12 @@
   "images": [
     {
       "name": "The icon made by Freepik from Flaticon",
+      "altName": "Pencil",
+      "iconUrl": "/assets/img/pencil.png",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik from Flaticon",
       "altName": "Youtube",
       "iconUrl": "/assets/img/youtube.png",
       "url": "https://www.flaticon.com/authors/freepik"

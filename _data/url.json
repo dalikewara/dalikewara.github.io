@@ -2,6 +2,8 @@
   "url": "https://www.dalikewara.com",
   "home": "/",
   "homeMatch": "/",
+  "posts": "/posts",
+  "postsMatch": "/posts/",
   "postMatch": "/post/",
   "projects": "/projects",
   "projectsMatch": "/projects/",
