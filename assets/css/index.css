@@ -352,7 +352,7 @@ blockquote img {
         --icon-lg: 30px;
     }
     h1 {
-        word-break: break-all;
+        word-break: break-word;
     }
     #content-inner,
     #header-inner,
