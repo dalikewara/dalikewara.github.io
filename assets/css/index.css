@@ -30,6 +30,7 @@ html {
     overflow-x: hidden;
     background: var(--bg-color);
     color: var(--font-color);
+    word-break: break-word;
 }
 
 /* link */
@@ -350,9 +351,6 @@ blockquote img {
 @media screen and (max-width: 680px) {
     :root {
         --icon-lg: 30px;
-    }
-    h1 {
-        word-break: break-word;
     }
     #content-inner,
     #header-inner,
