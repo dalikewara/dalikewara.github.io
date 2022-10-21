@@ -252,6 +252,12 @@ blockquote img {
     height: 30px;
 }
 
+/* disqus */
+#disqus_thread {
+    margin: 100px 0 20px;
+    color: yellow !important;
+}
+
 /* custom scroll.min.css */
 ::-webkit-scrollbar{
     width:10px;

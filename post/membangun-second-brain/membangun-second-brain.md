@@ -1,5 +1,5 @@
 ---
-layout: content.njk
+layout: post.njk
 title: Membangun Second Brain
 description: Kalau secara sederhana, Second Brain itu adalah tempat kita menyimpan dan mengolah berbagai informasi, yang itu nggak hanya berguna buat diri kita saat ini, melainkan juga untuk diri kita di masa mendatang.
 keywords: second brain, informasi, ide
