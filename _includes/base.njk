@@ -18,7 +18,7 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
         <meta name="google-site-verification" content="{{ google.siteVerification }}"/>
         <link rel="stylesheet" href="/assets/css/hint.min.css">
         <link rel="stylesheet" href="/assets/css/scroll.min.css">
-        <link rel="stylesheet" href="/assets/css/index.css">
+        <link rel="stylesheet" href="/assets/css/index.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Press+Start+2P&display=swap" rel="stylesheet">
@@ -67,8 +67,7 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
                 elem.classList.toggle("mode-toggle-active");
                 document.documentElement.style.setProperty("--bg-color", "var(--white)");
                 document.documentElement.style.setProperty("--font-color", "var(--black)");
-                document.documentElement.style.setProperty("--project-list-bg-color", "var(--black)");
-                document.documentElement.style.setProperty("--project-list-color", "var(--white)");
+                document.documentElement.style.setProperty("--project-list-box-shadow-border", "var(--box-shadow-border-light)");
                 localStorage.setItem(modeModeKey, mode);
                 localStorage.setItem(modeModeIdKey, id);
             } else if (mode === "dark") {
@@ -76,8 +75,7 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
                 elem.classList.toggle("mode-toggle-active");
                 document.documentElement.style.setProperty("--bg-color", "var(--dark)");
                 document.documentElement.style.setProperty("--font-color", "var(--white-dark)");
-                document.documentElement.style.setProperty("--project-list-bg-color", "var(--white)");
-                document.documentElement.style.setProperty("--project-list-color", "var(--black)");
+                document.documentElement.style.setProperty("--project-list-box-shadow-border", "var(--box-shadow-border-dark)");
                 localStorage.setItem(modeModeKey, mode);
                 localStorage.setItem(modeModeIdKey, id);
             } else {

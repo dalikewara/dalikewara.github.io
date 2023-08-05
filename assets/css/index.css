@@ -20,8 +20,9 @@
     --icon: 20px;
     --icon-lg: 40px;
     --content-width: 800px;
-    --project-list-color: var(--black);
-    --project-list-bg-color: var(--white);
+    --box-shadow-border-light: 0 0 0px 2px var(--black);
+    --box-shadow-border-dark: 0 0 0px 2px var(--white);
+    --project-list-box-shadow-border: var(--box-shadow-border-light);
 }
 html {
     font-family: var(--sp-font-family);
@@ -185,8 +186,9 @@ blockquote img {
 }
 .project-list-item p {
     padding: 0 8px;
-    background: var(--project-list-bg-color);
-    color: var(--project-list-color);
+    background: var(--color);
+    color: var(--black);
+    box-shadow: var(--project-list-box-shadow-border);
 }
 .project-list-item img {
     width: var(--icon);
@@ -197,9 +199,9 @@ blockquote img {
     font-family: var(--pixel-font-family);
     font-size: 0.7em;
     text-transform: uppercase;
+    color: var(--black);
 }
 .project-list-item .project-list-item-title:hover {
-    color: var(--color);
     text-decoration: underline;
 }
 
