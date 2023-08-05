@@ -1,6 +1,6 @@
 ---
 title: An unexpected journey
-description: A guy who lives and works as a Backend Developer in Indonesia—building useful and unexpected things, and making positive impacts for people. He loves to code and draw his own world—also has interests in art, writing and journey (traveling). He is on an unexpected journey and gonna make it simple but spectacular!
+description: A guy who lives and works as a Backend Developer in Indonesia—building useful and unexpected things, and making positive impacts for people. He loves to code and draw his own world—also has interests in art, writing and journey. He is on an unexpected journey and gonna make it simple but spectacular!
 keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing, journey, developer, backend, software engineer
 ---
 <!DOCTYPE html>
@@ -18,10 +18,10 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
         <meta name="google-site-verification" content="{{ google.siteVerification }}"/>
         <link rel="stylesheet" href="/assets/css/hint.min.css">
         <link rel="stylesheet" href="/assets/css/scroll.min.css">
-        <link rel="stylesheet" href="/assets/css/index.min.css">
+        <link rel="stylesheet" href="/assets/css/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Press+Start+2P&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -67,6 +67,8 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
                 elem.classList.toggle("mode-toggle-active");
                 document.documentElement.style.setProperty("--bg-color", "var(--white)");
                 document.documentElement.style.setProperty("--font-color", "var(--black)");
+                document.documentElement.style.setProperty("--project-list-bg-color", "var(--black)");
+                document.documentElement.style.setProperty("--project-list-color", "var(--white)");
                 localStorage.setItem(modeModeKey, mode);
                 localStorage.setItem(modeModeIdKey, id);
             } else if (mode === "dark") {
@@ -74,6 +76,8 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
                 elem.classList.toggle("mode-toggle-active");
                 document.documentElement.style.setProperty("--bg-color", "var(--dark)");
                 document.documentElement.style.setProperty("--font-color", "var(--white-dark)");
+                document.documentElement.style.setProperty("--project-list-bg-color", "var(--white)");
+                document.documentElement.style.setProperty("--project-list-color", "var(--black)");
                 localStorage.setItem(modeModeKey, mode);
                 localStorage.setItem(modeModeIdKey, id);
             } else {
@@ -94,9 +98,25 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
         let currentModeColor = localStorage.getItem(modeColorKey);
         let currentModeColorId = localStorage.getItem(modeColorIdKey);
         if (currentModeColor == null) {
-            modeToggle("mode-toggle-blue", "blue");
+            modeToggle("mode-toggle-green", "green");
         } else {
             modeToggle(currentModeColorId, currentModeColor);
         }
+        function getProjectListRotateClass() {
+            let items = [
+                "project-list-item-rotate-0",
+                "project-list-item-rotate-2",
+                "project-list-item-rotate-5",
+                "project-list-item-rotate-min-2",
+                "project-list-item-rotate-min-5",
+            ];
+            return items[Math.floor(Math.random()*items.length)];
+        }
+        function rotateProjectList() {
+            document.querySelectorAll(".project-list-item").forEach(function(el) {
+                el.classList.add(getProjectListRotateClass());
+            });
+        }
+        rotateProjectList();
     </script>
 </html>

@@ -1,8 +1,9 @@
 :root {
     --sp-font-family: 'Playfair Display', serif;
+    --pixel-font-family: "Press Start 2P",cursive;
     --transparent: rgba(0, 0, 0, 0);
     --black: rgb(0, 0, 0);
-    --white: rgb(255, 255, 255);
+    --white: rgb(225, 225, 225);
     --white-dark: rgb(200, 200, 200);
     --dark: rgb(34, 34, 34);
     --orange: rgb(255, 118, 0);
@@ -19,6 +20,8 @@
     --icon: 20px;
     --icon-lg: 40px;
     --content-width: 800px;
+    --project-list-color: var(--black);
+    --project-list-bg-color: var(--white);
 }
 html {
     font-family: var(--sp-font-family);
@@ -31,6 +34,7 @@ html {
     background: var(--bg-color);
     color: var(--font-color);
     word-break: break-word;
+    transition: 0.2s all;
 }
 
 /* link */
@@ -54,9 +58,15 @@ a:active {
 
 /* heading */
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
     letter-spacing: 0.2em;
     line-height: 1.2;
+    font-family: var(--pixel-font-family);
+    text-transform: uppercase;
+}
+h2, h3, h4, h5, h6 {
+    font-family: var(--pixel-font-family);
+    text-transform: uppercase;
 }
 
 /* blockquote */
@@ -112,7 +122,10 @@ blockquote img {
 }
 #header-inner ul li {
     display: inline;
-    margin-right: 15px;
+    margin-right: 30px;
+    font-family: var(--pixel-font-family);
+    font-size: 0.7em;
+    text-transform: uppercase;
 }
 #header-inner ul li a {
     color: var(--font-color);
@@ -123,6 +136,7 @@ blockquote img {
 }
 #header-inner ul li.active {
     font-weight: bold;
+    text-decoration: underline;
 }
 
 /* footer */
@@ -139,15 +153,53 @@ blockquote img {
 .project-list-item {
     display: inline-block;
 }
+.project-list-item-rotate-0 {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+.project-list-item-rotate-2 {
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+}
+.project-list-item-rotate-5 {
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+}
+.project-list-item-rotate-min-2 {
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+}
+.project-list-item-rotate-min-5 {
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+}
+.project-list-item p {
+    padding: 0 8px;
+    background: var(--project-list-bg-color);
+    color: var(--project-list-color);
+}
 .project-list-item img {
     width: var(--icon);
     height: var(--icon);
 }
 .project-list-item .project-list-item-title {
-    font-weight: bold;
     text-decoration: none;
+    font-family: var(--pixel-font-family);
+    font-size: 0.7em;
+    text-transform: uppercase;
 }
 .project-list-item .project-list-item-title:hover {
+    color: var(--color);
     text-decoration: underline;
 }
 
@@ -159,13 +211,12 @@ blockquote img {
 .post-list-item:nth-last-child(1) {
     border-bottom: none;
 }
-.post-list-item img {
-    width: var(--icon);
-    height: var(--icon);
-}
 .post-list-item .post-list-item-title {
     text-decoration: none;
     font-weight: bold;
+    font-family: var(--pixel-font-family);
+    font-size: 1em;
+    text-transform: uppercase;
 }
 .post-list-item .post-list-item-title:hover {
     text-decoration: underline;
@@ -202,6 +253,14 @@ blockquote img {
 /* mode */
 #mode {
     display: block;
+}
+#mode-brand {
+    display: inline-block;
+    margin-right: 10px;
+}
+#mode-brand img {
+    width: 64px;
+    margin-bottom: -18px;
 }
 #mode-toggle-light {
     background: var(--white);
@@ -243,7 +302,7 @@ blockquote img {
     display: inline-block;
     width: 20px;
     height: 20px;
-    margin: 0 5px;
+    margin: 18px 5px 0;
     cursor: pointer;
 }
 .mode-toggle:hover {
@@ -335,6 +394,11 @@ blockquote img {
     -webkit-transition: opacity 0s ease, visibility 0s ease, -webkit-transform 0s cubic-bezier(.71, 1.7, .77, 1.24);
     -moz-transition: opacity 0s ease, visibility 0s ease, -moz-transform 0s cubic-bezier(.71, 1.7, .77, 1.24);
     transition: opacity 0s ease, visibility 0s ease, transform 0s cubic-bezier(.71, 1.7, .77, 1.24);
+}
+
+/*custom*/
+.bg-white {
+    background: var(--white);
 }
 
 /* responsive */
