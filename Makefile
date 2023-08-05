@@ -9,3 +9,9 @@ build: ## build app
 	npx @11ty/eleventy
 
 build-netlify: build ## build command to deploy on netlify
+
+install-debian: ## install nodejs & npx on debian
+	curl -sL https://deb.nodesource.com/setup_14.x | sudo bash -
+	sudo apt update
+	sudo apt install nodejs
+	npm install

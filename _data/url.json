@@ -10,6 +10,7 @@
   "legalAndLicense": "/legal-and-license",
   "legalAndLicenseMatch": "/legal-and-license/",
   "assetsImg": "/assets/img",
+  "brandIconAnimated": "/assets/img/64x64_green_apple_animation_leaf_ghost_bites.gif",
   "steamUser": "https://steamcommunity.com/id/green_4pple",
   "githubSponsorUrl": "https://github.com/sponsors/dalikewara/button",
   "githubWebsiteRepo": "https://github.com/dalikewara/dalikewara.github.io",
@@ -18,6 +19,7 @@
   "vascomm": "https://www.vascomm.co.id",
   "rctiplus": "https://www.rctiplus.com",
   "warungPintar": "https://warungpintar.co.id",
+  "renos": "https://renos.id",
   "disqus": "https://disqus.com",
   "disqusUserEmbed": "https://dalikewara.disqus.com/embed.js"
 }
