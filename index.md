@@ -12,7 +12,7 @@ writing and journey. I'm on an unexpected journey and gonna make it simple but s
 **[Vascomm]({{ url.vascomm }})** (2016-2021), **[RCTI+]({{ url.rctiplus }})** (2022), **[Warung Pintar]({{ url.warungPintar }})** (2023) and **[Renos]({{ url.renos }})** (current).
 After working hours, sometimes I enjoy myself by watching [solo bushcraft](https://www.youtube.com/results?search_query=solo+bushcraft+bertram+nagualero)
 contents on YouTube, listening [Yorushika](https://open.spotify.com/playlist/3sQKVJHpxisbBGGtC1mA4I?si=a5610bb4d8ce4048) on Spotify,
-playing The Legend of Zelda on My Nintendo Switch and [Dota 2]({{ url.steamUser }}), and also traveling.
+playing The Legend of Zelda and Monster Hunter on My Nintendo Switch—I play [Dota 2]({{ url.steamUser }}) too—and also traveling.
 
 I believe that helping people is the one of many important things to do as a human, so that's why sometimes I created packages
 and hoping they can be useful—here are the latest:
