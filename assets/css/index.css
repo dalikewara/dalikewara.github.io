@@ -215,9 +215,6 @@ blockquote img {
 }
 
 /*attribution*/
-.attribution-list-item a {
-    font-size: 1.6em;
-}
 .attribution-list-item img {
     width: var(--icon);
     height: var(--icon);
