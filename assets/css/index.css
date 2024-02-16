@@ -216,7 +216,6 @@ blockquote img {
 
 /*attribution*/
 .attribution-list-item a {
-    text-decoration: none;
     font-size: 1.6em;
 }
 .attribution-list-item img {
@@ -435,5 +434,37 @@ blockquote img {
     #header-inner,
     #footer-inner {
         padding: 0 20px;
+    }
+    html p {
+        font-size: 1.2em;
+    }
+    h1 {
+        font-size: 1.6em;
+    }
+    #header-inner ul li{
+        font-size: 1.4em;
+    }
+    .project-list-item .project-list-item-title {
+        font-size: 1.8em;
+    }
+    .project-list-item p{
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 480px) {
+    html p {
+        font-size: 1em;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    #header-inner ul li{
+        font-size: 1.2em;
+    }
+    .project-list-item .project-list-item-title {
+        font-size: 1.6em;
+    }
+    .project-list-item p{
+        font-size: 0.8em;
     }
 }
