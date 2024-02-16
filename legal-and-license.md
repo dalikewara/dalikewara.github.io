@@ -10,8 +10,6 @@ Frequently Asked Questions about the GNU Licenses can be found at
 
 #### Attribution
 
-Some assets you found on this website didn't created by myself. I know that making good things
-like that takes a lot of time and effort, so I proudly to give them an attribution to credit the
-creator.
+Some assets you found on this website were not created by me. I understand that creating quality content like that takes a lot of time and effort, so I proudly give them attribution to credit the creator.
 
 {% include "attribution.njk" %}

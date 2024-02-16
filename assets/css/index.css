@@ -1,9 +1,9 @@
 :root {
-    --sp-font-family: 'Playfair Display', serif;
-    --pixel-font-family: "Press Start 2P",cursive;
+    --main-font-family:"Pixelify Sans", sans-serif;
+    --title-font-family:"Press Start 2P", cursive;
     --transparent: rgba(0, 0, 0, 0);
     --black: rgb(0, 0, 0);
-    --white: rgb(225, 225, 225);
+    --white: rgb(213, 225, 210);
     --white-dark: rgb(200, 200, 200);
     --dark: rgb(34, 34, 34);
     --orange: rgb(255, 118, 0);
@@ -25,17 +25,20 @@
     --project-list-box-shadow-border: var(--box-shadow-border-light);
 }
 html {
-    font-family: var(--sp-font-family);
+    font-family: var(--main-font-family);
     font-weight: 300;
     font-size: 1.2em;
     margin: 0;
     padding: 0;
-    line-height: 2;
+    line-height: 1.5;
     overflow-x: hidden;
     background: var(--bg-color);
     color: var(--font-color);
     word-break: break-word;
     transition: 0.2s all;
+}
+html p {
+    font-size: 1.6em;
 }
 
 /* link */
@@ -62,12 +65,12 @@ h1 {
     font-size: 2.5em;
     letter-spacing: 0.2em;
     line-height: 1.2;
-    font-family: var(--pixel-font-family);
-    text-transform: uppercase;
+    font-family: var(--title-font-family);
+/*    text-transform: uppercase;*/
 }
 h2, h3, h4, h5, h6 {
-    font-family: var(--pixel-font-family);
-    text-transform: uppercase;
+    font-family: var(--title-font-family);
+/*    text-transform: uppercase;*/
 }
 
 /* blockquote */
@@ -82,6 +85,7 @@ blockquote {
     margin-block-end: 1em;
     margin-inline-start: 20px;
     margin-inline-end: 20px;
+    font-size: 0.7em;
 }
 blockquote p:first-of-type:before {
     content: '\201c';
@@ -124,16 +128,11 @@ blockquote img {
 #header-inner ul li {
     display: inline;
     margin-right: 30px;
-    font-family: var(--pixel-font-family);
-    font-size: 0.7em;
-    text-transform: uppercase;
+    font-family: var(--main-font-family);
+    font-size: 1.6em;
 }
 #header-inner ul li a {
-    color: var(--font-color);
     text-decoration: none;
-}
-#header-inner ul li a:hover {
-    opacity: 0.5;
 }
 #header-inner ul li.active {
     font-weight: bold;
@@ -150,59 +149,31 @@ blockquote img {
 /* projects */
 #project-list-inner {
     columns: 250px auto;
+    line-height: 1.2;
+    word-break: break-all;
 }
 .project-list-item {
     display: inline-block;
 }
-.project-list-item-rotate-0 {
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-}
-.project-list-item-rotate-2 {
-    transform: rotate(2deg);
-    -webkit-transform: rotate(2deg);
-    -moz-transform: rotate(2deg);
-    -o-transform: rotate(2deg);
-}
-.project-list-item-rotate-5 {
-    transform: rotate(5deg);
-    -webkit-transform: rotate(5deg);
-    -moz-transform: rotate(5deg);
-    -o-transform: rotate(5deg);
-}
-.project-list-item-rotate-min-2 {
-    transform: rotate(-2deg);
-    -webkit-transform: rotate(-2deg);
-    -moz-transform: rotate(-2deg);
-    -o-transform: rotate(-2deg);
-}
-.project-list-item-rotate-min-5 {
-    transform: rotate(-5deg);
-    -webkit-transform: rotate(-5deg);
-    -moz-transform: rotate(-5deg);
-    -o-transform: rotate(-5deg);
-}
 .project-list-item p {
-    padding: 0 8px;
+    padding: 20px;
     background: var(--color);
     color: var(--black);
     box-shadow: var(--project-list-box-shadow-border);
+    font-size: 1.2em;
 }
 .project-list-item img {
     width: var(--icon);
     height: var(--icon);
 }
 .project-list-item .project-list-item-title {
-    text-decoration: none;
-    font-family: var(--pixel-font-family);
-    font-size: 0.7em;
-    text-transform: uppercase;
+    font-family: var(--main-font-family);
     color: var(--black);
+    font-size: 1.5em;
 }
 .project-list-item .project-list-item-title:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: var(--white);
 }
 
 /*post list*/
@@ -216,7 +187,7 @@ blockquote img {
 .post-list-item .post-list-item-title {
     text-decoration: none;
     font-weight: bold;
-    font-family: var(--pixel-font-family);
+    font-family: var(--title-font-family);
     font-size: 1em;
     text-transform: uppercase;
 }
@@ -246,6 +217,7 @@ blockquote img {
 /*attribution*/
 .attribution-list-item a {
     text-decoration: none;
+    font-size: 1.6em;
 }
 .attribution-list-item img {
     width: var(--icon);
@@ -337,7 +309,7 @@ blockquote img {
 
 /* custom hint.min.css */
 [class*="hint--"]:after {
-    font-family: var(--sp-font-family);
+    font-family: var(--main-font-family);
     font-size: 0.8em;
     font-weight: 200;
     background: var(--bg-color);
@@ -401,6 +373,47 @@ blockquote img {
 /*custom*/
 .bg-white {
     background: var(--white);
+}
+.img-left {
+    float: left;
+    margin-right: 40px !important;
+    margin-bottom: 20px !important;
+}
+.stabilo {
+    display: inline-block;
+    margin: auto;
+    background: var(--font-color);
+    color: var(--bg-color);
+}
+.rotate-0 {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+}
+.rotate-2 {
+    transform: rotate(2deg);
+    -webkit-transform: rotate(2deg);
+    -moz-transform: rotate(2deg);
+    -o-transform: rotate(2deg);
+}
+.rotate-5 {
+    transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -o-transform: rotate(5deg);
+}
+.rotate-min-2 {
+    transform: rotate(-2deg);
+    -webkit-transform: rotate(-2deg);
+    -moz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+}
+.rotate-min-5 {
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
 }
 
 /* responsive */

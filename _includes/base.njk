@@ -1,6 +1,6 @@
 ---
 title: An unexpected journey
-description: A guy who lives and works as a Backend Developer in Indonesia—building useful and unexpected things, and making positive impacts for people. He loves to code and draw his own world—also has interests in art, writing and journey. He is on an unexpected journey and gonna make it simple but spectacular!
+description: A guy who lives and works as a Backend Developer in Indonesia—building useful and unexpected things, and making positive impacts for people. He loves to code and draw his own world—also has interests in art, writing, and journeys. He is on an unexpected journey and going to make it simple yet spectacular!
 keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing, journey, developer, backend, software engineer
 ---
 <!DOCTYPE html>
@@ -21,7 +21,7 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
         <link rel="stylesheet" href="/assets/css/index.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Press+Start+2P&display=swap" rel="stylesheet">
         <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
@@ -100,21 +100,34 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
         } else {
             modeToggle(currentModeColorId, currentModeColor);
         }
-        function getProjectListRotateClass() {
+        function getRandomRotateClass() {
             let items = [
-                "project-list-item-rotate-0",
-                "project-list-item-rotate-2",
-                "project-list-item-rotate-5",
-                "project-list-item-rotate-min-2",
-                "project-list-item-rotate-min-5",
+                "rotate-0",
+                "rotate-2",
+                "rotate-5",
+                "rotate-min-2",
+                "rotate-min-5",
+            ];
+            return items[Math.floor(Math.random()*items.length)];
+        }
+        function getRandomRotateLessClass() {
+            let items = [
+                "rotate-2",
+                "rotate-min-2",
             ];
             return items[Math.floor(Math.random()*items.length)];
         }
         function rotateProjectList() {
             document.querySelectorAll(".project-list-item").forEach(function(el) {
-                el.classList.add(getProjectListRotateClass());
+                el.classList.add(getRandomRotateClass());
+            });
+        }
+        function rotateStabilo() {
+            document.querySelectorAll(".stabilo").forEach(function(el) {
+                el.classList.add(getRandomRotateLessClass());
             });
         }
         rotateProjectList();
+        rotateStabilo();
     </script>
 </html>
