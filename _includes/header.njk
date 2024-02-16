@@ -21,12 +21,6 @@
             <li><a href="{{ url.home }}">Introduction</a></li>
             {% endif %}
 
-            {% if url.postsMatch in page.url  %}
-            <li class="active">Posts</li>
-            {% else %}
-            <li><a href="{{ url.posts }}">Posts</a></li>
-            {% endif %}
-
             {% if url.projectsMatch in page.url  %}
             <li class="active">Projects</li>
             {% else %}
