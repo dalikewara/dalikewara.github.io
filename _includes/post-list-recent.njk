@@ -1,7 +1,7 @@
 <div id="post-list"><div id="post-list-inner">
 {% for post in collections.posts limit : 5 %}
 <div class="post-list-item">
-   <img src="/assets/img/pencil.png">
+   <img src="/assets/img/pencil.webp">
    <a class="post-list-item-title" href="{{ post.url }}">{{ post.data.title }}</a>
    <span class="post-list-item-date">/&nbsp;{{ post.date | date: "%B %-d, %Y" }}</span>
    <span class="post-list-item-content">{{ post.templateContent | strip_html | truncatewords: 30 | replace: post.data.title, "" }}</span>

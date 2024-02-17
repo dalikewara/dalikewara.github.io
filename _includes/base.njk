@@ -110,24 +110,11 @@ keywords: dali, dali kewara, dalikewara, posts, projects, website, art, writing,
             ];
             return items[Math.floor(Math.random()*items.length)];
         }
-        function getRandomRotateLessClass() {
-            let items = [
-                "rotate-2",
-                "rotate-min-2",
-            ];
-            return items[Math.floor(Math.random()*items.length)];
-        }
         function rotateProjectList() {
             document.querySelectorAll(".project-list-item").forEach(function(el) {
                 el.classList.add(getRandomRotateClass());
             });
         }
-        function rotateStabilo() {
-            document.querySelectorAll(".stabilo").forEach(function(el) {
-                el.classList.add(getRandomRotateLessClass());
-            });
-        }
         rotateProjectList();
-        rotateStabilo();
     </script>
 </html>

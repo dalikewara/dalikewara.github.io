@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("manifest.json");
     eleventyConfig.addPassthroughCopy("robots.txt");
     eleventyConfig.addPassthroughCopy("post/**/*.png");
+    eleventyConfig.addPassthroughCopy("post/**/*.webp");
     eleventyConfig.addPassthroughCopy("post/**/*.jpg");
     eleventyConfig.addCollection("posts", function (collectionApi) {
         return collectionApi.getFilteredByGlob("post/**/*.md").reverse();

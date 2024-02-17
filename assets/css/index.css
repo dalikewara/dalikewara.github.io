@@ -36,6 +36,20 @@ html {
     color: var(--font-color);
     word-break: break-word;
     transition: 0.2s all;
+    position: relative;
+}
+html::before {
+    content: "";
+    background-image: url("/assets/img/space-background.webp");
+    background-size: cover;
+    position: absolute;
+    opacity: 0.2;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
 }
 html p {
     font-size: 1.6em;
@@ -310,7 +324,7 @@ blockquote img {
 /* custom hint.min.css */
 [class*="hint--"]:after {
     font-family: var(--main-font-family);
-    font-size: 0.8em;
+    font-size: 1.4em;
     font-weight: 200;
     background: var(--bg-color);
     color: var(--font-color);
@@ -381,9 +395,31 @@ blockquote img {
 }
 .stabilo {
     display: inline-block;
-    margin: auto;
-    background: var(--font-color);
+    margin: 0 20px 0 10px;
     color: var(--bg-color);
+    position: relative;
+    z-index: 1;
+    background-color: var(--font-color);
+    background-clip: text !important;
+    -webkit-background-clip: text !important;
+}
+.stabilo::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: -10px;
+    height: 115%;
+    width: 119%;
+    background-color: inherit;
+    -webkit-mask-image: url(/assets/img/pixel-brush-1.webp);
+    mask-image: url(/assets/img/pixel-brush-1.webp);
+    -webkit-mask-position: left;
+    mask-position: left bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
 }
 .rotate-0 {
     transform: rotate(0deg);
@@ -449,7 +485,8 @@ blockquote img {
     .project-list-item .project-list-item-title {
         font-size: 1.8em;
     }
-    .project-list-item p{
+    .project-list-item p,
+    [class*="hint--"]:after {
         font-size: 1em;
     }
 }
@@ -467,7 +504,8 @@ blockquote img {
     .project-list-item .project-list-item-title {
         font-size: 1.6em;
     }
-    .project-list-item p{
+    .project-list-item p,
+    [class*="hint--"]:after {
         font-size: 0.8em;
     }
 }
