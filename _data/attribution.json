@@ -1,87 +1,99 @@
 {
   "images": [
     {
+      "name": "The icon made by Freepik from Freepik",
+      "altName": "Pixel Brush 1",
+      "iconUrl": "/assets/img/pixel-brush-1.webp",
+      "url": "https://www.freepik.com/free-vector/ink-brush-stroke-collection_11701402.htm#from_view=detail_alsolike"
+    },
+    {
+      "name": "The space background generated at https://deep-fold.itch.io/space-background-generator",
+      "altName": "Space Background",
+      "iconUrl": "/assets/img/space-background.webp",
+      "url": "https://deep-fold.itch.io/space-background-generator"
+    },
+    {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "Youtube",
-      "iconUrl": "/assets/img/youtube.png",
+      "iconUrl": "/assets/img/youtube.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by OpenSea",
       "altName": "OpenSea",
-      "iconUrl": "/assets/img/opensea.png",
+      "iconUrl": "/assets/img/opensea.webp",
       "url": "https://docs.opensea.io/docs/logos"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "Instagram",
-      "iconUrl": "/assets/img/instagram.png",
+      "iconUrl": "/assets/img/instagram.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "LinkedIn",
-      "iconUrl": "/assets/img/linkedin.png",
+      "iconUrl": "/assets/img/linkedin.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "Facebook",
-      "iconUrl": "/assets/img/facebook.png",
+      "iconUrl": "/assets/img/facebook.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "Twitter",
-      "iconUrl": "/assets/img/twitter.png",
+      "iconUrl": "/assets/img/twitter.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "GitHub",
-      "iconUrl": "/assets/img/github.png",
+      "iconUrl": "/assets/img/github.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "NodeJS",
-      "iconUrl": "/assets/img/nodejs.png",
+      "iconUrl": "/assets/img/nodejs.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "CSS",
-      "iconUrl": "/assets/img/css.png",
+      "iconUrl": "/assets/img/css.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "Javascript",
-      "iconUrl": "/assets/img/javascript.png",
+      "iconUrl": "/assets/img/javascript.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "Python",
-      "iconUrl": "/assets/img/python.png",
+      "iconUrl": "/assets/img/python.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "PHP",
-      "iconUrl": "/assets/img/php.png",
+      "iconUrl": "/assets/img/php.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by Freepik from Flaticon",
       "altName": "Docker",
-      "iconUrl": "/assets/img/docker.png",
+      "iconUrl": "/assets/img/docker.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
       "name": "The icon made by jiannette from Cleanpng",
       "altName": "Golang",
-      "iconUrl": "/assets/img/golang.png",
+      "iconUrl": "/assets/img/golang.webp",
       "url": "https://www.cleanpng.com/users/@jiannette.html"
     },
     {
@@ -92,6 +104,16 @@
     }
   ],
   "files": [
+    {
+      "name": "The title font family is \"Press Start 2P\". It designed by CodeMan38, downloaded from Google Fonts",
+      "altName": "Press Start 2P",
+      "url": "https://fonts.google.com/specimen/Press+Start+2P"
+    },
+    {
+      "name": "The main font family is \"Pixelify Sans\". It designed by Stefie Justprince, downloaded from Google Fonts",
+      "altName": "Pixelify Sans",
+      "url": "https://fonts.google.com/specimen/Pixelify+Sans"
+    },
     {
       "name": "hint.min.css by kushagra.dev",
       "altName": "hint.min.css",

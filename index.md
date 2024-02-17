@@ -4,7 +4,7 @@ layout: content.njk
 
 # An<br/>unexpected<br/>journey,
 
-<img class="img-left" height="200" src="/assets/img/intro-pic.jpg" />Hello there, I'm <span class="stabilo">Dali Kewara</span>, a guy who lives and works as a <span class="stabilo">Backend Developer</span> in Indonesia—building useful and unexpected things, and trying to make positive impacts for people. I love to code and draw my own world—also, I have an interest in art, writing, and journey. I'm on an unexpected journey and going to make it simple yet spectacular!
+<img class="img-left" height="200" src="/assets/img/intro-pic.webp" />Hello there, I'm <span class="stabilo">Dali Kewara</span>, a guy who lives and works as a <span class="stabilo">Backend Developer</span> in Indonesia—building useful and unexpected things, and trying to make positive impacts for people. I love to code and draw my own world—also, I have an interest in art, writing, and journey. I'm on an unexpected journey and going to make it simple yet spectacular!
 
 ### What am I doing in real life?
 
