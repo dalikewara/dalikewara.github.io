@@ -12,6 +12,7 @@
   "assetsImg": "/assets/img",
   "brandIconAnimated": "/assets/img/64x64_green_apple_animation_leaf_ghost_bites.gif",
   "steamUser": "https://steamcommunity.com/id/green_4pple",
+  "githubUserUrl": "https://github.com/dalikewara",
   "githubSponsorUrl": "https://github.com/sponsors/dalikewara/button",
   "githubWebsiteRepo": "https://github.com/dalikewara/dalikewara.github.io",
   "eleventy": "https://www.11ty.dev/",

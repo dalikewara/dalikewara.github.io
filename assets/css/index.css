@@ -178,7 +178,7 @@ blockquote img {
 
 /*post list*/
 .post-list-item {
-    border-bottom: 1px dashed var(--bg-color-dark);
+    border-bottom: 1px dashed vr(--bg-color-dark);
     padding: 5px 0 10px;
 }
 .post-list-item:nth-last-child(1) {
@@ -219,6 +219,10 @@ blockquote img {
     width: var(--icon);
     height: var(--icon);
 }
+.attribution-list-item a {
+    font-size: 1.6em;
+}
+
 
 /* mode */
 #mode {
@@ -432,7 +436,8 @@ blockquote img {
     #footer-inner {
         padding: 0 20px;
     }
-    html p {
+    html p,
+   .attribution-list-item a {
         font-size: 1.2em;
     }
     h1 {
@@ -449,7 +454,8 @@ blockquote img {
     }
 }
 @media screen and (max-width: 480px) {
-    html p {
+    html p,
+   .attribution-list-item a {
         font-size: 1em;
     }
     h1 {
