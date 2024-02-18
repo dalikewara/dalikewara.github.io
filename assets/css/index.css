@@ -273,7 +273,7 @@ blockquote img {
     display: inline-block;
     margin-right: 10px;
 }
-#mode-brand img {
+#mode-brand video {
     width: 64px;
     height: 64px;
     margin-bottom: -18px;
@@ -631,7 +631,7 @@ blockquote img {
     .mode-toggle-active{
         height: 25px;
     }
-    #mode-brand img {
+    #mode-brand video {
         width: 54px;
         height: 54px;
         margin-bottom: -15px;
