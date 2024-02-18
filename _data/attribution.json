@@ -1,10 +1,16 @@
 {
   "images": [
     {
-      "name": "The icon made by Freepik from Freepik",
+      "name": "The icon made by stephanie2212 on Freepik",
+      "altName": "Pixel Brush 2",
+      "iconUrl": "/assets/img/pixel-brush-2.webp",
+      "url": "https://www.freepik.com/free-vector/decorative-brush-shapes-set_14903232.htm"
+    },
+    {
+      "name": "The icon made by Freepik on Freepik",
       "altName": "Pixel Brush 1",
       "iconUrl": "/assets/img/pixel-brush-1.webp",
-      "url": "https://www.freepik.com/free-vector/ink-brush-stroke-collection_11701402.htm#from_view=detail_alsolike"
+      "url": "https://www.freepik.com/free-vector/ink-brush-stroke-collection_11701402.htm"
     },
     {
       "name": "The space background generated at https://deep-fold.itch.io/space-background-generator",
@@ -13,7 +19,7 @@
       "url": "https://deep-fold.itch.io/space-background-generator"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "Youtube",
       "iconUrl": "/assets/img/youtube.webp",
       "url": "https://www.flaticon.com/authors/freepik"
@@ -25,79 +31,79 @@
       "url": "https://docs.opensea.io/docs/logos"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "Instagram",
       "iconUrl": "/assets/img/instagram.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "LinkedIn",
       "iconUrl": "/assets/img/linkedin.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "Facebook",
       "iconUrl": "/assets/img/facebook.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "Twitter",
       "iconUrl": "/assets/img/twitter.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "GitHub",
       "iconUrl": "/assets/img/github.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "NodeJS",
       "iconUrl": "/assets/img/nodejs.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "CSS",
       "iconUrl": "/assets/img/css.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "Javascript",
       "iconUrl": "/assets/img/javascript.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "Python",
       "iconUrl": "/assets/img/python.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "PHP",
       "iconUrl": "/assets/img/php.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by Freepik from Flaticon",
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "Docker",
       "iconUrl": "/assets/img/docker.webp",
       "url": "https://www.flaticon.com/authors/freepik"
     },
     {
-      "name": "The icon made by jiannette from Cleanpng",
+      "name": "The icon made by jiannette on Cleanpng",
       "altName": "Golang",
       "iconUrl": "/assets/img/golang.webp",
       "url": "https://www.cleanpng.com/users/@jiannette.html"
     },
     {
-      "name": "The gif made by Ota Jaider from Giphy",
+      "name": "The gif made by Ota Jaider on Giphy",
       "altName": "Cat Pixel",
       "iconUrl": "/assets/img/cat-pixel.gif",
       "url": "https://giphy.com/otajaider"
@@ -105,12 +111,12 @@
   ],
   "files": [
     {
-      "name": "The title font family is \"Press Start 2P\". It designed by CodeMan38, downloaded from Google Fonts",
+      "name": "The title font family is \"Press Start 2P\". It designed by CodeMan38 on Google Fonts",
       "altName": "Press Start 2P",
       "url": "https://fonts.google.com/specimen/Press+Start+2P"
     },
     {
-      "name": "The main font family is \"Pixelify Sans\". It designed by Stefie Justprince, downloaded from Google Fonts",
+      "name": "The main font family is \"Pixelify Sans\". It designed by Stefie Justprince on Google Fonts",
       "altName": "Pixelify Sans",
       "url": "https://fonts.google.com/specimen/Pixelify+Sans"
     },
