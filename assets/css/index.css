@@ -275,6 +275,7 @@ blockquote img {
 }
 #mode-brand img {
     width: 64px;
+    height: 64px;
     margin-bottom: -18px;
 }
 #mode-toggle-light {
@@ -554,6 +555,11 @@ blockquote img {
         height: 15px;
     }
     .mode-toggle-active{
-        height: 20px;
+        height: 25px;
+    }
+    #mode-brand img {
+        width: 54px;
+        height: 54px;
+        margin-bottom: -15px;
     }
 }
