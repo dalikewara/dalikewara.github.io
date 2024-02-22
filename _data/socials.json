@@ -2,32 +2,32 @@
   {
     "name": "Twitter",
     "url": "https://www.twitter.com/dalikewara",
-    "iconUrl": "/assets/img/twitter.webp"
+    "iconUrl": "/assets/img/twitter-40x40.webp"
   },
   {
     "name": "Facebook",
     "url": "https://www.facebook.com/dalikewara",
-    "iconUrl": "/assets/img/facebook.webp"
+    "iconUrl": "/assets/img/facebook-40x40.webp"
   },
   {
     "name": "LinkedIn",
     "url": "https://www.linkedin.com/in/dalikewara",
-    "iconUrl": "/assets/img/linkedin.webp"
+    "iconUrl": "/assets/img/linkedin-40x40.webp"
   },
   {
     "name": "GitHub",
     "url": "https://www.github.com/dalikewara",
-    "iconUrl": "/assets/img/github.webp",
+    "iconUrl": "/assets/img/github-40x40.webp",
     "backgroundClass": "bg-white"
   },
   {
     "name": "Instagram",
     "url": "https://www.instagram.com/dalikewara",
-    "iconUrl": "/assets/img/instagram.webp"
+    "iconUrl": "/assets/img/instagram-40x40.webp"
   },
   {
     "name": "OpenSea",
     "url": "https://opensea.io/dalikewara",
-    "iconUrl": "/assets/img/opensea.webp"
+    "iconUrl": "/assets/img/opensea-40x40.webp"
   }
 ]
