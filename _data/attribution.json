@@ -68,6 +68,18 @@
     },
     {
       "name": "The icon made by Freepik on Flaticon",
+      "altName": "Terminal",
+      "iconUrl": "/assets/img/terminal-20x20.webp",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik on Flaticon",
+      "altName": "Typescript",
+      "iconUrl": "/assets/img/typescript-20x20.webp",
+      "url": "https://www.flaticon.com/authors/freepik"
+    },
+    {
+      "name": "The icon made by Freepik on Flaticon",
       "altName": "CSS",
       "iconUrl": "/assets/img/css-20x20.webp",
       "url": "https://www.flaticon.com/authors/freepik"

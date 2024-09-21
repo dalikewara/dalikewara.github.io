@@ -1,9 +1,27 @@
 [
   {
+    "name": "umar",
+    "url": "https://github.com/dalikewara/umar",
+    "iconUrl": "/assets/img/terminal-20x20.webp",
+    "description": "Little Linux assistant"
+  },
+  {
     "name": "ayapingping-go",
     "url": "https://github.com/dalikewara/ayapingping-go",
     "iconUrl": "/assets/img/golang-20x20.webp",
-    "description": "AyaPingPing (Go) generates standard project structure to build applications in Golang that follow Clean Architecture and Domain-Driven Design concept"
+    "description": "AyaPingPing (Go) generates standard project structure to build applications in Golang that follow Clean Architecture and Feature-Driven Design concept"
+  },
+  {
+    "name": "ayapingping-py",
+    "url": "https://github.com/dalikewara/ayapingping-py",
+    "iconUrl": "/assets/img/python-20x20.webp",
+    "description": "AyaPingPing (Py) generates standard project structure to build applications in Python that follow Clean Architecture and Feature-Driven Design concept"
+  },
+  {
+    "name": "ayapingping-ts",
+    "url": "https://github.com/dalikewara/ayapingping-ts",
+    "iconUrl": "/assets/img/typescript-20x20.webp",
+    "description": "AyaPingPing (Ts) generates standard project structure to build applications in NodeJS-TypeScript that follow Clean Architecture and Feature-Driven Design concept"
   },
   {
     "name": "strcgo",
