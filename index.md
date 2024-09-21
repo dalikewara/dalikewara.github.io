@@ -12,7 +12,7 @@ I have been working as a Software Engineer (Backend) for a living since 2016, at
 **[Vascomm]({{ url.vascomm }})** (2016-2021), **[RCTI+]({{ url.rctiplus }})** (2022), **[Warung Pintar]({{ url.warungPintar }})** (2023) and currently **[Renos]({{ url.renos }})**.
 After working hours, I sometimes enjoy myself by watching [solo bushcraft](https://www.youtube.com/results?search_query=solo+bushcraft+bertram+nagualero)
 content on YouTube, listening to [Yorushika](https://open.spotify.com/playlist/3sQKVJHpxisbBGGtC1mA4I?si=a5610bb4d8ce4048) on Spotify,
-playing <span class="stabilo">The Legend of Zelda</span> and <span class="stabilo">Monster Hunter</span> on My Nintendo Switch—I also play [Dota]({{ url.steamUser }})—and traveling.
+playing <span class="stabilo">The Legend of Zelda</span> and <span class="stabilo">Monster Hunter</span> on My Nintendo Switch & 3DS—I also play [Dota]({{ url.steamUser }})—and traveling.
 
 ### I believe that helping others is one of the most important things to do as a human being
 
