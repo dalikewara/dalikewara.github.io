@@ -1,0 +1,19 @@
+.pagination-nav {
+    display: block;
+}
+
+.pagination-nav__link {
+    border: none;
+}
+
+.pagination-nav__link:hover .pagination-nav__label {
+    text-decoration: underline;
+}
+
+.pagination-nav__link--prev {
+    float: left;
+}
+
+.pagination-nav__link--next {
+    float: right;
+}

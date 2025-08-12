@@ -3,10 +3,10 @@ info:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 serve: ## serve app
-	npx @11ty/eleventy --serve
+	npm run serve
 
 build: ## build app
-	npx @11ty/eleventy
+	npm run build
 
 build-netlify: build ## build command to deploy on netlify
 

@@ -1,0 +1,9 @@
+:root {
+    --img-md: 200px;
+}
+
+img[src$='#md-left'] {
+    float: left;
+    width: var(--img-md);
+    margin-right: 20px !important;
+}

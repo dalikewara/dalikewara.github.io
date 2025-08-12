@@ -1,0 +1,35 @@
+ul.social {
+    list-style-type: none;
+    margin: 15px 0;
+    padding: 0;
+}
+
+ul.social li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+html[data-theme="light"] ul.social li a img {
+    padding: 2px;
+    margin: 3px 5px;
+    background-color: var(--ifm-background-color);
+    border-radius: 50%;
+    border: 2px solid transparent;
+}
+
+html[data-theme="light"] ul.social li a img:hover {
+    border: 2px solid var(--color-black);
+}
+
+html[data-theme="dark"] ul.social li a img {
+    padding: 2px;
+    margin: 3px 5px;
+    background-color: var(--color-white);
+    border-radius: 50%;
+    border: 2px solid var(--ifm-background-color);
+}
+
+html[data-theme="dark"] ul.social li a img:hover {
+    opacity: 0.7;
+}
