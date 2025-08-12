@@ -1,0 +1,25 @@
+{
+  "id": "greeting",
+  "title": "Greeting 👋",
+  "description": "A guy who lives and works as a Backend Developer in Indonesia—building useful and unexpected things, and trying to make positive impacts for people",
+  "source": "@site/docs/greeting.md",
+  "sourceDirName": ".",
+  "slug": "/",
+  "permalink": "/",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "slug": "/",
+    "description": "A guy who lives and works as a Backend Developer in Indonesia—building useful and unexpected things, and trying to make positive impacts for people",
+    "image": "img/profile-pic.webp"
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "📖 Legal & License",
+    "permalink": "/legal-and-license"
+  }
+}

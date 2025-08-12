@@ -1,0 +1,35 @@
+{
+  "id": "ecosystem/uwais/project-structure",
+  "title": "Project Structure",
+  "description": "This page contains information about Uwais's project structure",
+  "source": "@site/docs/ecosystem/uwais/project-structure.md",
+  "sourceDirName": "ecosystem/uwais",
+  "slug": "/docs/uwais/project-structure",
+  "permalink": "/docs/uwais/project-structure",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "slug": "/docs/uwais/project-structure",
+    "description": "This page contains information about Uwais's project structure",
+    "keywords": [
+      "uwais",
+      "tools",
+      "ecosystem",
+      "application",
+      "project structure",
+      "clean architecture",
+      "feature driven design",
+      "domain driven design",
+      "design pattern"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Backward Compatibility",
+    "permalink": "/docs/uwais/backward-compatibility"
+  }
+}

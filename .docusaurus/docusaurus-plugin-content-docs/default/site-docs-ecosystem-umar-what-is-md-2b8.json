@@ -1,0 +1,35 @@
+{
+  "id": "ecosystem/umar/what-is",
+  "title": "What is umar? 🤔",
+  "description": "This page contains information about what Umar is",
+  "source": "@site/docs/ecosystem/umar/what-is.md",
+  "sourceDirName": "ecosystem/umar",
+  "slug": "/docs/umar/what-is",
+  "permalink": "/docs/umar/what-is",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "sidebar_position": 1,
+    "slug": "/docs/umar/what-is",
+    "description": "This page contains information about what Umar is",
+    "keywords": [
+      "umar",
+      "tools",
+      "ecosystem",
+      "linux",
+      "application"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Umar",
+    "permalink": "/docs/umar"
+  },
+  "next": {
+    "title": "Getting Started",
+    "permalink": "/docs/umar/getting-started"
+  }
+}

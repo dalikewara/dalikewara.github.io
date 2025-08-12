@@ -1,0 +1,33 @@
+{
+  "id": "legal-and-license",
+  "title": "📖 Legal & License",
+  "description": "A page that provides information about the website’s legal terms and licenses",
+  "source": "@site/docs/legal-and-license.md",
+  "sourceDirName": ".",
+  "slug": "/legal-and-license",
+  "permalink": "/legal-and-license",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "description": "A page that provides information about the website’s legal terms and licenses",
+    "keywords": [
+      "legal and license",
+      "legal",
+      "license",
+      "attribution"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Greeting 👋",
+    "permalink": "/"
+  },
+  "next": {
+    "title": "🌏 Ecosystem",
+    "permalink": "/ecosystem"
+  }
+}

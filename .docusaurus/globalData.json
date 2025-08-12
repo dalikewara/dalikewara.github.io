@@ -1,0 +1,98 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "greeting",
+          "docs": [
+            {
+              "id": "ecosystem/umar/getting-started",
+              "path": "/docs/umar/getting-started",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ecosystem/umar/what-is",
+              "path": "/docs/umar/what-is",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ecosystem/uwais/backward-compatibility",
+              "path": "/docs/uwais/backward-compatibility",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ecosystem/uwais/getting-started",
+              "path": "/docs/uwais/getting-started",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ecosystem/uwais/project-structure",
+              "path": "/docs/uwais/project-structure",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "ecosystem/uwais/what-is",
+              "path": "/docs/uwais/what-is",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "greeting",
+              "path": "/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "legal-and-license",
+              "path": "/legal-and-license",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/ecosystem",
+              "path": "/ecosystem",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/docs/umar",
+              "path": "/docs/umar",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "/docs/uwais",
+              "path": "/docs/uwais",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/",
+                "label": "greeting"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  },
+  "docusaurus-plugin-google-gtag": {
+    "default": {
+      "trackingID": [
+        "G-TBLTVPW7ZD"
+      ],
+      "anonymizeIP": false,
+      "id": "default"
+    }
+  },
+  "docusaurus-plugin-google-tag-manager": {
+    "default": {
+      "containerId": "GTM-MMH79W",
+      "id": "default"
+    }
+  }
+}

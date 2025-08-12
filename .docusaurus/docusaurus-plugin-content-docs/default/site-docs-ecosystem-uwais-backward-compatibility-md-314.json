@@ -1,0 +1,40 @@
+{
+  "id": "ecosystem/uwais/backward-compatibility",
+  "title": "Backward Compatibility",
+  "description": "This page contains information about Uwais's backward compatibility",
+  "source": "@site/docs/ecosystem/uwais/backward-compatibility.md",
+  "sourceDirName": "ecosystem/uwais",
+  "slug": "/docs/uwais/backward-compatibility",
+  "permalink": "/docs/uwais/backward-compatibility",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "slug": "/docs/uwais/backward-compatibility",
+    "description": "This page contains information about Uwais's backward compatibility",
+    "keywords": [
+      "uwais",
+      "tools",
+      "ecosystem",
+      "application",
+      "project structure",
+      "clean architecture",
+      "feature driven design",
+      "domain driven design",
+      "design pattern",
+      "backward compatibility"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/uwais/getting-started"
+  },
+  "next": {
+    "title": "Project Structure",
+    "permalink": "/docs/uwais/project-structure"
+  }
+}

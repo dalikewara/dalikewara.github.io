@@ -1,0 +1,36 @@
+{
+  "id": "ecosystem/umar/getting-started",
+  "title": "Getting Started",
+  "description": "This page contains introductory information to help you get started with Umar",
+  "source": "@site/docs/ecosystem/umar/getting-started.md",
+  "sourceDirName": "ecosystem/umar",
+  "slug": "/docs/umar/getting-started",
+  "permalink": "/docs/umar/getting-started",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "sidebar_position": 2,
+    "slug": "/docs/umar/getting-started",
+    "description": "This page contains introductory information to help you get started with Umar",
+    "keywords": [
+      "umar",
+      "tools",
+      "ecosystem",
+      "linux",
+      "application",
+      "getting started"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "What is umar? 🤔",
+    "permalink": "/docs/umar/what-is"
+  },
+  "next": {
+    "title": "Uwais",
+    "permalink": "/docs/uwais"
+  }
+}
