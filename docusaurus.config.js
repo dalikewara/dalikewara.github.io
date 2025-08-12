@@ -136,7 +136,7 @@ export default {
                 rel: 'icon',
                 type: "image/png",
                 sizes: "32x32",
-                href: 'faviconfavicon-32x32.png',
+                href: 'favicon/favicon-32x32.png',
             },
         },
         {
@@ -145,7 +145,7 @@ export default {
                 rel: 'icon',
                 type: "image/png",
                 sizes: "96x96",
-                href: 'faviconfavicon-96x96.png',
+                href: 'favicon/favicon-96x96.png',
             },
         },
         {
@@ -154,7 +154,7 @@ export default {
                 rel: 'icon',
                 type: "image/png",
                 sizes: "16x16",
-                href: 'faviconfavicon-16x16.png',
+                href: 'favicon/favicon-16x16.png',
             },
         }
     ],
