@@ -50,6 +50,14 @@ export const links = {
         name: "Github",
         url: "https://github.com/dalikewara/dalikewara.github.io"
     },
+    umarrepo: {
+        name: "Github",
+        url: "https://github.com/dalikewara/umar"
+    },
+    uwaisrepo: {
+        name: "Github",
+        url: "https://github.com/dalikewara/uwais"
+    },
 
     // License
 
@@ -60,6 +68,10 @@ export const links = {
     gnugplv3faq: {
         name: "https://www.gnu.org/licenses/gpl-faq.html",
         url: "https://www.gnu.org/licenses/gpl-faq.html"
+    },
+    mit: {
+        name: "MIT License",
+        url: "https://mit-license.org/"
     },
 
     // Platform
@@ -110,4 +122,14 @@ export function linkImg(name, imgName) {
     if (links[name]) {
         return <a href={links[name].url} target="_blank" rel="noopener noreferrer">{img(imgName)}</a>
     }
+}
+
+/**
+ * @param {string} name
+ * @param {string} url
+ *
+ * @returns {JSX.Element}
+ */
+export function linkCustom(name, url) {
+    return <a href={url} target="_blank" rel="noopener noreferrer">{name}</a>
 }

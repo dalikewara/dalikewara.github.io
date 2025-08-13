@@ -12,19 +12,9 @@
       "name": "@docusaurus/plugin-content-docs",
       "version": "3.8.1"
     },
-    "docusaurus-plugin-google-gtag": {
+    "docusaurus-plugin-debug": {
       "type": "package",
-      "name": "@docusaurus/plugin-google-gtag",
-      "version": "3.8.1"
-    },
-    "docusaurus-plugin-google-tag-manager": {
-      "type": "package",
-      "name": "@docusaurus/plugin-google-tag-manager",
-      "version": "3.8.1"
-    },
-    "docusaurus-plugin-sitemap": {
-      "type": "package",
-      "name": "@docusaurus/plugin-sitemap",
+      "name": "@docusaurus/plugin-debug",
       "version": "3.8.1"
     },
     "docusaurus-plugin-svgr": {

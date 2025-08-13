@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 4
 slug: /docs/uwais/project-structure
 description: This page contains information about Uwais's project structure
 keywords: [uwais, tools, ecosystem, application, project structure, clean architecture, feature driven design, domain driven design, design pattern]
@@ -9,9 +9,7 @@ keywords: [uwais, tools, ecosystem, application, project structure, clean archit
 
 To implement the concept of Clean Architecture and Feature-Driven Design, and to keep them as simple and understandable as possible, Uwais structures the project like this:
 
-Example (Golang):
-
-```text
+```text title="Example (Go)"
 - common
     - error.go
     - fiber.go
@@ -32,27 +30,25 @@ Example (Golang):
 - main.go
 ```
 
-> Current version is **v4**
-
 ## Explanation
 
-### main.[extension]
+### `main.[extension]`
 
 - In this file, you initialize dependencies, injections, and anything required to start and run your application
 - This is the starting or entry point of your application
 
-### domain
+### `domain`
 
 - The **Domain** represents your primary business model or entity
 - Define your main object models or properties for your business here, including database models, DTOs (Data Transfer Objects), etc
 - Keep this package as straightforward as possible. Avoid including any code that is not directly related to the model itself
 
-### common
+### `common`
 
 - In this place, you can implement various functions to assist you in performing common tasks—consider them as helpers
 - Common functions can be directly called from anywhere
 
-### features
+### `features`
 
 - A **Feature** encapsulates your main business feature, logic, or service
 - Here, you include everything necessary to ensure the proper functioning of the feature

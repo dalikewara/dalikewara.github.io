@@ -3,16 +3,51 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', '5ff'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', '5ba'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', 'a2b'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'c3c'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', '156'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', '88c'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', '000'),
+    exact: true
+  },
+  {
     path: '/',
-    component: ComponentCreator('/', '937'),
+    component: ComponentCreator('/', '085'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', 'e9a'),
+        component: ComponentCreator('/', '83f'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', '00d'),
+            component: ComponentCreator('/', 'e5b'),
             routes: [
               {
                 path: '/docs/umar',
@@ -23,6 +58,12 @@ export default [
               {
                 path: '/docs/umar/getting-started',
                 component: ComponentCreator('/docs/umar/getting-started', '573'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/umar/repo-and-license',
+                component: ComponentCreator('/docs/umar/repo-and-license', '5ce'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -53,6 +94,12 @@ export default [
               {
                 path: '/docs/uwais/project-structure',
                 component: ComponentCreator('/docs/uwais/project-structure', '769'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/uwais/repo-and-license',
+                component: ComponentCreator('/docs/uwais/repo-and-license', 'a95'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

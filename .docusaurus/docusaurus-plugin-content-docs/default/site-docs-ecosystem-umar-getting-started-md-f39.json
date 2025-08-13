@@ -26,11 +26,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "What is umar? 🤔",
+    "title": "What Is Umar? 🤔",
     "permalink": "/docs/umar/what-is"
   },
   "next": {
-    "title": "Uwais",
-    "permalink": "/docs/uwais"
+    "title": "Repo & License",
+    "permalink": "/docs/umar/repo-and-license"
   }
 }

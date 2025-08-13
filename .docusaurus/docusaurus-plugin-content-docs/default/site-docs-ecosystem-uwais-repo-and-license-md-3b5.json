@@ -1,0 +1,42 @@
+{
+  "id": "ecosystem/uwais/repo-and-license",
+  "title": "Repo & License",
+  "description": "This page contains information about Uwais's repository & license",
+  "source": "@site/docs/ecosystem/uwais/repo-and-license.md",
+  "sourceDirName": "ecosystem/uwais",
+  "slug": "/docs/uwais/repo-and-license",
+  "permalink": "/docs/uwais/repo-and-license",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "sidebar_position": 5,
+    "slug": "/docs/uwais/repo-and-license",
+    "description": "This page contains information about Uwais's repository & license",
+    "keywords": [
+      "uwais",
+      "tools",
+      "ecosystem",
+      "application",
+      "mit",
+      "license",
+      "repository",
+      "clean architecture",
+      "project structure",
+      "feature driven design",
+      "domain driven design",
+      "design pattern"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Project Structure",
+    "permalink": "/docs/uwais/project-structure"
+  },
+  "next": {
+    "title": "📖 Legal & License",
+    "permalink": "/legal-and-license"
+  }
+}

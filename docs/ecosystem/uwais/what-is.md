@@ -7,7 +7,7 @@ keywords: [uwais, tools, ecosystem, application, project structure, clean archit
 
 import { symbol } from '@site/src/symbol.js';
 
-# What is Uwais? 🤔
+# What Is Uwais? 🤔
 
 Uwais—formerly named ayapingping—is a standard project structure generator to build
 applications that follow Clean Architecture and Feature-Driven Design concept in various programming languages

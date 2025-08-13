@@ -10,9 +10,9 @@
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "sidebarPosition": 3,
+  "sidebarPosition": 4,
   "frontMatter": {
-    "sidebar_position": 3,
+    "sidebar_position": 4,
     "slug": "/docs/uwais/project-structure",
     "description": "This page contains information about Uwais's project structure",
     "keywords": [
@@ -31,5 +31,9 @@
   "previous": {
     "title": "Backward Compatibility",
     "permalink": "/docs/uwais/backward-compatibility"
+  },
+  "next": {
+    "title": "Repo & License",
+    "permalink": "/docs/uwais/repo-and-license"
   }
 }

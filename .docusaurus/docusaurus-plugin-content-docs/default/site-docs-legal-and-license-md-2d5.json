@@ -10,9 +10,9 @@
   "unlisted": false,
   "tags": [],
   "version": "current",
-  "sidebarPosition": 2,
+  "sidebarPosition": 3,
   "frontMatter": {
-    "sidebar_position": 2,
+    "sidebar_position": 3,
     "description": "A page that provides information about the website’s legal terms and licenses",
     "keywords": [
       "legal and license",
@@ -23,11 +23,7 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Greeting 👋",
-    "permalink": "/"
-  },
-  "next": {
-    "title": "🌏 Ecosystem",
-    "permalink": "/ecosystem"
+    "title": "Repo & License",
+    "permalink": "/docs/uwais/repo-and-license"
   }
 }

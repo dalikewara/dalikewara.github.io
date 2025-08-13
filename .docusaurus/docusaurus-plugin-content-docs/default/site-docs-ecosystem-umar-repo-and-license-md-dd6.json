@@ -1,0 +1,38 @@
+{
+  "id": "ecosystem/umar/repo-and-license",
+  "title": "Repo & License",
+  "description": "This page contains information about Umar's repository & license",
+  "source": "@site/docs/ecosystem/umar/repo-and-license.md",
+  "sourceDirName": "ecosystem/umar",
+  "slug": "/docs/umar/repo-and-license",
+  "permalink": "/docs/umar/repo-and-license",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "sidebar_position": 3,
+    "slug": "/docs/umar/repo-and-license",
+    "description": "This page contains information about Umar's repository & license",
+    "keywords": [
+      "umar",
+      "tools",
+      "ecosystem",
+      "linux",
+      "application",
+      "license",
+      "repo",
+      "mit"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Getting Started",
+    "permalink": "/docs/umar/getting-started"
+  },
+  "next": {
+    "title": "Uwais",
+    "permalink": "/docs/uwais"
+  }
+}
