@@ -5,7 +5,7 @@ description: This page contains information about Uwais's backward compatibility
 keywords: [uwais, tools, ecosystem, application, project structure, clean architecture, feature driven design, domain driven design, design pattern, backward compatibility]
 ---
 
-# Backward Compatibility
+# ♻ Backward Compatibility
 
 Uwais maintains backward compatibility by separating the version of the source/app from the version of the generated project structure.
 With this approach, Uwais can introduce future changes without breaking any existing generated project structures.
@@ -19,4 +19,6 @@ Don’t worry, upgrading Uwais will not break your generated project structure; 
 
 This refers to the version of the generated project structure. Different versions may produce different structures, which helps ensure backward compatibility.
 
-> The current default project structure version is `v4`.
+:::info
+The current default project structure version is `v4`.
+:::

@@ -19,5 +19,11 @@ export const icon = {
     globe: "🌏",
     thinkingface: "🤔",
     electricplug: "🔌",
-    joystick: "🕹"
+    joystick: "🕹",
+    file: "📄",
+    folder: "📁",
+    books: "📚",
+    recycle: "♻",
+    manrunning: "🏃‍♂️",
+    hammerandwrench: "🛠"
 };
