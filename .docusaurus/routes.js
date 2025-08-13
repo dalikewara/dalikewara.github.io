@@ -39,15 +39,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '085'),
+    component: ComponentCreator('/', '937'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '83f'),
+        component: ComponentCreator('/', 'e9a'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', 'e5b'),
+            component: ComponentCreator('/', '00d'),
             routes: [
               {
                 path: '/docs/umar',
@@ -58,12 +58,6 @@ export default [
               {
                 path: '/docs/umar/getting-started',
                 component: ComponentCreator('/docs/umar/getting-started', '573'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/umar/repo-and-license',
-                component: ComponentCreator('/docs/umar/repo-and-license', '5ce'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
@@ -94,12 +88,6 @@ export default [
               {
                 path: '/docs/uwais/project-structure',
                 component: ComponentCreator('/docs/uwais/project-structure', '769'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/docs/uwais/repo-and-license',
-                component: ComponentCreator('/docs/uwais/repo-and-license', 'a95'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

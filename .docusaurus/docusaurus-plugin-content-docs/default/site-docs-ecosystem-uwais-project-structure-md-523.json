@@ -1,6 +1,6 @@
 {
   "id": "ecosystem/uwais/project-structure",
-  "title": "Project Structure",
+  "title": "📚 Project Structure",
   "description": "This page contains information about Uwais's project structure",
   "source": "@site/docs/ecosystem/uwais/project-structure.md",
   "sourceDirName": "ecosystem/uwais",
@@ -29,11 +29,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Backward Compatibility",
+    "title": "♻ Backward Compatibility",
     "permalink": "/docs/uwais/backward-compatibility"
   },
   "next": {
-    "title": "Repo & License",
-    "permalink": "/docs/uwais/repo-and-license"
+    "title": "📖 Legal & License",
+    "permalink": "/legal-and-license"
   }
 }

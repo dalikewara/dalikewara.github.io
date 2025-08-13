@@ -241,9 +241,9 @@ export default {
             ],
             announcementBar: {
                 id: 'work-in-progress',
-                content: "Work In Progress...",
-                backgroundColor: 'rgb(255, 186, 0)',
-                textColor: 'rgb(22, 22, 24)',
+                content: "🛠 Work In Progress...",
+                backgroundColor: 'rgb(0, 0, 0)',
+                textColor: 'rgb(225, 225, 225)',
                 isCloseable: false,
             },
             colorMode: {

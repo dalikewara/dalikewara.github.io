@@ -7,7 +7,7 @@ keywords: [uwais, tools, ecosystem, application, getting started, clean architec
 
 import { linkCustom } from '@site/src/link.js';
 
-# Getting Started
+# 🏃‍♂️ Getting Started
 
 ## Requirements
 

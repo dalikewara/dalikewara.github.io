@@ -1,6 +1,6 @@
 {
   "id": "ecosystem/uwais/backward-compatibility",
-  "title": "Backward Compatibility",
+  "title": "♻ Backward Compatibility",
   "description": "This page contains information about Uwais's backward compatibility",
   "source": "@site/docs/ecosystem/uwais/backward-compatibility.md",
   "sourceDirName": "ecosystem/uwais",
@@ -30,11 +30,11 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Getting Started",
+    "title": "🏃‍♂️ Getting Started",
     "permalink": "/docs/uwais/getting-started"
   },
   "next": {
-    "title": "Project Structure",
+    "title": "📚 Project Structure",
     "permalink": "/docs/uwais/project-structure"
   }
 }

@@ -16,11 +16,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "ecosystem/umar/repo-and-license",
-              "path": "/docs/umar/repo-and-license",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "ecosystem/umar/what-is",
               "path": "/docs/umar/what-is",
               "sidebar": "tutorialSidebar"
@@ -38,11 +33,6 @@
             {
               "id": "ecosystem/uwais/project-structure",
               "path": "/docs/uwais/project-structure",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "ecosystem/uwais/repo-and-license",
-              "path": "/docs/uwais/repo-and-license",
               "sidebar": "tutorialSidebar"
             },
             {

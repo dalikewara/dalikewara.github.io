@@ -1,6 +1,6 @@
 {
   "id": "ecosystem/umar/getting-started",
-  "title": "Getting Started",
+  "title": "🏃‍♂️ Getting Started",
   "description": "This page contains introductory information to help you get started with Umar",
   "source": "@site/docs/ecosystem/umar/getting-started.md",
   "sourceDirName": "ecosystem/umar",
@@ -30,7 +30,7 @@
     "permalink": "/docs/umar/what-is"
   },
   "next": {
-    "title": "Repo & License",
-    "permalink": "/docs/umar/repo-and-license"
+    "title": "Uwais",
+    "permalink": "/docs/uwais"
   }
 }

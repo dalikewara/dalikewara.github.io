@@ -7,7 +7,7 @@ keywords: [umar, tools, ecosystem, linux, application, getting started]
 
 import { linkCustom } from '@site/src/link.js';
 
-# Getting Started
+# 🏃‍♂️ Getting Started
 
 Before using Umar, please check your OS first. Umar was created for Linux systems, especially Arch Linux.
 I highly recommend running Umar on that system.
@@ -18,12 +18,15 @@ I once tested it on Fedora 42 and Ubuntu 24.04—some commands worked, some didn
 :::
 
 :::danger
-- Umar doesn’t work on Windows CLI systems (such as PowerShell or Command Prompt)
-- If you’re not sure about what you’re doing, please don’t proceed
+Umar doesn’t work on Windows CLI systems (such as PowerShell or Command Prompt).
 :::
 
-If you really want to understand what Umar does, you can always check the source code through the commands `umar r` or `umar p`.
+:::tip
+You can always check the Umar's source code through the commands `umar r` or `umar p`.
 This might give you more confidence to use it next time.
+:::
+
+If you’re not sure about what you’re doing, please don’t proceed.
 
 ## Installation 🔌
 
