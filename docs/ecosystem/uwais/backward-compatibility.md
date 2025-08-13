@@ -7,7 +7,16 @@ keywords: [uwais, tools, ecosystem, application, project structure, clean archit
 
 # Backward Compatibility
 
-There are two types of versions:
+Uwais maintains backward compatibility by separating the version of the source/app from the version of the generated project structure.
+With this approach, Uwais can introduce future changes without breaking any existing generated project structures.
 
-- Uwais version: This refers to the version of the Uwais source code. Always update Uwais to the latest version to get the latest fixes and features
-- Project Structure version: This refers to the version of the generated project structure. Different versions may produce different project structures, which is useful for ensuring backward compatibility
+## Source or App Version
+
+This refers to the version of the Uwais source code. You should always update Uwais to the latest version to receive the newest fixes and features.
+Don’t worry, upgrading Uwais will not break your generated project structure; it will remain automatically compatible.
+
+## Project Structure Version
+
+This refers to the version of the generated project structure. Different versions may produce different structures, which helps ensure backward compatibility.
+
+> The current default project structure version is `v4`.

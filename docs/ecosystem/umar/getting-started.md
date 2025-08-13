@@ -5,6 +5,8 @@ description: This page contains introductory information to help you get started
 keywords: [umar, tools, ecosystem, linux, application, getting started]
 ---
 
+import { linkCustom } from '@site/src/link.js';
+
 # Getting Started
 
 Before using Umar, please check your OS first. Umar was created for Linux systems, especially Arch Linux.
@@ -16,27 +18,27 @@ I once tested it on Fedora 42 and Ubuntu 24.04—some commands worked, some didn
 :::
 
 :::danger
-Umar doesn’t work on Windows CLI systems (such as PowerShell or Command Prompt).
+- Umar doesn’t work on Windows CLI systems (such as PowerShell or Command Prompt)
+- If you’re not sure about what you’re doing, please don’t proceed
 :::
 
-:::danger
-If you’re not sure about what you’re doing, please don’t proceed.
-:::
+If you really want to understand what Umar does, you can always check the source code through the commands `umar r` or `umar p`.
+This might give you more confidence to use it next time.
 
-:::tip
-If you really want to understand what Umar does, you can
-always check the source code through the commands `umar r` or `umar p`. This might give you more confidence to use it next time.
-:::
-
-## Installation🔌
+## Installation 🔌
 
 To install Umar, run the following command:
 
 ```bash
-curl -L https://dalikewara.com/umar/install.sh | sh
+curl --proto '=https' --tlsv1.2 -L https://dalikewara.com/umar/install.sh | sh
 ```
 
 > If the `install.sh` URL above doesn’t work, you can use this URL instead: `https://raw.githubusercontent.com/dalikewara/umar/master/install.sh`.
+ 
+:::tip
+If you’re concerned about safety and security, you can download the {linkCustom('install.sh', 'https://dalikewara.com/umar/install.sh')} file first and execute it manually.
+Or, you can view the `install.sh` source code at {linkCustom('https://raw.githubusercontent.com/dalikewara/umar/master/install.sh', 'https://raw.githubusercontent.com/dalikewara/umar/master/install.sh')}.
+:::
 
 ### Upgrade
 

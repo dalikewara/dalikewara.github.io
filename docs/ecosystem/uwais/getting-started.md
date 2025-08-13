@@ -5,6 +5,8 @@ description: This page contains introductory information to help you get started
 keywords: [uwais, tools, ecosystem, application, getting started, clean architecture, project structure, feature driven design, domain driven design, design pattern]
 ---
 
+import { linkCustom } from '@site/src/link.js';
+
 # Getting Started
 
 ## Requirements
@@ -15,15 +17,27 @@ Before installing, make sure your system meets these requirements:
 - curl
 - git
 
-## Installation🔌
+:::info
+Currently, I am working on migrating Uwais's code from pure POSIX shell script to Rust. It will be available in the next version of Uwais, which is v2.
+The new Uwais will have a different installation approach to ensure cross-platform compatibility. Don’t worry, I will keep the existing flow and mechanism
+so it will be automatically compatible with the new version. If you already have an older Uwais installed, you won’t need to do anything except upgrade to
+the latest version.
+:::
+
+## Installation 🔌
 
 To install Uwais, run the following command:
 
 ```bash
-curl -L https://dalikewara.com/uwais/install.sh | sh
+curl --proto '=https' --tlsv1.2 -L https://dalikewara.com/uwais/install.sh | sh
 ```
 
 > If the `install.sh` URL above doesn’t work, you can use this URL instead: `https://raw.githubusercontent.com/dalikewara/uwais/master/install.sh`.
+
+:::tip
+If you’re concerned about safety and security, you can download the {linkCustom('install.sh', 'https://dalikewara.com/uwais/install.sh')} file first and execute it manually.
+Or, you can view the `install.sh` source code at {linkCustom('https://raw.githubusercontent.com/dalikewara/uwais/master/install.sh', 'https://raw.githubusercontent.com/dalikewara/uwais/master/install.sh')}.
+:::
 
 ### Upgrade
 

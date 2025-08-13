@@ -28,7 +28,7 @@ if err != nil {
 
 A lot of people hate it, but to me, it's the best error handling ever {icon.fire}
 
-## 🚵‍♂️ What am I doing in real life?
+## 🚵‍♂️ What Am I Doing In Real Life?
 
 I have been working as a **Software Engineer (Backend)** for a living since 2016, at least for these companies:
 - {link('vascomm')} (2016-2021)
@@ -44,7 +44,7 @@ I can sit in front of a monitor for hours doing coding{symbol.mdash}depends on t
 some of them pushed me to create tools or packages to make things easier. I also hope these tools can be useful for others.
 You might find them on this website, as it’s intended to be a place where I document my work.
 
-## How do I communicate? 🗣
+## How Do I Communicate? 🗣
 
 I love explaining things in detail, but I'm not good at verbal communication, tbh {icon.sweatface}. I communicate better in writing{symbol.mdash}through text {icon.keyboard}.
 

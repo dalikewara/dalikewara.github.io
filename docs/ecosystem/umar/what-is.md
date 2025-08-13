@@ -7,7 +7,7 @@ keywords: [umar, tools, ecosystem, linux, application]
 
 import { symbol } from '@site/src/symbol.js';
 
-# What is Umar? 🤔
+# What Is Umar? 🤔
 
 Umar is a collection of CLI commands I initially created to help me do various Linux tasks{symbol.mdash}I consider it a little Linux assistant.
 Most of the time, I work on my personal laptop running Linux. It’s an OS where you’ll often deal with configuration and settings through the CLI.

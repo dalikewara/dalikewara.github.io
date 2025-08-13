@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 3
 description: A page that provides information about the website’s legal terms and licenses
 keywords: [legal and license, legal, license, attribution]
 ---
@@ -12,7 +12,7 @@ import { symbol } from '@site/src/symbol.js';
 
 This website is powered by {link('docusaurus')}, hosted on {link('netlify')}, and its source code is available on {link('githubrepo')}.
 
-This website is licensed under {link('gnugplv3')}, but not all content is covered by the same license. For example,
+This website is licensed under the {link('gnugplv3')}, but not all content is covered by the same license. For example,
 some tools or packages I created may have their own license, which will be explicitly stated in their repository or documentation page.
 If you find content that does not explicitly state its license, it falls under this website's default license{symbol.mdash}{link('gnugplv3')}.
 Frequently Asked Questions about the GNU Licenses can be found at {link('gnugplv3faq')}.
