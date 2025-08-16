@@ -1,0 +1,11 @@
+:root {
+    --img-md: 200px;
+}
+
+img[img-size="md"] {
+    width: var(--img-md);
+}
+
+img[img-pos="left"] {
+    margin: 0 2em 1em 0 !important;
+}
