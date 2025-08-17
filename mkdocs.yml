@@ -1,13 +1,27 @@
-site_name: Dali Kewara
+site_name: DK
+site_author: Dali Kewara
+site_description: An unexpected journey
+site_url: http://www.dalikewara.com
+repo_name: Profile
+repo_url: https://github.com/dalikewara
 copyright: Copyright &copy; 2017 - 2025 Dali Kewara. All rights reserved.
 
 nav:
   - 🏠 /: index.md
-  - 📁 /blog:
+  - 📚 /docs:
+    - docs/index.md
+    - 📁 Umar:
+      - docs/umar/index.md
+      - docs/umar/getting-started.md
+      - docs/umar/license.md
+    - 📁 Uwais:
+      - docs/uwais/index.md
+      - docs/uwais/getting-started.md
+      - docs/uwais/backward-compatibility.md
+      - docs/uwais/project-structure.md
+      - docs/uwais/license.md
+  - 📚 /blog:
     - blog/index.md
-  - 📁 /docs:
-    - Umar:
-      - ecosystem/umar/index.md
   - 📖 /legal-and-license: legal-and-license.md
 
 theme:
@@ -18,14 +32,14 @@ theme:
   custom_dir: overrides
   palette:
     - scheme: slate
-      primary: black
-      accent: blue
+      primary: green
+      accent: light green
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
     - scheme: default
-      primary: black
-      accent: blue
+      primary: lime
+      accent: green
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
@@ -38,6 +52,7 @@ theme:
     - navigation.prune
     - navigation.footer
     - navigation.top
+    - navigation.indexes
     - toc.follow
     - search.suggest
     - search.highlight
@@ -55,7 +70,8 @@ extra_javascript:
 
 plugins:
   - search
-  - blog
+  - blog:
+      blog_toc: true
   - tags
   - meta
   - rss:
@@ -65,6 +81,9 @@ plugins:
       categories:
         - categories
         - tags
+  - privacy:
+      concurrency: 1
+      no_symlinks: true
 
 markdown_extensions:
   - attr_list
@@ -94,17 +113,6 @@ extra:
   analytics:
     provider: google
     property: G-XXXXXXXXXX
-    feedback:
-      title: Was this page helpful?
-      ratings:
-        - icon: material/thumb-up-outline
-          name: This page was helpful
-          data: 1
-          note: Thanks for your feedback!
-        - icon: material/thumb-down-outline
-          name: This page could be improved
-          data: 0
-          note: Thanks for your feedback!
   social:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/dalikewara
@@ -115,3 +123,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://www.github.com/dalikewara
       name: dalikewara on GitHub
+  cust:
+    symbol:
+      - mdash: —

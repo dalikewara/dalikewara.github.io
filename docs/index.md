@@ -3,7 +3,6 @@ title: 🏠 /
 hide:
   - navigation
   - footer
-  - feedback
 ---
 
 # Hello there 👋,
@@ -43,10 +42,15 @@ I can sit in front of a monitor for hours doing coding—depends on the mood btw
 some of them pushed me to create tools or packages to make things easier. I also hope these tools can be useful for others.
 You might find them on this website, as it’s intended to be a place where I document my work.
 
-## 🗣 How Do I Communicate?
+## How Do I Communicate? 🗣
 
 I love explaining things in detail, but I'm not good at verbal communication tbh 😅. I can communicate better through text ⌨.
 
+> Am I Good in English? currently, not really, but I’m keeping on learning. You might notice that this website is written in English, and some sentences
+may seem quite polished. That’s mostly because I use the power of AI to help me handle it.
+
 ## 🤝 Connect
 
-For professional purpose, don't hesitate to email me at *==dalikewara[at]gmail.com==*
+You can find me on the social media platforms listed in the footer.
+
+> For professional purpose, don't hesitate to email me at *==dalikewara[at]gmail.com==*

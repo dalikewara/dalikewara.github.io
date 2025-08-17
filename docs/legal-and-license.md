@@ -3,7 +3,6 @@ title: 📖 /legal-and-license
 hide:
   - navigation
   - footer
-  - feedback
 ---
 
 # 📖 Legal & License
@@ -19,7 +18,9 @@ Frequently Asked Questions about the GNU Licenses can be found at [https://www.g
 
 !!! info
 
-    GNU General Public License v3.0 original text -> [https://www.gnu.org/licenses/gpl-3.0.txt](https://www.gnu.org/licenses/gpl-3.0.txt)
+    GNU General Public License v3.0 original text -> [https://www.gnu.org/licenses/gpl-3.0.txt](https://www.gnu.org/licenses/gpl-3.0.txt).
+
+> Licenses for any engines used to build this website belong to their respective owners and are not covered by this website's license.
 
 ## 😎 Attribution
 
