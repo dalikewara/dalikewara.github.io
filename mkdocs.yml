@@ -83,7 +83,6 @@ plugins:
         - tags
   - privacy:
       concurrency: 1
-      no_symlinks: true
 
 markdown_extensions:
   - attr_list
@@ -106,13 +105,16 @@ markdown_extensions:
       linenums_style: table
 
 extra:
+  meta:
+    keywords: "dali kewara, backend developer, code"
+    google_site_verification: "Czw8BPlbSgfcKuHG56yYHEU2TPLH5TK29b80uJLX-CY"
   alternate:
     - name: English
       link: /
       lang: en
   analytics:
     provider: google
-    property: G-XXXXXXXXXX
+    property: G-TBLTVPW7ZD
   social:
     - icon: fontawesome/brands/instagram
       link: https://www.instagram.com/dalikewara
@@ -123,6 +125,3 @@ extra:
     - icon: fontawesome/brands/github
       link: https://www.github.com/dalikewara
       name: dalikewara on GitHub
-  cust:
-    symbol:
-      - mdash: —
