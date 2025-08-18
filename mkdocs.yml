@@ -83,6 +83,19 @@ plugins:
         - tags
   - privacy:
       concurrency: 1
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+      js_files:
+        - assets/js/link.js
+      css_files:
+        - assets/css/base.css
+        - assets/css/color.css
+        - assets/css/img.css
 
 markdown_extensions:
   - attr_list

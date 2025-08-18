@@ -62,17 +62,17 @@
         <meta property="og:type" content="website">
     {% endif %}
     {% if page and page.canonical_url %}
+        {% set jsonld_title = config.site_name %}
+        {% set jsonld_description = config.site_description %}
+        {% if page.meta and page.meta.title %}
+            {% set jsonld_title = page.meta.title ~ " - " ~ config.site_name %}
+        {% elif page.title and not page.is_homepage %}
+            {% set jsonld_title = page.title | striptags ~ " - " ~ config.site_name %}
+        {% endif %}
+        {% if page.meta and page.meta.description %}
+          {% set jsonld_description = page.meta.description %}
+        {% endif %}
         <script type="application/ld+json">
-            {% set jsonld_title = config.site_name %}
-            {% set jsonld_description = config.site_description %}
-            {% if page.meta and page.meta.title %}
-                {% set jsonld_title = page.meta.title ~ " - " ~ config.site_name %}
-            {% elif page.title and not page.is_homepage %}
-                {% set jsonld_title = page.title | striptags ~ " - " ~ config.site_name %}
-            {% endif %}
-            {% if page.meta and page.meta.description %}
-              {% set jsonld_description = page.meta.description %}
-            {% endif %}
             {% if page.is_homepage %}
             {
                 "@context": "https://schema.org",
