@@ -1,3 +1,9 @@
+---
+title: What Is Uwais? 🤔
+description: Uwais—formerly named ayapingping—is a standard project structure generator to build applications that follow Clean Architecture and Feature-Driven Design concept in various programming languages (such as Golang, Python, Typescript, etc). Uwais aims to be a seamless and very simple project structure while avoiding unnecessary complexity
+keywords: uwais, ayapingping, project structure
+---
+
 # What Is Uwais? 🤔
 
 Uwais—formerly named ayapingping—is a standard project structure generator to build

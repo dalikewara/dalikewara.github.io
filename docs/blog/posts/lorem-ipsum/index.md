@@ -1,4 +1,7 @@
 ---
+title: Lorem Ipsum Text
+description: Just Lorem Ipsum text, nothing more
+keywords: lorem ipsum
 date: 2017-01-01
 pin: false
 authors:

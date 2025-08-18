@@ -3,7 +3,7 @@
 }
 
 [data-md-color-scheme=default] {
-    --md-default-bg-color: rgb(223, 229, 235);
+    --md-default-bg-color: rgb(255, 255, 255);
 }
 
 .md-typeset h1, .md-typeset h2 {

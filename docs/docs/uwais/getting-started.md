@@ -1,3 +1,9 @@
+---
+title: 🏃‍♂️ Getting Started
+description: This page shows the steps to get started before using Uwais
+keywords: uwais, installation
+---
+
 # 🏃‍♂️ Getting Started
 
 ## Requirements

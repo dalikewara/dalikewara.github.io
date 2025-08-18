@@ -1,3 +1,9 @@
+---
+title: 🗄 Project Structure
+description: This page shows the detail about Uwais project structure
+keywords: project structure, clean architecture, feature-driven design
+---
+
 # 🗄 Project Structure
 
 To implement the concept of Clean Architecture and Feature-Driven Design, and to keep them as simple and understandable as

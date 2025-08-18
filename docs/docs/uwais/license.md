@@ -1,3 +1,9 @@
+---
+title: 📖 License
+description: This page shows the detail of Uwais license
+keywords: license, repository
+---
+
 # 📖 License
 
 Uwais is licensed under the [MIT License](https://mit-license.org/), and its repository is available on [GitHub](https://github.com/dalikewara/uwais).

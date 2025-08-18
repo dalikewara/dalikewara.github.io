@@ -1,4 +1,7 @@
 ---
+title: Building a Second Brain
+description: Our brains are great for thinking, but not always for remembering tons of info. Without a system, ideas can feel scattered and hard to act on. A Second Brain helps capture, organize, and retrieve info so it’s useful in daily life, work projects, or personal growth
+keywords: second brain, brain
 date: 2022-10-20
 pin: false
 authors:

@@ -1,3 +1,9 @@
+---
+title: ♻ Backward Compatibility
+description: This page shows the detail about Uwais backward compatibility
+keywords: uwais, installation
+---
+
 # ♻ Backward Compatibility
 
 Uwais maintains backward compatibility by separating the version of the source/app from the version of the generated project structure.

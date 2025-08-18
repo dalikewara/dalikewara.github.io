@@ -1,5 +1,7 @@
 ---
 title: 🏠 /
+description: A guy who lives and works as a 👨‍💻 Software Engineer (BackEnd) in Indonesia—building useful and unexpected things, and trying to make positive impacts for people
+keywords: dali kewara, software engineer, backend, coding
 hide:
   - navigation
   - footer
@@ -8,7 +10,7 @@ hide:
 # Hello there 👋,
 
 ![Profile Pic](assets/img/profile-pic.webp){ align=left img-size=md img-pos=left } I'm Dali Kewara, a guy who lives and
-works as a 👨‍💻 Backend Developer in Indonesia—building useful and unexpected things, and trying to make positive impacts for people.
+works as a 👨‍💻 Software Engineer (BackEnd) in Indonesia—building useful and unexpected things, and trying to make positive impacts for people.
 I love coding and drawing my own worlds. ==*I'm on an unexpected journey and going
 to make it simple yet spectacular!*==
 

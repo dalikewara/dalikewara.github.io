@@ -1,5 +1,7 @@
 ---
 title: 📖 /legal-and-license
+description: Read about the legal information, terms of use, and licensing for this website
+keywords: legal, license, attribution, terms of use
 hide:
   - navigation
   - footer
@@ -20,7 +22,19 @@ Frequently Asked Questions about the GNU Licenses can be found at [https://www.g
 
     GNU General Public License v3.0 original text -> [https://www.gnu.org/licenses/gpl-3.0.txt](https://www.gnu.org/licenses/gpl-3.0.txt).
 
-> Licenses for any engines used to build this website belong to their respective owners and are not covered by this website's license.
+!!! abstract "Engine License"
+
+    Licenses for any engines used to build this website belong to their respective owners and are not covered by this website's license.
+
+## ⚠ Terms of Use
+
+You’re welcome to read and share anything on this website, as long as you give proper credit. Please don’t use it in ways that could cause harm.
+The content here is written with care, but it may not always be 100% accurate or up to date. Use it as a reference, not as an absolute source of truth.
+Whatever you decide to do with the information is your own responsibility. This website can’t be held responsible for any problems or losses that might come up.
+
+!!! info
+
+    These Terms of Use might change from time to time without notice. Check back here if you need to stay updated.
 
 ## 😎 Attribution
 

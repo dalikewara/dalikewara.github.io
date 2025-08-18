@@ -1,3 +1,9 @@
+---
+title: 📖 License
+description: This page shows the detail of Umar license
+keywords: license, repository
+---
+
 # 📖 License
 
 Umar is licensed under the [MIT License](https://mit-license.org/), and its repository is available on [GitHub](https://github.com/dalikewara/umar).

@@ -1,3 +1,9 @@
+---
+title: 📚 /docs
+description: This is the documentation page for a bunch of handy tools I built to make life a little easier when getting things done
+keywords: documentation
+---
+
 # 📚 /docs
 
 This is the documentation page for a bunch of handy tools I built to make life a little easier when getting things done.

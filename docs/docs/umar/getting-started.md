@@ -1,3 +1,9 @@
+---
+title: 🏃‍♂️ Getting Started
+description: This page shows the steps to get started before using Umar
+keywords: umar, linux, installation
+---
+
 # 🏃‍♂️ Getting Started
 
 Before using Umar, please check your OS first. Umar was created for Linux systems, especially Arch Linux.
