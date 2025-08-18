@@ -36,6 +36,27 @@ Desktop.ini
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
 
+# Python environment
+venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# MkDocs build output
+site/
+
+# MkDocs cache
+/.cache/
+.mkdocs/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
 # Others
 bin
 .idea
@@ -49,5 +70,4 @@ temp
 tmp
 scripts
 site
-build
 .docusaurus

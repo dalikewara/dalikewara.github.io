@@ -1,0 +1,139 @@
+site_name: DK
+site_author: Dali Kewara
+site_description: An unexpected journey
+site_url: https://www.dalikewara.com
+repo_name: Profile
+repo_url: https://github.com/dalikewara
+copyright: Copyright &copy; 2017 - 2025 Dali Kewara. All rights reserved.
+
+nav:
+  - 🏠 /: index.md
+  - 📚 /docs:
+    - docs/index.md
+    - 📁 Umar:
+      - docs/umar/index.md
+      - docs/umar/getting-started.md
+      - docs/umar/license.md
+    - 📁 Uwais:
+      - docs/uwais/index.md
+      - docs/uwais/getting-started.md
+      - docs/uwais/backward-compatibility.md
+      - docs/uwais/project-structure.md
+      - docs/uwais/license.md
+  - 📚 /blog:
+    - blog/index.md
+  - 📖 /legal-and-license: legal-and-license.md
+
+theme:
+  name: material
+  logo: assets/img/32x32_green_apple.webp
+  favicon: favicon.ico
+  language: en
+  custom_dir: overrides
+  palette:
+    - scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+    - scheme: default
+      primary: lime
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.path
+    - navigation.prune
+    - navigation.footer
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+
+extra_css:
+  - assets/css/color.css
+  - assets/css/base.css
+  - assets/css/img.css
+
+extra_javascript:
+  - assets/js/link.js
+
+plugins:
+  - search
+  - blog:
+      blog_toc: true
+  - tags
+  - meta
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  - privacy:
+      concurrency: 1
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+      js_files:
+        - assets/js/link.js
+      css_files:
+        - assets/css/base.css
+        - assets/css/color.css
+        - assets/css/img.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      use_pygments: true
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      auto_title: true
+      linenums: true
+      linenums_style: table
+
+extra:
+  meta:
+    google_site_verification: "Czw8BPlbSgfcKuHG56yYHEU2TPLH5TK29b80uJLX-CY"
+  alternate:
+    - name: English
+      link: /
+      lang: en
+  analytics:
+    provider: google
+    property: G-TBLTVPW7ZD
+  social:
+    - icon: fontawesome/brands/instagram
+      link: https://www.instagram.com/dalikewara
+      name: dalikewara on Instagram
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/dalikewara
+      name: dalikewara on LinkedIn
+    - icon: fontawesome/brands/github
+      link: https://www.github.com/dalikewara
+      name: dalikewara on GitHub

@@ -1,0 +1,18 @@
+.md-main__inner {
+    margin-top: 0 !important;
+    margin-bottom: 4em !important;
+}
+
+.md-footer-meta {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+
+.md-tabs__item--active .md-tabs__link, .md-nav__link--active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.md-typeset .md-tags:not([hidden]) {
+    margin-bottom: 2.5em;
+}

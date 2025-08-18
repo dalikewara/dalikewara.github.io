@@ -1,5 +1,0 @@
-.navbar,
-.navbar--fixed-top {
-    background-color: var(--ifm-background-color);
-    border-bottom: 1px solid var(--ifm-toc-border-color);
-}
