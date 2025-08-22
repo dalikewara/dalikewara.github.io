@@ -44,7 +44,7 @@ Perjalanan saya dalam mencari design pattern interface terbaik ini dimulai dari 
 > Tapi perlu diingat, disini saya menggunakan pendekatan yang lebih universal supaya mudah dipahami, jadi agak mengesampingkan
 > idiomatic di Golang
 
-## Repository Pattern
+## Getting Started, The Repository Pattern
 
 Konsep pattern ini tujuannya untuk menyediakan abstraksi atau kontrak untuk memisahkan domainnya (produser) dengan logical
 bisnis utama (consumer). Pattern ini kebanyakan dipakai untuk abstraksi detail teknis sumber data (repository) seperti database,
@@ -112,7 +112,7 @@ dan consumer tidak akan rusak atau error. Karena kontraknya sama, yang artinya m
 
 Tapi kemudian, bagaimana cara consumer mengorkestrasi hal ini?
 
-## Dependency Injection
+## With The Dependency Injection, Of Course!
 
 Inilah caranya agar consumer bisa mengorkestrasi produser. Dependency injection adalah sebuah konsep dimana kita menginject dependency dari luar
 menggunakan sebuah kontrak sebagai tipe data atau constructor. Sebagai contoh, alih-alih saya langsung memanggil object produser didalam consumer
@@ -164,10 +164,10 @@ func UpdateUser(userRepoImpl UserRepository) error {
 }
 ```
 
-## Single Fat Repository Pattern
+## Now I Have A Single Fat Repository Pattern
 
-## CQRS (Command Query Responsibility Segregation)
+## Let's Change It To CQRS (Command Query Responsibility Segregation)
 
-## Interface Segregation Principle (ISP)
+## I Need To Separate Them Using The Interface Segregation Principle (ISP)
 
-## Adapter Pattern
+## Adapter Pattern Will Be Helpful
