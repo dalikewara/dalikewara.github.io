@@ -29,7 +29,7 @@ If you’re not sure about what you’re doing, please don’t proceed.
 
 To install Umar, run the following command:
 
-```bash
+``` bash
 curl --proto '=https' --tlsv1.2 -L https://dalikewara.com/umar/install.sh | sh
 ```
 
@@ -44,7 +44,7 @@ curl --proto '=https' --tlsv1.2 -L https://dalikewara.com/umar/install.sh | sh
 
 If you already have Umar installed, simply run the following command to upgrade to the latest version:
 
-```bash
+``` bash
 umar u
 ```
 
@@ -52,7 +52,7 @@ umar u
 
 Just run this command:
 
-```bash
+``` bash
 umar
 ```
 

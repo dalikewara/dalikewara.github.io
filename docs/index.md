@@ -19,7 +19,7 @@ something ordinary. What makes me interested is simplicity and clarity. Take Goâ
  
 &nbsp;
 
-```go
+``` go
 if err != nil {
     return err
 }

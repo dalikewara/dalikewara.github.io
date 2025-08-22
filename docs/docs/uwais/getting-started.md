@@ -25,7 +25,7 @@ Before installing, make sure your system meets these requirements:
 
 To install Uwais, run the following command:
 
-```bash
+``` bash
 curl --proto '=https' --tlsv1.2 -L https://dalikewara.com/uwais/install.sh | sh
 ```
 
@@ -40,7 +40,7 @@ curl --proto '=https' --tlsv1.2 -L https://dalikewara.com/uwais/install.sh | sh
 
 If you already have Uwais installed, simply run the following command to upgrade to the latest version:
 
-```bash
+``` bash
 uwais update
 ```
 
@@ -48,7 +48,7 @@ uwais update
 
 Just run this command:
 
-```bash
+``` bash
 uwais
 ```
 
