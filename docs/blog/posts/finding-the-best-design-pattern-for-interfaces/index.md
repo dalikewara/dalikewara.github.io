@@ -17,8 +17,8 @@ tags:
 
 # Finding The Best Design Pattern For Interfaces
 
-Design pattern adalah sebuah konsep yang sangat berguna dalam pembuatan program. Konsep ini memastikan alur dari kode program
-kita tetap konsisten dan terstruktur, sehingga mempermudah pekerjaan. Saya pribadi sangat menjunjung tinggi design pattern dan
+Design Pattern adalah sebuah konsep yang sangat berguna dalam pembuatan program. Konsep ini memastikan alur dari kode program
+tetap konsisten dan terstruktur, sehingga mempermudah pekerjaan. Saya pribadi sangat menjunjung tinggi design pattern dan
 menganggap bahwa konsep ini wajib sekali diterapkan dalam setiap pembuatan program. Bukan berarti saya sangat jago disini, tapi
 maksud saya adalah harus ada pattern yang konsisten.
 
@@ -40,7 +40,7 @@ implementasinya, saya hanya membenci sesuatu yang ribet—apalagi jika tidak ada
 
 Perjalanan saya dalam mencari design pattern interface terbaik ini dimulai dari konsep yang cukup simple...
 
-> untuk selanjutnya, saya akan pakai contoh menggunakan golang. Nggak ada alasan khusus, saya cuma suka Golang karna simpel.
+> Untuk selanjutnya, saya akan pakai contoh menggunakan Golang. Nggak ada alasan khusus, saya cuma suka Golang karna simpel.
 > Tapi perlu diingat, disini saya menggunakan pendekatan yang lebih universal supaya mudah dipahami, jadi agak mengesampingkan
 > idiomatic di Golang
 
@@ -52,14 +52,14 @@ tapi sebernarnya bisa juga dipakai untuk layer lain seperti use case, service, a
 sama, yaitu untuk mencerminkan sebuah kebutuhan bisnis.
 
 Simpelnya, ada produser, consumer dan kontrak. Consumer adalah executor yang memanggil fungsi-fungsi yang disediakan oleh produser.
-produser adalah produser yang menyediakan fungsi-fungsi untuk bisa dipanggil oleh consumer. Nah, kontrak adalah perjanjian
+Produser adalah implementator yang menyediakan fungsi-fungsi untuk bisa dipanggil oleh consumer. Nah, kontrak adalah perjanjian
 antara produser dan consumer untuk mengikat hubungan antara keduanya. Produser harus menyediakan fungsi-fungsinya sesuai dengan
 kontrak yang telah disepakati dengan consumer, karena consumer akan melakukan proses bisnisnya berdasarkan kontrak tersebut.
-Repository pattern ini adalah desain kontrak tersebut.
+Repository pattern ini adalah desain dari kontrak tersebut.
 
-> untuk selanjutnya saya akan pakai ketiga istilah ini: produser, consumer, kontrak
+> Untuk selanjutnya saya akan pakai ketiga istilah ini: produser, consumer, kontrak
 
-Saya akan mengambil contoh sederhana, yaitu saya akan membuat sebuah kontrak UserRepository untuk melakukan CRUD ke database:
+Saya akan mengambil contoh sederhana, yaitu saya akan membuat sebuah kontrak `UserRepository` untuk melakukan CRUD ke database:
 
 ``` go
 type UserRepository interface {
@@ -103,11 +103,11 @@ func (u *userRepositoryPostgres) Delete(data *User) error {
 
 Kita lihat bahwa object `userRepositoryPostgres` ini memiliki method dan spesifikasi yang sama persis dengan `UserRepository`.
 Hal ini karna `userRepositoryPostgres` adalah produsernya, jadi dia harus mengimplementasi semua spesifikasi sesuai kontraknya
-(`UserRepository`) dengan sama persis.
+dengan sama persis.
 
 Nah, nanti di dalam consumer, fungsi-fungsi yang telah disediakan produser ini yang akan dipanggil, karena dialah yang punya hasil
-implementasi nyata dari proses CRUDnya. Tapi, consumer akan mengorkestrasinya berdasarkan kontrak. Sehingga, apabila suatu saat kita
-ingin mengganti produser dari postgres ke mongodb misal, kita cukup buat sebuah object produser baru yang mengemplimentasi kontrak,
+implementasi nyata dari proses CRUDnya. Tapi, consumer akan mengorkestrasinya berdasarkan kontrak. Sehingga, apabila suatu saat saya
+ingin mengganti produser dari postgres ke mongodb misal, saya cukup buat sebuah object produser baru yang mengemplimentasi kontrak,
 dan consumer tidak akan rusak atau error. Karena kontraknya sama, yang artinya method-method dan spesifikainya pun juga pasti sama.
 
 Tapi kemudian, bagaimana cara consumer mengorkestrasi hal ini?
@@ -115,7 +115,7 @@ Tapi kemudian, bagaimana cara consumer mengorkestrasi hal ini?
 ## Dependency Injection
 
 Inilah caranya agar consumer bisa mengorkestrasi produser. Dependency injection adalah sebuah konsep dimana kita menginject dependency dari luar
-menggunakan sebuah kontrak sebagai tipe data atau constructor. Sebagai contoh, alih-alih kita langsung memanggil object produser didalam consumer
+menggunakan sebuah kontrak sebagai tipe data atau constructor. Sebagai contoh, alih-alih saya langsung memanggil object produser didalam consumer
 seperti ini:
 
 > Disini saya pakai pendekatan fungsi saja supaya lebih mudah dibaca
@@ -129,7 +129,7 @@ func UpdateUser() error {
     if err != nil {
         return err
     }
-    if user == nil {
+    if user  nil {
         return errors.New("user not found")
     }
     
@@ -142,7 +142,7 @@ func UpdateUser() error {
 }
 ```
 
-Kita bisa ubah supaya menggunakan dependency injection seperti ini:
+Saya bisa ubah supaya menggunakan dependency injection seperti ini:
 
 ``` go
 func UpdateUser(userRepoImpl UserRepository) error {
@@ -151,7 +151,7 @@ func UpdateUser(userRepoImpl UserRepository) error {
     if err != nil {
         return err
     }
-    if user == nil {
+    if user  nil {
         return errors.New("user not found")
     }
     
