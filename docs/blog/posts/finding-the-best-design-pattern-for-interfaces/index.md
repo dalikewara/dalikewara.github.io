@@ -71,7 +71,7 @@ type UserRepository interface {
 }
 ```
 
-Saya akan memakai postgres sebagai databasenya, sehingga produsernya akan seperti ini:
+Kemudian, saya akan memakai postgres sebagai databasenya, sehingga produsernya akan seperti ini:
 
 ``` go
 type userRepositoryPostgres struct {
