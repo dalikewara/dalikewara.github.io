@@ -22,10 +22,11 @@ kita tetap konsisten dan terstruktur, sehingga mempermudah pekerjaan. Saya priba
 menganggap bahwa konsep ini wajib sekali diterapkan dalam setiap pembuatan program. Bukan berarti saya sangat jago disini, tapi
 maksud saya adalah harus ada pattern yang konsisten.
 
-Lagipula, penerapan dari teori design pattern ini pasti berbeda-beda tiap individu. Terserah mau kita menguasai ISP (Interface Segregation Principle),
-CQRS (Command Query Responsibility Segregation) atau apapun itu, pasti tiap orang berbeda dalam hal implementasi. Ada yang strict mengikuti 1 pattern,
-ada yang mengadopsi lebih dari 1, ada juga yang mencampurkan beberapa pattern, bahkan ada yang ngasal. It's ok, yang penting ada sebuah standart yang
-kita buat untuk diikuti. Tinggal nanti kita buat dokumentasi menjelaskan cara kerja pattern yang kita buat, beres.
+Lagipula, penerapan dari teori design pattern ini pasti berbeda-beda tiap individu. Terserah mau kita menguasai ISP
+(Interface Segregation Principle), CQRS (Command Query Responsibility Segregation) atau apapun itu, pasti tiap orang berbeda
+dalam hal implementasi. Ada yang strict mengikuti 1 pattern, ada yang mengadopsi lebih dari 1, ada juga yang mencampurkan beberapa
+pattern, bahkan ada yang ngasal. It's ok, yang penting ada sebuah standart yang kita buat untuk diikuti. Tinggal nanti kita buat
+dokumentasi menjelaskan cara kerja pattern yang kita buat, beres.
 
 !!! warning
 
@@ -33,20 +34,32 @@ kita buat untuk diikuti. Tinggal nanti kita buat dokumentasi menjelaskan cara ke
 
 <!-- more -->
 
-Saya sendiri selalu mencari pattern terbaik untuk project-project yang saya buat. Saya pernah terjebak mengikuti pattern buatan orang lain
-ketika sedang dalam project kolaborasi—yang design patternnya sangat ribet untuk diikuti. Saya tidak membenci cara implementasinya, saya hanya
-membenci sesuatu yang ribet—apalagi jika tidak ada dokumentasinya.
+Saya sendiri selalu mencari pattern terbaik untuk project-project yang saya buat. Saya pernah terjebak mengikuti pattern buatan
+orang lain ketika sedang dalam project kolaborasi—yang design patternnya sangat ribet untuk diikuti. Saya tidak membenci cara
+implementasinya, saya hanya membenci sesuatu yang ribet—apalagi jika tidak ada dokumentasinya.
 
-Perjalanan saya dalam mencari design pattern untuk interface ini dimulai dengan konsep yang cukup simple...
+Perjalanan saya dalam mencari design pattern interface terbaik ini dimulai dari konsep yang cukup simple...
 
-> untuk selanjutnya, saya akan pakai contoh menggunakan golang. Nggak ada alasan khusus, saya cuma suka Golang.
-> Tapi perlu diingat, disini saya menggunakan pendekatan yang lebih universal supaya mudah dipahami, jadi agak mengesampingkan idiomatic di Golang
+> untuk selanjutnya, saya akan pakai contoh menggunakan golang. Nggak ada alasan khusus, saya cuma suka Golang karna simpel.
+> Tapi perlu diingat, disini saya menggunakan pendekatan yang lebih universal supaya mudah dipahami, jadi agak mengesampingkan
+> idiomatic di Golang
 
 ## Repository Pattern
 
-Konsep pattern ini tujuannya untuk memisahkan domain atau use case bisnis dari sumber data. logical bisnis tidak perlu tahu data kita
-disimpan dimana, entah itu di database sql, nosql, file, elastic atau yang lain. Dan tidak perlu tahu juga metode eksekusi nya seperti apa,
-apakah itu via query langsung ke db atau via http service. terdengar sangat bagus dan make sense bukan, jadilah berikut interface yang saya buat:
+Konsep pattern ini tujuannya untuk menyediakan abstraksi atau kontrak untuk memisahkan domainnya (produser) dengan logical
+bisnis utama (consumer). Pattern ini kebanyakan dipakai untuk abstraksi detail teknis sumber data (repository) seperti database,
+tapi sebernarnya bisa juga dipakai untuk layer lain seperti use case, service, atau bahkan sebuah statement builder. karna intinya
+sama, yaitu untuk mencerminkan sebuah kebutuhan bisnis.
+
+Simpelnya, ada produser, consumer dan kontrak. Consumer adalah executor yang memanggil fungsi-fungsi yang disediakan oleh produser.
+produser adalah produser yang menyediakan fungsi-fungsi untuk bisa dipanggil oleh consumer. Nah, kontrak adalah perjanjian
+antara produser dan consumer untuk mengikat hubungan antara keduanya. Produser harus menyediakan fungsi-fungsinya sesuai dengan
+kontrak yang telah disepakati dengan consumer, karena consumer akan melakukan proses bisnisnya berdasarkan kontrak tersebut.
+Repository pattern ini adalah desain kontrak tersebut.
+
+> untuk selanjutnya saya akan pakai ketiga istilah ini: produser, consumer, kontrak
+
+Saya akan mengambil contoh sederhana, yaitu saya akan membuat sebuah kontrak UserRepository untuk melakukan CRUD ke database:
 
 ``` go
 type UserRepository interface {
@@ -58,10 +71,7 @@ type UserRepository interface {
 }
 ```
 
-Pattern ini Simple dan mudah dimengerti. tanpa dokumentasipun, kita bisa tahu fungsi dan tujuan interface ini untuk apa, yaitu untuk melakukan CRUD ke sumber data.
-Bisnis logic cukup tau kontrak interface dari UserRepository saja, yang mana mengharuskan implementator wajib memiliki method-method sesuai dengan
-kontrak, yaitu: FindOne, FindAll, Insert, Update, Delete lengkap dengan dengan spesifikasinya (argument dan result). Sebagai contoh, dibawah ini
-saya mencoba membuat gambaran implementator CRUD ke database postgres:
+Saya akan memakai postgres sebagai databasenya, sehingga produsernya akan seperti ini:
 
 ``` go
 type userRepositoryPostgres struct {
@@ -91,21 +101,21 @@ func (u *userRepositoryPostgres) Delete(data *User) error {
 
 > Anggap saja struct adalah sebuah object
 
-Kita lihat bahwa object userRepositoryPostgres ini memiliki method dan spesifikasi yang sama persis dengan interface UserRepository.
-Hal ini karna userRepositoryPostgres adalah implementator dari interface UserRepository, jadi dia harus mengimplementasi semua spesifikasi
-sesuai kontraknya dengan sama persis.
+Kita lihat bahwa object `userRepositoryPostgres` ini memiliki method dan spesifikasi yang sama persis dengan `UserRepository`.
+Hal ini karna `userRepositoryPostgres` adalah produsernya, jadi dia harus mengimplementasi semua spesifikasi sesuai kontraknya
+(`UserRepository`) dengan sama persis.
 
-Nah, nanti di dalam bisnis logic, implementator ini yang akan dipanggil, karena dialah yang punya hasil implementasi nyata dari proses CRUDnya. Tapi,
-bisnis logic akan mengorkestrasinya berdasarkan kontrak dari interface UserRepository. Sehingga, apabila suatu saat kita ingin mengganti implementator
-dari postgres ke mongodb, kita cukup buat sebuah object baru yang mengemplimentasi kontrak interface UserRepository, maka bisnis logic tidak akan rusak atau error,
-karena kontrak interfacenya sama, yang artinya method-method dan spesifikainya pun juga pasti sama.
+Nah, nanti di dalam consumer, fungsi-fungsi yang telah disediakan produser ini yang akan dipanggil, karena dialah yang punya hasil
+implementasi nyata dari proses CRUDnya. Tapi, consumer akan mengorkestrasinya berdasarkan kontrak. Sehingga, apabila suatu saat kita
+ingin mengganti produser dari postgres ke mongodb misal, kita cukup buat sebuah object produser baru yang mengemplimentasi kontrak,
+dan consumer tidak akan rusak atau error. Karena kontraknya sama, yang artinya method-method dan spesifikainya pun juga pasti sama.
 
-Tapi kemudian, bagaimana cara bisnis logic mengorkestrasi hal ini?
+Tapi kemudian, bagaimana cara consumer mengorkestrasi hal ini?
 
 ## Dependency Injection
 
-Inilah caranya agar bisnis logic bisa mengorkestrasi implementator. Dependency injection adalah sebuah konsep dimana kita menginject dependency dari luar
-menggunakan sebuah kontrak sebagai tipe data atau constructor. Sebagai contoh, alih-alih kita langsung memanggil object implementator didalam bisnis logic
+Inilah caranya agar consumer bisa mengorkestrasi produser. Dependency injection adalah sebuah konsep dimana kita menginject dependency dari luar
+menggunakan sebuah kontrak sebagai tipe data atau constructor. Sebagai contoh, alih-alih kita langsung memanggil object produser didalam consumer
 seperti ini:
 
 > Disini saya pakai pendekatan fungsi saja supaya lebih mudah dibaca
@@ -154,3 +164,10 @@ func UpdateUser(userRepoImpl UserRepository) error {
 }
 ```
 
+## Single Fat Repository Pattern
+
+## CQRS (Command Query Responsibility Segregation)
+
+## Interface Segregation Principle (ISP)
+
+## Adapter Pattern
