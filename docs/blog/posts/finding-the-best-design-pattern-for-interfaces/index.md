@@ -657,7 +657,30 @@ func main() {
 Lihatlah betapa mudahnya saya mengubah-ubah kebutuhan bisnis sumber data diatas. Hanya dengan consumer dan kontrak yang sama, cukup
 ubah providernya saja, beres.
 
-## I Can't Find That The Pattern Can Be Used When talking About The Result
+## I Can't Find That The Last Pattern Can Be Used When talking About The Result
+
+Kalau saya perhatikan, dari tadi saya mereturn object tunggal `User` sebagai contoh. Object ini sebenarnya berisi data-data user seperti
+`id`, `username`, `email`, `password`, dll. Kurang lebih seperti ini:
+
+``` go
+type User struct {
+    ID int64
+    Username string
+    Email string
+    Password string
+    CreatedAt time.Time
+    UpdatedAt time.Time
+}
+```
+
+Karna di kontrak kita mereturn object `User` ini, artinya consumer akan selalu berekspektasi bahwa field-field tersebut available dan nilainya bisa dipakai
+sesuai dengan tipe data yang diassignkan di objectnya. Sebelumnya saya selalu memakai contoh sumber data dari database, yang mana sebenarnya ada korelasinya.
+Field-field dari object `User` diatas adalah representasi kolom-kolom dari table `users`. Artinya kalau kita mengambil data dari database, kita bisa langsung isi
+value field nya berdasarkan kolom dari table `users`.
+
+### Let's assume that we have a consumer use case to insert product
+
+
 
 ## Specialized ISP
 
