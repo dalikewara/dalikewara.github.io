@@ -34,7 +34,7 @@ Just document how your pattern works, and you're golden.
 
 I'm always on the hunt for the best pattern for my projects. I once got stuck following someone else's pattern during a
 collaboration—and it was a total nightmare to follow. I didn't hate their implementation, just how complicated it was—especially
-with no documentation.
+with no documentation 😭.
 
 My journey to find the best interface design pattern started with a pretty simple concept...
 
@@ -43,7 +43,7 @@ My journey to find the best interface design pattern started with a pretty simpl
     From here on out, I'll be using Go for my examples. No special reason, I just like Go because it's simple. But keep in mind,
     I'm using a more universal approach here so it's easier to understand, so I might be skipping some of Go's specific idioms.
 
-## Getting Started: The Repository Pattern
+## 🏃‍♂️ Getting Started: The Repository Pattern
 
 ==The goal of this pattern is to provide an abstraction or a contract to separate the domain (provider) from the core business
 logic (consumer)==. This pattern is mostly used to abstract technical details of data sources (repositories) like databases,
@@ -168,7 +168,7 @@ func UpdateUser(userRepoImpl UserRepository) error {
 }
 ```
 
-### Why though?
+### Why though? 🤔
 
 ``` go
 func UpdateUser() error {
@@ -261,7 +261,7 @@ You can see above that I'm only using one consumer, `UpdateUser`, to update many
 same contract. Imagine without dependency injection: I would either have to create a new consumer for each database, or I'd
 have to change the consumer's code and add logic to make it compatible with each database.
 
-I hope the example above is easy to understand.
+I hope the example above is easy to understand 🙏.
 
 ## Now I Have a Single Fat Repository Pattern
 
@@ -270,7 +270,7 @@ Okay, is the pattern above enough? Unfortunately, I don't think so. I see that t
 operations. There are methods for getting data, for inserting, updating, and deleting. ==This is called a Single Fat Interface, which
 means an interface contract that's too "fat" because it has too many different operations or methods.==
 
-### So, what's the problem here?
+### So, what's the problem here? 🤔
 
 I have explained that a provider should always follow the contract, meaning it has to implement all the functions from that contract.
 This is where the problem lies. In many development cases, this pattern always causes issues. Business needs are always changing, sometimes
@@ -382,7 +382,7 @@ them, even though I only need a few. I could just use dummy implementations like
 I don't need, but that's really confusing, ugly, and just not acceptable. I don't like it. Why should I have to do something
 that's not needed?
 
-## Let's Change It To CQRS (Command Query Responsibility Segregation)
+## 👨‍💻 Let's Change It To CQRS (Command Query Responsibility Segregation)
 
 ==From what I've read, this design pattern is about separating read operations (query) and write operations (command)==. Instead of
 making one big contract for both reading and writing data, we split these two operations into two interface contracts: Query and Command,
@@ -403,7 +403,7 @@ type UserRepositoryCommand interface {
 
 Here, Query is the contract with functions to get user data, while Command is for creating, updating, and deleting users.
 Okay, this looks pretty good and makes sense. But it seems like this pattern only solves the need to move to Elasticsearch, which
-is just for the "get data" functions. It doesn't seem strong enough to solve the need to move to MongoDB, because only the
+is just for the "get data" functions. It doesn't seem strong enough to solve the need to move to MongoDB 😢, because only the
 "insert" function is moving to MongoDB, while "update" and "delete" are staying in Postgres.
 
 ## I Need To Separate Them Using The Interface Segregation Principle (ISP)
@@ -653,11 +653,11 @@ func main() {
 ```
 
 Look how easily I can change the data source business needs above. With the same consumer and contract, all I have to do is
-change the provider, and I'm done.
+change the provider, and I'm done 👏.
 
 ## Let's talk About The Result object
 
-If you look, I've been returning a single `User` object as an example. This object actually contains user data like id,
+If you notice, I've been returning a single `User` object as an example. This object actually contains user data like id,
 username, email, password, etc. It's more or less like this:
 
 ``` go
@@ -739,7 +739,7 @@ If the user use case ever gets migrated to a separate HTTP service, the product 
 the user service return all the fields of the single `User` object, because via HTTP, sensitive fields like `password` shouldn't be
 returned in the response.
 
-I'm calling this part Specialized ISP.
+I'm calling this part Specialized ISP ✨.
 
 ## Data Transfer Object (DTO)
 
@@ -752,7 +752,7 @@ In the use case above, you can see that I'm not returning a product object as th
 Why? Because the product object might contain many fields that the client doesn't need, so they shouldn't all be returned. So, I'm applying
 the DTO concept by creating a DTO object that only has the fields the client needs. The response size to the client also becomes smaller.
 
-## The Adapter Pattern Will Be Helpful
+## The Adapter Pattern Will Be Helpful 👀
 
 In cases of changing data source needs (from Postgres -> MongoDB, Postgres -> Elasticsearch, MongoDB -> HTTP service), what's actually changing is
 just the way we query and parse the results. For example, Postgres usually uses RAW Queries, while MongoDB, Elasticsearch, and HTTP services
@@ -990,7 +990,7 @@ I'd say this pattern is optional. But once we've implemented the provider adapte
 standardized in the future, which will make migrations and adapting to changes easy without having to change the business process.
 The issue in the first case example above can also be solved with the Adapter Pattern.
 
-## The Final Take, For The Current Moment
+## The Final Take 🚀, For The Current Moment
 
 Finally, for now, the best interface design pattern that I use to meet my expectations and needs above is Dependency Injection + Specialized ISP + DTO.
 I feel like this pattern is a good balance between complexity and simplicity, is flexible enough, and is definitely still very human-readable.
