@@ -30,6 +30,8 @@ Just document how your pattern works, and you're golden.
 
     Don't start coding until you know what pattern you're going to use!
 
+<!-- more -->
+
 I'm always on the hunt for the best pattern for my projects. I once got stuck following someone else's pattern during a
 collaboration—and it was a total nightmare to follow. I didn't hate their implementation, just how complicated it was—especially
 with no documentation.
@@ -43,8 +45,8 @@ My journey to find the best interface design pattern started with a pretty simpl
 
 ## Getting Started: The Repository Pattern
 
-The goal of this pattern is to provide an abstraction or a contract to separate the domain (provider) from the core business
-logic (consumer). This pattern is mostly used to abstract technical details of data sources (repositories) like databases,
+==The goal of this pattern is to provide an abstraction or a contract to separate the domain (provider) from the core business
+logic (consumer)==. This pattern is mostly used to abstract technical details of data sources (repositories) like databases,
 but you can also use it for other layers like use cases, services, or even a statement builder. The main point is to reflect
 a business need.
 
@@ -53,7 +55,9 @@ by the provider. The provider is the implementer that provides the functions the
 between the provider and consumer that binds them together. The provider has to provide its functions according to the contract,
 because the consumer will run its business process based on that contract. The Repository pattern is the design of that contract.
 
-> From now on, I'll use these three terms: provider, consumer, and contract.
+!!! info
+
+    From now on, I'll use these three terms: provider, consumer, and contract.
 
 I'll use a simple example: I'm going to create a `UserRepository` contract to perform CRUD operations on a database.
 
@@ -100,7 +104,7 @@ func (u *userRepositoryPostgres) Delete(data *User) error {
 }
 ```
 
-> Just think of a struct as an object.
+> *Just think of a struct as an object.*
 
 You can see that the `userRepositoryPostgres` object has the exact same methods and specifications as `UserRepository`. This is
 because `userRepositoryPostgres` is the provider, so it has to implement all the specifications from its contract.
@@ -114,11 +118,9 @@ But how does the consumer orchestrate this?
 
 ## With Dependency Injection, Of Course!
 
-This is how the consumer can orchestrate the provider. Dependency injection is a concept where you inject dependencies from
-outside using a contract as the data type or constructor. For example, instead of calling the provider object directly inside
+This is how the consumer can orchestrate the provider. ==Dependency injection is a concept where you inject dependencies from
+outside using a contract as the data type or constructor==. For example, instead of calling the provider object directly inside
 the consumer like this:
-
-> I'm just using a function approach here to make it easier to read.
 
 ``` go
 func UpdateUser() error {
@@ -141,6 +143,8 @@ func UpdateUser() error {
     return nil
 }
 ```
+
+> *I'm just using a function approach here to make it easier to read.*
 
 I can change it to use dependency injection like this:
 
@@ -257,18 +261,18 @@ You can see above that I'm only using one consumer, `UpdateUser`, to update many
 same contract. Imagine without dependency injection: I would either have to create a new consumer for each database, or I'd
 have to change the consumer's code and add logic to make it compatible with each database.
 
-I hope the example above easy to understand.
+I hope the example above is easy to understand.
 
 ## Now I Have a Single Fat Repository Pattern
 
 Okay, is the pattern above enough? Unfortunately, I don't think so. I see that the pattern is still not flexible enough. The
 `UserRepository` contract might seem simple, but it's not. If you look closely, that one contract has a ton of methods with different
-operations. There are methods for getting data, for inserting, updating, and deleting. This is called a Single Fat Interface, which
-means an interface contract that's too "fat" because it has too many different operations or methods.
+operations. There are methods for getting data, for inserting, updating, and deleting. ==This is called a Single Fat Interface, which
+means an interface contract that's too "fat" because it has too many different operations or methods.==
 
 ### So, what's the problem here?
 
-Above, I explained that a provider should always follow the contract, meaning it has to implement all the functions from that contract.
+I have explained that a provider should always follow the contract, meaning it has to implement all the functions from that contract.
 This is where the problem lies. In many development cases, this pattern always causes issues. Business needs are always changing, sometimes
 almost constantly. The classic reasons are to adapt to user needs, improve performance, and for security and cost efficiency. For example,
 let's say from the `UserRepository` contract, I need to move the "get user data" function to Elasticsearch, and the "insert user" function to MongoDB.
@@ -374,13 +378,13 @@ func (u *userRepositoryMongoDB) Delete(data *User) error {
 So, you can see above that I'm creating three providers, but I have to implement all the functions because I have to follow
 the contract. In reality, I only want the "get data" function to go to Elasticsearch and the "insert user" function to go to MongoDB,
 with the rest staying in Postgres. Since all the functions are in one single interface contract, I'm forced to implement all of
-them, even though I only need a few. I could just use dummy implementations like `!#go fmt.Println("implement me!")` for the functions
+them, even though I only need a few. I could just use dummy implementations like `#!go fmt.Println("implement me!")` for the functions
 I don't need, but that's really confusing, ugly, and just not acceptable. I don't like it. Why should I have to do something
 that's not needed?
 
 ## Let's Change It To CQRS (Command Query Responsibility Segregation)
 
-From what I've read, this design pattern is about separating read operations (query) and write operations (command). Instead of
+==From what I've read, this design pattern is about separating read operations (query) and write operations (command)==. Instead of
 making one big contract for both reading and writing data, we split these two operations into two interface contracts: Query and Command,
 or Reader and Writer. If I try to apply this, the `UserRepository` contract above can be made like this:
 
@@ -405,8 +409,8 @@ is just for the "get data" functions. It doesn't seem strong enough to solve the
 ## I Need To Separate Them Using The Interface Segregation Principle (ISP)
 
 I think I can solve the problem above using the next design pattern, which is the Interface Segregation Principle (ISP),
-one of the SOLID principles. This ISP pattern states that clients (in this context, producers and consumers) should not be
-forced to depend on functions they don't use. The point is, instead of creating one contract with a bunch of operations,
+one of the SOLID principles. ==This ISP pattern states that clients (in this context, producers and consumers) should not be
+forced to depend on functions they don't use==. The point is, instead of creating one contract with a bunch of operations,
 it's better to create several contracts, each separating its own operations. But unlike CQRS, this is more specific and
 smaller. For example, I can change the `UserRepository` contract above to look like this:
 
@@ -438,7 +442,7 @@ because it's more focused. And my needs above can now be implemented.
 
 There are still three providers, one for Elasticsearch, MongoDB, and Postgres. The difference now is how the contract is implemented:
 
-> I'll make the Postgres provider implement all four contracts to make it easier to understand later.
+> *I'll make the Postgres provider implement all four contracts to make it easier to understand later.*
 
 ``` go
 // Elasticsearch provider
@@ -525,8 +529,6 @@ from the consumer side also becomes more flexible.
 For example, previously, I only had one `UpdateUser` consumer using the `UserRepository` contract. This time, I'll change it and create
 a new consumer to manage user data like this:
 
-> From now on, the `UserRepository` contract isn't used anymore because it's no longer relevant.
-
 ``` go
 func FindAllUser(userRepoFinderImpl UserRepositoryFinder) (Users, error) {      
     return userRepoFinderImpl.FindAll({})
@@ -581,6 +583,8 @@ func DeleteUser(userRepoFinderImpl UserRepositoryFinder, userRepoDeleterImpl Use
     return nil
 }
 ```
+
+> *The `UserRepository` contract isn't used anymore because it's no longer relevant.*
 
 Now, the consumer is super flexible; it no longer injects one big contract. All it injects are the specific operations that
 the consumer needs. I can also freely change the data source business needs (not just switching databases, but also if I switch a
@@ -675,7 +679,7 @@ table. This means if we get data from the database, we can directly fill the fie
 
 Now, imagine I have a consumer use case to get product data, which looks more or less like this
 
-``` go hl_lines="20 21 22 23 24"
+``` go hl_lines="12 23 24"
 func FindProduct(productRepoInserterImpl ProductRepositoryFinder, userRepoFinderImpl UserRepositoryFinder) (*ProductDTO1, error) {
     // Get user data
     user, err := userRepoFinderImpl.FindOne({ id: 1})
@@ -711,8 +715,8 @@ just the `ID` and `Name` fields.
 
 ## Specialized ISP
 
-I'm still going to use this pattern, because according to the ISP definition above that "clients should not be forced to depend on
-functions they do not use" this also applies to object fields. So, for the product use case, I won't use the `UserRepositoryFinder`
+I'm still going to use this pattern, because according to the ISP definition above that =="clients should not be forced to depend on
+functions they do not use"==, this also applies to object fields. So, for the product use case, I won't use the `UserRepositoryFinder`
 contract; instead, I'll use a new contract like this:
 
 ``` go
@@ -741,8 +745,8 @@ I'm calling this part Specialized ISP.
 
 This is still related to what's above. Previously, I separated the result objects between the user use case and the product use case.
 The result for the user use case was `User`, while for the product use case it was `UserForProduct`. This is one example of a DTO.
-The definition itself is an object used to move data between application layers and to ensure only relevant data is sent, as well
-as to keep sensitive data from being exposed to layers that don't need it.
+==The definition itself is an object used to move data between application layers and to ensure only relevant data is sent, as well
+as to keep sensitive data from being exposed to layers that don't need it.==
 
 In the use case above, you can see that I'm not returning a product object as the result, but I'm returning a `ProductDTO1` object.
 Why? Because the product object might contain many fields that the client doesn't need, so they shouldn't all be returned. So, I'm applying
@@ -842,7 +846,7 @@ func (p *productRepositoryUpdaterPGXPool) UpdateTx(tx pgx.Tx, product *Product) 
 
 and on the consumer side:
 
-> Let's assume the contracts are `OrderRepositoryInserter` and `ProductRepositoryUpdater`.
+> *Let's assume the contracts are `OrderRepositoryInserter` and `ProductRepositoryUpdater`.*
 
 ``` go
 func CreateOrder(orderRepoImplInserter OrderRepositoryInserter, productRepoImplUpdater OrderRepositoryUpdater) error {
@@ -883,8 +887,8 @@ like that.
 
 ### Now we get the usage of this pattern
 
-This is where the Adapter Pattern comes in handy, because its purpose is to transform an object/interface into a new standard interface
-contract that the client expects. This means we're turning the `pgxpool` and `sqlx` objects/interfaces into a standard interface that we
+==This is where the Adapter Pattern comes in handy, because its purpose is to transform an object/interface into a new standard interface
+contract that the client expects==. This means we're turning the `pgxpool` and `sqlx` objects/interfaces into a standard interface that we
 create ourselves. For example, a data source process always has read and write operations. We can create a standard contract for that:
 
 ``` go
@@ -920,20 +924,21 @@ type SourceResult interface {
 Then, on the provider side, the argument being injected is this adapter's contract, for example:
 
 ``` go
-type orderRepositoryInserterPGXPool struct {
+type orderRepositoryInserter struct {
     db SourceAdapter
 }
 
-func (u *orderRepositoryInserterPGXPool) BeginTx() (SourceAdapterTx, error) {
+func (u *orderRepositoryInserter) BeginTx() (SourceAdapterTx, error) {
     return u.db.BeginTx()
 }
 
-func (u *orderRepositoryInserterPGXPool) InsertTx(tx SourceAdapterTx, order *Order) error {
+func (u *orderRepositoryInserter) InsertTx(tx SourceAdapterTx, order *Order) error {
     ...
 }
 ```
 
-With this, the dependency problem is solved. If I switch from `pgxpool` to `sqlx`, all I need to do is make those clients implement
+With this, the dependency problem is solved. We don't need to specify the suffix `PGXPool` anymore, because now the provider doesn't care,
+it is now tied to the `SourceAdapter`. If I switch from `pgxpool` to `sqlx`, all I need to do is make those clients implement
 the `SourceAdapter` contract, and the consumer above won't break and nothing needs to be changed. The method is exactly the same
 as the initial design pattern, just with a different name: Adapter Pattern. Example:
 
@@ -943,7 +948,7 @@ type pgxPoolAdapter struct {
 }
 
 func (p *pgxPoolAdapter) BeginTx() (SourceAdapterTx, error) {
-    // Example so pgxpool returns `(SourceAdapterTx, error)` according to the contract
+    // I make pgxpool returns `(SourceAdapterTx, error)` according to the contract
     
 	tx, err := u.db.BeginTx(context.Background(), pgx.TxOptions{})
 	if err != nil {
@@ -954,17 +959,17 @@ func (p *pgxPoolAdapter) BeginTx() (SourceAdapterTx, error) {
 }
 
 func (p *pgxPoolAdapter) QueryOne(query interface{}, args ...interface{}) (SourceRow, error) {
-    // implement so pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceRow, error)` according to the contract
+    // I'll make pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceRow, error)` according to the contract
 	...
 }
 
 func (p *pgxPoolAdapter) QueryAll(query interface{}, args ...interface{}) (SourceRows, error) (SourceAdapterRows, SourceAdapterErr) {
-    // implement so pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceAdapterRows, error)` according to the contract
+    // I'll make pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceAdapterRows, error)` according to the contract
 	...
 }
 
 func (p *pgxPoolAdapter) Exec(query interface{}, args ...interface{}) (SourceResult, error) {
-    // implement so pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceResult, error)` according to the contract
+    // I'll make pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceResult, error)` according to the contract
 	...
 }
 
@@ -992,9 +997,10 @@ I feel like this pattern is a good balance between complexity and simplicity, is
 The Adapter Pattern is optional, but since I plan to create reusable adapters for various database drivers, I'll be using this pattern in the future,
 and it won't interfere with the main design pattern.
 
-So, the final design pattern I'm choosing is Dependency Injection + Specialized ISP + Adapter Pattern + DTO. That's all, thank you, I hope this helps.
+So, the final design pattern I'm choosing is Dependency Injection + Specialized ISP + Adapter Pattern + DTO. That's all, thank you, I hope this post
+helps you.
 
 !!! note
 
-    For the Uwais todo example, I'll still be using the basic Repository pattern because a complex design pattern isn't necessary for a project generator
+    For the [Uwais](/docs/uwais/) todo example, I'll still be using the basic Repository pattern because a complex design pattern isn't necessary for a project generator
     example. The developers can change it later to their liking.
