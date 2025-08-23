@@ -764,7 +764,7 @@ different flows are implemented in each provider. But this Adapter Pattern might
 
 The database is still Postgres, but the clients are different: one uses `pgxpool` and the other uses `sqlx`:
 
-``` go hl_lines="14 15 16 17 38 39 40"
+``` go hl_lines="15 16 17 38 39 40"
 // Postgres provider using pgxpool
 
 type userRepositoryFinderPGXPool struct {
