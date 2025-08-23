@@ -104,7 +104,7 @@ func (u *userRepositoryPostgres) Delete(data *User) error {
 
 > Anggap saja struct adalah sebuah object
 
-Kalian lihat bahwa object `userRepositoryPostgres` ini memiliki method dan spesifikasi yang sama persis dengan `UserRepository`.
+kita lihat bahwa object `userRepositoryPostgres` ini memiliki method dan spesifikasi yang sama persis dengan `UserRepository`.
 Hal ini karna `userRepositoryPostgres` adalah providernya, jadi dia harus mengimplementasi semua spesifikasi sesuai kontraknya
 dengan sama persis.
 
@@ -256,7 +256,7 @@ func main() {
 }
 ```
 
-Kalian bisa lihat diatas saya cuma pakai 1 consumer yang sama yaitu `UpdateUser` untuk update ke banyak database, karna semua
+kita bisa lihat diatas saya cuma pakai 1 consumer yang sama yaitu `UpdateUser` untuk update ke banyak database, karna semua
 provider diatas kontraknya sama. Bayangkan kalau tanpa pakai Dependency Injection, maka saya harus antara membuat ulang consumer
 baru untuk masing-masing database, atau saya harus merubah kodingan consumer dan menambahkan logic agar bisa kompatible terhadap
 masing-masing database.
@@ -266,7 +266,7 @@ Semoga dapat dimengerti ya dengan contoh diatas.
 ## Now I Have A Single Fat Repository Pattern
 
 Ok sekarang, apakah pattern diatas sudah cukup? Sayangnya saya rasa belum. Saya melihat bahwa pattern diatas masih belum cukup
-fleksibel. Kontrak `UserRepository` diatas memang terlihat simpel, tapi sebenarnya tidak. Kalau kalian sadar, 1 kontrak tersebut
+fleksibel. Kontrak `UserRepository` diatas memang terlihat simpel, tapi sebenarnya tidak. Kalau kita sadar, 1 kontrak tersebut
 memiliki banyak sekali method dengan operasi yang berbeda-beda. Ada method buat get data, ada yang buat insert, update dan delete.
 Ini dinamakan dengan istilah Single Fat Interface, artinya suatu kontrak interface yang sangat gemuk karna memiliki beragam operasi
 atau method yang berbeda-beda.
@@ -376,7 +376,7 @@ func (u *userRepositoryMongo) Delete(data *User) error {
 }
 ```
 
-Nah, kalian bisa lihat diatas saya membuat 3 provider, tapi saya harus mengimplementasi semua fungsi-fungsinya karna memang
+Nah, kita bisa lihat diatas saya membuat 3 provider, tapi saya harus mengimplementasi semua fungsi-fungsinya karna memang
 harus mengikuti kontrak. Padahal, saya hanya ingin fungsi get data saja yang ke elastic dan fungsi insert ke mongo, sisanya
 masih tetap ke postgres. Karena semua fungsinya berada dalam 1 kontrak interface yang sama, maka mau tidak mau saya harus
 tetap mengimplementasi semua fungsi-fungsi nya, meskipun sebenearnya saya hanya butuh sebagian saja. Saya bisa saja melakukan
@@ -434,7 +434,7 @@ type UserRepositoryDeleter interface {
 }
 ```
 
-Kalian lihat interface diatas dibagi menjadi 4 macam kontrak: `Finder`, `Inserter`, `Updater`, `Deleter`. Finder disini adalah
+kita lihat interface diatas dibagi menjadi 4 macam kontrak: `Finder`, `Inserter`, `Updater`, `Deleter`. Finder disini adalah
 kontrak untuk semua operasi yang berhubungan dengan mendapatkan data user. Inserter untuk yang behubungan dengan menambah data user,
 Updater untuk merubah data user dan Deleter untuk menghapus data user. Karna operasi-operasinya sekarang sudah dipisah, maka implementasi
 providernya menjadi lebih proper karna jadi terfokus. Dan kebutuhan saya diatas jadi bisa diimplementasi.
@@ -520,7 +520,7 @@ func (u *userRepositoryDeleterPostgres) Delete(data *User) error {
 
 ### The breakdown!
 
-Kalian bisa lihat, pada provider elastic, saya tidak perlu implement fungsi Insert, Update dan Delete, karna berdasarkan kebutuhan
+kita bisa lihat, pada provider elastic, saya tidak perlu implement fungsi Insert, Update dan Delete, karna berdasarkan kebutuhan
 diatas ini tidak diperlukan. Begitu juga dengan provider mongo, saya tidak perlu implement fungsi get data, update dan delete.
 
 Sekarang semua operasi-operasi nya sudah dikelompokan dan tidak akan saling ketergantungan. Jika butuh perubahan pada operasi tertentu,
@@ -887,10 +887,11 @@ func NewPGXPoolAdapter(db *pgxpool.Pool) SourceAdapter {
 
 Kekurangannya, kita jadi harus coding untuk implementasi merubah object external tersebut agar mengikuti kontrak Adapter Pattern yang kita buat.
 Ini biasanya butuh extra effort. Karena kan flownya beda-beda setiap client jadi penyesuaiannya juga beda-beda, agak tricky. Kadang kita juga 
-harus memikirkan gimana membuat sebuah Adapter Pattern yang kompatible untuk semua sdk/client. Saya bisa bilang pattern ini opsional saja.
-Tapi begitu kita sudah buat implementasi provider adapternya maka selanjutnya akan lebih mudah. karna akan jadi banyak hal yang
-bisa terstandarisasi kedepannya, sehingga akan memudahkan migrasi dan mengadopsi peruibahan-perubahan dengan mudah tanpa harus merubah
-proses bisnis.
+harus memikirkan gimana membuat sebuah Adapter Pattern yang kompatible untuk semua sdk/client.
+
+Saya bisa bilang pattern ini opsional saja. Tapi begitu kita sudah buat implementasi provider adapternya maka selanjutnya akan lebih mudah.
+karna akan jadi banyak hal yang bisa terstandarisasi kedepannya, sehingga akan memudahkan migrasi dan mengadopsi peruibahan-perubahan dengan
+mudah tanpa harus merubah proses bisnis.
 
 ## The Final Take, For The Current Moment
 
