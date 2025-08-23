@@ -657,7 +657,7 @@ func main() {
 Lihatlah betapa mudahnya saya mengubah-ubah kebutuhan bisnis sumber data diatas. Hanya dengan consumer dan kontrak yang sama, cukup
 ubah providernya saja, beres.
 
-## I Can't Find That The Last Pattern Can Be Used When talking About The Result
+## Let's talk About The Result object
 
 Kalau saya perhatikan, dari tadi saya mereturn object tunggal `User` sebagai contoh. Object ini sebenarnya berisi data-data user seperti
 `id`, `username`, `email`, `password`, dll. Kurang lebih seperti ini:
@@ -678,9 +678,27 @@ sesuai dengan tipe data yang diassignkan di objectnya. Sebelumnya saya selalu me
 Field-field dari object `User` diatas adalah representasi kolom-kolom dari table `users`. Artinya kalau kita mengambil data dari database, kita bisa langsung isi
 value field nya berdasarkan kolom dari table `users`.
 
-### Let's assume that we have a consumer use case to insert product
+Sekarang, anggap saya punya sebuah use case consumer untuk get data product, kurang lebih seperti ini:
 
-
+``` go
+func FindProduct(productRepoInserterImpl ProductRepositoryInserter, userRepoFinderImpl UserRepositoryFinder) (ProductDTO1, error) {
+    // Check user exists
+    user, err := userRepoFinderImpl.FindOne({ id: 1})
+    if err != nil {
+        return err
+    }
+    if user == nil {
+        return errors.New("user not found")
+    }
+    
+    // Update user
+    if err = userRepoUpdaterImpl.Update(user); err != nil {
+        return err
+    }
+    
+    return nil
+}
+```
 
 ## Specialized ISP
 
