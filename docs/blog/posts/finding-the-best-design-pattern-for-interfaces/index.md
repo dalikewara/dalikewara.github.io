@@ -667,6 +667,7 @@ type User struct {
     ID int64
     Username string
     Email string
+    Name string
     Password string
     CreatedAt time.Time
     UpdatedAt time.Time
@@ -680,9 +681,9 @@ value field nya berdasarkan kolom dari table `users`.
 
 Sekarang, anggap saya punya sebuah use case consumer untuk get data product, kurang lebih seperti ini:
 
-``` go
-func FindProduct(productRepoInserterImpl ProductRepositoryInserter, userRepoFinderImpl UserRepositoryFinder) (ProductDTO1, error) {
-    // Check user exists
+``` go hl_lines="20 21 22 23 24"
+func FindProduct(productRepoInserterImpl ProductRepositoryFinder, userRepoFinderImpl UserRepositoryFinder) (*ProductDTO1, error) {
+    // Get user data
     user, err := userRepoFinderImpl.FindOne({ id: 1})
     if err != nil {
         return err
@@ -691,16 +692,67 @@ func FindProduct(productRepoInserterImpl ProductRepositoryInserter, userRepoFind
         return errors.New("user not found")
     }
     
-    // Update user
-    if err = userRepoUpdaterImpl.Update(user); err != nil {
+    // Get product data
+    product, err := productRepoInserterImpl.FindOne({ id: 1, userID: user.ID })
+    if err != nil {
         return err
     }
+    if product == nil {
+        return errors.New("product not found")
+    }
     
-    return nil
+    return &ProductDTO1{
+        ProductID: product.ID,
+        ProductName: product.Name,
+        OwnerID: user.ID,
+        OwnerName: user.Name,
+    }
 }
 ```
 
+Kita bisa lihat, untuk use case product diatas, saya hanya butuh field `ID` dan `Name` dari object `User`. Tapi sebenarnya, menurut kontrak `UserRepositoryFinder`
+yang dikembalikan adalah object tunggal `User`, yang artinya seluruh field juga dikembalikan. Tapi karna saya hanya butuh beberapa field saja dari object `User`,
+saya bisa improve supaya kontraknya mengembalikan object `User` dengan field `ID` dan `Name` saja.
+
 ## Specialized ISP
+
+Saya masih akan pakai pattern ini, karena menurut pengertian ISP diatas bahwa "bahwa klien (dalam konteks ini adalah producer dan consumer) tidak
+boleh dipaksa untuk bergantung pada fungsi-fungsi yang tidak mereka gunakan", ini juga berlaku untuk Object fields. Jadi, untuk use case product, saya tidak akan
+pakai kontrak `UserRepositoryFinder`, tapi saya akan pakai kontrak baru seperti berikut:
+
+``` go
+type UserRepositoryFinderForProduct interface {
+    FindOne(queryFilter UserQueryFilter) (*UserForProduct, error)
+}
+
+type UserForProduct struct {
+    ID int64
+    Name string
+}
+```
+
+kontrak `UserRepositoryFinderForProduct` inilah yang nantinya akan diinject di use case product diatas. Dan kontrak ini ditujukan hanya untuk
+use case product, tidak untuk use case yang lain. Jika use case yang lain punya kebutuhan khusus terhadap data object User, maka caranya
+pun sama, yaitu bikin kontrak baru untuk use case tersebut. Dengan begini, saya lebih complete lagi dalam mengimplementasikan design pattern ISP, karena sekarang
+kaidah-kaidahnya sudah sesuai dari sisi fungsi dan object field.
+
+Ketika suatu saat user use case dimigrasi menjadi service http terpisah, use case product pun masih akan tetap aman. Dan saya tidak harus
+membuat user service mengembalikan semua field tunggal object `User`. karna kalau via http, harusnya field-field sensitive seperti `password`
+tidak boleh ikut di kembalikan sebagai response.
+
+Saya sebut bagian ini dengan Specialized ISP.
+
+## Data Transfer Object (DTO)
+
+Ini masih berhubungan dengan yang diatas. Sebelumnya kan saya memisahkan object result antara user use case dan product use case. Dimana
+untuk user use case resultnya pakai `User`, sednagkan untuk product result nya pakai `UserForProduct`. Ini adalah salah satu contoh dari DTO. Sebab
+pengertiannya sendiri adalah objek yang digunakan untuk memindahkan data antar layer aplikasi dan memastikan hanya data relevan saja yang dikirimkan,
+serta menjaga agar data sensitive tidak terekspose ke layer yang tidak memerlukannya.
+
+Pada use case diatas, terlihat bahwa saya tidak mengebalikan object product sebagai result, tapi saya mengembalikan object `ProductDTO1`. Kenapa?
+karna bisa saja object product ini mengandung banyak field-field yang sebenarnya tidak diperlukan oleh client, jadi harusnya tidak perlu dikembalikan
+semuanya. Oleh karena itu, saya menerapkan konsep DTO ini dengan membuat sebuah object DTO yang berisi field-field apa saja yang memang dibutuhkan oleh client.
+Secara size response ke client pun juga menjadi lebih kecil.
 
 ## Adapter Pattern Will Be Helpful
 
@@ -940,12 +992,12 @@ mudah tanpa harus merubah proses bisnis. Issue pada contoh kasus pertama diatas 
 ## The Final Take, For The Current Moment
 
 Akhirnya, untuk saat ini, design pattern interface terbaik yang saya pakai untuk memenuhi ekspektasi dan kebutuhan saya diatas adalah
-Dependency Injection dan Specialized ISP. Saya merasa pattern ini sudah cukup balance antara complexity dan simplicity, cukup
+Dependency Injection + Specialized ISP + DTO. Saya merasa pattern ini sudah cukup balance antara complexity dan simplicity, cukup
 fleksibel dan pastinya masih sangat humanable untuk dibaca. Untuk Adapter Pattern ini opsional, tapi karna saya berencana untuk
 membuat reusable adapter dalam berbagai driver database, jadi saya akan pakai pattern ini kedepannya, toh juga tidak akan mengganggu
 design pattern utama.
 
-Jadi, final design pattern yang saya ambil adalah Dependency Injection + Specialized ISP + Adapter Pattern. Sekian terima kasih,
+Jadi, final design pattern yang saya ambil adalah Dependency Injection + Specialized ISP + Adapter Pattern + DTO. Sekian terima kasih,
 semoga bisa membantu.
 
 Untuk todo example di Uwais, saya masih akan pakai basic Repository pattern karna buat contoh project generator tidak perlu
