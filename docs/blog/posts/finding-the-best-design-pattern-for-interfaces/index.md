@@ -15,49 +15,47 @@ tags:
   - coding
 ---
 
-# Finding The Best Design Pattern For Interfaces
+# Finding The Best Design Pattern for Interfaces
 
-Design Pattern adalah sebuah konsep yang sangat berguna dalam pembuatan program. Konsep ini memastikan alur dari kode program
-tetap konsisten dan terstruktur, sehingga mempermudah pekerjaan. Saya pribadi sangat menjunjung tinggi design pattern dan
-menganggap bahwa konsep ini wajib sekali diterapkan dalam setiap pembuatan program. Bukan berarti saya sangat jago disini, tapi
-maksud saya adalah harus ada pattern yang konsisten.
+Design patterns are a super useful concept in programming. They keep your code consistent and structured, which makes your
+life way easier. Personally, I'm a huge fan and think they should be a must for every project. It's not that I'm a pattern
+guru; it's just about having a consistent way of doing things.
 
-Lagipula, penerapan dari teori design pattern ini pasti berbeda-beda tiap individu. Terserah mau kita menguasai ISP
-(Interface Segregation Principle), CQRS (Command Query Responsibility Segregation) atau apapun itu, pasti tiap orang berbeda
-dalam hal implementasi. Ada yang strict mengikuti 1 pattern, ada yang mengadopsi lebih dari 1, ada juga yang mencampurkan beberapa
-pattern, bahkan ada yang ngasal. It's ok, yang penting ada sebuah standart yang dibuat untuk diikuti. Tinggal nanti dibikin
-dokumentasi menjelaskan cara kerja patternnya, beres.
+After all, everyone implements these patterns differently. Whether you're an expert in ISP (Interface Segregation Principle),
+CQRS (Command Query Responsibility Segregation), or something else, each person will have their own implementation style. Some
+stick strictly to one pattern, some mix a few, and some just wing it. It's all good, as long as you create a standard to follow.
+Just document how your pattern works, and you're golden.
 
-Jangan mulai ngoding sebelum tahu pattern apa yang akan diterapkan!
+!!! warning
 
-<!-- more -->
+    Don't start coding until you know what pattern you're going to use!
 
-Saya sendiri selalu mencari pattern terbaik untuk project-project yang saya buat. Saya pernah terjebak mengikuti pattern buatan
-orang lain ketika sedang dalam project kolaborasi—yang design patternnya sangat ribet untuk diikuti. Saya tidak membenci cara
-implementasinya, saya hanya membenci sesuatu yang ribet—apalagi jika tidak ada dokumentasinya.
+I'm always on the hunt for the best pattern for my projects. I once got stuck following someone else's pattern during a
+collaboration—and it was a total nightmare to follow. I didn't hate their implementation, just how complicated it was—especially
+with no documentation.
 
-Perjalanan saya dalam mencari design pattern interface terbaik ini dimulai dari konsep yang cukup simple...
+My journey to find the best interface design pattern started with a pretty simple concept...
 
-> Untuk selanjutnya, saya akan pakai contoh menggunakan Golang. Nggak ada alasan khusus, saya cuma suka Golang karna simpel.
-> Tapi perlu diingat, disini saya menggunakan pendekatan yang lebih universal supaya mudah dipahami, jadi agak mengesampingkan
-> idiomatic di Golang
+!!! info
 
-## Getting Started, The Repository Pattern
+    From here on out, I'll be using Go for my examples. No special reason, I just like Go because it's simple. But keep in mind,
+    I'm using a more universal approach here so it's easier to understand, so I might be skipping some of Go's specific idioms.
 
-Konsep pattern ini tujuannya untuk menyediakan abstraksi atau kontrak untuk memisahkan domainnya (provider) dengan logical
-bisnis utama (consumer). Pattern ini kebanyakan dipakai untuk abstraksi detail teknis sumber data (repository) seperti database,
-tapi sebernarnya bisa juga dipakai untuk layer lain seperti use case, service, atau bahkan sebuah statement builder. karna intinya
-sama, yaitu untuk mencerminkan sebuah kebutuhan bisnis.
+## Getting Started: The Repository Pattern
 
-Simpelnya, ada provider, consumer dan kontrak. Consumer adalah executor yang memanggil fungsi-fungsi yang disediakan oleh provider.
-provider adalah implementator yang menyediakan fungsi-fungsi untuk bisa dipanggil oleh consumer. Nah, kontrak adalah perjanjian
-antara provider dan consumer untuk mengikat hubungan antara keduanya. provider harus menyediakan fungsi-fungsinya sesuai dengan
-kontrak yang telah disepakati dengan consumer, karena consumer akan melakukan proses bisnisnya berdasarkan kontrak tersebut.
-Repository pattern ini adalah desain dari kontrak tersebut.
+The goal of this pattern is to provide an abstraction or a contract to separate the domain (provider) from the core business
+logic (consumer). This pattern is mostly used to abstract technical details of data sources (repositories) like databases,
+but you can also use it for other layers like use cases, services, or even a statement builder. The main point is to reflect
+a business need.
 
-> Untuk selanjutnya saya akan pakai ketiga istilah ini: provider, consumer, kontrak
+Simply put, you have a provider, a consumer, and a contract. The consumer is the executor that calls the functions provided
+by the provider. The provider is the implementer that provides the functions the consumer can call. The contract is the agreement
+between the provider and consumer that binds them together. The provider has to provide its functions according to the contract,
+because the consumer will run its business process based on that contract. The Repository pattern is the design of that contract.
 
-Saya akan mengambil contoh sederhana, yaitu saya akan membuat sebuah kontrak `UserRepository` untuk melakukan CRUD ke database:
+> From now on, I'll use these three terms: provider, consumer, and contract.
+
+I'll use a simple example: I'm going to create a `UserRepository` contract to perform CRUD operations on a database.
 
 ``` go
 type UserRepository interface {
@@ -69,70 +67,69 @@ type UserRepository interface {
 }
 ```
 
-Kemudian, saya akan memakai postgres sebagai databasenya, sehingga providernya akan seperti ini:
+Next, I'll use Postgres as the database, so the provider will look like this:
 
 ``` go
 type userRepositoryPostgres struct {
-	db *pgxpool.Pool // Contoh jika drivernya pakai pgxpool
+	db *pgxpool.Pool // Example if the driver is pgxpool
 }
 
 func (u *userRepositoryPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {
-	// disini saya query SELECT ke postgres
+	// here I'll SELECT query to Postgres
 	...
 }
 
 func (u *userRepositoryPostgres) FindAll(queryFilter UserQueryFilter) (Users, error) {
-	// disini saya query SELECT ke postgres
+	// here I'll SELECT query to Postgres
 	...
 }
 
 func (u *userRepositoryPostgres) Insert(data *User) error {
-	// disini saya query INSERT ke postgres
+	// here I'll INSERT query to Postgres
 	...
 }
 
 func (u *userRepositoryPostgres) Update(data *User) error {
-	// disini saya query UPDATE ke postgres
+	// here I'll UPDATE query to Postgres
 	...
 }
 
 func (u *userRepositoryPostgres) Delete(data *User) error {
-	// disini saya query DELETE ke postgres
+	// here I'll DELETE query to Postgres
 	...
 }
 ```
 
-> Anggap saja struct adalah sebuah object
+> Just think of a struct as an object.
 
-kita lihat bahwa object `userRepositoryPostgres` ini memiliki method dan spesifikasi yang sama persis dengan `UserRepository`.
-Hal ini karna `userRepositoryPostgres` adalah providernya, jadi dia harus mengimplementasi semua spesifikasi sesuai kontraknya
-dengan sama persis.
+You can see that the `userRepositoryPostgres` object has the exact same methods and specifications as `UserRepository`. This is
+because `userRepositoryPostgres` is the provider, so it has to implement all the specifications from its contract.
 
-Nah, nanti di dalam consumer, fungsi-fungsi yang telah disediakan provider ini yang akan dipanggil, karena dialah yang punya hasil
-implementasi nyata dari proses CRUDnya. Tapi, consumer akan mengorkestrasinya berdasarkan kontrak. Sehingga, apabila suatu saat saya
-ingin mengganti provider dari postgres ke mongodb misal, saya cukup buat sebuah object provider baru yang mengemplimentasi kontrak,
-dan consumer tidak akan rusak atau error. Karena kontraknya sama, yang artinya method-method dan spesifikainya pun juga pasti sama.
+Now, inside the consumer, it will call the functions provided by the provider, since the provider has the actual implementation
+of the CRUD process. But the consumer will orchestrate everything based on the contract. So, if I ever want to switch the provider
+from Postgres to, say, MongoDB, all I have to do is create a new MongoDB provider object that implements the contract, and the consumer won't
+break or throw an error. Since the contract is the same, the methods and their specifications will also be the same.
 
-Tapi kemudian, bagaimana cara consumer mengorkestrasi hal ini?
+But how does the consumer orchestrate this?
 
-## With The Dependency Injection, Of Course!
+## With Dependency Injection, Of Course!
 
-Inilah caranya agar consumer bisa mengorkestrasi provider. Dependency injection adalah sebuah konsep dimana kita menginject dependency dari luar
-menggunakan sebuah kontrak sebagai tipe data atau constructor. Sebagai contoh, alih-alih saya langsung memanggil object provider didalam consumer
-seperti ini:
+This is how the consumer can orchestrate the provider. Dependency injection is a concept where you inject dependencies from
+outside using a contract as the data type or constructor. For example, instead of calling the provider object directly inside
+the consumer like this:
 
-> Disini saya pakai pendekatan fungsi saja supaya lebih mudah dibaca
+> I'm just using a function approach here to make it easier to read.
 
 ``` go
 func UpdateUser() error {
-    userRepoImpl := userRepositoryPostgres{}
+    userRepoImpl := &userRepositoryPostgres{}
     
     // Check user exists
     user, err := userRepoImpl.FindOne({ id: 1})
     if err != nil {
         return err
     }
-    if user  nil {
+    if user == nil {
         return errors.New("user not found")
     }
     
@@ -145,7 +142,7 @@ func UpdateUser() error {
 }
 ```
 
-Saya bisa ubah supaya menggunakan dependency injection seperti ini:
+I can change it to use dependency injection like this:
 
 ``` go
 func UpdateUser(userRepoImpl UserRepository) error {
@@ -154,7 +151,7 @@ func UpdateUser(userRepoImpl UserRepository) error {
     if err != nil {
         return err
     }
-    if user  nil {
+    if user == nil {
         return errors.New("user not found")
     }
     
@@ -177,12 +174,12 @@ func UpdateUser() error {
 }
 ```
 
-Jika saya langsung memanggil object provider kedalam consumer seperti diatas, itu artinya saya membuat proses bisnis
-consumer menjadi ketergantungan terhadap provider. Jika suatu saat saya mau mengganti provider dari postgres ke mongodb, atau
-misal ada perubahan kodingan disisi provider, maka saya juga harus merubah kodingan di sisi consumer, kalau tidak maka consumer
-akan error. provider disini seolah-olah diberi kebebasan karna sama sekali tidak terikat dengan kontrak. Itu artinya kontrak
-menjadi tidak berguna karna consumer sekarang taunya object provider bukannya si kontrak. Padahal harusnya sebaliknya, consumer
-hanya perlu tau kontrak, tidak perlu tau object provider.
+If I call the provider object directly inside the consumer like the code above, it means I'm making the consumer's business
+process dependent on the provider. If I ever want to switch the provider from Postgres to MongoDB, or if there's a code change
+on the provider side, I'd also have to change the code on the consumer side, or the consumer will break. The provider, in this
+case, is free because it's not tied to a contract at all. This makes the contract useless because the consumer now tied to the
+provider object instead of the contract. It should be the other way around: the consumer must be tied to the contract, not the
+provider object.
 
 ``` go
 func UpdateUser(userRepoImpl UserRepository) error {
@@ -190,28 +187,28 @@ func UpdateUser(userRepoImpl UserRepository) error {
 }
 ```
 
-pada kode diatas, saya menaruh `userRepoImpl` sebagai argument dengan type data `UserRepository`, yang mana adalah si kontrak.
-Inilah yang namanya Dependency Injection. Object provider saya lewatkan sebagai argument dari fungsi consumer, tapi saya mengikat
-object tersebut dengan kontrak dengan membuat tipe data atau constructornya nya adalah `UserRepository`. Sehingga, sekarang consumer
-taunya hanya tipe data kontrak tersebut, tidak peduli object providernya. Mau saya merubah atau mengganti kode provider kayak
-gimanapun, selama object providernya mengikuti kontrak, consumer tidak perduli dan tidak akan error, karna sudah dipastikan tipe
-data dan kontraknya akan selalu sama. Kebanyakan bahasa pemrograman juga bisa membantu memvalidasi kecocokan object dengan kontrak
-pada proses compiling atau build, sehingga tidak perlu khawatir lagi terjadi runtime error.
+In the code above, I'm passing `userRepoImpl` as an argument with the data type `UserRepository`, which is the contract. This is
+what's called Dependency Injection. I pass the provider object as an argument to the consumer's function, but I tie that object
+to the contract by making its data type or constructor `UserRepository`. So now, the consumer only knows the contract data type;
+it doesn't care about the provider object. No matter how I change or replace the provider code, as long as the provider object
+follows the contract, the consumer won't care and won't break because the data type and contract are guaranteed to be the same.
+Most programming languages can even help validate if the object matches the contract during the compiling or building process,
+so you don't have to worry about runtime errors.
 
 ### Usage differential
 
-Secara penggunaan antara pakai Dependency Injection dan tidak juga sangat berbeda. Tanpa dependency injection, saya pakai
-consumernya seperti ini:
+The way you use it is also very different with and without dependency injection. Without dependency injection, I would use the
+consumer like this:
 
 ``` go
 func main() {
-    if err : UpdateUser(); err ! nil {
+    if err := UpdateUser(); err != nil {
         panic(err)
     }
 }
 ```
 
-sedangkan kalau pakai Dependency Injection seperti ini:
+while with dependency injection, it's like this:
 
 ``` go
 func main() {
@@ -223,171 +220,169 @@ func main() {
 }
 ```
 
-kalau saya mau pakai beberapa database sekaligus, saya tinggal buat seperti ini:
+If I want to use several databases at once, I can just do this:
 
 ``` go
 func main() {
-    // inisialisasi providers
+    // initialize providers
 
     userRepoImplPostgres := &userRepositoryPostgres{}
     userRepoImplMySQL := &userRepositoryMySQL{}
-    userRepoImplMongo := &userRepositoryMongo{}
-    userRepoImplElastic := &userRepositoryElastic{}
+    userRepoImplMongoDB := &userRepositoryMongoDB{}
+    userRepoImplElasticsearch := &userRepositoryElasticsearch{}
     
-    // Update user ke database postgres
+    // Update user to Postgres database
     if err := UpdateUser(userRepoImplPostgres); err != nil {
         panic(err)
     }
     
-    // Update user ke database MySQL
+    // Update user to MySQL database
     if err := UpdateUser(userRepoImplMySQL); err != nil {
         panic(err)
     }
     
-    // Update user ke database Mongo
-    if err := UpdateUser(userRepoImplMongo); err != nil {
+    // Update user to MongoDB database
+    if err := UpdateUser(userRepoImplMongoDB); err != nil {
         panic(err)
     }
     
-    // Update user ke Elasticsearch
-    if err := UpdateUser(userRepoImplElastic); err != nil {
+    // Update user to Elasticsearchsearch
+    if err := UpdateUser(userRepoImplElasticsearch); err != nil {
         panic(err)
     }
 }
 ```
 
-kita bisa lihat diatas saya cuma pakai 1 consumer yang sama yaitu `UpdateUser` untuk update ke banyak database, karna semua
-provider diatas kontraknya sama. Bayangkan kalau tanpa pakai Dependency Injection, maka saya harus antara membuat ulang consumer
-baru untuk masing-masing database, atau saya harus merubah kodingan consumer dan menambahkan logic agar bisa kompatible terhadap
-masing-masing database.
+You can see above that I'm only using one consumer, `UpdateUser`, to update many databases, because all the providers have the
+same contract. Imagine without dependency injection: I would either have to create a new consumer for each database, or I'd
+have to change the consumer's code and add logic to make it compatible with each database.
 
-Semoga dapat dimengerti ya dengan contoh diatas.
+I hope the example above easy to understand.
 
-## Now I Have A Single Fat Repository Pattern
+## Now I Have a Single Fat Repository Pattern
 
-Ok sekarang, apakah pattern diatas sudah cukup? Sayangnya saya rasa belum. Saya melihat bahwa pattern diatas masih belum cukup
-fleksibel. Kontrak `UserRepository` diatas memang terlihat simpel, tapi sebenarnya tidak. Kalau kita sadar, 1 kontrak tersebut
-memiliki banyak sekali method dengan operasi yang berbeda-beda. Ada method buat get data, ada yang buat insert, update dan delete.
-Ini dinamakan dengan istilah Single Fat Interface, artinya suatu kontrak interface yang sangat gemuk karna memiliki beragam operasi
-atau method yang berbeda-beda.
+Okay, is the pattern above enough? Unfortunately, I don't think so. I see that the pattern is still not flexible enough. The
+`UserRepository` contract might seem simple, but it's not. If you look closely, that one contract has a ton of methods with different
+operations. There are methods for getting data, for inserting, updating, and deleting. This is called a Single Fat Interface, which
+means an interface contract that's too "fat" because it has too many different operations or methods.
 
 ### So, what's the problem here?
 
-Diatas saya menjelaskan bahwa sebuah provider harus selalu mengukuti kontrak, artinya dia harus mengimplementasi semua fungsi-fungsi
-dari kontrak tersebut. Disinilah masalahnya. Dalam banyak kasus pengembangan, pattern ini selalu menimbulkan masalah. Kebutuhan bisnis
-selalu berubah-ubah, bahkan kadang hampir setiap saat. Alasan klasisknya ya karna menyesuaikan kebutuhan user, performance improvement,
-securtity dan cost efisiensi. Sebagai contoh, anggaplah bahwa dari kontrak `UserRepository`, saya butuh merubah get data user ke elastic,
-dan insert user ke mongo. Ini contoh saja jangan pikirkan make sense atau tidaknya. Maka, apa yang harus saya lakukan? tentunya saya
-harus membuat 3 provider kan? provider untuk postgres, elastic dan mongo:
+Above, I explained that a provider should always follow the contract, meaning it has to implement all the functions from that contract.
+This is where the problem lies. In many development cases, this pattern always causes issues. Business needs are always changing, sometimes
+almost constantly. The classic reasons are to adapt to user needs, improve performance, and for security and cost efficiency. For example,
+let's say from the `UserRepository` contract, I need to move the "get user data" function to Elasticsearch, and the "insert user" function to MongoDB.
+This is just an example, so don't worry if it doesn't make sense.
+
+So, what do I have to do? Of course, I have to create three providers, right? A provider for Postgres, Elasticsearch, and MongoDB:
 
 ``` go
-
-// provider postgres
+// Postgres provider
 
 type userRepositoryPostgres struct {
-    db interface{} // saya mock jadi interface saja
+    db interface{} // I'll mock it as an interface for now
 }
- 
+
 func (u *userRepositoryPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {
-    // disini saya query SELECT ke postgres
-	...
+    // here I'll SELECT query to Postgres
+    ...
 }
- 
+
 func (u *userRepositoryPostgres) FindAll(queryFilter UserQueryFilter) (Users, error) {
-    // disini saya query SELECT ke postgres
-	...
+    // here I'll SELECT query to Postgres
+    ...
 }
 
 func (u *userRepositoryPostgres) Insert(data *User) error {
-    // disini saya query INSERT ke postgres
-	...
+    // here I'll INSERT query to Postgres
+    ...
 }
- 
+
 func (u *userRepositoryPostgres) Update(data *User) error {
-    // disini saya query UPDATE ke postgres
-	...
+    // here I'll UPDATE query to Postgres
+    ...
 }
-  
+
 func (u *userRepositoryPostgres) Delete(data *User) error {
-    // disini saya query DELETE ke postgres
-	...
+    // here I'll DELETE query to Postgres
+    ...
 }
 
-// provider elastic
+// Elasticsearch provider
 
-type userRepositoryElastic struct {
+type userRepositoryElasticsearch struct {
     db interface{}
 }
 
-func (u *userRepositoryElastic) FindOne(queryFilter UserQueryFilter) (*User, error) {
-    // disini saya get data dari elastic
-	...
+func (u *userRepositoryElasticsearch) FindOne(queryFilter UserQueryFilter) (*User, error) {
+    // here I'll get data from Elasticsearch
+    ...
 }
 
-func (u *userRepositoryElastic) FindAll(queryFilter UserQueryFilter) (Users, error) {
-    // disini saya get all data dari elastic
-	...
+func (u *userRepositoryElasticsearch) FindAll(queryFilter UserQueryFilter) (Users, error) {
+    // here I'll get all data from Elasticsearch
+    ...
 }
 
-func (u *userRepositoryElastic) Insert(data *User) error {
-    // disini saya insert data ke elastic
-	...
+func (u *userRepositoryElasticsearch) Insert(data *User) error {
+    // here I'll insert data into Elasticsearch
+    ...
 }
 
-func (u *userRepositoryElastic) Update(data *User) error {
-    // disini saya update data ke elastic
-	...
+func (u *userRepositoryElasticsearch) Update(data *User) error {
+    // here I'll update data in Elasticsearch
+    ...
 }
 
-func (u *userRepositoryElastic) Delete(data *User) error {
-    // disini saya delete data ke elastic
-	...
+func (u *userRepositoryElasticsearch) Delete(data *User) error {
+    // here I'll delete data from Elasticsearch
+    ...
 }
 
-// provider mongo
+// MongoDB provider
 
-type userRepositoryMongo struct {
+type userRepositoryMongoDB struct {
     db interface{}
 }
 
-func (u *userRepositoryMongo) FindOne(queryFilter UserQueryFilter) (*User, error) {
-    // disini saya get data dari mongo
-	...
+func (u *userRepositoryMongoDB) FindOne(queryFilter UserQueryFilter) (*User, error) {
+    // here I'll get data from MongoDB
+    ...
 }
 
-func (u *userRepositoryMongo) FindAll(queryFilter UserQueryFilter) (Users, error) {
-    // disini saya get all data dari mongo
-	...
+func (u *userRepositoryMongoDB) FindAll(queryFilter UserQueryFilter) (Users, error) {
+    // here I'll get all data from MongoDB
+    ...
 }
 
-func (u *userRepositoryMongo) Insert(data *User) error {
-    // disini saya insert data ke mongo
-	...
+func (u *userRepositoryMongoDB) Insert(data *User) error {
+    // here I'll insert data into MongoDB
+    ...
 }
 
-func (u *userRepositoryMongo) Update(data *User) error {
-    // disini saya update data ke mongo
-	...
+func (u *userRepositoryMongoDB) Update(data *User) error {
+    // here I'll update data in MongoDB
+    ...
 }
 
-func (u *userRepositoryMongo) Delete(data *User) error {
-    // disini saya delete data ke mongo
-	...
+func (u *userRepositoryMongoDB) Delete(data *User) error {
+    // here I'll delete data from MongoDB
+    ...
 }
 ```
 
-Nah, kita bisa lihat diatas saya membuat 3 provider, tapi saya harus mengimplementasi semua fungsi-fungsinya karna memang
-harus mengikuti kontrak. Padahal, saya hanya ingin fungsi get data saja yang ke elastic dan fungsi insert ke mongo, sisanya
-masih tetap ke postgres. Karena semua fungsinya berada dalam 1 kontrak interface yang sama, maka mau tidak mau saya harus
-tetap mengimplementasi semua fungsi-fungsi nya, meskipun sebenearnya saya hanya butuh sebagian saja. Saya bisa saja melakukan
-dummy implementasi dengan memakai misal `fmt.Println("implement me!")` untuk fungsi-fungsi yang tidak dibutuhkan, tapi ini sangat
-membingungkan, jelek dan tidak acceptable. Saya tidak suka. Kenapa saya harus mengerjakan sesuatu yang tidak dibutuhkan? 
+So, you can see above that I'm creating three providers, but I have to implement all the functions because I have to follow
+the contract. In reality, I only want the "get data" function to go to Elasticsearch and the "insert user" function to go to MongoDB,
+with the rest staying in Postgres. Since all the functions are in one single interface contract, I'm forced to implement all of
+them, even though I only need a few. I could just use dummy implementations like `!#go fmt.Println("implement me!")` for the functions
+I don't need, but that's really confusing, ugly, and just not acceptable. I don't like it. Why should I have to do something
+that's not needed?
 
 ## Let's Change It To CQRS (Command Query Responsibility Segregation)
 
-Dari yang saya baca, konsep design pattern ini adalah untuk memisahkan operasi baca (query) dan tulis (command). Alih-alih
-membuat 1 kontrak besar untuk read data dan write data sekaligus, kita pisahkan kedua operasi tersebut menjadi dua kontrak interface `Query` dan `Command`,
-atau `Reader` dan `Writer`. Kalau saya coba terapkan, kontrak `UserRepository` diatas bisa dibuat seperti ini:
+From what I've read, this design pattern is about separating read operations (query) and write operations (command). Instead of
+making one big contract for both reading and writing data, we split these two operations into two interface contracts: Query and Command,
+or Reader and Writer. If I try to apply this, the `UserRepository` contract above can be made like this:
 
 ``` go
 type UserRepositoryQuery interface {
@@ -402,18 +397,18 @@ type UserRepositoryCommand interface {
 }
 ```
 
-Disini Query adalah kontrak yang berisi fungsi-fungsi untuk get data user, sedangkan Command untuk create, update dan delete user. Ok
-terlihat cukup bagus dan make sense. Cuman sepertinya pattern ini hanya bisa mensolve kebutuhan perpindahan ke elastic saja, yang mana hanya untuk
-fungsi get data. Tapi sepertinya tidak cukup kuat untuk mensolve kebutuhan perpindahan ke Mongo. Karna yang pindah ke Mongo hanya fungsi insert
-saja, Update dan Delete masih ke postgres.
+Here, Query is the contract with functions to get user data, while Command is for creating, updating, and deleting users.
+Okay, this looks pretty good and makes sense. But it seems like this pattern only solves the need to move to Elasticsearch, which
+is just for the "get data" functions. It doesn't seem strong enough to solve the need to move to MongoDB, because only the
+"insert" function is moving to MongoDB, while "update" and "delete" are staying in Postgres.
 
 ## I Need To Separate Them Using The Interface Segregation Principle (ISP)
 
-Kayaknya Masalah diatas bisa saya solve dengan memakai design pattern selanjutnya yang ini, yaitu Interface Segregation Principle (ISP),
-salah satu bagian dari SOLID principle. Pattern ISP ini menyatakan bahwa klien (dalam konteks ini adalah producer dan consumer) tidak
-boleh dipaksa untuk bergantung pada fungsi-fungsi yang tidak mereka gunakan. Jadi intinya, daripada saya membuat 1 kontrak dengan berbagai macam operasi,
-lebih baik saya membuat beberapa kontrak dengan memisahkan operasinya masing-masing. Namun tidak seperti CQRS, melainkan lebih kecil dan spesifik lagi.
-Sebagai contoh, kontrak `UserRepository` diatas saya bisa ubah menjadi seperti ini:
+I think I can solve the problem above using the next design pattern, which is the Interface Segregation Principle (ISP),
+one of the SOLID principles. This ISP pattern states that clients (in this context, producers and consumers) should not be
+forced to depend on functions they don't use. The point is, instead of creating one contract with a bunch of operations,
+it's better to create several contracts, each separating its own operations. But unlike CQRS, this is more specific and
+smaller. For example, I can change the `UserRepository` contract above to look like this:
 
 ``` go
 type UserRepositoryFinder interface {
@@ -434,60 +429,59 @@ type UserRepositoryDeleter interface {
 }
 ```
 
-kita lihat interface diatas dibagi menjadi 4 macam kontrak: `Finder`, `Inserter`, `Updater`, `Deleter`. Finder disini adalah
-kontrak untuk semua operasi yang berhubungan dengan mendapatkan data user. Inserter untuk yang behubungan dengan menambah data user,
-Updater untuk merubah data user dan Deleter untuk menghapus data user. Karna operasi-operasinya sekarang sudah dipisah, maka implementasi
-providernya menjadi lebih proper karna jadi terfokus. Dan kebutuhan saya diatas jadi bisa diimplementasi.
+You can see the interface above is split into four kinds of contracts: Finder, Inserter, Updater, Deleter. Finder is the
+contract for all operations related to getting user data. Inserter is for adding user data, Updater for changing user data,
+and Deleter for deleting user data. Since the operations are now separated, the provider implementation becomes more proper
+because it's more focused. And my needs above can now be implemented.
 
 ### Let's implement the provider!
 
-Tetap ada 3 provider, masing-masing untuk elastic, mongo dan postgres. Bedanya sekarang implementasi kontraknya sebagai berikut:
+There are still three providers, one for Elasticsearch, MongoDB, and Postgres. The difference now is how the contract is implemented:
 
-> Saya akan buat untuk provider postgres mengimplementasi ke 4 kontrak diatas agar memudahkan pemahaman lebih lanjut
+> I'll make the Postgres provider implement all four contracts to make it easier to understand later.
 
 ``` go
+// Elasticsearch provider
 
-// provider elastic
-
-type userRepositoryFinderElastic struct {
+type userRepositoryFinderElasticsearch struct {
     db interface{}
 }
 
-func (u *userRepositoryFinderElastic) FindOne(queryFilter UserQueryFilter) (*User, error) {
-    // disini saya get data dari elastic
-	...
+func (u *userRepositoryFinderElasticsearch) FindOne(queryFilter UserQueryFilter) (*User, error) {
+    // here I'll get data from Elasticsearch
+    ...
 }
 
-func (u *userRepositoryFinderElastic) FindAll(queryFilter UserQueryFilter) (Users, error) {
-    // disini saya get all data dari elastic
-	...
+func (u *userRepositoryFinderElasticsearch) FindAll(queryFilter UserQueryFilter) (Users, error) {
+    // here I'll get all data from Elasticsearch
+    ...
 }
 
-// provider mongo
+// MongoDB provider
 
-type userRepositoryInserterMongo struct {
+type userRepositoryInserterMongoDB struct {
     db interface{}
 }
 
-func (u *userRepositoryInserterMongo) Insert(data *User) error {
-    // disini saya insert data ke mongo
-	...
+func (u *userRepositoryInserterMongoDB) Insert(data *User) error {
+    // here I'll insert data into MongoDB
+    ...
 } 
 
-// provider postgres
+// Postgres provider
 
 type userRepositoryFinderPostgres struct {
     db interface{}
 }
 
 func (u *userRepositoryFinderPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {
-    // disini saya query SELECT ke postgres
-	...
+    // here I'll SELECT query to Postgres
+    ...
 }
 
 func (u *userRepositoryFinderPostgres) FindAll(queryFilter UserQueryFilter) (Users, error) {
-    // disini saya query SELECT ke postgres
-	...
+    // here I'll SELECT query to Postgres
+    ...
 }
 
 type userRepositoryInserterPostgres struct {
@@ -495,8 +489,8 @@ type userRepositoryInserterPostgres struct {
 }
 
 func (u *userRepositoryInserterPostgres) Insert(data *User) error {
-    // disini saya query INSERT ke postgres
-	...
+    // here I'll INSERT query to Postgres
+    ...
 } 
 
 type userRepositoryUpdaterPostgres struct {
@@ -504,8 +498,8 @@ type userRepositoryUpdaterPostgres struct {
 }
 
 func (u *userRepositoryUpdaterPostgres) Update(data *User) error {
-    // disini saya query UPDATE ke postgres
-	...
+    // here I'll UPDATE query to Postgres
+    ...
 }
 
 type userRepositoryDeleterPostgres struct {
@@ -513,32 +507,33 @@ type userRepositoryDeleterPostgres struct {
 }
 
 func (u *userRepositoryDeleterPostgres) Delete(data *User) error {
-    // disini saya query DELETE ke postgres
-	...
+    // here I'll DELETE query to Postgres
+    ...
 }
 ```
 
-### The breakdown!
+### The Breakdown!
 
-kita bisa lihat, pada provider elastic, saya tidak perlu implement fungsi Insert, Update dan Delete, karna berdasarkan kebutuhan
-diatas ini tidak diperlukan. Begitu juga dengan provider mongo, saya tidak perlu implement fungsi get data, update dan delete.
+You can see that in the Elasticsearch provider, I don't need to implement the "insert", "update", and "delete" functions because, based
+on the needs above, they aren't needed. The same goes for the MongoDB provider; I don't need to implement the "get data,"
+"update," and "delete" functions.
 
-Sekarang semua operasi-operasi nya sudah dikelompokan dan tidak akan saling ketergantungan. Jika butuh perubahan pada operasi tertentu,
-maka hanya operasi itulah yang diubah, tidak boleh ikut bergantung dan merubah operasi yang lain, sehingga meminimalisir pekerjaan
-pada hal-hal yang tidak diperlukan. Secara penggunaan dari sisi consumer juga jadi lebih fleksibel.
+Now, all the operations are grouped and won't be dependent on each other. If I need to change a specific operation, only that
+operation is changed; it won't depend on and change other operations, which minimizes work on things that aren't needed. Usage
+from the consumer side also becomes more flexible.
 
-Sebagai contoh, sebelumnya saya hanya mempunyai 1 consumer `UpdateUser` dengan memakai kontrak `UserRepository`. Kali ini saya akan
-mengubahnya dan membuat consumer baru untuk melakukan management data user sebagai berikut:
+For example, previously, I only had one `UpdateUser` consumer using the `UserRepository` contract. This time, I'll change it and create
+a new consumer to manage user data like this:
 
-> Mulai dari sekarang, kontrak `UserRepository` tidak terpakai lagi karena sudah tidak relevan
+> From now on, the `UserRepository` contract isn't used anymore because it's no longer relevant.
 
 ``` go
-func FindAllUser(userRepoFinderImpl UserRepositoryFinder) (Users, error) {        
+func FindAllUser(userRepoFinderImpl UserRepositoryFinder) (Users, error) {      
     return userRepoFinderImpl.FindAll({})
 }
 
 func InsertUser(userRepoInserterImpl UserRepositoryInserter) error {
-    user := User{
+    user := &User{
         Name: "John Doe",
     }
     
@@ -556,7 +551,7 @@ func UpdateUser(userRepoFinderImpl UserRepositoryFinder, userRepoUpdaterImpl Use
     if err != nil {
         return err
     }
-    if user  nil {
+    if user == nil {
         return errors.New("user not found")
     }
     
@@ -574,7 +569,7 @@ func DeleteUser(userRepoFinderImpl UserRepositoryFinder, userRepoDeleterImpl Use
     if err != nil {
         return err
     }
-    if user  nil {
+    if user == nil {
         return errors.New("user not found")
     }
     
@@ -587,53 +582,52 @@ func DeleteUser(userRepoFinderImpl UserRepositoryFinder, userRepoDeleterImpl Use
 }
 ```
 
-Dengan demikian, sekarang consumer nya menjadi sangat fleksibel, tidak lagi menginject 1 kontrak besar. Semua yang diinject
-adalah semua operasi-operasi yang memang dibutuhkan oleh si consumer saja. Selain itu, saya juga bisa dengan leluasa
-mengubah-ubah kebutuhan bisnis sumber data secara spesifik (tidak hanya ganti database, tapi berlaku juga misal saya ganti driver dari
-`pgxpool` ke `sqlx` atau bahkan orm seperti `goqu`) tanpa khawatir harus mengimplementasi semua yang tidak dibutuhkan.
-Berikut adalah contoh penggunaan consumer sesuai kebutuhan saya diatas:
+Now, the consumer is super flexible; it no longer injects one big contract. All it injects are the specific operations that
+the consumer needs. I can also freely change the data source business needs (not just switching databases, but also if I switch a
+driver from `pgxpool` to `sqlx` or even an ORM like `goqu`) without worrying about having to implement everything I don't need. Here's
+an example of using the consumer based on my needs above:
 
 ``` go
 func main() {
-    // Inisialisasi Elastic provider
+    // Initialize Elasticsearch provider
     
-    userRepoFinderImplElastic := &userRepositoryFinderElastic{}
+    userRepoFinderImplElasticsearch := &userRepositoryFinderElasticsearch{}
     
-    // Inisialisasi Mongo provider
+    // Initialize MongoDB provider
     
-    userRepoInserterImplMongo := &userRepositoryInserterMongo{}
+    userRepoInserterImplMongoDB := &userRepositoryInserterMongoDB{}
     
-    // Inisialisasi Postgres provider
+    // Initialize Postgres provider
     
     userRepoFinderImplPostgres := &userRepositoryFinderPostgres{}
     userRepoInserterImplPostgres := &userRepositoryInserterPostgres{}
     userRepoUpdaterImplPostgres := &userRepositoryUpdaterPostgres{}
     userRepoDeleterImplPostgres := &userRepositoryDeleterPostgres{}
     
-    // Insert data user ke mongo
-    if err := InsertUser(userRepoInserterImplMongo); err != nil {
+    // Insert user data into MongoDB
+    if err := InsertUser(userRepoInserterImplMongoDB); err != nil {
         panic(err)
     }
     
-    // Get data user dari elastic
-    users, err := FindAllUser(userRepoFinderImplElastic)
+    // Get user data from Elasticsearch
+    users, err := FindAllUser(userRepoFinderImplElasticsearch)
     if err != nil {
         panic(err)
     }
     
     fmt.Println(users)
     
-    // Update dan delete ke postgres, tapi check user exists dari elastic
+    // Update and delete to Postgres, but check if user exists from Elasticsearch
 
-    if err = UpdateUser(userRepoFinderImplElastic, userRepoUpdaterImplPostgres); err != nil {
+    if err = UpdateUser(userRepoFinderImplElasticsearch, userRepoUpdaterImplPostgres); err != nil {
         panic(err)
     }
     
-    if err = DeleteUser(userRepoFinderImplElastic, userRepoDeleterImplPostgres); err != nil {
+    if err = DeleteUser(userRepoFinderImplElasticsearch, userRepoDeleterImplPostgres); err != nil {
         panic(err)
     }
     
-    // CRUD ke postgres seperti normal flow diawal
+    // CRUD to Postgres as in the original normal flow
     
     users, err = FindAllUser(userRepoFinderImplPostgres)
     if err != nil {
@@ -654,32 +648,32 @@ func main() {
 }
 ```
 
-Lihatlah betapa mudahnya saya mengubah-ubah kebutuhan bisnis sumber data diatas. Hanya dengan consumer dan kontrak yang sama, cukup
-ubah providernya saja, beres.
+Look how easily I can change the data source business needs above. With the same consumer and contract, all I have to do is
+change the provider, and I'm done.
 
 ## Let's talk About The Result object
 
-Kalau saya perhatikan, dari tadi saya mereturn object tunggal `User` sebagai contoh. Object ini sebenarnya berisi data-data user seperti
-`id`, `username`, `email`, `password`, dll. Kurang lebih seperti ini:
+If you look, I've been returning a single `User` object as an example. This object actually contains user data like id,
+username, email, password, etc. It's more or less like this:
 
 ``` go
 type User struct {
-    ID int64
-    Username string
-    Email string
-    Name string
-    Password string
-    CreatedAt time.Time
-    UpdatedAt time.Time
+	ID        int64
+	Username  string
+	Email     string
+	Name      string
+	Password  string
+	CreatedAt time.Time
+	UpdatedAt time.Time
 }
 ```
 
-Karna di kontrak kita mereturn object `User` ini, artinya consumer akan selalu berekspektasi bahwa field-field tersebut available dan nilainya bisa dipakai
-sesuai dengan tipe data yang diassignkan di objectnya. Sebelumnya saya selalu memakai contoh sumber data dari database, yang mana sebenarnya ada korelasinya.
-Field-field dari object `User` diatas adalah representasi kolom-kolom dari table `users`. Artinya kalau kita mengambil data dari database, kita bisa langsung isi
-value field nya berdasarkan kolom dari table `users`.
+Since our contract returns this `User` object, the consumer will always expect these fields to be available and their values
+to be usable according to the data types assigned in the object. Previously, I always used a database as the data source,
+which actually has a correlation. The fields from the `User` object above are a representation of the columns from the `users`
+table. This means if we get data from the database, we can directly fill the field values based on the columns from the `users` table.
 
-Sekarang, anggap saya punya sebuah use case consumer untuk get data product, kurang lebih seperti ini:
+Now, imagine I have a consumer use case to get product data, which looks more or less like this
 
 ``` go hl_lines="20 21 22 23 24"
 func FindProduct(productRepoInserterImpl ProductRepositoryFinder, userRepoFinderImpl UserRepositoryFinder) (*ProductDTO1, error) {
@@ -710,15 +704,16 @@ func FindProduct(productRepoInserterImpl ProductRepositoryFinder, userRepoFinder
 }
 ```
 
-Kita bisa lihat, untuk use case product diatas, saya hanya butuh field `ID` dan `Name` dari object `User`. Tapi sebenarnya, menurut kontrak `UserRepositoryFinder`
-yang dikembalikan adalah object tunggal `User`, yang artinya seluruh field juga dikembalikan. Tapi karna saya hanya butuh beberapa field saja dari object `User`,
-saya bisa improve supaya kontraknya mengembalikan object `User` dengan field `ID` dan `Name` saja.
+You can see that for the product use case above, I only need the `ID` and `Name` fields from the `User` object. But in reality,
+according to the `UserRepositoryFinder` contract, the single `User` object is returned, which means all fields are returned too.
+But because I only need a few fields from the `User` object, I can improve it so the contract only returns a `User` object with
+just the `ID` and `Name` fields.
 
 ## Specialized ISP
 
-Saya masih akan pakai pattern ini, karena menurut pengertian ISP diatas bahwa "bahwa klien (dalam konteks ini adalah producer dan consumer) tidak
-boleh dipaksa untuk bergantung pada fungsi-fungsi yang tidak mereka gunakan", ini juga berlaku untuk Object fields. Jadi, untuk use case product, saya tidak akan
-pakai kontrak `UserRepositoryFinder`, tapi saya akan pakai kontrak baru seperti berikut:
+I'm still going to use this pattern, because according to the ISP definition above that "clients should not be forced to depend on
+functions they do not use" this also applies to object fields. So, for the product use case, I won't use the `UserRepositoryFinder`
+contract; instead, I'll use a new contract like this:
 
 ``` go
 type UserRepositoryFinderForProduct interface {
@@ -726,48 +721,47 @@ type UserRepositoryFinderForProduct interface {
 }
 
 type UserForProduct struct {
-    ID int64
-    Name string
+	ID   int64
+	Name string
 }
 ```
 
-kontrak `UserRepositoryFinderForProduct` inilah yang nantinya akan diinject di use case product diatas. Dan kontrak ini ditujukan hanya untuk
-use case product, tidak untuk use case yang lain. Jika use case yang lain punya kebutuhan khusus terhadap data object User, maka caranya
-pun sama, yaitu bikin kontrak baru untuk use case tersebut. Dengan begini, saya lebih complete lagi dalam mengimplementasikan design pattern ISP, karena sekarang
-kaidah-kaidahnya sudah sesuai dari sisi fungsi dan object field.
+This `UserRepositoryFinderForProduct` contract will be injected into the product use case. And this contract is specifically for
+the product use case, not for others. If another use case has specific needs for the `User` object data, the method is the same:
+create a new contract for that use case. By using this way, I'm implementing the ISP design pattern more completely, because now the rules
+are followed for both functions and object fields.
 
-Ketika suatu saat user use case dimigrasi menjadi service http terpisah, use case product pun masih akan tetap aman. Dan saya tidak harus
-membuat user service mengembalikan semua field tunggal object `User`. karna kalau via http, harusnya field-field sensitive seperti `password`
-tidak boleh ikut di kembalikan sebagai response.
+If the user use case ever gets migrated to a separate HTTP service, the product use case will still be safe. And I don't have to make
+the user service return all the fields of the single `User` object, because via HTTP, sensitive fields like `password` shouldn't be
+returned in the response.
 
-Saya sebut bagian ini dengan Specialized ISP.
+I'm calling this part Specialized ISP.
 
 ## Data Transfer Object (DTO)
 
-Ini masih berhubungan dengan yang diatas. Sebelumnya kan saya memisahkan object result antara user use case dan product use case. Dimana
-untuk user use case resultnya pakai `User`, sednagkan untuk product result nya pakai `UserForProduct`. Ini adalah salah satu contoh dari DTO. Sebab
-pengertiannya sendiri adalah objek yang digunakan untuk memindahkan data antar layer aplikasi dan memastikan hanya data relevan saja yang dikirimkan,
-serta menjaga agar data sensitive tidak terekspose ke layer yang tidak memerlukannya.
+This is still related to what's above. Previously, I separated the result objects between the user use case and the product use case.
+The result for the user use case was `User`, while for the product use case it was `UserForProduct`. This is one example of a DTO.
+The definition itself is an object used to move data between application layers and to ensure only relevant data is sent, as well
+as to keep sensitive data from being exposed to layers that don't need it.
 
-Pada use case diatas, terlihat bahwa saya tidak mengebalikan object product sebagai result, tapi saya mengembalikan object `ProductDTO1`. Kenapa?
-karna bisa saja object product ini mengandung banyak field-field yang sebenarnya tidak diperlukan oleh client, jadi harusnya tidak perlu dikembalikan
-semuanya. Oleh karena itu, saya menerapkan konsep DTO ini dengan membuat sebuah object DTO yang berisi field-field apa saja yang memang dibutuhkan oleh client.
-Secara size response ke client pun juga menjadi lebih kecil.
+In the use case above, you can see that I'm not returning a product object as the result, but I'm returning a `ProductDTO1` object.
+Why? Because the product object might contain many fields that the client doesn't need, so they shouldn't all be returned. So, I'm applying
+the DTO concept by creating a DTO object that only has the fields the client needs. The response size to the client also becomes smaller.
 
-## Adapter Pattern Will Be Helpful
+## The Adapter Pattern Will Be Helpful
 
-Dalam kasus perubahan kebutuhan sumber data: dari postgres -> mongo, postgres -> elastic, mongo -> http service, ini
-sebenarnya yang berubah hanyalah cara query dan parsing resultnya saja. Misal postgres biasa pakai RAW Query sedangkan mongo, elastic dan http service
-biasa pakai object. Result juga biasanya tergantung driver/client/sdk, ada yang pakai scanner ada juga yang parsing struct atau object.
-Memang sih flow masing-masing client tersebut beda-beda caranya. Tapi dengan design pattern Specialized ISP diatas hal ini bukan menjadi suatu masalah,
-karna perbedaan flow tersebut diimplemntasinya di masing-masing provider. Tapi mungkin pattern ini bisa membantu dalam beberapa kasus.
+In cases of changing data source needs (from Postgres -> MongoDB, Postgres -> Elasticsearch, MongoDB -> HTTP service), what's actually changing is
+just the way we query and parse the results. For example, Postgres usually uses RAW Queries, while MongoDB, Elasticsearch, and HTTP services
+usually use objects. The result also usually depends on the driver/client/SDK; some use scanners, and some parse structs or objects.
+The flow for each of these clients is different. But with the Specialized ISP design pattern above, this isn't a problem, because the
+different flows are implemented in each provider. But this Adapter Pattern might help in some cases.
 
 ### First Case Example
 
-Database nya sama pakai postgres, tapi client nya beda, yang satu pakai `pgxpool` yang satu pakai `sqlx`:
+The database is still Postgres, but the clients are different: one uses `pgxpool` and the other uses `sqlx`:
 
 ``` go hl_lines="14 15 16 17 38 39 40"
-// provider postgres pakai pgxpool
+// Postgres provider using pgxpool
 
 type userRepositoryFinderPGXPool struct {
     db interface{}
@@ -780,9 +774,9 @@ func (u *userRepositoryFinderPGXPool) FindOne(queryFilter UserQueryFilter) (*Use
     
     var user User
     
-    // context disini hanya contoh saja, idiomatic di Golang ini ditaruh sebagai first argument: `ctx context.Context`
+    // context here is just an example, in idiomatic Go it's placed as the first argument: `ctx context.Context`
 	if err := u.db.QueryRow(context.Background(), `SELECT name, created_at, updated_at FROM users WHERE id = $1`, queryFilter.ID).Scan(&user.Name, &user.CreatedAt, &user.UpdatedAt); err != nil {
-	    return nil, err
+		return nil, err
 	}
 	
 	user.SetFormattedCreatedAt()
@@ -791,7 +785,7 @@ func (u *userRepositoryFinderPGXPool) FindOne(queryFilter UserQueryFilter) (*Use
 	return &user, nil
 }
 
-// provider postgres pakai sqlx
+// Postgres provider using sqlx
 
 type userRepositoryFinderSQLX struct {
     db interface{}
@@ -815,13 +809,14 @@ func (u *userRepositoryFinderSQLX) FindOne(queryFilter UserQueryFilter) (*User, 
 }
 ```
 
-Dari kode diatas bisa dilihat bahwa secara flow yang berbeda hanya yang di highlight saja, selain itu flownya sama antara keduanya.
-Bukankah akan lebih baik jika tidak perlu menulis ulang flow yang sama tersebut?
+From the code above, you can see that the only parts of the flow that are different are the highlighted ones; the rest of
+the flow is the same. Wouldn't it be better if we didn't have to rewrite the same flow?
 
 ### Second Case example
 
-misal saya punya fungsi untuk create order. Didalam proses create order tersebut, ada proses insert data order dan update stock product.
-Kemudian, anggap saja saya butuh untuk menggunakan Transaction supaya data ordernya valid, kurang lebih seperti ini providernya:
+Let's say I have a function to create an order. In the process of creating the order, there's a process to insert order data
+and update product stock. Now, let's say I need to use a Transaction to make sure the order data is valid. The provider
+would look something like this:
 
 ``` go
 type orderRepositoryInserterPGXPool struct {
@@ -845,9 +840,9 @@ func (p *productRepositoryUpdaterPGXPool) UpdateTx(tx pgx.Tx, product *Product) 
 }
 ```
 
-lalu di sisi consumer:
+and on the consumer side:
 
-> Anggap saja kontraknya adalah `OrderRepositoryInserter` dan `ProductRepositoryUpdater`
+> Let's assume the contracts are `OrderRepositoryInserter` and `ProductRepositoryUpdater`.
 
 ``` go
 func CreateOrder(orderRepoImplInserter OrderRepositoryInserter, productRepoImplUpdater OrderRepositoryUpdater) error {
@@ -878,18 +873,19 @@ func CreateOrder(orderRepoImplInserter OrderRepositoryInserter, productRepoImplU
 }
 ```
 
-Nah, ini baru masalah serius, karna disitu saya memakai object/interface transaction `pgx.Tx` dari client `pgxpool` secara langsung dan menginject objectnya sebagai depedency ke argument
-fungsi `InsertTx` dan `UpdateTx`. Serta di dalam consumernya sendiri saya memanggil `tx.Rollback()` dan `tx.Commit()`, yang mana method ini berasal dari object
-`pgx.Tx` tadi. Itu artinya, saya telah membuat baik kontrak, provider maupun consumer nya punya ketergantungan dengan object external `pgxpool` dan `pgx.Tx`.
-Secara otomatis ini akan menggugurkan konsep design pattern yang sudah dibuat diatas, karna design pattern nya itu tidak boleh punya ketergantungan apapun dengan object external.
-Kalau saya mau ubah dari `pgxpool` ke `sqlx`, maka saya sudah pasti harus merubah kontrak, provider dan consumer, mengganti object transaksi dari `pgxpool` ke `sqlx`.
-Harusnya tidak boleh seperti itu.
+Now, this is a serious problem, because I'm using the `pgx.Tx` transaction object/interface from the `pgxpool` client directly and
+injecting its object as a dependency to the `InsertTx` and `UpdateTx` function arguments. And inside the consumer itself, I'm calling
+`tx.Rollback()` and `tx.Commit()`, which are methods from the `pgx.Tx` object. This means I've made the contract, provider, and consumer
+all dependent on the external `pgxpool` and `pgx.Tx` objects. This automatically invalidates the design pattern concepts we've built above,
+because the pattern shouldn't have any dependencies on external objects. If I want to switch from `pgxpool` to `sqlx`, I'll definitely
+have to change the contract, provider, and consumer, and replace the transaction object from `pgxpool` with `sqlx`. It shouldn't be
+like that.
 
 ### Now we get the usage of this pattern
 
-Nah, disinilah peran Adapter Pattern dibutuhkan, karena tujuan pattern ini adalah untuk mengubah sebuah object/interface menjadi kontrak interface standart baru yang diharapkan oleh klien.
-Artinya, kita mengubah object/interface `pgxpool` dan `sqlx` menjadi sebuah interface yang kita buat sendiri sebagai standart. Contoh, proses sumber data selalu punya operasi read dan write.
-Kita bisa bikin kontrak standart untuk itu:
+This is where the Adapter Pattern comes in handy, because its purpose is to transform an object/interface into a new standard interface
+contract that the client expects. This means we're turning the `pgxpool` and `sqlx` objects/interfaces into a standard interface that we
+create ourselves. For example, a data source process always has read and write operations. We can create a standard contract for that:
 
 ``` go
 type SourceAdapter interface {
@@ -921,7 +917,7 @@ type SourceResult interface {
 }
 ```
 
-Nanti, di sisi provider, argument yang diinject adalah kontrak dari adapter ini, contoh:
+Then, on the provider side, the argument being injected is this adapter's contract, for example:
 
 ``` go
 type orderRepositoryInserterPGXPool struct {
@@ -937,9 +933,9 @@ func (u *orderRepositoryInserterPGXPool) InsertTx(tx SourceAdapterTx, order *Ord
 }
 ```
 
-Dengan begini, masalah ketergantungan terselesaikan. Jika saya ubah dari `pgxpool` ke `sqlx`, saya hanya perlu membuat para client tersebut
-mengimplementasi kontrak `SourceAdapter`, maka consumer diatas tidak akan error dan tidak ada yang perlu diubah. Metodenya sama persis dengan
-design pattern yang awal-awal diatas, cuman bedanya disini kita pakai istilah Adapter Pattern. Contoh:
+With this, the dependency problem is solved. If I switch from `pgxpool` to `sqlx`, all I need to do is make those clients implement
+the `SourceAdapter` contract, and the consumer above won't break and nothing needs to be changed. The method is exactly the same
+as the initial design pattern, just with a different name: Adapter Pattern. Example:
 
 ``` go
 type pgxPoolAdapter struct {
@@ -947,28 +943,28 @@ type pgxPoolAdapter struct {
 }
 
 func (p *pgxPoolAdapter) BeginTx() (SourceAdapterTx, error) {
-    // Contoh supaya pgxpool mereturn `(SourceAdapterTx, error)` sesuai kontrak
+    // Example so pgxpool returns `(SourceAdapterTx, error)` according to the contract
     
 	tx, err := u.db.BeginTx(context.Background(), pgx.TxOptions{})
 	if err != nil {
-	    return nil, err
+		return nil, err
 	}
 	
 	return &pgxPoolAdapterTx{ tx: tx }, nil
 }
 
 func (p *pgxPoolAdapter) QueryOne(query interface{}, args ...interface{}) (SourceRow, error) {
-    // implement supaya pgxpool mengolah argument `query interface{}, args ...interface{}` dan mereturn `(SourceRow, error)` sesuai kontrak
+    // implement so pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceRow, error)` according to the contract
 	...
 }
 
 func (p *pgxPoolAdapter) QueryAll(query interface{}, args ...interface{}) (SourceRows, error) (SourceAdapterRows, SourceAdapterErr) {
-    // implement supaya pgxpool mengolah argument `query interface{}, args ...interface{}` dan mereturn `(SourceAdapterRows, error)` sesuai kontrak
+    // implement so pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceAdapterRows, error)` according to the contract
 	...
 }
 
 func (p *pgxPoolAdapter) Exec(query interface{}, args ...interface{}) (SourceResult, error) {
-    // implement supaya pgxpool mengolah argument `query interface{}, args ...interface{}` dan mereturn `(SourceResult, error)` sesuai kontrak
+    // implement so pgxpool processes the `query interface{}, args ...interface{}` argument and returns `(SourceResult, error)` according to the contract
 	...
 }
 
@@ -979,26 +975,26 @@ func NewPGXPoolAdapter(db *pgxpool.Pool) SourceAdapter {
 }
 ```
 
-### There is also drawbacks for this
+### There are also drawbacks for this
 
-Kekurangannya, kita jadi harus coding untuk implementasi merubah object external tersebut agar mengikuti kontrak Adapter Pattern yang kita buat.
-Ini biasanya butuh extra effort. Karena kan flownya beda-beda setiap client jadi penyesuaiannya juga beda-beda, agak tricky. Kadang kita juga 
-harus memikirkan gimana membuat sebuah Adapter Pattern yang kompatible untuk semua sdk/client.
+The downside is that we have to code the implementation to transform these external objects to follow the Adapter Pattern contract
+we've made. This usually takes extra effort, because each client's flow is different, so the adjustments are also different and a
+bit tricky. Sometimes we also have to think about how to create a single Adapter Pattern that's compatible with all SDKs/clients.
 
-Saya bisa bilang pattern ini opsional saja. Tapi begitu kita sudah buat implementasi provider adapternya maka selanjutnya akan lebih mudah.
-karna akan jadi banyak hal yang bisa terstandarisasi kedepannya, sehingga akan memudahkan migrasi dan mengadopsi peruibahan-perubahan dengan
-mudah tanpa harus merubah proses bisnis. Issue pada contoh kasus pertama diatas juga bisa diselesaikan dengan Adapter Pattern.
+I'd say this pattern is optional. But once we've implemented the provider adapter, it will be easier later on. Many things can be
+standardized in the future, which will make migrations and adapting to changes easy without having to change the business process.
+The issue in the first case example above can also be solved with the Adapter Pattern.
 
 ## The Final Take, For The Current Moment
 
-Akhirnya, untuk saat ini, design pattern interface terbaik yang saya pakai untuk memenuhi ekspektasi dan kebutuhan saya diatas adalah
-Dependency Injection + Specialized ISP + DTO. Saya merasa pattern ini sudah cukup balance antara complexity dan simplicity, cukup
-fleksibel dan pastinya masih sangat humanable untuk dibaca. Untuk Adapter Pattern ini opsional, tapi karna saya berencana untuk
-membuat reusable adapter dalam berbagai driver database, jadi saya akan pakai pattern ini kedepannya, toh juga tidak akan mengganggu
-design pattern utama.
+Finally, for now, the best interface design pattern that I use to meet my expectations and needs above is Dependency Injection + Specialized ISP + DTO.
+I feel like this pattern is a good balance between complexity and simplicity, is flexible enough, and is definitely still very human-readable.
+The Adapter Pattern is optional, but since I plan to create reusable adapters for various database drivers, I'll be using this pattern in the future,
+and it won't interfere with the main design pattern.
 
-Jadi, final design pattern yang saya ambil adalah Dependency Injection + Specialized ISP + Adapter Pattern + DTO. Sekian terima kasih,
-semoga bisa membantu.
+So, the final design pattern I'm choosing is Dependency Injection + Specialized ISP + Adapter Pattern + DTO. That's all, thank you, I hope this helps.
 
-Untuk todo example di Uwais, saya masih akan pakai basic Repository pattern karna buat contoh project generator tidak perlu
-design pattern yang kompleks. Nanti biar developernya yang mengganti sesuai selera.
+!!! note
+
+    For the Uwais todo example, I'll still be using the basic Repository pattern because a complex design pattern isn't necessary for a project generator
+    example. The developers can change it later to their liking.
