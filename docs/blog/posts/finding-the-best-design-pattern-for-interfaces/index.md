@@ -79,23 +79,28 @@ type userRepositoryPostgres struct {
 }
 
 func (u *userRepositoryPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {
-	// disini kita query SELECT ke postgres
+	// disini saya query SELECT ke postgres
+	...
 }
 
 func (u *userRepositoryPostgres) FindAll(queryFilter UserQueryFilter) (Users, error) {
-	// disini kita query SELECT ke postgres
+	// disini saya query SELECT ke postgres
+	...
 }
 
 func (u *userRepositoryPostgres) Insert(data *User) error {
-	// disini kita query INSERT ke postgres
+	// disini saya query INSERT ke postgres
+	...
 }
 
 func (u *userRepositoryPostgres) Update(data *User) error {
-	// disini kita query UPDATE ke postgres
+	// disini saya query UPDATE ke postgres
+	...
 }
 
 func (u *userRepositoryPostgres) Delete(data *User) error {
-	// disini kita query DELETE ke postgres
+	// disini saya query DELETE ke postgres
+	...
 }
 ```
 
@@ -169,10 +174,12 @@ func UpdateUser(userRepoImpl UserRepository) error {
 ``` go
 func UpdateUser() error {
     userRepoImpl := userRepositoryPostgres{}
+    
+    ...
 }
 ```
 
-Karna jika saya langsung memanggil object produser kedalam consumer seperti diatas, itu artinya saya membuat proses bisnis
+Jika saya langsung memanggil object produser kedalam consumer seperti diatas, itu artinya saya membuat proses bisnis
 consumer menjadi ketergantungan terhadap produser. Jika suatu saat saya mau mengganti produser dari postgres ke mongodb, atau
 misal ada perubahan kodingan disisi produser, maka saya juga harus merubah kodingan di sisi consumer, kalau tidak maka consumer
 akan error. Produser disini seolah-olah diberi kebebasan karna sama sekali tidak terikat dengan kontrak. Itu artinya kontrak
@@ -199,47 +206,53 @@ Secara penggunaan antara pakai Dependency Injection dan tidak juga sangat berbed
 consumernya seperti ini:
 
 ``` go
-if err : UpdateUser(); err ! nil {
-    panic(err)
+func main() {
+    if err : UpdateUser(); err ! nil {
+        panic(err)
+    }
 }
 ```
 
 sedangkan kalau pakai Dependency Injection seperti ini:
 
 ``` go
-userRepoImpl := userRepositoryPostgres{}
-
-if err := UpdateUser(userRepoImpl); err != nil {
-    panic(err)
+func main() {
+    userRepoImpl := userRepositoryPostgres{}
+    
+    if err := UpdateUser(userRepoImpl); err != nil {
+        panic(err)
+    }
 }
 ```
 
 kalau saya mau pakai beberapa database sekaligus, saya tinggal buat seperti ini:
 
 ``` go
-userRepoImplPostgres := userRepositoryPostgres{}
-userRepoImplMySQL := userRepositoryMySQL{}
-userRepoImplMongo := userRepositoryMongo{}
-userRepoImplElastic := userRepositoryElastic{}
-
-// Update user ke database postgres
-if err := UpdateUser(userRepoImplPostgres); err != nil {
-    panic(err)
-}
-
-// Update user ke database MySQL
-if err := UpdateUser(userRepoImplMySQL); err != nil {
-    panic(err)
-}
-
-// Update user ke database Mongo
-if err := UpdateUser(userRepoImplMongo); err != nil {
-    panic(err)
-}
-
-// Update user ke Elasticsearch
-if err := UpdateUser(userRepoImplElastic); err != nil {
-    panic(err)
+func main() {
+    userRepoImplPostgres := userRepositoryPostgres{}
+    userRepoImplMySQL := userRepositoryMySQL{}
+    userRepoImplMongo := userRepositoryMongo{}
+    userRepoImplElastic := userRepositoryElastic{}
+    
+    // Update user ke database postgres
+    if err := UpdateUser(userRepoImplPostgres); err != nil {
+        panic(err)
+    }
+    
+    // Update user ke database MySQL
+    if err := UpdateUser(userRepoImplMySQL); err != nil {
+        panic(err)
+    }
+    
+    // Update user ke database Mongo
+    if err := UpdateUser(userRepoImplMongo); err != nil {
+        panic(err)
+    }
+    
+    // Update user ke Elasticsearch
+    if err := UpdateUser(userRepoImplElastic); err != nil {
+        panic(err)
+    }
 }
 ```
 
@@ -268,29 +281,63 @@ dan insert user ke mongo. Ini contoh saja jangan pikirkan make sense atau tidakn
 harus membuat 3 produser kan? produser untuk postgres, elastic dan mongo:
 
 ``` go
-type userRepositoryPostgres struct {}
+type userRepositoryPostgres struct {
+    db interface{} // saya mock jadi interface saja
+}
  
-func (u *userRepositoryPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {}
+func (u *userRepositoryPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {
+    // disini saya query SELECT ke postgres
+	...
+}
  
-func (u *userRepositoryPostgres) FindAll(queryFilter UserQueryFilter) (Users, error) {}
+func (u *userRepositoryPostgres) FindAll(queryFilter UserQueryFilter) (Users, error) {
+    // disini saya query SELECT ke postgres
+	...
+}
 
-func (u *userRepositoryPostgres) Insert(data *User) error {}
+func (u *userRepositoryPostgres) Insert(data *User) error {
+    // disini saya query INSERT ke postgres
+	...
+}
  
-func (u *userRepositoryPostgres) Update(data *User) error {}
+func (u *userRepositoryPostgres) Update(data *User) error {
+    // disini saya query UPDATE ke postgres
+	...
+}
   
-func (u *userRepositoryPostgres) Delete(data *User) error {}
+func (u *userRepositoryPostgres) Delete(data *User) error {
+    // disini saya query DELETE ke postgres
+	...
+}
 
-type userRepositoryElastic struct {}
+type userRepositoryElastic struct {
+    db interface{}
+}
 
-func (u *userRepositoryElastic) FindOne(queryFilter UserQueryFilter) (*User, error) {}
+func (u *userRepositoryElastic) FindOne(queryFilter UserQueryFilter) (*User, error) {
+    // disini saya get data dari elastic
+	...
+}
 
-func (u *userRepositoryElastic) FindAll(queryFilter UserQueryFilter) (Users, error) {}
+func (u *userRepositoryElastic) FindAll(queryFilter UserQueryFilter) (Users, error) {
+    // disini saya get all data dari elastic
+	...
+}
 
-func (u *userRepositoryElastic) Insert(data *User) error {}
+func (u *userRepositoryElastic) Insert(data *User) error {
+    // disini saya insert data ke elastic
+	...
+}
 
-func (u *userRepositoryElastic) Update(data *User) error {}
+func (u *userRepositoryElastic) Update(data *User) error {
+    // disini saya update data ke elastic
+	...
+}
 
-func (u *userRepositoryElastic) Delete(data *User) error {}
+func (u *userRepositoryElastic) Delete(data *User) error {
+    // disini saya delete data ke elastic
+	...
+}
 
 type userRepositoryMongo struct {}
 
@@ -490,7 +537,7 @@ if err != nil {
 
 fmt.Println(users)
 
-// Update dan delete ke postgres
+// Update dan delete ke postgres, tapi check user exists dari elastic
 
 if err = UpdateUser(userRepoFinderImplElastic, userRepoUpdaterImplPostgres); err != nil {
     panic(err)
@@ -502,7 +549,7 @@ if err = DeleteUser(userRepoFinderImplElastic, userRepoDeleterImplPostgres); err
 
 // CRUD ke postgres seperti normal flow diawal
 
-user, err = FindAllUser(userRepoFinderImplPostgres)
+users, err = FindAllUser(userRepoFinderImplPostgres)
 if err != nil {
     panic(err)
 }
