@@ -667,10 +667,11 @@ Dalam kasus perubahan kebutuhan sumber data: dari postgres -> mongo, postgres ->
 sebenarnya yang berubah hanyalah cara query dan parsing resultnya saja. Misal postgres biasa pakai RAW Query sedangkan mongo, elastic dan http service
 biasa pakai object. Result juga biasanya tergantung driver/client/sdk, ada yang pakai scanner ada juga yang parsing struct atau object.
 Memang sih flow masing-masing client tersebut beda-beda caranya. Tapi dengan design pattern Specialized ISP diatas hal ini bukan menjadi suatu masalah,
-karna perbedaan flow tersebut diimplemntasinya di masing-masing provider.
+karna perbedaan flow tersebut diimplemntasinya di masing-masing provider. Tapi mungkin pattern ini bisa membantu dalam beberapa kasus.
 
-Tapi mungkin pattern ini bisa membantu dalam beberapa kasus. Sebagai contoh, database nya sama pakai postgres, tapi client nya beda,
-yang satu pakai `pgxpool` yang satu pakai `sqlx`:
+### First Case Example
+
+Database nya sama pakai postgres, tapi client nya beda, yang satu pakai `pgxpool` yang satu pakai `sqlx`:
 
 ``` go hl_lines="14 15 16 17 38 39 40"
 // provider postgres pakai pgxpool
@@ -724,7 +725,9 @@ func (u *userRepositoryFinderSQLX) FindOne(queryFilter UserQueryFilter) (*User, 
 Dari kode diatas bisa dilihat bahwa secara flow yang berbeda hanya yang di highlight saja, selain itu flownya sama antara keduanya.
 Bukankah akan lebih baik jika tidak perlu menulis ulang flow yang sama tersebut?
 
-Contoh lain, misal saya punya fungsi untuk create order. Didalam proses create order tersebut, ada proses insert data order dan update stock product.
+### Second Case example
+
+misal saya punya fungsi untuk create order. Didalam proses create order tersebut, ada proses insert data order dan update stock product.
 Kemudian, anggap saja saya butuh untuk menggunakan Transaction supaya data ordernya valid, kurang lebih seperti ini providernya:
 
 ``` go
@@ -782,7 +785,7 @@ func CreateOrder(orderRepoImplInserter OrderRepositoryInserter, productRepoImplU
 }
 ```
 
-Nah, ini baru masalah, karna disitu saya memakai object/interface transaction `pgx.Tx` dari client `pgxpool` secara langsung dan menginject objectnya sebagai depedency ke argument
+Nah, ini baru masalah serius, karna disitu saya memakai object/interface transaction `pgx.Tx` dari client `pgxpool` secara langsung dan menginject objectnya sebagai depedency ke argument
 fungsi `InsertTx` dan `UpdateTx`. Serta di dalam consumernya sendiri saya memanggil `tx.Rollback()` dan `tx.Commit()`, yang mana method ini berasal dari object
 `pgx.Tx` tadi. Itu artinya, saya telah membuat baik kontrak, provider maupun consumer nya punya ketergantungan dengan object external `pgxpool` dan `pgx.Tx`.
 Secara otomatis ini akan menggugurkan konsep design pattern yang sudah dibuat diatas, karna design pattern nya itu tidak boleh punya ketergantungan apapun dengan object external.
@@ -891,7 +894,7 @@ harus memikirkan gimana membuat sebuah Adapter Pattern yang kompatible untuk sem
 
 Saya bisa bilang pattern ini opsional saja. Tapi begitu kita sudah buat implementasi provider adapternya maka selanjutnya akan lebih mudah.
 karna akan jadi banyak hal yang bisa terstandarisasi kedepannya, sehingga akan memudahkan migrasi dan mengadopsi peruibahan-perubahan dengan
-mudah tanpa harus merubah proses bisnis.
+mudah tanpa harus merubah proses bisnis. Issue pada contoh kasus pertama diatas juga bisa diselesaikan dengan Adapter Pattern.
 
 ## The Final Take, For The Current Moment
 
