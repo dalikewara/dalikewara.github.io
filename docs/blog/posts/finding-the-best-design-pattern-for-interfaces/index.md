@@ -17,14 +17,14 @@ tags:
 
 # Finding The Best Design Pattern for Interfaces
 
-Design patterns are a super useful concept in programming. They keep your code consistent and structured, which makes your
+Design pattern is a super useful concept in programming. They keep your code consistent and structured, which makes your
 life way easier. Personally, I'm a huge fan and think they should be a must for every project. It's not that I'm a pattern
 guru; it's just about having a consistent way of doing things.
 
 After all, everyone implements these patterns differently. Whether you're an expert in ISP (Interface Segregation Principle),
 CQRS (Command Query Responsibility Segregation), or something else, each person will have their own implementation style. Some
-stick strictly to one pattern, some mix a few, and some just wing it. It's all good, as long as you create a standard to follow.
-Just document how your pattern works, and you're golden.
+stick strictly to one pattern, some mix a few, and some just wing it. It's all good, as long as you create a standard to follow,
+and just document how your pattern works later.
 
 !!! warning
 
@@ -33,14 +33,14 @@ Just document how your pattern works, and you're golden.
 <!-- more -->
 
 I'm always on the hunt for the best pattern for my projects. I once got stuck following someone else's pattern during a
-collaboration—and it was a total nightmare to follow. I didn't hate their implementation, just how complicated it was—especially
+collaboration—and it was a total nightmare to follow. I didn't hate their implementation, I just hate how complicated it was—especially
 with no documentation 😭.
 
 My journey to find the best interface design pattern started with a pretty simple concept...
 
 !!! info
 
-    From here on out, I'll be using Go for my examples. No special reason, I just like Go because it's simple. But keep in mind,
+    From here, I'll be using Go for my examples. No special reason, I just like Go because it's simple. But keep in mind,
     I'm using a more universal approach here so it's easier to understand, so I might be skipping some of Go's specific idioms.
 
 ## 🏃‍♂️ Getting Started: The Repository Pattern
@@ -48,9 +48,9 @@ My journey to find the best interface design pattern started with a pretty simpl
 ==The goal of this pattern is to provide an abstraction or a contract to separate the domain (provider) from the core business
 logic (consumer)==. This pattern is mostly used to abstract technical details of data sources (repositories) like databases,
 but you can also use it for other layers like use cases, services, or even a statement builder. The main point is to reflect
-a business need.
+a business requirement.
 
-Simply put, you have a provider, a consumer, and a contract. The consumer is the executor that calls the functions provided
+Basically, you have a provider, a consumer, and a contract. The consumer is the executor that calls the functions provided
 by the provider. The provider is the implementer that provides the functions the consumer can call. The contract is the agreement
 between the provider and consumer that binds them together. The provider has to provide its functions according to the contract,
 because the consumer will run its business process based on that contract. The Repository pattern is the design of that contract.
@@ -75,7 +75,7 @@ Next, I'll use Postgres as the database, so the provider will look like this:
 
 ``` go
 type userRepositoryPostgres struct {
-	db *pgxpool.Pool // Example if the driver is pgxpool
+	db *pgxpool.Pool // Example if the driver or client is pgxpool
 }
 
 func (u *userRepositoryPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {
@@ -127,7 +127,7 @@ func UpdateUser() error {
     userRepoImpl := &userRepositoryPostgres{}
     
     // Check user exists
-    user, err := userRepoImpl.FindOne({ id: 1})
+    user, err := userRepoImpl.FindOne(UserQueryFilter{ ID: 1 })
     if err != nil {
         return err
     }
@@ -151,7 +151,7 @@ I can change it to use dependency injection like this:
 ``` go
 func UpdateUser(userRepoImpl UserRepository) error {
     // Check user exists
-    user, err := userRepoImpl.FindOne({ id: 1})
+    user, err := userRepoImpl.FindOne(UserQueryFilter{ ID: 1 })
     if err != nil {
         return err
     }
@@ -168,11 +168,11 @@ func UpdateUser(userRepoImpl UserRepository) error {
 }
 ```
 
-### Why though? 🤔
+### Why Though? 🤔
 
 ``` go
 func UpdateUser() error {
-    userRepoImpl := userRepositoryPostgres{}
+    userRepoImpl := &userRepositoryPostgres{}
     
     ...
 }
@@ -193,13 +193,13 @@ func UpdateUser(userRepoImpl UserRepository) error {
 
 In the code above, I'm passing `userRepoImpl` as an argument with the data type `UserRepository`, which is the contract. This is
 what's called Dependency Injection. I pass the provider object as an argument to the consumer's function, but I tie that object
-to the contract by making its data type or constructor `UserRepository`. So now, the consumer only knows the contract data type;
-it doesn't care about the provider object. No matter how I change or replace the provider code, as long as the provider object
+to the contract by making its data type or constructor `UserRepository`. So now, the consumer only knows about the contract data type;
+it doesn't care about the provider object. No matter how I change or replace the provider, as long as the provider object
 follows the contract, the consumer won't care and won't break because the data type and contract are guaranteed to be the same.
 Most programming languages can even help validate if the object matches the contract during the compiling or building process,
 so you don't have to worry about runtime errors.
 
-### Usage differential
+### Usage Differential
 
 The way you use it is also very different with and without dependency injection. Without dependency injection, I would use the
 consumer like this:
@@ -263,17 +263,17 @@ have to change the consumer's code and add logic to make it compatible with each
 
 I hope the example above is easy to understand 🙏.
 
-## Now I Have a Single Fat Repository Pattern
+## But Now I Have a Single Fat Repository Pattern
 
 Okay, is the pattern above enough? Unfortunately, I don't think so. I see that the pattern is still not flexible enough. The
 `UserRepository` contract might seem simple, but it's not. If you look closely, that one contract has a ton of methods with different
 operations. There are methods for getting data, for inserting, updating, and deleting. ==This is called a Single Fat Interface, which
 means an interface contract that's too "fat" because it has too many different operations or methods.==
 
-### So, what's the problem here? 🤔
+### So, What's The Problem Here? 🤔
 
 I have explained that a provider should always follow the contract, meaning it has to implement all the functions from that contract.
-This is where the problem lies. In many development cases, this pattern always causes issues. Business needs are always changing, sometimes
+This is where the problem lies. In many development cases, this pattern always causes issues. Business requirements are always changing, sometimes
 almost constantly. The classic reasons are to adapt to user needs, improve performance, and for security and cost efficiency. For example,
 let's say from the `UserRepository` contract, I need to move the "get user data" function to Elasticsearch, and the "insert user" function to MongoDB.
 This is just an example, so don't worry if it doesn't make sense.
@@ -284,7 +284,7 @@ So, what do I have to do? Of course, I have to create three providers, right? A 
 // Postgres provider
 
 type userRepositoryPostgres struct {
-    db interface{} // I'll mock it as an interface for now
+    db interface{} // I'll mock it as an interface from now
 }
 
 func (u *userRepositoryPostgres) FindOne(queryFilter UserQueryFilter) (*User, error) {
@@ -433,12 +433,12 @@ type UserRepositoryDeleter interface {
 }
 ```
 
-You can see the interface above is split into four kinds of contracts: Finder, Inserter, Updater, Deleter. Finder is the
+You can see that the `UserRepository` interface divided into four kinds of contracts: Finder, Inserter, Updater, Deleter. Finder is the
 contract for all operations related to getting user data. Inserter is for adding user data, Updater for changing user data,
 and Deleter for deleting user data. Since the operations are now separated, the provider implementation becomes more proper
 because it's more focused. And my needs above can now be implemented.
 
-### Let's implement the provider!
+### Let's Implement The Provider!
 
 There are still three providers, one for Elasticsearch, MongoDB, and Postgres. The difference now is how the contract is implemented:
 
@@ -519,7 +519,7 @@ func (u *userRepositoryDeleterPostgres) Delete(data *User) error {
 ### The Breakdown!
 
 You can see that in the Elasticsearch provider, I don't need to implement the "insert", "update", and "delete" functions because, based
-on the needs above, they aren't needed. The same goes for the MongoDB provider; I don't need to implement the "get data,"
+on the requirement above, they aren't needed. The same goes for the MongoDB provider; I don't need to implement the "get data,"
 "update," and "delete" functions.
 
 Now, all the operations are grouped and won't be dependent on each other. If I need to change a specific operation, only that
@@ -531,7 +531,7 @@ a new consumer to manage user data like this:
 
 ``` go
 func FindAllUser(userRepoFinderImpl UserRepositoryFinder) (Users, error) {      
-    return userRepoFinderImpl.FindAll({})
+    return userRepoFinderImpl.FindAll(UserQueryFilter{})
 }
 
 func InsertUser(userRepoInserterImpl UserRepositoryInserter) error {
@@ -549,7 +549,7 @@ func InsertUser(userRepoInserterImpl UserRepositoryInserter) error {
 
 func UpdateUser(userRepoFinderImpl UserRepositoryFinder, userRepoUpdaterImpl UserRepositoryUpdater) error {
     // Check user exists
-    user, err := userRepoFinderImpl.FindOne({ id: 1})
+    user, err := userRepoFinderImpl.FindOne(UserQueryFilter{ ID: 1 })
     if err != nil {
         return err
     }
@@ -567,7 +567,7 @@ func UpdateUser(userRepoFinderImpl UserRepositoryFinder, userRepoUpdaterImpl Use
 
 func DeleteUser(userRepoFinderImpl UserRepositoryFinder, userRepoDeleterImpl UserRepositoryDeleter) error {
     // Check user exists
-    user, err := userRepoFinderImpl.FindOne({ id: 1})
+    user, err := userRepoFinderImpl.FindOne(UserQueryFilter{ ID: 1 })
     if err != nil {
         return err
     }
@@ -586,8 +586,8 @@ func DeleteUser(userRepoFinderImpl UserRepositoryFinder, userRepoDeleterImpl Use
 
 > *The `UserRepository` contract isn't used anymore because it's no longer relevant.*
 
-Now, the consumer is super flexible; it no longer injects one big contract. All it injects are the specific operations that
-the consumer needs. I can also freely change the data source business needs (not just switching databases, but also if I switch a
+Now, the consumer is super flexible; it no longer injects one big contract. All the injections are the specific operations that
+the consumer needs. I can also freely change the data sources (not just switching databases, but also if I switch a
 driver from `pgxpool` to `sqlx` or even an ORM like `goqu`) without worrying about having to implement everything I don't need. Here's
 an example of using the consumer based on my needs above:
 
@@ -618,8 +618,6 @@ func main() {
     if err != nil {
         panic(err)
     }
-    
-    fmt.Println(users)
     
     // Update and delete to Postgres, but check if user exists from Elasticsearch
 
@@ -652,10 +650,10 @@ func main() {
 }
 ```
 
-Look how easily I can change the data source business needs above. With the same consumer and contract, all I have to do is
+Look how easily I can change the data sources above. With the same consumer and contract, all I have to do is
 change the provider, and I'm done 👏.
 
-## Let's talk About The Result object
+## Let's Talk About The Result Object
 
 If you notice, I've been returning a single `User` object as an example. This object actually contains user data like id,
 username, email, password, etc. It's more or less like this:
@@ -682,7 +680,7 @@ Now, imagine I have a consumer use case to get product data, which looks more or
 ``` go hl_lines="12 23 24"
 func FindProduct(productRepoInserterImpl ProductRepositoryFinder, userRepoFinderImpl UserRepositoryFinder) (*ProductDTO1, error) {
     // Get user data
-    user, err := userRepoFinderImpl.FindOne({ id: 1})
+    user, err := userRepoFinderImpl.FindOne(UserQueryFilter{ ID: 1 })
     if err != nil {
         return err
     }
@@ -691,7 +689,7 @@ func FindProduct(productRepoInserterImpl ProductRepositoryFinder, userRepoFinder
     }
     
     // Get product data
-    product, err := productRepoInserterImpl.FindOne({ id: 1, userID: user.ID })
+    product, err := productRepoInserterImpl.FindOne(ProductQueryFilter{ ID: 1, userID: user.ID })
     if err != nil {
         return err
     }
@@ -754,7 +752,7 @@ the DTO concept by creating a DTO object that only has the fields the client nee
 
 ## The Adapter Pattern Will Be Helpful 👀
 
-In cases of changing data source needs (from Postgres -> MongoDB, Postgres -> Elasticsearch, MongoDB -> HTTP service), what's actually changing is
+In cases of changing data sources (from Postgres -> MongoDB, Postgres -> Elasticsearch, MongoDB -> HTTP service, etc.), what's actually changing is
 just the way we query and parse the results. For example, Postgres usually uses RAW Queries, while MongoDB, Elasticsearch, and HTTP services
 usually use objects. The result also usually depends on the driver/client/SDK; some use scanners, and some parse structs or objects.
 The flow for each of these clients is different. But with the Specialized ISP design pattern above, this isn't a problem, because the
@@ -816,13 +814,15 @@ func (u *userRepositoryFinderSQLX) FindOne(queryFilter UserQueryFilter) (*User, 
 From the code above, you can see that the only parts of the flow that are different are the highlighted ones; the rest of
 the flow is the same. Wouldn't it be better if we didn't have to rewrite the same flow?
 
-### Second Case example
+### Second Case Example
 
 Let's say I have a function to create an order. In the process of creating the order, there's a process to insert order data
-and update product stock. Now, let's say I need to use a Transaction to make sure the order data is valid. The provider
-would look something like this:
+and update product stock. Now, let's say I need to use a Transaction to make sure the order data is valid and the product stock is updated.
+The provider would look something like this:
 
 ``` go
+// Order provider
+
 type orderRepositoryInserterPGXPool struct {
     db *pgxpool.Pool
 }
@@ -834,6 +834,8 @@ func (u *orderRepositoryInserterPGXPool) BeginTx() (pgx.Tx, error) {
 func (u *orderRepositoryInserterPGXPool) InsertTx(tx pgx.Tx, order *Order) error {
     ...
 }
+
+// Product provider
 
 type productRepositoryUpdaterPGXPool struct {
     db *pgxpool.Pool
@@ -878,18 +880,17 @@ func CreateOrder(orderRepoImplInserter OrderRepositoryInserter, productRepoImplU
 ```
 
 Now, this is a serious problem, because I'm using the `pgx.Tx` transaction object/interface from the `pgxpool` client directly and
-injecting its object as a dependency to the `InsertTx` and `UpdateTx` function arguments. And inside the consumer itself, I'm calling
-`tx.Rollback()` and `tx.Commit()`, which are methods from the `pgx.Tx` object. This means I've made the contract, provider, and consumer
-all dependent on the external `pgxpool` and `pgx.Tx` objects. This automatically invalidates the design pattern concepts we've built above,
-because the pattern shouldn't have any dependencies on external objects. If I want to switch from `pgxpool` to `sqlx`, I'll definitely
-have to change the contract, provider, and consumer, and replace the transaction object from `pgxpool` with `sqlx`. It shouldn't be
-like that.
+injecting it to the `InsertTx` and `UpdateTx` function arguments. And inside the consumer itself, I'm calling `tx.Rollback()` and `tx.Commit()`,
+which are methods from the `pgx.Tx` object. This means I've made the contract, provider, and consumer all dependent on the external `pgxpool`
+and `pgx.Tx` objects. This automatically invalidates the design pattern concepts we've built above, because the pattern shouldn't have
+any dependencies on external objects. If I want to switch from `pgxpool` to `sqlx`, I'll definitely have to change the contract, provider,
+and consumer, and replace the transaction object from `pgxpool` with `sqlx`. It shouldn't be like that.
 
-### Now we get the usage of this pattern
+### Now We Get The Usage of This Pattern
 
 ==This is where the Adapter Pattern comes in handy, because its purpose is to transform an object/interface into a new standard interface
 contract that the client expects==. This means we're turning the `pgxpool` and `sqlx` objects/interfaces into a standard interface that we
-create ourselves. For example, a data source process always has read and write operations. We can create a standard contract for that:
+create ourselves. For example, a data source process always has read and write operations. So we can create a standard contract for that like this:
 
 ``` go
 type SourceAdapter interface {
@@ -980,7 +981,7 @@ func NewPGXPoolAdapter(db *pgxpool.Pool) SourceAdapter {
 }
 ```
 
-### There are also drawbacks for this
+### There Are Also Drawbacks For This
 
 The downside is that we have to code the implementation to transform these external objects to follow the Adapter Pattern contract
 we've made. This usually takes extra effort, because each client's flow is different, so the adjustments are also different and a

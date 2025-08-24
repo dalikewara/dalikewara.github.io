@@ -49,7 +49,7 @@ You might find them on this website, as it’s intended to be a place where I do
 I love explaining things in detail, but I'm not good at verbal communication tbh 😅. I can communicate better through text ⌨.
 
 > Am I Good in English? currently, not really, but I’m keeping on learning. You might notice that this website is written in English, and some sentences
-may seem quite polished. That’s mostly because I use the power of AI to help me handle it.
+may seem quite polished. That’s mostly because I use the power of AI to handle it.
 
 ## 🤝 Connect
 
