@@ -4,12 +4,14 @@ description: This page shows the detail about Uwais project structure
 keywords: project structure, clean architecture, feature-driven design
 ---
 
-# 🗄 Project Structure
+# 🗄 Project Structure (v4)
 
 To implement the concept of Clean Architecture and Feature-Driven Design, and to keep them as simple and understandable as
 possible, Uwais structures the project like this:
 
-```text title="Example (Go)"
+> This is project structure `v4`, which is currently the only available version.
+
+``` text title="Example (Go)"
 - common
     - error.go
     - fiber.go
@@ -73,8 +75,37 @@ own style as long as it aligns with the core concept.
 > Changes outside the `service` SHOULD NOT affect the service itself (except changes for business domain/model/entity, repository and use case).
 > For config variables, external clients, or use cases, pass or inject them as dependencies.
 
+#### Feature Dependencies (OPTIONAL)
+
+If your feature relies on other modules or external packages, you must define them to ensure a smooth import process. Failure to do so may result in missing package errors. To handle this, place a `dependency.json` file inside your feature directory. You can link dependencies from the `domain`, `common`, and `features` directories. Note: Dependencies from other directories are not supported. You can also use the `externals` field to list third-party libraries that should be installed automatically.
+
+``` json title="Example dependency.json"
+{
+  "domains": [
+    "user.go",
+    "product.go"
+  ],
+  "features": [
+    "user",
+    "product"
+  ],
+  "commons": [
+    "validator.go",
+    "formatter.go"
+  ],
+  "externals": [
+    "github.com/go-sql-driver/mysql",
+    "github.com/jmoiron/sqlx"
+  ]
+}
+```
+
 ## Make It Your Own
 
 Feel free to create your own style to suit your requirements, as long as you still follow the main architecture concept.
 For example, in the project root, you can create folders such as `migration` to store your database migrations, `tmp` for
 temporary files, or even `infra` to house infrastructure configurations or scripts to facilitate the deployment of your project on a server or VM.
+
+## Seamless Integration
+
+By using this project structure, you can easily import or move your business logic to another project. There are also commands available to help with this; simply run the `uwais` command.

@@ -4,24 +4,24 @@ site_description: An unexpected journey
 site_url: https://www.dalikewara.com
 repo_name: Profile
 repo_url: https://github.com/dalikewara
-copyright: Copyright &copy; 2017 - 2025 Dali Kewara. All rights reserved.
+copyright: Copyright &copy; 2017 - 2026 Dali Kewara. All rights reserved.
 
 nav:
   - 🏠 /: index.md
   - 📚 /docs:
-    - docs/index.md
-    - 📁 Umar:
-      - docs/umar/index.md
-      - docs/umar/getting-started.md
-      - docs/umar/license.md
-    - 📁 Uwais:
-      - docs/uwais/index.md
-      - docs/uwais/getting-started.md
-      - docs/uwais/backward-compatibility.md
-      - docs/uwais/project-structure.md
-      - docs/uwais/license.md
+      - docs/index.md
+      - 📁 Umar:
+          - docs/umar/index.md
+          - docs/umar/getting-started.md
+          - docs/umar/license.md
+      - 📁 Uwais:
+          - docs/uwais/index.md
+          - docs/uwais/getting-started.md
+          - docs/uwais/backward-compatibility.md
+          - docs/uwais/project-structure.md
+          - docs/uwais/license.md
   - 📚 /blog:
-    - blog/index.md
+      - blog/index.md
   - 📖 /legal-and-license: legal-and-license.md
 
 theme:
