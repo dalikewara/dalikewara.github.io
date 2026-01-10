@@ -9,7 +9,7 @@
 
 ## Credits
 
-Copyright &copy; 2017 - 2025 [Dali Kewara](https://www.dalikewara.com)
+Copyright &copy; 2017 - 2026 [Dali Kewara](https://www.dalikewara.com)
 
 ## License
 
